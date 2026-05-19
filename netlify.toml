@@ -1,4 +1,2 @@
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Multi-page static site — no SPA redirect needed.
+# Each directory has its own index.html and is served directly.
