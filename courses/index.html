@@ -1760,7 +1760,17 @@ li.has-dropdown > button{background:none;border:none;color:var(--fg);cursor:poin
     </div>
   </div>
 
-  <div class="cta-band fu"><div class="cta-inner"><h2>Ready to <em>Fly?</em></h2><p>Book via WhatsApp or drop us a message — we reply fast and help you choose the right course.</p><div class="cta-btns"><a href="https://wa.me/66967203910" class="btn-p">Book on WhatsApp</a><a href="contacts/" class="btn-s">Contact Us</a></div></div></div>
+  <div class="faq-wrap fu">
+    <div class="sh fu"><div class="sh-eye">FAQ</div><h2 class="sh-h">Frequently Asked <em>Questions</em></h2></div>
+    <div class="fq"><button class="fq-q">Which course should I start with?<span class="arr">+</span></button><div class="fq-a"><p>If you have zero experience, start with the Discovery Course for your discipline (2h, from 3,500 THB). It shows you whether you enjoy the sport before committing to a full course. If you already know you want to learn fully, go straight for the Beginner Course — you save time and get riding within 3 days.</p></div></div>
+    <div class="fq"><button class="fq-q">Can I try multiple disciplines in one trip?<span class="arr">+</span></button><div class="fq-a"><p>Yes — many guests do a kitesurfing Discovery in the morning and a wing foil Intro in the afternoon. E-Foil sessions work on any day regardless of wind. Talk to us when you arrive and we'll build a personalised schedule.</p></div></div>
+    <div class="fq"><button class="fq-q">Are IKO/IWO certificates included?<span class="arr">+</span></button><div class="fq-a"><p>Yes. All kitesurfing and windsurfing courses include IKO certification. Wing foil courses include IWO certification. You receive a digital certificate valid at schools worldwide. Discovery courses are introductory and do not include certification.</p></div></div>
+    <div class="fq"><button class="fq-q">What equipment is provided?<span class="arr">+</span></button><div class="fq-a"><p>All equipment is included in every course: kite/wing/sail, bar, board, harness, helmet and impact vest. We use current-season gear from Duotone, North and Cabrinha. You bring only swimwear and sunscreen.</p></div></div>
+    <div class="fq"><button class="fq-q">What is the minimum age?<span class="arr">+</span></button><div class="fq-a"><p>Kitesurfing, wing foil and windsurfing lessons start from age 12 with parental consent. E-Foil sessions start from age 14. There is no upper age limit — we have taught students in their 60s successfully.</p></div></div>
+    <div class="fq"><button class="fq-q">What if the wind is too low on my lesson day?<span class="arr">+</span></button><div class="fq-a"><p>We reschedule at no charge. Koh Phangan's peak season (January–April) has very reliable winds 15–25 knots. E-Foil and kayak sessions run year-round regardless of wind. For multi-day courses, we plan around the forecast together.</p></div></div>
+  </div>
+
+  <div class="cta-band fu"><div class="cta-inner"><h2>Ready to <em>Fly?</em></h2><p>Book via WhatsApp or drop us a message — we reply fast and help you choose the right course.</p><div class="cta-btns"><a href="https://wa.me/66967203910" class="btn-p">Book on WhatsApp</a><a href="../contacts/" class="btn-s">Contact Us</a></div></div></div>
 
 </main>
 <footer id="site-footer" role="contentinfo">
@@ -1827,6 +1837,7 @@ document.querySelectorAll('.course-toggle').forEach(function(btn){
     if(!isOpen)item.classList.add('open');
   };
 });
+document.addEventListener('click',function(e){const btn=e.target.classList.contains('fq-q')?e.target:e.target.closest('.fq-q');if(!btn)return;const ans=btn.nextElementSibling;const isOpen=btn.classList.contains('open');document.querySelectorAll('.fq-q.open').forEach(b=>{b.classList.remove('open');b.nextElementSibling.classList.remove('open');});if(!isOpen){btn.classList.add('open');ans.classList.add('open');}});
 </script>
 </body>
 </html>
