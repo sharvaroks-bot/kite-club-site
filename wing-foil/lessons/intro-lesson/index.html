@@ -1816,14 +1816,7 @@ document.querySelectorAll('.course-item').forEach(function(item){
   });}
 });
 
-document.querySelectorAll('.fq-q').forEach(function(btn){
-  btn.addEventListener('click',function(){
-    var ans=btn.nextElementSibling;
-    var isOpen=btn.classList.contains('open');
-    document.querySelectorAll('.fq-q.open').forEach(function(b){b.classList.remove('open');b.nextElementSibling.classList.remove('open');});
-    if(!isOpen){btn.classList.add('open');ans.classList.add('open');}
-  });
-});
+
 </script>
 </body>
 </html>
