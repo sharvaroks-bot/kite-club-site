@@ -1753,6 +1753,27 @@ body.light .cc-btns .btn-s{border-color:#7b2fff;color:#7b2fff}
   .cc-disc-sep{margin:20px 18px 0}
   .cc-disc-label{margin-bottom:20px}
 }
+/* ─── REVIEWS ─── */
+.reviews-section{padding:70px 60px;text-align:center}
+.reviews-label{font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:10px}
+.reviews-title{font-family:var(--FD);font-size:clamp(32px,4vw,52px);font-weight:900;text-transform:uppercase;margin:0 0 14px}
+.reviews-title em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.reviews-sub{color:var(--muted);font-size:14px;margin-bottom:48px}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
+.review-card{background:var(--mid);border:1px solid var(--border);padding:28px;display:flex;flex-direction:column;gap:12px;transition:border-color .3s}
+.review-card:hover{border-color:var(--mag)}
+body.light .review-card{background:#fff;border-color:rgba(17,17,24,.08);box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.review-top{display:flex;align-items:center;gap:14px}
+.review-avatar{width:48px;height:48px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-family:var(--FD);font-size:18px;font-weight:900;color:#fff;flex-shrink:0}
+.review-author{font-family:var(--FD);font-size:16px;font-weight:700;text-transform:uppercase}
+.review-loc{font-size:12px;color:var(--muted);margin-top:2px}
+.review-stars{color:var(--pink);font-size:15px;letter-spacing:2px}
+.review-text{font-size:13px;color:var(--off);line-height:1.7;font-style:italic}
+.reviews-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,0,138,.08);border:1px solid rgba(232,0,138,.2);padding:10px 20px;margin-top:40px;font-family:var(--FD);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--pink)}
+@media(max-width:900px){
+  .reviews-section{padding:50px 22px}
+  .reviews-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -2532,7 +2553,82 @@ body.light .cc-btns .btn-s{border-color:#7b2fff;color:#7b2fff}
   <!-- END RENTAL SECTION -->
 
 
-  <!-- SHOP PREVIEW -->
+  <!-- REVIEWS -->
+  <section class="reviews-section fu">
+    <div class="reviews-label">Google Reviews</div>
+    <h2 class="reviews-title">What Our<br><em>Students Say</em></h2>
+    <p class="reviews-sub">Real reviews from real students — verified on Google Maps</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">L</div>
+          <div>
+            <div class="review-author">Lisa Zumkeller</div>
+            <div class="review-loc">⭐⭐⭐⭐⭐ Google Review</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Great kite surfing school! The team at Kite Club got me from zero experience to being independent. Instructors are skilled, attentive, and great at explaining everything clearly. I progressed faster than expected and felt confident every session. The whole crew is welcoming, professional, and genuinely passionate about kite surfing."</p>
+      </div>
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">L</div>
+          <div>
+            <div class="review-author">Lauren Groves</div>
+            <div class="review-loc">⭐⭐⭐⭐⭐ Google Review</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I was a total beginner and initially signed up just for the intro class, then added another 2 hours. Roman was a great teacher — clear explanations, good structure, very patient. Safety was top priority but he ensured I had fun too. Communication with all staff was very clear, especially regarding the wind forecast. Highly recommended!"</p>
+      </div>
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">J</div>
+          <div>
+            <div class="review-author">Jaroslav Mužík</div>
+            <div class="review-loc">⭐⭐⭐⭐⭐ Google Review</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Great Kite Club on a great place. I took the full set of 8 lessons — never done kite surfing before. Sandy beach with right water levels, in combination with very supportive staff. Can recommend to everybody. I started liking kite surfing! Thank you to the whole team."</p>
+      </div>
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">J</div>
+          <div>
+            <div class="review-author">Jeroen Schiphorst</div>
+            <div class="review-loc">⭐⭐⭐⭐⭐ Google Review</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I had two days of lessons with Abdoul. I've taken kitesurfing lessons in several countries but this was by far my best experience. The equipment was professional. You were provided with a walkie-talkie, which made communication on the water easy. I would definitely recommend this."</p>
+      </div>
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">R</div>
+          <div>
+            <div class="review-author">Ruslan Жолжақсы</div>
+            <div class="review-loc">⭐⭐⭐⭐⭐ Google Review</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I spent three wonderful days at Kite Club on Koh Phangan. All instructors are highly trained, very attentive, and made me feel safe every second. I had never stood on a board in the water before, and after just my third session I was already riding. That really blew me away. If you want to learn kitesurfing, this is the perfect school."</p>
+      </div>
+    </div>
+    <div class="reviews-badge">★ 5.0 · 47 Reviews on Google Maps</div>
+  </section>
+
+  <!-- FAQ -->
+  <div class="sh fu"><h2>Frequently Asked<br><em class="gt">Questions</em></h2></div>
+  <div class="faq-wrap fu">
+    <div class="fq"><button class="fq-q">Where are you located?<span class="arr">+</span></button><div class="fq-a"><p>We are based at Thong Sala Beach on Koh Phangan, Thailand. The beach offers a protected flat-water lagoon — perfect for learning kitesurfing, wing foil and other water sports. Exact location and directions are on our Contacts page.</p></div></div>
+    <div class="fq"><button class="fq-q">What is the best time to visit?<span class="arr">+</span></button><div class="fq-a"><p>Peak season is January through April when the northeast monsoon brings steady 15–25 knot winds. March and April are the best months — 25–30 rideable days per month. We operate year-round; outside peak season conditions suit intermediate and advanced riders.</p></div></div>
+    <div class="fq"><button class="fq-q">What activities do you offer?<span class="arr">+</span></button><div class="fq-a"><p>We offer kitesurfing lessons (IKO certified), wing foil lessons (IWO certified), windsurfing, e-foil sessions, kayak rental, SUP rental, equipment rental, and storage. See our full course list for prices and details.</p></div></div>
+    <div class="fq"><button class="fq-q">Do I need any experience to start?<span class="arr">+</span></button><div class="fq-a"><p>No experience is needed for any activity. The Discovery Course (kitesurfing), Intro Lesson (wing foil, e-foil) and kayak/SUP rental are all designed for complete beginners. Our instructors are trained to teach from absolute zero.</p></div></div>
+    <div class="fq"><button class="fq-q">How do I book a lesson?<span class="arr">+</span></button><div class="fq-a"><p>The fastest way is WhatsApp — message us at +66 96 720 3910 and we confirm your lesson within 30 minutes. We check the wind forecast and assign the best available instructor for your level and goals.</p></div></div>
+    <div class="fq"><button class="fq-q">Is equipment included in the lesson price?<span class="arr">+</span></button><div class="fq-a"><p>Yes. All courses and lessons include full equipment: kite or wing, board, harness, helmet and impact vest. You need only swimwear and waterproof sunscreen. Nothing to rent or buy separately.</p></div></div>
+  </div>
+
   <!-- CTA -->
   <section class="cta-band fu">
     <div class="cta-inner">
