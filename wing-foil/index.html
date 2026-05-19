@@ -2309,7 +2309,6 @@ body.light #seoExpandable p,body.light #seoExpandable li,body.light #seoExpandab
     </div>
   </div>
 
-    <div class="sh fu"><h2>Frequently Asked<br><em class="gt">Questions</em></h2></div>
   <section class="seo-section" aria-label="About Wing Foiling on Koh Phangan">
   <div class="seo-title">About Wing Foiling on Koh Phangan</div>
   <button class="seo-toggle-btn" onclick="toggleSEOBlock(this)" aria-expanded="false">
@@ -2340,6 +2339,7 @@ body.light #seoExpandable p,body.light #seoExpandable li,body.light #seoExpandab
 
   </div>
 </section>
+    <div class="sh fu"><h2>Frequently Asked<br><em class="gt">Questions</em></h2></div>
 
 <div class="faq-wrap fu">
     <div class="fq"><button class="fq-q">Do I need kitesurfing or surfing experience to try wing foil?</button><div class="fq-a"><p>Not at all. Wing foiling is a completely standalone sport. Many of our best students had never tried any wind sport before. If you already kitesurf, the foilboard will feel familiar but the wing handling is entirely different and very intuitive.</p></div></div>
@@ -2402,6 +2402,12 @@ function openMobile(){document.getElementById('mobileMenu').classList.add('open'
 function closeMobile(){document.getElementById('mobileMenu').classList.remove('open');}
 function toggleSub(id){var el=document.getElementById(id);if(el)el.classList.toggle('open');}
 (function(){if(localStorage.getItem('theme')!=='dark')document.body.classList.add('light');})();
+document.addEventListener('click',function(e){
+  const btn=e.target.classList.contains('fq-q')?e.target:e.target.closest('.fq-q');
+  if(!btn)return;const ans=btn.nextElementSibling;const isOpen=btn.classList.contains('open');
+  document.querySelectorAll('.fq-q.open').forEach(b=>{b.classList.remove('open');b.nextElementSibling.classList.remove('open');});
+  if(!isOpen){btn.classList.add('open');ans.classList.add('open');}
+});
   function toggleSEOBlock(el){const box=document.getElementById('seoExpandable');const btn=el.querySelector('span');const open=el.getAttribute('aria-expanded')==='true';if(open){box.style.display='none';btn.textContent='Show more ▾';el.setAttribute('aria-expanded','false');}else{box.style.display='block';btn.textContent='Hide ▴';el.setAttribute('aria-expanded','true');}}
 </script>
 </body>
