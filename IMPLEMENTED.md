@@ -87,7 +87,27 @@ This file tracks what has been implemented and verified on the new dev site.
 - [x] `/kitesurfing/koh-phangan/` — GEO landing page with EducationalOrganization + BreadcrumbList + FAQPage schema
 - [x] `/best-kitesurf-spots-koh-phangan/` — spots guide with Article + BreadcrumbList + FAQPage schema
 - [x] `/best-time-kitesurfing-koh-phangan/` — season guide with Article + BreadcrumbList + FAQPage schema + monthly wind table
-- [x] `sitemap.xml` — updated to 48 URLs (added 3 new pages at priority 0.8–0.85)
+- [x] `/faq/` — central FAQ page with FAQPage schema, 14 questions in 4 categories
+- [x] `/pricing/` — full pricing overview with all activity price cards
+- [x] `sitemap.xml` — updated to 66 URLs
+
+### New Pages (Phase 12 — Medium Priority)
+- [x] `/seasons/` — wind calendar page (EducationalOrganization + BreadcrumbList + FAQPage)
+- [x] `/kitesurfing/thong-sala/` — micro-GEO page (EducationalOrganization + BreadcrumbList + FAQPage + Place)
+
+### Blog Posts (Phase 12 — 7 new)
+- [x] `guide-kitesurfing-thailand.html` — Complete guide to kitesurfing in Thailand
+- [x] `kitesurfing-for-kids.html` — Family guide, kids kitesurfing age 12+
+- [x] `kitesurfing-vs-wing-foil.html` — Comparison for beginners
+- [x] `what-equipment-is-included.html` — Full equipment breakdown
+- [x] `kitesurf-rental-koh-phangan.html` — Rental guide for independent riders
+- [x] `wing-foil-guide-thailand.html` — Wing foil complete guide
+- [x] `efoil-guide-koh-phangan.html` — E-foil experience guide
+
+### Lesson UX (Phase 12)
+- [x] WhatsApp pre-fill CTAs on all 17 lesson pages (course-specific messages)
+- [x] No-wind rescheduling badge on 13 wind-dependent lesson pages
+- [x] AggregateRating schema (5.0 / 47 reviews) on 4 lesson listing pages
 
 ---
 
@@ -95,24 +115,11 @@ This file tracks what has been implemented and verified on the new dev site.
 
 ### Critical
 - [ ] `_redirects` deployed to Netlify (file created, not deployed)
-- [ ] Price discrepancy verified and fixed
 - [ ] Internal links to old slugs fixed (/windsurfing-2/, /supboard-rental/, etc.)
 
-### High Priority
-- [ ] GEO landing page: /kitesurfing/koh-phangan/
-- [ ] Spots guide: /best-kitesurf-spots-koh-phangan/
-- [ ] Season guide: /best-time-kitesurfing-koh-phangan/
-- [ ] Central FAQ page: /faq/
-- [ ] Pricing overview: /pricing/
-- [ ] 7+ new blog posts covering old URLs with redirect value
-
 ### Medium Priority
-- [ ] AggregateRating schema on review sections
 - [ ] Course schema on individual lesson pages
 - [ ] Instructor profiles section on school pages
-- [ ] No-wind policy/guarantee text on lesson pages
-- [ ] /seasons/ page
-- [ ] /kitesurfing/thong-sala/ GEO page
 
 ### Low Priority
 - [ ] WebP image conversion

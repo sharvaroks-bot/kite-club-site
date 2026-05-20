@@ -13,6 +13,44 @@
 
 ---
 
+## [v3.7.0] — 2026-05-20
+
+### Lesson Pages — WhatsApp pre-fill CTAs (17 pages)
+- All lesson pages: `wa.me/66967203910` → `wa.me/66967203910?text=COURSE_MSG`
+- Course-specific messages with name, duration, and price pre-filled
+- Affects: all kitesurfing, wing foil, windsurfing, efoil lesson pages
+
+### Lesson Pages — No-Wind Rescheduling Badge (13 pages)
+- Added `✓ No wind = rescheduled at no extra charge` badge before booking buttons
+- Applied to all wind-dependent lessons (kitesurfing, wing foil, windsurfing)
+- Skipped: efoil pages (motor-powered, no wind dependency)
+
+### Lesson Listing Pages — AggregateRating Schema (4 pages)
+- Added `AggregateRating` (5.0 / 47 reviews) to @graph on:
+  - `/kitesurfing/lessons/`, `/wing-foil/lessons/`, `/windsurfing/lessons/`, `/efoil/lessons/`
+
+### New Pages
+- `/seasons/index.html` — wind calendar targeting "koh phangan kite season"
+  - Schema: EducationalOrganization + BreadcrumbList + FAQPage
+  - Sections: 3 season cards, 12-month activity table, FAQ, CTA
+- `/kitesurfing/thong-sala/index.html` — micro-GEO targeting "kitesurfing thong sala beach"
+  - Schema: EducationalOrganization + BreadcrumbList + FAQPage + Place (GeoCoordinates)
+  - Sections: hero, stat boxes, about-spot, course cards, FAQ, CTA
+
+### New Blog Posts (7)
+- `guide-kitesurfing-thailand.html` — Complete guide to kitesurfing in Thailand
+- `kitesurfing-for-kids.html` — Family guide, kids kitesurfing age 12+
+- `kitesurfing-vs-wing-foil.html` — Comparison for beginners
+- `what-equipment-is-included.html` — Full equipment breakdown
+- `kitesurf-rental-koh-phangan.html` — Rental guide for independent riders
+- `wing-foil-guide-thailand.html` — Wing foil complete guide
+- `efoil-guide-koh-phangan.html` — E-foil experience guide
+
+### sitemap.xml
+- Updated to 66 URLs (added /seasons/, /kitesurfing/thong-sala/, 7 blog posts)
+
+---
+
 ## [v3.6.0] — 2026-05-20
 
 ### New Pages — High-Priority SEO pages (Phase 9–11)
