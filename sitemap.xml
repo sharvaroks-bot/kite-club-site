@@ -1,57 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Main pages -->
-  <url><loc>https://kiteclubkohphangan.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/about/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/courses/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/school/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/school/kitesurfing/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/school/wing-foil/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/school/windsurfing/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/school/efoil/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <!-- Kitesurfing -->
-  <url><loc>https://kiteclubkohphangan.com/kitesurfing/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/kitesurfing/lessons/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/kitesurfing/lessons/discovery-course/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/kitesurfing/lessons/full-beginner-course/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/kitesurfing/lessons/independent-course/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/kitesurfing/lessons/pro-lesson/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/kitesurfing/lessons/refresh-lesson/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/kitesurfing/lessons/hydrofoil-lesson/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <!-- Wing Foil -->
-  <url><loc>https://kiteclubkohphangan.com/wing-foil/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/wing-foil/lessons/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/wing-foil/lessons/intro-lesson/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/wing-foil/lessons/beginner-course/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/wing-foil/lessons/advanced-course/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <!-- Windsurfing -->
-  <url><loc>https://kiteclubkohphangan.com/windsurfing/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/windsurfing/lessons/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/windsurfing/lessons/discovery-lesson/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/windsurfing/lessons/beginner-course/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/windsurfing/lessons/refresh-lesson/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <!-- E-Foil -->
-  <url><loc>https://kiteclubkohphangan.com/efoil/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/efoil/lessons/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/efoil/lessons/intro-lesson/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/efoil/lessons/efoil-lesson/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <!-- Other activities -->
-  <url><loc>https://kiteclubkohphangan.com/kayaking/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/sup-rental/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/kite-safari/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <!-- Services -->
-  <url><loc>https://kiteclubkohphangan.com/rental/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/shop/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/storage/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <!-- Info -->
-  <url><loc>https://kiteclubkohphangan.com/locations/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/contacts/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <!-- Blog -->
-  <url><loc>https://kiteclubkohphangan.com/blog/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/blog/posts/first-kite-lesson.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/blog/posts/top-10-mistakes.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/blog/posts/kite-to-wing.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/blog/posts/efoil-vs-wing.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/blog/posts/wind-season-2026.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kiteclubkohphangan.com/blog/posts/family-holidays.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/</loc><lastmod>2026-05-20</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/kitesurfing/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/wing-foil/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/windsurfing/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/efoil/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/kayaking/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/sup-rental/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/kite-safari/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/kitesurfing/lessons/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/wing-foil/lessons/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/windsurfing/lessons/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/efoil/lessons/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/kitesurfing/lessons/discovery-course/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/kitesurfing/lessons/full-beginner-course/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/kitesurfing/lessons/independent-course/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/kitesurfing/lessons/refresh-lesson/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/kitesurfing/lessons/pro-lesson/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/kitesurfing/lessons/hydrofoil-lesson/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/wing-foil/lessons/intro-lesson/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/wing-foil/lessons/beginner-course/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/wing-foil/lessons/advanced-course/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/windsurfing/lessons/discovery-lesson/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/windsurfing/lessons/beginner-course/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/windsurfing/lessons/refresh-lesson/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/efoil/lessons/intro-lesson/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/efoil/lessons/efoil-lesson/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/school/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/courses/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/school/kitesurfing/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/school/wing-foil/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/school/windsurfing/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/school/efoil/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/rental/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/shop/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/storage/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/about/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/locations/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/contacts/</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/blog/</loc><lastmod>2026-05-20</lastmod><changefreq>weekly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/blog/posts/first-kite-lesson.html</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/blog/posts/top-10-mistakes.html</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/blog/posts/kite-to-wing.html</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/blog/posts/efoil-vs-wing.html</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/blog/posts/wind-season-2026.html</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kiteclubkohphangan.com/blog/posts/family-holidays.html</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
