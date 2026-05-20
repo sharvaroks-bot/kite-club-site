@@ -105,10 +105,14 @@ nav{position:sticky;top:0;z-index:200;background:rgba(13,13,26,.95);backdrop-fil
 .mobile-submenu{display:none;padding-left:20px}
 .mobile-submenu.open{display:block}
 .mobile-submenu a{font-size:17px;color:var(--muted)}
-.btn-p{background:var(--grad);color:#fff;padding:14px 34px;font-family:var(--FD);font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;border:none;cursor:pointer;display:inline-block;transition:opacity .2s,transform .15s}
-.btn-p:hover{opacity:.85;transform:translateY(-2px)}
-.btn-s{background:transparent;color:#fff;padding:14px 34px;font-family:var(--FD);font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;border:2px solid rgba(255,255,255,.35);display:inline-block;cursor:pointer;transition:all .2s}
-.btn-s:hover{border-color:var(--pink);color:var(--pink);transform:translateY(-2px)}
+.btn-p{background:var(--grad);color:#fff;padding:14px 34px;font-family:var(--FD);font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;border:none;cursor:pointer;display:inline-block;transition:box-shadow .35s,transform .2s;position:relative;overflow:hidden}
+.btn-p::after{content:'';position:absolute;top:0;left:-100%;width:55%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-20deg);transition:left .55s ease}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(232,0,138,.5),0 4px 15px rgba(123,47,255,.35)}
+.btn-p:hover::after{left:160%}
+.btn-s{background:transparent;color:#fff;padding:14px 34px;font-family:var(--FD);font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;border:2px solid rgba(255,255,255,.35);display:inline-block;cursor:pointer;transition:border-color .25s,color .25s,box-shadow .3s,transform .2s;position:relative;overflow:hidden}
+.btn-s::after{content:'';position:absolute;inset:0;background:rgba(232,0,138,.08);transform:scaleX(0);transform-origin:left;transition:transform .3s ease;pointer-events:none}
+.btn-s:hover{border-color:var(--pink);color:var(--pink);transform:translateY(-3px);box-shadow:0 8px 24px rgba(232,0,138,.25)}
+.btn-s:hover::after{transform:scaleX(1)}
 .gt{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .page-hero{position:relative;height:50vh;min-height:380px;display:flex;align-items:flex-end;overflow:hidden}
 .page-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.04)}
@@ -342,8 +346,8 @@ body.light .theme-icon-moon{opacity:1}
         <div class="price-cur">THB per session</div>
         <p>Private 1-hour foiling session. Foil board and all equipment provided. Suitable for independent kitesurfers.</p>
         <div class="course-actions">
-          <a class="btn-p" href="https://wa.me/66967203910">Book Now</a>
           <a class="btn-s" href="../">Back to Courses</a>
+          <a class="btn-p" href="https://wa.me/66967203910">Book Now</a>
         </div>
       </div>
     </div>

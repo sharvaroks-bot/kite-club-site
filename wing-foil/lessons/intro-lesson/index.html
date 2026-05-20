@@ -344,10 +344,14 @@ nav{position:sticky;top:0;z-index:200;background:rgba(13,13,26,.95);backdrop-fil
 .mobile-submenu a{font-size:17px;color:var(--muted)}
 
 /* ─── BUTTONS ─── */
-.btn-p{background:var(--grad);color:#fff;padding:14px 34px;font-family:var(--FD);font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;border:none;cursor:pointer;display:inline-block;transition:opacity .2s,transform .15s}
-.btn-p:hover{opacity:.85;transform:translateY(-2px)}
-.btn-s{background:transparent;color:#fff;padding:14px 34px;font-family:var(--FD);font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;border:2px solid rgba(255,255,255,.35);display:inline-block;cursor:pointer;transition:all .2s}
-.btn-s:hover{border-color:var(--pink);color:var(--pink);transform:translateY(-2px)}
+.btn-p{background:var(--grad);color:#fff;padding:14px 34px;font-family:var(--FD);font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;border:none;cursor:pointer;display:inline-block;transition:box-shadow .35s,transform .2s;position:relative;overflow:hidden}
+.btn-p::after{content:'';position:absolute;top:0;left:-100%;width:55%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-20deg);transition:left .55s ease}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(232,0,138,.5),0 4px 15px rgba(123,47,255,.35)}
+.btn-p:hover::after{left:160%}
+.btn-s{background:transparent;color:#fff;padding:14px 34px;font-family:var(--FD);font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;border:2px solid rgba(255,255,255,.35);display:inline-block;cursor:pointer;transition:border-color .25s,color .25s,box-shadow .3s,transform .2s;position:relative;overflow:hidden}
+.btn-s::after{content:'';position:absolute;inset:0;background:rgba(232,0,138,.08);transform:scaleX(0);transform-origin:left;transition:transform .3s ease;pointer-events:none}
+.btn-s:hover{border-color:var(--pink);color:var(--pink);transform:translateY(-3px);box-shadow:0 8px 24px rgba(232,0,138,.25)}
+.btn-s:hover::after{transform:scaleX(1)}
 .btn-o{background:transparent;color:var(--pink);padding:11px 26px;font-family:var(--FD);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;border:2px solid var(--pink);display:inline-block;cursor:pointer;transition:all .2s}
 .btn-o:hover{background:var(--pink);color:#fff}
 
@@ -1519,7 +1523,7 @@ li.has-dropdown > button{background:none;border:none;color:var(--fg);cursor:poin
         <source src="../../../assets/wingfoil-desktop.mp4" type="video/mp4">
       </video>
       <video class="page-hero-video page-hero-video-mobile" autoplay muted loop playsinline preload="auto">
-        <source src="../../../assets/wingfoil-mobile.mp4" type="video/mp4">
+        <source src="../../../assets/wingfoil-desktop.mp4" type="video/mp4">
       </video>
     </div>
     <div class="page-hero-content fu">
@@ -1553,15 +1557,15 @@ li.has-dropdown > button{background:none;border:none;color:var(--fg);cursor:poin
       <a class="btn-s" href="../../../contacts/" style="color:var(--pink);border-color:var(--pink)">Ask a Question</a>
     </div>
     <div class="lesson-media">
-      <div class="lesson-img" style="background-image:url('../../../assets/live-wingfoil.jpg')"></div>
+      <div class="lesson-img" style="background-image:url('../../../assets/wingfoil.jpg')"></div>
       <div class="lesson-price-card fu">
         <h3>Price</h3>
         <div class="price-big">3,500</div>
         <div class="price-cur">THB per course</div>
         <p>Intro lesson including all equipment — wing, board, harness, helmet and impact vest.</p>
         <div class="course-actions">
-          <a class="btn-p" href="https://wa.me/66967203910">Book Now</a>
           <a class="btn-s" href="../">Back to Wing Foil</a>
+          <a class="btn-p" href="https://wa.me/66967203910">Book Now</a>
         </div>
       </div>
     </div>
