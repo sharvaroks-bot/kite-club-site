@@ -1628,9 +1628,9 @@ body.light .cc-price-box strong{color:#111}
 .cc-price-box span{font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.1em;color:#e8008a;text-transform:uppercase}
 .cc-btns{display:flex;flex-direction:row;gap:8px;margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,.08)}
 body.light .cc-btns{border-top-color:#eee}
-.cc-btns .btn-s{flex:1;text-align:center;padding:11px 8px;font-size:13px;border-color:#7b2fff;color:#7b2fff}
+.cc-btns .btn-s{flex:1;text-align:center;padding:11px 8px;font-size:13px;border-color:#7b2fff;color:#7b2fff;box-sizing:border-box;min-width:0}
 body.light .cc-btns .btn-s{border-color:#7b2fff;color:#7b2fff}
-.cc-btns .btn-p{flex:1;text-align:center;padding:11px 8px;font-size:13px}
+.cc-btns .btn-p{flex:1;text-align:center;padding:11px 8px;font-size:13px;box-sizing:border-box;min-width:0}
 @media(max-width:900px){
   .cc-grid,.cc-grid.two-col{grid-template-columns:1fr !important;padding:0 4px}
   .cc-img{height:56vw}
@@ -1648,7 +1648,7 @@ body.light .cc-btns .btn-s{border-color:#7b2fff;color:#7b2fff}
 /* ─── T4-6: cc-card mobile: no side padding, larger fonts, buttons in row ─── */
 @media(max-width:900px){
   .cc-btns{flex-direction:row !important;flex-wrap:nowrap !important;gap:6px}
-  .cc-btns .btn-s,.cc-btns .btn-p{flex:1 !important;text-align:center !important;padding:12px 6px !important;font-size:13px !important;min-width:0}
+  .cc-btns .btn-s,.cc-btns .btn-p{flex:1 !important;text-align:center !important;padding:12px 6px !important;font-size:13px !important;min-width:0 !important;box-sizing:border-box !important}
   .cc-body{padding:22px 18px}
   .cc-name{font-size:22px !important}
   .cc-price-box{width:110px;height:110px}
