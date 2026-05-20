@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kitesurfing Courses Koh Phangan | IKO Certified — from 3,500 THB</title>
-<meta name="description" content="Learn kitesurfing on Koh Phangan. Discovery 3,500 THB, Beginner 11,000 THB, Independent 18,000 THB.">
+<title>Windsurfing Equipment Rental Koh Phangan | Kite Club</title>
+<meta name="description" content="Rent windsurfing gear on Koh Phangan — boards, sails, masts. Quality equipment for all levels. Book via WhatsApp.">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#e8008a">
 <meta name="geo.region" content="TH-84">
-<link rel="canonical" href="https://kiteclubkohphangan.com/kitesurfing/lessons/">
-<link rel="alternate" hreflang="en" href="https://kiteclubkohphangan.com/kitesurfing/lessons/">
-<link rel="alternate" hreflang="ru" href="https://kiteclubkohphangan.com/kitesurfing/lessons/">
-<meta property="og:title" content="Kitesurfing Courses Koh Phangan | IKO Certified — from 3,500 THB">
-<meta property="og:description" content="Learn kitesurfing on Koh Phangan. Discovery 3,500 THB, Beginner 11,000 THB, Independent 18,000 THB.">
-<meta property="og:url" content="https://kiteclubkohphangan.com/school/kitesurfing/">
+<link rel="canonical" href="https://kiteclubkohphangan.com/windsurfing/rental/">
+<link rel="alternate" hreflang="en" href="https://kiteclubkohphangan.com/windsurfing/rental/">
+<link rel="alternate" hreflang="ru" href="https://kiteclubkohphangan.com/windsurfing/rental/">
+<meta property="og:title" content="Windsurfing Equipment Rental Koh Phangan | Kite Club">
+<meta property="og:description" content="Rent windsurfing gear on Koh Phangan — boards, sails, masts. Book via WhatsApp.">
+<meta property="og:url" content="https://kiteclubkohphangan.com/windsurfing/rental/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -1391,32 +1391,198 @@ body.light .course-price-row strong{color:#111118}
   div[style*="padding:0 60px 70px"]{padding-left:22px !important;padding-right:22px !important;}
 }
 
-/* ===== LESSON DETAIL PAGE ===== */
-.lesson-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1200px;margin:0 auto;padding:70px 60px}
-.lesson-copy h2{font-family:var(--FD);font-weight:900;font-size:42px;line-height:.9;text-transform:uppercase;margin-bottom:20px}
-.lesson-copy h3{font-family:var(--FD);font-weight:700;font-size:18px;text-transform:uppercase;letter-spacing:.08em;color:var(--pink);margin:28px 0 14px}
-.lesson-copy p{color:var(--off);font-size:16px;line-height:1.8;margin-bottom:16px}
-.lesson-copy ul{list-style:none;margin:0 0 24px}
-.lesson-copy li{color:var(--off);font-size:15px;padding:9px 0;border-bottom:1px solid var(--border2)}
-.lesson-copy li::before{content:'+';color:var(--pink);font-weight:900;margin-right:10px}
-.lesson-media{display:flex;flex-direction:column;gap:16px}
-.lesson-img{height:320px;background-size:cover;background-position:center;border:1px solid var(--border)}
-.lesson-price-card{background:var(--mid);border:1px solid var(--border);padding:32px}
-.lesson-price-card h3{font-family:var(--FD);font-weight:900;font-size:28px;text-transform:uppercase;margin-bottom:16px}
-.lesson-price-card .price-big{font-family:var(--FD);font-weight:900;font-size:64px;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.lesson-price-card .price-cur{font-family:var(--FD);font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
-.lesson-price-card p{color:var(--off);font-size:14px;line-height:1.7;margin-bottom:20px}
-.lesson-price-card .course-actions{display:flex;gap:10px;flex-wrap:wrap}
-.lesson-price-card .btn-s{color:var(--pink);border-color:var(--pink)}
-.lesson-faq{max-width:1200px;margin:0 auto;padding:0 60px 70px}
-.lesson-faq h2{font-family:var(--FD);font-weight:900;font-size:42px;line-height:.9;text-transform:uppercase;margin-bottom:24px}
-body.light .lesson-price-card{background:#f8f8f5;border-color:rgba(17,17,24,.1)}
-body.light .lesson-copy h2{color:#111118}
+/* ===== COURSE ACCORDION ===== */
+.course-accordion{display:grid;gap:8px}
+.course-item{background:var(--mid);border:1px solid var(--border);overflow:hidden;transition:border-color .25s;position:relative}
+.course-item:hover,.course-item.open{border-color:var(--mag)}
+.course-toggle{width:100%;background:none;border:0;color:inherit;cursor:pointer;padding:0;text-align:left;font:inherit}
+.course-head{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;padding:26px 28px}
+.course-kicker{font-family:var(--FD);font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:8px}
+.course-name{font-family:var(--FD);font-weight:900;font-size:32px;line-height:.95;text-transform:uppercase;color:var(--white)}
+.course-short{color:var(--off);font-size:15px;line-height:1.6;margin-top:10px;max-width:720px}
+.course-price{text-align:right;white-space:nowrap}
+.course-price strong{display:block;font-family:var(--FD);font-weight:900;font-size:34px;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.course-price span{display:block;color:var(--muted);font-family:var(--FD);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-top:4px}
+.course-panel{max-height:0;overflow:hidden;transition:max-height .38s ease}
+.course-panel-inner{padding:0 28px 28px;border-top:1px solid var(--border2)}
+.course-panel-inner p{color:var(--off);font-size:16px;line-height:1.75;margin:22px 0 18px;max-width:820px}
+.course-panel ul{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:8px 22px;margin:0 0 24px;max-width:900px}
+.course-panel li{color:var(--off);font-size:14px;line-height:1.45;padding:9px 0;border-bottom:1px solid var(--border2)}
+.course-panel li::before{content:'+';color:var(--pink);font-weight:900;margin-right:10px}
+.course-actions{display:flex;gap:10px;flex-wrap:wrap}
+.course-actions .btn-s{color:var(--pink);border-color:var(--pink)}
+.course-item.open .course-panel{max-height:600px}
+.course-price-list{background:rgba(232,0,138,.06);border:1px solid rgba(232,0,138,.18);padding:24px 28px;margin-top:26px}
+.course-price-list h3{font-family:var(--FD);font-weight:900;font-size:32px;line-height:1;text-transform:uppercase;margin-bottom:16px}
+.course-price-row{display:grid;grid-template-columns:1fr auto;gap:16px;padding:12px 0;border-bottom:1px solid var(--border2);color:var(--off)}
+.course-price-row:last-child{border-bottom:0}
+.course-price-row strong{font-family:var(--FD);font-size:18px;text-transform:uppercase;color:var(--white)}
+.course-price-row span{font-family:var(--FD);font-weight:900;color:var(--pink)}
+/* discipline group */
+.discipline-course-list{display:grid;gap:10px}
+.discipline-course-group{background:var(--mid);border:1px solid var(--border);overflow:hidden;transition:border-color .25s}
+.discipline-course-group:hover,.discipline-course-group.open{border-color:var(--mag)}
+.discipline-course-toggle{width:100%;border:0;background:none;color:inherit;cursor:pointer;text-align:left;padding:0;font:inherit;display:flex;align-items:stretch;justify-content:space-between;gap:18px}
+.discipline-course-toggle span{display:block;padding:30px 32px}
+.discipline-course-toggle small{display:block;font-family:var(--FD);font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:12px}
+.discipline-course-toggle strong{display:block;font-family:var(--FD);font-weight:900;font-size:clamp(38px,6vw,74px);line-height:.86;text-transform:uppercase;color:var(--white)}
+.discipline-course-toggle em{display:flex;align-items:center;justify-content:center;min-width:132px;padding:28px;font-style:normal;font-family:var(--FD);font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-left:1px solid var(--border)}
+.discipline-course-panel{max-height:0;overflow:hidden;transition:max-height .42s ease}
+.discipline-course-group.open .discipline-course-panel{max-height:4600px;border-top:1px solid var(--border)}
+.discipline-course-panel .course-accordion{padding:10px}
+.discipline-course-panel .course-item{background:rgba(255,255,255,.025)}
+body.light .course-item{background:#f8f8f5;border-color:rgba(17,17,24,.1)}
+body.light .course-item:hover,body.light .course-item.open{border-color:var(--mag)}
+body.light .course-name{color:#111118}
+body.light .course-price-list{background:rgba(232,0,138,.04);border-color:rgba(232,0,138,.15)}
+body.light .course-price-row strong{color:#111118}
+body.light .discipline-course-group{background:#f8f8f5;border-color:rgba(17,17,24,.1)}
+body.light .discipline-course-toggle strong{color:#111118}
 @media(max-width:900px){
-  .lesson-grid{grid-template-columns:1fr;padding:40px 22px;gap:28px}
-  .lesson-faq{padding:0 22px 50px}
-  .lesson-copy h2{font-size:34px}
-  .lesson-price-card .price-big{font-size:52px}
+  .course-head{grid-template-columns:1fr;padding:22px 20px}
+  .course-price{text-align:left}.course-name{font-size:26px}
+  .course-price strong{font-size:28px}
+  .course-panel-inner{padding:0 20px 24px}
+  .course-panel ul{grid-template-columns:1fr}
+  .course-item.open .course-panel{max-height:860px}
+  .course-price-list{padding:22px 20px}
+  .course-price-row{grid-template-columns:1fr;gap:2px}
+  .discipline-course-toggle{display:block}
+  .discipline-course-toggle span{padding:24px 20px 18px}
+  .discipline-course-toggle strong{font-size:40px}
+  .discipline-course-toggle em{display:block;min-width:0;border-left:0;border-top:1px solid var(--border);padding:12px 20px;text-align:left}
+  .discipline-course-panel .course-accordion{padding:6px}
+}
+
+/* ===== DESKTOP COURSE CARDS ===== */
+.course-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:32px}
+.cc{background:var(--mid);border:1px solid var(--border);display:flex;flex-direction:column;border-radius:4px}
+.cc-badge{background:var(--grad);color:#fff;font-family:var(--FD);font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:12px 22px;text-align:center}
+.perks-section{padding:70px 60px;text-align:center}
+.perks-label{font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#e8008a;margin-bottom:10px}
+.perks-title{font-family:var(--FD);font-size:clamp(32px,4vw,52px);font-weight:900;text-transform:uppercase;margin:0 0 48px;color:var(--fg)}
+.perks-title em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.perks-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.perk-item{}
+.perk-icon{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,rgba(123,47,255,.12),rgba(255,58,172,.12));display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 16px}
+.perk-name{font-family:var(--FD);font-size:18px;font-weight:900;text-transform:uppercase;color:var(--fg);margin-bottom:8px}
+.perk-desc{font-family:var(--FB);font-size:13px;color:var(--sub);line-height:1.6;margin:0}
+/* ═══ УСЛОВИЯ ═══ */
+.cond-section{display:grid;grid-template-columns:1fr 1fr;min-height:480px;overflow:hidden}
+.cond-text{display:flex;flex-direction:column;justify-content:center;padding:60px}
+body:not(.light) .cond-text{background:#0e0e1a}
+body.light .cond-text{background:#f5f4f0}
+.cond-label{font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#e8008a;margin-bottom:10px}
+.cond-title{font-family:var(--FD);font-size:clamp(28px,3.5vw,46px);font-weight:900;text-transform:uppercase;line-height:1;margin:0 0 24px;color:var(--fg)}
+.cond-title em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.cond-list{list-style:none;padding:0;margin:0 0 32px;display:flex;flex-direction:column;gap:12px}
+.cond-list li{display:flex;align-items:flex-start;gap:12px;font-family:var(--FB);font-size:14px;color:var(--sub);line-height:1.5}
+.cond-check{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#7b2fff,#ff3aac);display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;flex-shrink:0;margin-top:1px}
+.cond-media{position:relative;overflow:hidden}
+.cond-media img,.cond-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* ═══ ОТЗЫВЫ ═══ */
+.reviews-section{padding:70px 60px;text-align:center}
+.reviews-label{font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#e8008a;margin-bottom:10px}
+.reviews-title{font-family:var(--FD);font-size:clamp(32px,4vw,52px);font-weight:900;text-transform:uppercase;margin:0 0 48px;color:var(--fg)}
+.reviews-title em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:left}
+.review-card{background:var(--mid);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:12px}
+body.light .review-card{background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.review-top{display:flex;align-items:center;gap:14px}
+.review-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#7b2fff,#ff3aac);display:flex;align-items:center;justify-content:center;font-family:var(--FD);font-size:18px;font-weight:900;color:#fff;flex-shrink:0}
+.review-author{font-family:var(--FD);font-size:16px;font-weight:700;text-transform:uppercase;color:var(--fg)}
+.review-loc{font-family:var(--FB);font-size:12px;color:var(--sub)}
+.review-course{font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#e8008a}
+.review-stars{color:#e8008a;font-size:16px;letter-spacing:2px}
+.review-text{font-family:var(--FB);font-size:13px;color:var(--sub);line-height:1.6;font-style:italic}
+/* ═══ ВАРИАНТЫ КАРТОЧЕК ═══ */
+.variant-label{text-align:center;padding:40px 0 0;font-family:var(--FD);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.5;color:var(--fg)}
+.variant-divider{height:2px;margin:24px 60px 0;background:linear-gradient(90deg,transparent,rgba(255,58,172,.3),transparent)}
+/* V1 — Мозаика */
+.v1-section{padding:0 0 80px}
+.v1-label{text-align:center;font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#e8008a;padding:60px 0 8px}
+.v1-title{text-align:center;font-family:var(--FD);font-size:clamp(36px,5vw,60px);font-weight:900;text-transform:uppercase;margin:0 0 48px;color:var(--fg)}
+.v1-title em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.v1-row{display:grid;grid-template-columns:1fr 1fr;min-height:480px;overflow:hidden}
+.v1-img{position:relative;overflow:hidden}
+.v1-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.v1-text{display:flex;flex-direction:column;justify-content:center;padding:52px 60px;background:var(--bg)}
+body:not(.light) .v1-text{background:#0e0e1a}
+body.light .v1-text{background:#f5f4f0}
+.v1-badge{display:inline-block;font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#e8008a;margin-bottom:8px}
+.v1-badge.pop{background:linear-gradient(135deg,#7b2fff,#ff3aac);color:#fff;padding:4px 12px;border-radius:4px}
+.v1-name{font-family:var(--FD);font-size:38px;font-weight:900;text-transform:uppercase;line-height:1;margin:0 0 12px;color:var(--fg)}
+.v1-desc{font-family:var(--FB);font-size:14px;color:var(--sub);line-height:1.6;margin:0 0 20px;max-width:420px}
+.v1-list{list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:6px}
+.v1-list li{font-family:var(--FB);font-size:13px;color:var(--sub);padding-left:16px;position:relative}
+.v1-list li::before{content:'✦';position:absolute;left:0;color:#e8008a;font-size:9px;top:3px}
+.v1-footer{display:flex;align-items:center;gap:20px}
+.v1-price{font-family:var(--FD);font-size:40px;font-weight:900;color:var(--fg)}
+.v1-price span{font-size:13px;color:var(--sub);margin-left:4px}
+.v1-btns{display:flex;gap:10px}
+.v1-sep{height:3px;background:var(--grad);width:100%}
+/* V1 mobile */
+.v1-mob-btns{display:none}
+/* V2 — Карточки с фото */
+.v2-section{padding:0 60px 80px}
+.v2-label{text-align:center;font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#e8008a;padding:60px 0 8px}
+.v2-title{text-align:center;font-family:var(--FD);font-size:clamp(36px,5vw,60px);font-weight:900;text-transform:uppercase;margin:0 0 48px;color:var(--fg)}
+.v2-title em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.v2-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.v2-card{background:var(--mid);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;position:relative}
+body.light .v2-card{background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.07)}
+.v2-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.2)}
+.v2-pop-tag{position:absolute;top:16px;left:16px;background:linear-gradient(135deg,#7b2fff,#ff3aac);color:#fff;font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:6px;z-index:2}
+.v2-img{width:100%;height:200px;object-fit:cover;object-position:top;display:block}
+.v2-body{padding:22px;flex:1;display:flex;flex-direction:column}
+.v2-kicker{font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#e8008a;margin-bottom:6px}
+.v2-name{font-family:var(--FD);font-size:22px;font-weight:900;text-transform:uppercase;color:var(--fg);margin:0 0 10px}
+.v2-desc{font-family:var(--FB);font-size:13px;color:var(--sub);line-height:1.5;margin:0 0 14px}
+.v2-list{list-style:none;padding:0;margin:0 0 18px;display:flex;flex-direction:column;gap:5px}
+.v2-list li{display:flex;align-items:center;gap:8px;font-family:var(--FB);font-size:13px;color:var(--sub)}
+.v2-list li::before{content:'✦';color:#e8008a;font-size:9px;flex-shrink:0}
+.v2-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);margin-top:auto}
+body.light .v2-footer{border-top-color:#eee}
+.v2-price{font-family:var(--FD);font-size:28px;font-weight:900;color:var(--fg)}
+.v2-price span{font-size:12px;color:var(--sub);margin-left:2px}
+.v2-btns{display:flex;gap:8px}
+/* V2 mobile price box */
+.v2-list-wrap{display:contents}
+.v2-mob-bottom{display:none}
+@media(max-width:900px){
+  .perks-section{padding:50px 22px}
+  .perks-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .cond-section{grid-template-columns:1fr}
+  .cond-media{min-height:280px;position:relative}
+  .cond-text{padding:36px 22px}
+  .reviews-section{padding:50px 22px}
+  .reviews-grid{grid-template-columns:1fr;gap:16px}
+  .v1-row{grid-template-columns:1fr}
+  .v1-img{min-height:280px;position:relative;order:-1}
+  .v1-text{padding:32px 22px;order:1}
+  .v1-name{font-size:28px}
+  .v1-footer{display:none}
+  .v1-mob-btns{display:flex;gap:10px;margin-top:24px}
+  .v1-mob-btns .btn-p,.v1-mob-btns .btn-s{flex:1;text-align:center;padding:16px}
+  .v1-list-price-wrap{display:flex;align-items:center;gap:16px}
+  .v1-list{flex:1;margin-bottom:0}
+  .v1-price-mob{width:130px;height:130px;flex-shrink:0;border-radius:14px;background:linear-gradient(135deg,rgba(123,47,255,.1),rgba(255,58,172,.1));border:2px solid rgba(232,0,138,.3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+  body.light .v1-price-mob{background:#fff;border-color:rgba(232,0,138,.25);box-shadow:0 4px 16px rgba(123,47,255,.1)}
+  .v1-price-mob strong{font-family:var(--FD);font-size:32px;font-weight:900;color:var(--fg);line-height:1}
+  .v1-price-mob span{font-family:var(--FD);font-size:12px;font-weight:700;letter-spacing:.1em;color:#e8008a;text-transform:uppercase}
+  .v2-section{padding:0 16px 60px}
+  .v2-grid{grid-template-columns:1fr;gap:16px}
+  .v2-footer{display:none}
+  .v2-list-wrap{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+  .v2-list{margin-bottom:0 !important;flex:1}
+  .v2-price-box{width:130px;height:130px;flex-shrink:0;border-radius:14px;background:linear-gradient(135deg,rgba(123,47,255,.1),rgba(255,58,172,.1));border:2px solid rgba(232,0,138,.3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+  body.light .v2-price-box{background:#fff;border-color:rgba(232,0,138,.25);box-shadow:0 4px 16px rgba(123,47,255,.1)}
+  .v2-price-box strong{font-family:var(--FD);font-size:32px;font-weight:900;color:var(--fg);line-height:1}
+  .v2-price-box span{font-family:var(--FD);font-size:12px;font-weight:700;letter-spacing:.1em;color:#e8008a;text-transform:uppercase}
+  .v2-mob-bottom{display:flex;gap:10px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08)}
+  body.light .v2-mob-bottom{border-top-color:#eee}
+  .v2-mob-bottom .btn-p,.v2-mob-bottom .btn-s{flex:1;text-align:center;padding:14px}
+  body.light .v2-mob-bottom .btn-s{border-color:#7b2fff !important;color:#7b2fff !important}
 }
 
 /* School nav fix */
@@ -1429,45 +1595,96 @@ li.has-dropdown > button{background:none;border:none;color:var(--fg);cursor:poin
 .nav-school-link:hover{color:#e8008a}
 .nav-school-arrow{background:none;border:none;color:var(--fg);cursor:pointer;font-size:12px;padding:0 0 0 2px;line-height:1}
 
+/* ═══ COURSE CARDS (v3 — финальный стиль) ═══ */
+.cc-section{padding:0 0 80px}
+.cc-label{text-align:center;font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#e8008a;padding:60px 0 8px}
+.cc-title{text-align:center;font-family:var(--FD);font-size:clamp(36px,5vw,60px);font-weight:900;text-transform:uppercase;margin:0 0 48px;color:var(--fg)}
+.cc-title em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.cc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:0 60px}
+.cc-grid.two-col{grid-template-columns:repeat(2,1fr);max-width:860px;margin:0 auto;padding:0 60px}
+.cc-card{background:var(--mid);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;position:relative;transition:transform .3s,box-shadow .3s}
+body.light .cc-card{background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.07)}
+.cc-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.2)}
+.cc-pop-tag{position:absolute;top:16px;left:16px;background:linear-gradient(135deg,#7b2fff,#ff3aac);color:#fff;font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:6px;z-index:2}
+.cc-img{width:100%;height:200px;object-fit:cover;object-position:center top;display:block}
+.cc-body{padding:20px;flex:1;display:flex;flex-direction:column;gap:8px}
+.cc-kicker{font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#e8008a}
+.cc-name{font-family:var(--FD);font-size:22px;font-weight:900;text-transform:uppercase;color:var(--fg);margin:0}
+body.light .cc-name{color:#111}
+.cc-desc{font-family:var(--FB);font-size:12px;color:var(--sub);line-height:1.5;margin:0}
+.cc-list-price{display:flex;align-items:flex-start;gap:12px;margin-top:4px}
+.cc-list{list-style:none;padding:0;margin:0;flex:1;display:flex;flex-direction:column;gap:4px}
+.cc-list li{font-family:var(--FB);font-size:11px;color:var(--sub);padding-left:12px;position:relative;line-height:1.4}
+.cc-list li::before{content:'✦';position:absolute;left:0;color:#e8008a;font-size:7px;top:3px}
+body.light .cc-list li{color:#555}
+.cc-price-box{width:100px;height:100px;flex-shrink:0;border-radius:12px;background:linear-gradient(135deg,rgba(123,47,255,.1),rgba(255,58,172,.1));border:2px solid rgba(232,0,138,.25);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+body.light .cc-price-box{background:#fff;border-color:rgba(232,0,138,.3);box-shadow:0 4px 12px rgba(123,47,255,.1)}
+.cc-price-box strong{font-family:var(--FD);font-size:24px;font-weight:900;color:var(--fg);line-height:1}
+body.light .cc-price-box strong{color:#111}
+.cc-price-box span{font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.1em;color:#e8008a;text-transform:uppercase}
+.cc-btns{display:flex;flex-direction:row;gap:8px;margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,.08)}
+body.light .cc-btns{border-top-color:#eee}
+.cc-btns .btn-s{flex:1;text-align:center;padding:11px 8px;font-size:13px;border-color:#7b2fff;color:#7b2fff}
+body.light .cc-btns .btn-s{border-color:#7b2fff;color:#7b2fff}
+.cc-btns .btn-p{flex:1;text-align:center;padding:11px 8px;font-size:13px}
+@media(max-width:900px){
+  .cc-grid,.cc-grid.two-col{grid-template-columns:1fr !important;padding:0 4px}
+  .cc-img{height:56vw}
+  .cc-name{font-size:18px}
+  .cc-disc-sep{margin:20px 18px 0}
+  .cc-disc-label{margin-bottom:20px}
+}
+
 /* ─── T3: Hero buttons side-by-side on mobile ─── */
 @media(max-width:900px){
   .hero-btns{flex-wrap:nowrap !important;gap:8px !important}
   .hero-btns a,.hero-btns .btn-p,.hero-btns .btn-s{flex:1;text-align:center;padding:14px 8px !important;font-size:14px !important;min-width:0}
 }
+
+/* ─── T4-6: cc-card mobile: no side padding, larger fonts, buttons in row ─── */
+@media(max-width:900px){
+  .cc-btns{flex-direction:row !important;flex-wrap:nowrap !important;gap:6px}
+  .cc-btns .btn-s,.cc-btns .btn-p{flex:1 !important;text-align:center !important;padding:12px 6px !important;font-size:13px !important;min-width:0}
+  .cc-body{padding:22px 18px}
+  .cc-name{font-size:22px !important}
+  .cc-price-box{width:110px;height:110px}
+  .cc-price-box strong{font-size:28px}
+}
 </style>
-<div class="announce"><span>🏄 High Season Jan–Apr — Best Kite Conditions on Koh Phangan!</span> <a href="../../../contacts/">Book via WhatsApp →</a></div>
+
+<div class="announce"><span>🏄 High Season Jan–Apr — Best Kite Conditions on Koh Phangan!</span> <a href="../../contacts/">Book via WhatsApp →</a></div>
 <nav role="navigation" aria-label="Main navigation">
-  <div class="nav-logo" style="cursor:pointer" onclick="location.href='../../../'" >
+  <div class="nav-logo" style="cursor:pointer" onclick="location.href='../../'" >
     <div class="nav-logo-circle" style="background:none;padding:0;overflow:hidden">
-      <img src="../../../assets/logo.jpg" alt="Kite Club" style="width:100%;height:100%;object-fit:cover;border-radius:50%" onerror="this.parentElement.style.background='linear-gradient(135deg,#7b2fff,#e8008a)';this.parentElement.innerHTML='KC'">
+      <img src="../../assets/logo.jpg" alt="Kite Club" style="width:100%;height:100%;object-fit:cover;border-radius:50%" onerror="this.parentElement.style.background='linear-gradient(135deg,#7b2fff,#e8008a)';this.parentElement.innerHTML='KC'">
     </div>
     <div class="nav-logo-text">Kite Club <span>Koh Phangan</span></div>
   </div>
   <ul class="nav-links">
-    <li><a href="../../../">Home</a></li>
-    <li><a href="../../../school/" style="color:var(--off);font-family:var(--FD);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:color .2s;padding:0 14px;height:64px;display:flex;align-items:center">School ▾</a><div class="dropdown">
-      <a href="../../../kitesurfing/lessons/">Kitesurf Lessons</a>
-      <a href="../../../wing-foil/lessons/">Wing Foil Lessons</a>
-      <a href="../../../windsurfing/lessons/">Windsurf Lessons</a>
-      <a href="../../../efoil/lessons/">E-Foil Sessions</a>
-      <a href="../../../courses/" style="border-top:1px solid var(--border2);margin-top:4px;padding-top:8px;opacity:.7">All Courses →</a>
+    <li><a href="../../">Home</a></li>
+    <li><a href="../../school/" style="color:var(--off);font-family:var(--FD);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:color .2s;padding:0 14px;height:64px;display:flex;align-items:center">School ▾</a><div class="dropdown">
+      <a href="../../kitesurfing/lessons/">Kitesurf Lessons</a>
+      <a href="../../wing-foil/lessons/">Wing Foil Lessons</a>
+      <a href="../../windsurfing/lessons/">Windsurf Lessons</a>
+      <a href="../../efoil/lessons/">E-Foil Sessions</a>
+      <a href="../../courses/" style="border-top:1px solid var(--border2);margin-top:4px;padding-top:8px;opacity:.7">All Courses →</a>
     </div></li>
-    <li><a href="../../../rental/">Rental</a></li>
+    <li><a href="../../rental/">Rental</a></li>
     <li><button>Activities ▾</button><div class="dropdown">
-      <a href="../../../kitesurfing/">Kitesurfing</a>
-      <a href="../../../wing-foil/">Wing Foil</a>
-      <a href="../../../windsurfing/">Windsurfing</a>
-      <a href="../../../efoil/">E-Foil</a>
-      <a href="../../../kayaking/">Kayaking</a>
-      <a href="../../../sup-rental/">SUP Rental</a>
-      <a href="../../../kite-safari/">Kite Safari</a>
+      <a href="../../kitesurfing/">Kitesurfing</a>
+      <a href="../../wing-foil/">Wing Foil</a>
+      <a href="../../windsurfing/">Windsurfing</a>
+      <a href="../../efoil/">E-Foil</a>
+      <a href="../../kayaking/">Kayaking</a>
+      <a href="../../sup-rental/">SUP Rental</a>
+      <a href="../../kite-safari/">Kite Safari</a>
     </div></li>
-    <li><a href="../../../shop/">Shop</a></li>
-    <li><a href="../../../storage/">Storage</a></li>
-    <li><a href="../../../locations/">Locations</a></li>
-    <li><a href="../../../blog/">Blog</a></li>
-    <li><a href="../../../about/">About Us</a></li>
-    <li><a href="../../../contacts/">Contacts</a></li>
+    <li><a href="../../shop/">Shop</a></li>
+    <li><a href="../../storage/">Storage</a></li>
+    <li><a href="../../locations/">Locations</a></li>
+    <li><a href="../../blog/">Blog</a></li>
+    <li><a href="../../about/">About Us</a></li>
+    <li><a href="../../contacts/">Contacts</a></li>
   </ul>
   <div class="nav-actions">
     <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
@@ -1480,114 +1697,145 @@ li.has-dropdown > button{background:none;border:none;color:var(--fg);cursor:poin
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-close" onclick="closeMobile()">✕</button>
-  <a href="../../../" onclick="closeMobile()">Home</a>
+  <a href="../../" onclick="closeMobile()">Home</a>
   <button onclick="toggleSub('sub1')">School ▾</button>
   <div class="mobile-submenu" id="sub1">
-    <a href="../../../school/">All School Info</a>
-    <a href="../../../kitesurfing/lessons/" onclick="closeMobile()">Kitesurf Lessons</a>
-    <a href="../../../wing-foil/lessons/" onclick="closeMobile()">Wing Foil Lessons</a>
-    <a href="../../../windsurfing/lessons/" onclick="closeMobile()">Windsurf Lessons</a>
-    <a href="../../../efoil/lessons/" onclick="closeMobile()">E-Foil Sessions</a>
-    <a href="../../../courses/" onclick="closeMobile()" style="opacity:.7">All Courses →</a>
+    <a href="../../school/">All School Info</a>
+    <a href="../../kitesurfing/lessons/" onclick="closeMobile()">Kitesurf Lessons</a>
+    <a href="../../wing-foil/lessons/" onclick="closeMobile()">Wing Foil Lessons</a>
+    <a href="../../windsurfing/lessons/" onclick="closeMobile()">Windsurf Lessons</a>
+    <a href="../../efoil/lessons/" onclick="closeMobile()">E-Foil Sessions</a>
+    <a href="../../courses/" onclick="closeMobile()" style="opacity:.7">All Courses →</a>
   </div>
-  <a href="../../../rental/" onclick="closeMobile()">Rental</a>
+  <a href="../../rental/" onclick="closeMobile()">Rental</a>
   <button onclick="toggleSub('sub2')">Activities ▾</button>
   <div class="mobile-submenu" id="sub2">
-    <a href="../../../kitesurfing/" onclick="closeMobile()">Kitesurfing</a>
-    <a href="../../../wing-foil/" onclick="closeMobile()">Wing Foil</a>
-    <a href="../../../windsurfing/" onclick="closeMobile()">Windsurfing</a>
-    <a href="../../../efoil/" onclick="closeMobile()">E-Foil</a>
-    <a href="../../../kayaking/" onclick="closeMobile()">Kayaking</a>
-    <a href="../../../sup-rental/" onclick="closeMobile()">SUP Rental</a>
-    <a href="../../../kite-safari/" onclick="closeMobile()">Kite Safari</a>
+    <a href="../../kitesurfing/" onclick="closeMobile()">Kitesurfing</a>
+    <a href="../../wing-foil/" onclick="closeMobile()">Wing Foil</a>
+    <a href="../../windsurfing/" onclick="closeMobile()">Windsurfing</a>
+    <a href="../../efoil/" onclick="closeMobile()">E-Foil</a>
+    <a href="../../kayaking/" onclick="closeMobile()">Kayaking</a>
+    <a href="../../sup-rental/" onclick="closeMobile()">SUP Rental</a>
+    <a href="../../kite-safari/" onclick="closeMobile()">Kite Safari</a>
   </div>
-  <a href="../../../shop/" onclick="closeMobile()">Shop</a>
-  <a href="../../../storage/" onclick="closeMobile()">Storage</a>
-  <a href="../../../locations/" onclick="closeMobile()">Locations</a>
-  <a href="../../../blog/" onclick="closeMobile()">Blog</a>
-  <a href="../../../about/" onclick="closeMobile()">About Us</a>
-  <a href="../../../contacts/" onclick="closeMobile()">Contacts</a>
+  <a href="../../shop/" onclick="closeMobile()">Shop</a>
+  <a href="../../storage/" onclick="closeMobile()">Storage</a>
+  <a href="../../locations/" onclick="closeMobile()">Locations</a>
+  <a href="../../blog/" onclick="closeMobile()">Blog</a>
+  <a href="../../about/" onclick="closeMobile()">About Us</a>
+  <a href="../../contacts/" onclick="closeMobile()">Contacts</a>
   <a href="https://wa.me/66967203910" target="_blank" class="btn-nav" style="text-align:center;margin-top:20px">Book Now</a>
 </div>
+
 
 <main id="page-content">
 
   <div class="page-hero">
-    <div class="page-hero-bg page-hero-bg-video">
-      <video class="page-hero-video page-hero-video-desktop" autoplay muted loop playsinline preload="auto">
-        <source src="../../../assets/kitesurf-desktop.mp4" type="video/mp4">
-      </video>
-      <video class="page-hero-video page-hero-video-mobile" autoplay muted loop playsinline preload="auto">
-        <source src="../../../assets/kitesurf-mobile.mp4" type="video/mp4">
-      </video>
+    <div class="page-hero-bg" style="background:url('../../assets/windsurfing.jpg') center/cover no-repeat">
+      <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,13,26,.45) 0%,rgba(13,13,26,.75) 100%)"></div>
     </div>
     <div class="page-hero-content fu">
-      <div class="eyebrow">Kitesurfing · Pro Coaching</div>
-      <h1>Pro<br><em>Lesson</em></h1>
-      <p>Progress faster with jumps, transitions, upwind riding and advanced coaching.</p>
+      <div class="eyebrow">Windsurfing · Equipment Rental</div>
+      <h1>Windsurf<br><em>Rental</em></h1>
       <div class="hero-btns">
-        <a href="https://wa.me/66967203910" target="_blank" class="btn-p">Book Now</a>
-        <a href="../" class="btn-s">Back to Courses</a>
+        <a href="../" class="btn-s">Back to Windsurfing</a>
+        <a href="https://wa.me/66967203910" target="_blank" class="btn-p">Book via WhatsApp</a>
       </div>
     </div>
   </div>
 
-  <div class="lesson-grid fu">
-    <div class="lesson-copy">
-      <h2>Take your riding to the next level</h2>
-      <p>Private advanced coaching focused on your specific goals — whether that is jumping higher, landing transitions, riding toeside or improving upwind technique. Your instructor analyses your riding and gives targeted feedback.</p>
-      <h3>What you will learn</h3>
-      <ul><li>2h private coaching</li><li>Jump technique</li><li>Transitions and direction changes</li><li>Upwind riding efficiency</li><li>Toeside riding</li><li>Video-style analysis and feedback</li></ul>
-      <a class="btn-s" href="../../../contacts/" style="color:var(--pink);border-color:var(--pink)">Ask a Question</a>
+  <section class="about-band fu">
+    <div class="about-txt" style="padding:60px">
+      <div class="about-label">Windsurfing · Equipment Rental</div>
+      <h2>Rent Windsurf<br><em>Equipment</em></h2>
+      <p>Kite Club Koh Phangan offers windsurfing equipment rental for riders who want to hit the water on their own. We have a range of boards and sails to match all wind conditions on the lagoon.</p><p>All gear is IKO-certified and regularly serviced. Contact us via WhatsApp to check availability and rent by the session or the day.</p>
+      <a href="https://wa.me/66967203910" target="_blank" class="btn-p" style="margin-top:24px;align-self:flex-start">Ask via WhatsApp</a>
     </div>
-    <div class="lesson-media">
-      <div class="lesson-img" style="background-image:url('../../../assets/live-kitesurfing.jpg')"></div>
-      <div class="lesson-price-card fu">
-        <h3>Price</h3>
-        <div class="price-big">4,000</div>
-        <div class="price-cur">THB per course</div>
-        <p>Private 2-hour advanced coaching session. Focused on your specific technique goals.</p>
-        <div class="course-actions">
-          <a class="btn-p" href="https://wa.me/66967203910">Book Now</a>
-          <a class="btn-s" href="../">Back to Courses</a>
+  </section>
+
+
+  <div class="fu" style="padding:0 60px 70px">
+    <div class="rg-block">
+      <div class="rg-header">
+        <div class="rg-icon">🌊</div>
+        <div>
+          <div class="rg-label">Rental Prices</div>
+          <h2 class="rg-title">Windsurfing Rental</h2>
+        </div>
+        <a href="https://wa.me/66967203910" target="_blank" class="btn-o rg-book">Book</a>
+      </div>
+      <div class="rg-cards">
+        <div class="rfl">
+          <div class="rfl-left">
+            <div class="rfl-name">1 Hour</div>
+            <div class="rfl-note">Full set — sail + board + harness</div>
+          </div>
+          <div class="rfl-prices">
+            <div class="rfl-price-item">
+              <div class="rfl-amount">800</div>
+              <div class="rfl-unit">THB</div>
+            </div>
+          </div>
+        </div>
+        <div class="rfl">
+          <div class="rfl-left">
+            <div class="rfl-name">2 Hours</div>
+            <div class="rfl-note">Full set — sail + board + harness</div>
+          </div>
+          <div class="rfl-prices">
+            <div class="rfl-price-item">
+              <div class="rfl-amount">1,400</div>
+              <div class="rfl-unit">THB</div>
+            </div>
+          </div>
+        </div>
+        <div class="rfl">
+          <div class="rfl-left">
+            <div class="rfl-name">Half Day</div>
+            <div class="rfl-note">Best value · up to 4 hours</div>
+          </div>
+          <div class="rfl-prices">
+            <div class="rfl-price-item">
+              <div class="rfl-amount">1,800</div>
+              <div class="rfl-unit">THB</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="lesson-faq fu">
-    <h2>FAQ</h2>
-    <div class="faq-wrap"><div class="fq"><button class="fq-q">What level do I need for a Pro Lesson?</button><div class="fq-a"><p>You should already be riding independently upwind. This lesson is for riders who want to improve technique and learn tricks.</p></div></div><div class="fq"><button class="fq-q">Can I request specific skills to work on?</button><div class="fq-a"><p>Yes. Tell us your goals when booking and we assign the most suitable instructor for your style.</p></div></div></div>
-  </div>
-  <div class="cta-band fu"><div class="cta-inner"><h2>Ready to <em>Start?</em></h2><p>Book via WhatsApp — we reply within 30 minutes and confirm your lesson.</p><div class="cta-btns"><a href="https://wa.me/66967203910" class="btn-s">Ask a Question</a><a href="https://wa.me/66967203910" class="btn-p">Book on WhatsApp</a></div></div></div>
+
+  <div class="cta-band fu"><div class="cta-inner"><h2>Ready to <em>Sail?</em></h2><p>Message us on WhatsApp to check windsurfing gear availability.</p><div class="cta-btns"><a href="https://wa.me/66967203910" class="btn-s">Ask a Question</a><a href="https://wa.me/66967203910" class="btn-p">Book on WhatsApp</a></div></div></div>
 
 </main>
+
 <footer id="site-footer" role="contentinfo">
   <div class="footer-top">
     <div class="fb-brand"><h3>Kite Club</h3><span class="since">Koh Phangan · Since 2021</span>
     <p>Top-rated kitesurfing and wing foil school on Koh Phangan. IKO &amp; IWO certified.</p></div>
     <div class="fc"><h4>School</h4><ul>
-      <li><a href="../../../../kitesurfing/lessons/">Kitesurfing</a></li>
-      <li><a href="../../../../wing-foil/lessons/">Wing Foil</a></li>
-      <li><a href="../../../../windsurfing/lessons/">Windsurfing</a></li>
-      <li><a href="../../../../efoil/lessons/">E-Foil</a></li>
-      <li><a href="../../../../courses/">All Courses →</a></li>
+      <li><a href="../../kitesurfing/lessons/">Kitesurfing</a></li>
+      <li><a href="../../wing-foil/lessons/">Wing Foil</a></li>
+      <li><a href="../../windsurfing/lessons/">Windsurfing</a></li>
+      <li><a href="../../efoil/lessons/">E-Foil</a></li>
+      <li><a href="../../courses/">All Courses →</a></li>
     </ul></div>
     <div class="fc"><h4>Activities</h4><ul>
-      <li><a href="../../../../kitesurfing/">Kitesurfing</a></li>
-      <li><a href="../../../../wing-foil/">Wing Foil</a></li>
-      <li><a href="../../../../efoil/">E-Foil</a></li>
-      <li><a href="../../../../windsurfing/">Windsurfing</a></li>
-      <li><a href="../../../../kayaking/">Kayaking</a></li>
-      <li><a href="../../../../sup-rental/">SUP Rental</a></li>
-      <li><a href="../../../../kite-safari/">Kite Safari</a></li>
+      <li><a href="../../kitesurfing/">Kitesurfing</a></li>
+      <li><a href="../../wing-foil/">Wing Foil</a></li>
+      <li><a href="../../efoil/">E-Foil</a></li>
+      <li><a href="../../windsurfing/">Windsurfing</a></li>
+      <li><a href="../../kayaking/">Kayaking</a></li>
+      <li><a href="../../sup-rental/">SUP Rental</a></li>
+      <li><a href="../../kite-safari/">Kite Safari</a></li>
     </ul></div>
     <div class="fc"><h4>Info</h4><ul>
-      <li><a href="../../../../rental/">Rental</a></li>
-      <li><a href="../../../../storage/">Storage</a></li>
-      <li><a href="../../../../locations/">Locations</a></li>
-      <li><a href="../../../../blog/">Blog</a></li>
-    <li><a href="../../../../about/">About Us</a></li>
-      <li><a href="../../../../contacts/">Contacts</a></li>
+      <li><a href="../../rental/">Rental</a></li>
+      <li><a href="../../storage/">Storage</a></li>
+      <li><a href="../../locations/">Locations</a></li>
+      <li><a href="../../blog/">Blog</a></li>
+    <li><a href="../../about/">About Us</a></li>
+      <li><a href="../../contacts/">Contacts</a></li>
     </ul></div>
   </div>
   <div class="footer-bot">
@@ -1598,55 +1846,34 @@ li.has-dropdown > button{background:none;border:none;color:var(--fg);cursor:poin
 <a href="https://wa.me/66967203910" target="_blank" class="wa">💬</a>
 <script>
 function toggleTheme(){const l=document.body.classList.toggle('light');localStorage.setItem('theme',l?'light':'dark');}
-(function(){if(localStorage.getItem('theme')!=='dark')document.body.classList.add('light');})();
 function openMobile(){document.getElementById('mobileMenu').classList.add('open');}
 function closeMobile(){document.getElementById('mobileMenu').classList.remove('open');}
-function toggleSub(id){document.getElementById(id).classList.toggle('open');}
-document.addEventListener('click',function(e){
-  const btn=e.target.classList.contains('fq-q')?e.target:e.target.closest('.fq-q');
-  if(!btn)return;const ans=btn.nextElementSibling;const isOpen=btn.classList.contains('open');
-  document.querySelectorAll('.fq-q.open').forEach(b=>{b.classList.remove('open');b.nextElementSibling.classList.remove('open');});
-  if(!isOpen){btn.classList.add('open');ans.classList.add('open');}
-});
-
-function toggleSEOBlock(el){const box=document.getElementById('seoExpandable');const btn=el.querySelector('span');const open=el.getAttribute('aria-expanded')==='true';if(open){box.style.display='none';btn.textContent='Show more ▾';el.setAttribute('aria-expanded','false');}else{box.style.display='block';btn.textContent='Hide ▴';el.setAttribute('aria-expanded','true');}}
-// Shop
-let shopItems=[{id:1,name:'Kites',badge:'ALL SIZES',catLabel:'CATEGORY 01',desc:'Performance kites 7m-17m. Best brands.',emoji:'🪁',img:''},{id:2,name:'Bars & Lines',badge:'ALL SIZES',catLabel:'CATEGORY 02',desc:'Control bars 4-line & 5-line systems.',emoji:'🎣',img:''},{id:3,name:'Boards',badge:'NEW',catLabel:'CATEGORY 03',desc:'Twintips, surfboards, foilboards.',emoji:'🏄',img:''},{id:4,name:'Accessories',badge:'COMPLETE KIT',catLabel:'CATEGORY 04',desc:'Harnesses, wetsuits, helmets, bags.',emoji:'🎒',img:''},{id:5,name:'Kite Duotone',badge:'BEST SELLER',catLabel:'KITE',desc:'12m race kite for advanced riders.',emoji:'💨',img:''},{id:6,name:'Wing Foil Set',badge:'NEW',catLabel:'WING FOIL',desc:'Complete wing foil setup. Ready to ride.',emoji:'🌊',img:''}];
-let editingId=null;
-function renderShop(id,limit){const el=document.getElementById(id);if(!el)return;const items=limit?shopItems.slice(0,limit):shopItems;el.innerHTML=items.map(item=>`<div class="shop-cat"><div class="shop-cat-badge">${item.badge}</div><div class="shop-cat-img">${item.img?`<img src="${item.img}" alt="${item.name}">`:''}<span class="emoji-fallback">${item.emoji}</span></div><div class="shop-cat-body"><div class="shop-cat-tag">${item.catLabel}</div><h3>${item.name}</h3><p>${item.desc}</p><div style="display:flex;gap:8px;margin-top:8px"><a href="contacts/" class="btn-o" style="flex:1">Enquire</a><button class="edit-btn" onclick="openEdit(${item.id})">✎ Edit</button></div></div></div>`).join('');initDrag(id);}
-function initDrag(id){const el=document.getElementById(id);if(!el)return;let d=false,sx,sl;el.addEventListener('mousedown',e=>{d=true;el.classList.add('drag');sx=e.pageX-el.offsetLeft;sl=el.scrollLeft;});['mouseleave','mouseup'].forEach(ev=>el.addEventListener(ev,()=>{d=false;el.classList.remove('drag');}));el.addEventListener('mousemove',e=>{if(!d)return;e.preventDefault();el.scrollLeft=sl-(e.pageX-el.offsetLeft-sx)*1.2;});}
-function openEdit(id){editingId=id;const item=shopItems.find(i=>i.id===id);if(!item)return;document.getElementById('edit-name').value=item.name;document.getElementById('edit-badge').value=item.badge;document.getElementById('edit-cat-label').value=item.catLabel;document.getElementById('edit-desc').value=item.desc;document.getElementById('edit-img').value=item.img||'';document.getElementById('editModal').classList.add('open');}
-function closeModal(){document.getElementById('editModal').classList.remove('open');editingId=null;}
-function saveModal(){if(editingId===null)return;const item=shopItems.find(i=>i.id===editingId);if(!item)return;item.name=document.getElementById('edit-name').value||item.name;item.badge=document.getElementById('edit-badge').value||item.badge;item.catLabel=document.getElementById('edit-cat-label').value||item.catLabel;item.desc=document.getElementById('edit-desc').value||item.desc;item.img=document.getElementById('edit-img').value||'';closeModal();['homeShopTrack','shopMainTrack'].forEach(id=>{const el=document.getElementById(id);if(el)renderShop(id,id==='homeShopTrack'?4:null);});}
-function addShopItem(){const id=Math.max(...shopItems.map(i=>i.id))+1;shopItems.push({id,name:'New Product',badge:'NEW',catLabel:'CATEGORY',desc:'Description.',emoji:'📦',img:''});const el=document.getElementById('shopMainTrack');if(el)renderShop('shopMainTrack',null);openEdit(id);}
-['homeShopTrack','shopMainTrack'].forEach(id=>{const el=document.getElementById(id);if(el)renderShop(id,id==='homeShopTrack'?4:null);});
-</script>
-
-<script>
-(function(){
-  // Ensure all .fu elements are visible
-  document.querySelectorAll('.fu').forEach(function(el){
-    el.classList.add('vis');
-  });
-  // Also handle any lazy-loaded content
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting) e.target.classList.add('vis');
-    });
-  },{threshold:0.05});
-  document.querySelectorAll('.fu').forEach(function(el){ io.observe(el); });
-})();
-
-// Course accordion
-document.querySelectorAll('.course-item').forEach(function(item){
-  var btn = item.querySelector('.course-toggle');
+function toggleSub(id){var el=document.getElementById(id);if(el)el.classList.toggle('open');}
+(function(){if(localStorage.getItem('theme')!=='dark')document.body.classList.add('light');})();
+  // Discipline accordion
+document.querySelectorAll('.discipline-course-group').forEach(function(g){
+  var btn=g.querySelector('.discipline-course-toggle');
   if(btn){btn.addEventListener('click',function(){
-    document.querySelectorAll('.course-item.open').forEach(function(o){if(o!==item)o.classList.remove('open');});
-    item.classList.toggle('open');
+    document.querySelectorAll('.discipline-course-group.open').forEach(function(o){if(o!==g)o.classList.remove('open');});
+    g.classList.toggle('open');
   });}
 });
-
-
+// Course accordion
+document.querySelectorAll('.course-toggle').forEach(function(btn){
+  btn.style.pointerEvents='auto';
+  btn.style.cursor='pointer';
+  btn.style.position='relative';
+  btn.style.zIndex='2';
+  btn.onclick=function(e){
+    e.stopPropagation();
+    var item=btn.closest('.course-item');
+    if(!item)return;
+    var isOpen=item.classList.contains('open');
+    document.querySelectorAll('.course-item.open').forEach(function(o){o.classList.remove('open');});
+    if(!isOpen)item.classList.add('open');
+  };
+});
+document.addEventListener('click',function(e){const btn=e.target.classList.contains('fq-q')?e.target:e.target.closest('.fq-q');if(!btn)return;const ans=btn.nextElementSibling;const isOpen=btn.classList.contains('open');document.querySelectorAll('.fq-q.open').forEach(b=>{b.classList.remove('open');b.nextElementSibling.classList.remove('open');});if(!isOpen){btn.classList.add('open');ans.classList.add('open');}});
 </script>
 </body>
 </html>

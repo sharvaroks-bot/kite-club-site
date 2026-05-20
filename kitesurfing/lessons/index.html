@@ -1628,11 +1628,27 @@ body.light .cc-btns{border-top-color:#eee}
 body.light .cc-btns .btn-s{border-color:#7b2fff;color:#7b2fff}
 .cc-btns .btn-p{flex:1;text-align:center;padding:11px 8px;font-size:13px}
 @media(max-width:900px){
-  .cc-grid,.cc-grid.two-col{grid-template-columns:1fr !important;padding:0 18px}
+  .cc-grid,.cc-grid.two-col{grid-template-columns:1fr !important;padding:0 4px}
   .cc-img{height:56vw}
   .cc-name{font-size:18px}
   .cc-disc-sep{margin:20px 18px 0}
   .cc-disc-label{margin-bottom:20px}
+}
+
+/* ─── T3: Hero buttons side-by-side on mobile ─── */
+@media(max-width:900px){
+  .hero-btns{flex-wrap:nowrap !important;gap:8px !important}
+  .hero-btns a,.hero-btns .btn-p,.hero-btns .btn-s{flex:1;text-align:center;padding:14px 8px !important;font-size:14px !important;min-width:0}
+}
+
+/* ─── T4-6: cc-card mobile: no side padding, larger fonts, buttons in row ─── */
+@media(max-width:900px){
+  .cc-btns{flex-direction:row !important;flex-wrap:nowrap !important;gap:6px}
+  .cc-btns .btn-s,.cc-btns .btn-p{flex:1 !important;text-align:center !important;padding:12px 6px !important;font-size:13px !important;min-width:0}
+  .cc-body{padding:22px 18px}
+  .cc-name{font-size:22px !important}
+  .cc-price-box{width:110px;height:110px}
+  .cc-price-box strong{font-size:28px}
 }
 </style>
 <div class="announce"><span>🏄 High Season Jan–Apr — Best Kite Conditions on Koh Phangan!</span> <a href="../../contacts/">Book via WhatsApp →</a></div>
@@ -1726,8 +1742,8 @@ body.light .cc-btns .btn-s{border-color:#7b2fff;color:#7b2fff}
       <h1>Kitesurfing<br><em>Lessons</em></h1>
       <p>Learn kitesurfing on Koh Phangan with IKO certified instructors, flat water and radio helmet coaching.</p>
       <div class="hero-btns">
-        <a href="https://wa.me/66967203910" target="_blank" class="btn-p">Book via WhatsApp</a>
         <a href="../../kitesurfing/" class="btn-s">About Kitesurfing</a>
+        <a href="https://wa.me/66967203910" target="_blank" class="btn-p">Book via WhatsApp</a>
       </div>
     </div>
   </div>
@@ -1897,7 +1913,7 @@ body.light .cc-btns .btn-s{border-color:#7b2fff;color:#7b2fff}
       <div class="review-card"><div class="review-top"><div class="review-avatar">I</div><div><div class="review-author">Igor K.</div><div class="review-loc">🇷🇺 Russia</div></div></div><div class="review-course">Independent Rider Course</div><div class="review-stars">★★★★★</div><p class="review-text">"Best kite school on the island. Equipment is brand new Duotone 2024. After 5 days I'm riding upwind confidently. Kite Club Koh Phangan is the best kite school in Thailand."</p></div>
     </div>
   </section>
-  <div class="cta-band fu"><div class="cta-inner"><h2>Book Your<br><em>Kitesurf Course</em></h2><p>WhatsApp us to book. We reply within 30 minutes.</p><div class="cta-btns"><a href="https://wa.me/66967203910" class="btn-p">Book on WhatsApp</a><a href="../../contacts/" class="btn-s">Ask a Question</a></div></div></div>
+  <div class="cta-band fu"><div class="cta-inner"><h2>Book Your<br><em>Kitesurf Course</em></h2><p>WhatsApp us to book. We reply within 30 minutes.</p><div class="cta-btns"><a href="https://wa.me/66967203910" class="btn-s">Ask a Question</a><a href="https://wa.me/66967203910" class="btn-p">Book on WhatsApp</a></div></div></div>
 
 </main>
 <footer id="site-footer" role="contentinfo">

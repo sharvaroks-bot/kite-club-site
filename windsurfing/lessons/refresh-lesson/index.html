@@ -1428,6 +1428,12 @@ li.has-dropdown > button{background:none;border:none;color:var(--fg);cursor:poin
 .nav-school-link{font-family:var(--FD);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--fg);padding:6px 0;transition:color .2s;white-space:nowrap}
 .nav-school-link:hover{color:#e8008a}
 .nav-school-arrow{background:none;border:none;color:var(--fg);cursor:pointer;font-size:12px;padding:0 0 0 2px;line-height:1}
+
+/* ─── T3: Hero buttons side-by-side on mobile ─── */
+@media(max-width:900px){
+  .hero-btns{flex-wrap:nowrap !important;gap:8px !important}
+  .hero-btns a,.hero-btns .btn-p,.hero-btns .btn-s{flex:1;text-align:center;padding:14px 8px !important;font-size:14px !important;min-width:0}
+}
 </style>
 <div class="announce"><span>🏄 High Season Jan–Apr — Best Kite Conditions on Koh Phangan!</span> <a href="../../../contacts/">Book via WhatsApp →</a></div>
 <nav role="navigation" aria-label="Main navigation">
@@ -1552,7 +1558,7 @@ li.has-dropdown > button{background:none;border:none;color:var(--fg);cursor:poin
     <h2>FAQ</h2>
     <div class="faq-wrap"><div class="fq"><button class="fq-q">How long does the refresh take?</button><div class="fq-a"><p>Approximately 2 hours. We focus on what you need most.</p></div></div><div class="fq"><button class="fq-q">Do I need a refresh if I was good before?</button><div class="fq-a"><p>If you have not windsurfed for over a year we recommend at least one session to get back your feel safely.</p></div></div></div>
   </div>
-  <div class="cta-band fu"><div class="cta-inner"><h2>Ready to <em>Start?</em></h2><p>Book via WhatsApp — we reply within 30 minutes and confirm your lesson.</p><div class="cta-btns"><a href="https://wa.me/66967203910" class="btn-p">Book on WhatsApp</a><a href="../../../contacts/" class="btn-s">Ask a Question</a></div></div></div>
+  <div class="cta-band fu"><div class="cta-inner"><h2>Ready to <em>Start?</em></h2><p>Book via WhatsApp — we reply within 30 minutes and confirm your lesson.</p><div class="cta-btns"><a href="https://wa.me/66967203910" class="btn-s">Ask a Question</a><a href="https://wa.me/66967203910" class="btn-p">Book on WhatsApp</a></div></div></div>
 
 </main>
 <footer id="site-footer" role="contentinfo">

@@ -1807,6 +1807,33 @@ body.light #seoExpandable p,body.light #seoExpandable li,body.light #seoExpandab
 
 /* Force all fu elements visible */
 .fu{opacity:1 !important;transform:translateY(0) !important;}
+
+/* ─── T3: Hero buttons side-by-side on mobile ─── */
+@media(max-width:900px){
+  .hero-btns{flex-wrap:nowrap !important;gap:8px !important}
+  .hero-btns a,.hero-btns .btn-p,.hero-btns .btn-s{flex:1;text-align:center;padding:14px 8px !important;font-size:14px !important;min-width:0}
+}
+
+/* ─── Discipline explore section: desktop cats / mobile cards ─── */
+.disc-cats-desktop{display:block}
+.disc-cats-mobile{display:none}
+.disc-4col{grid-template-columns:repeat(4,1fr) !important}
+.disc-3col{grid-template-columns:repeat(3,1fr) !important}
+@media(max-width:900px){
+  .disc-cats-desktop{display:none}
+  .disc-cats-mobile{display:block}
+}
+
+/* ─── Mobile discipline cards ─── */
+.mob-disc-list{display:flex;flex-direction:column;gap:12px;padding:0 0 40px}
+.mob-disc-card{position:relative;overflow:hidden;display:block;width:100%;aspect-ratio:4/3;text-decoration:none;cursor:pointer;border-radius:12px}
+.mob-disc-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.mob-disc-ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:24px 22px;background:linear-gradient(to top,rgba(0,0,0,.8) 0%,rgba(0,0,0,.2) 55%,transparent 100%)}
+.mob-disc-tag{font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#e8008a;margin-bottom:8px}
+.mob-disc-card h3{font-family:var(--FD);font-weight:900;font-size:38px;text-transform:uppercase;line-height:.95;margin:0 0 12px;color:#fff}
+.mob-disc-lnk{font-family:var(--FD);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+a.course-price-row{text-decoration:none}
+a.course-price-row:hover strong{color:var(--pink) !important}
 </style>
 </head>
 <body>
@@ -1914,6 +1941,56 @@ body.light #seoExpandable p,body.light #seoExpandable li,body.light #seoExpandab
     </div>
   </section>
 
+  <!-- ═══ EXPLORE E-FOIL ═══ -->
+  <div class="disc-cats-desktop fu">
+    <div class="sh"><h2>Explore<br><em class="gt">E-Foil</em></h2></div>
+    <div class="cats disc-3col">
+    <a href="lessons/" class="cat-card" style="aspect-ratio:4/5;text-decoration:none">
+      <img src="../assets/efoil.jpg" alt="E-Foil Sessions" loading="lazy">
+      <div class="cat-ov">
+        <div class="cat-tag">Lessons</div>
+        <h3>Lessons</h3>
+        <span class="cat-lnk">Explore</span>
+      </div>
+    </a>
+    <a href="rental/" class="cat-card" style="aspect-ratio:4/5;text-decoration:none">
+      <img src="../assets/efoil-photo.jpg" alt="E-Foil Rental" loading="lazy">
+      <div class="cat-ov">
+        <div class="cat-tag">Rental</div>
+        <h3>Rental</h3>
+        <span class="cat-lnk">Explore</span>
+      </div>
+    </a>
+    <a href="shop/" class="cat-card" style="aspect-ratio:4/5;text-decoration:none">
+      <img src="../assets/full-beginner.jpg" alt="E-Foil Shop" loading="lazy">
+      <div class="cat-ov">
+        <div class="cat-tag">Shop</div>
+        <h3>Shop</h3>
+        <span class="cat-lnk">Explore</span>
+      </div>
+    </a>
+    </div>
+  </div>
+  <div class="disc-cats-mobile">
+    <div style="padding:40px 22px 20px"><h2 style="font-family:var(--FD);font-size:44px;font-weight:900;text-transform:uppercase;line-height:.95;margin:0">Explore<br><em class="gt" style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">E-Foil</em></h2></div>
+    <div class="mob-disc-list" style="padding:0 0 40px">
+      <a href="lessons/" class="mob-disc-card">
+        <img src="../assets/efoil.jpg" alt="E-Foil Sessions" loading="lazy">
+        <div class="mob-disc-ov"><div class="mob-disc-tag">E-Foil</div><h3>Lessons</h3><span class="mob-disc-lnk">View sessions →</span></div>
+      </a>
+      <a href="rental/" class="mob-disc-card">
+        <img src="../assets/efoil-photo.jpg" alt="E-Foil Rental" loading="lazy">
+        <div class="mob-disc-ov"><div class="mob-disc-tag">E-Foil</div><h3>Rental</h3><span class="mob-disc-lnk">Book gear →</span></div>
+      </a>
+      <a href="shop/" class="mob-disc-card">
+        <img src="../assets/full-beginner.jpg" alt="E-Foil Shop" loading="lazy">
+        <div class="mob-disc-ov"><div class="mob-disc-tag">E-Foil</div><h3>Shop</h3><span class="mob-disc-lnk">Browse gear →</span></div>
+      </a>
+    </div>
+  </div>
+
+
+
   <div class="sh fu"><h2>Why Try<br><em class="gt">E-Foil?</em></h2></div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;padding:0 60px 48px" class="fu">
     <div style="padding:28px;background:var(--mid);border:1px solid var(--border)">
@@ -1997,7 +2074,7 @@ body.light #seoExpandable p,body.light #seoExpandable li,body.light #seoExpandab
     </div>
     <div class="course-price-list">
       <h3>Price List</h3>
-      <div class="course-price-row"><strong>E-Foil Discovery</strong><span>4,500 THB</span></div><div class="course-price-row"><strong>E-Foil Progression</strong><span>6,500 THB</span></div>
+      <a class="course-price-row" href="lessons/intro-lesson/"><strong>E-Foil Discovery</strong><span>4,500 THB</span></a><a class="course-price-row" href="lessons/efoil-lesson/"><strong>E-Foil Progression</strong><span>6,500 THB</span></a>
     </div>
     <div style="margin-top:24px">
       <a href="../efoil/lessons/" class="btn-s" style="color:var(--pink);border-color:var(--pink)">View All Lessons →</a>

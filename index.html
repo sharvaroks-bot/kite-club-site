@@ -1615,6 +1615,33 @@ body.light .review-card{background:#fff;border-color:rgba(17,17,24,.08);box-shad
   .reviews-section{padding:50px 22px}
   .reviews-grid{grid-template-columns:1fr}
 }
+
+/* ─── T3: Hero buttons side-by-side on mobile ─── */
+@media(max-width:900px){
+  .hero-btns{flex-wrap:nowrap !important;gap:8px !important}
+  .hero-btns a,.hero-btns .btn-p,.hero-btns .btn-s{flex:1;text-align:center;padding:14px 8px !important;font-size:14px !important;min-width:0}
+}
+
+/* ─── All Courses: nav-style clickable discipline headers ─── */
+.disc-btn-rent{padding:14px 28px;background:transparent;border:2px solid #e8008a;color:#e8008a;font-family:var(--FD);font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;transition:all .2s;display:inline-block}
+.disc-btn-rent:hover{background:#e8008a;color:#fff}
+.sh-center{justify-content:center;text-align:center;flex-direction:column;align-items:center;gap:12px}
+.courses-section{display:grid;grid-template-columns:1fr 1fr;min-height:520px;overflow:hidden}
+.courses-video{position:relative;overflow:hidden;min-height:460px}
+.courses-video img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media(max-width:900px){
+  .sh-center{display:flex !important}
+  .courses-section{display:flex;flex-direction:column;min-height:auto}
+  .courses-video{min-height:260px;position:relative}
+  .courses-section .disc-text{padding:40px 22px}
+  .courses-section .disc-text p{max-width:100%}
+  .courses-section .disc-btns{flex-wrap:wrap;gap:8px}
+}
+.disc-title-link{text-decoration:none;display:inline-block;cursor:pointer}
+.disc-title-link h2{transition:opacity .22s}
+.disc-title-link:hover h2{opacity:.72}
+.disc-title-link::after{content:'Explore →';font-family:var(--FD);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pink);display:block;margin-top:6px;opacity:0;transform:translateX(-6px);transition:opacity .22s,transform .22s}
+.disc-title-link:hover::after{opacity:1;transform:translateX(0)}
 </style>
 </head>
 <body>
@@ -1740,19 +1767,19 @@ body.light .review-card{background:#fff;border-color:rgba(17,17,24,.08);box-shad
   <div class="disc-mobile-cats">
     <div class="sh-disc-mobile"><h2>Choose Your<br><span class="gt">Discipline</span></h2><a href="courses/">All activities</a></div>
     <div class="mob-disc-list">
-      <a href="kitesurfing/lessons/" class="mob-disc-card">
+      <a href="kitesurfing/" class="mob-disc-card">
         <video autoplay muted loop playsinline preload="auto"><source src="assets/kitesurf-desktop.mp4" type="video/mp4"></video>
         <div class="mob-disc-ov"><div class="mob-disc-tag">Water Sport 01</div><h3>Kitesurfing</h3><span class="mob-disc-lnk">View courses →</span></div>
       </a>
-      <a href="wing-foil/lessons/" class="mob-disc-card">
+      <a href="wing-foil/" class="mob-disc-card">
         <video autoplay muted loop playsinline preload="auto"><source src="assets/wingfoil-desktop.mp4" type="video/mp4"></video>
         <div class="mob-disc-ov"><div class="mob-disc-tag">Water Sport 02</div><h3>Wing Foil</h3><span class="mob-disc-lnk">View courses →</span></div>
       </a>
-      <a href="windsurfing/lessons/" class="mob-disc-card">
+      <a href="windsurfing/" class="mob-disc-card">
         <video autoplay muted loop playsinline preload="auto"><source src="assets/windsurfing-desktop.mp4" type="video/mp4"></video>
         <div class="mob-disc-ov"><div class="mob-disc-tag">Water Sport 03</div><h3>Windsurfing</h3><span class="mob-disc-lnk">View courses →</span></div>
       </a>
-      <a href="efoil/lessons/" class="mob-disc-card">
+      <a href="efoil/" class="mob-disc-card">
         <img src="assets/efoil-photo.jpg" alt="E-Foil">
         <div class="mob-disc-ov"><div class="mob-disc-tag">Water Sport 04</div><h3>E-Foil</h3><span class="mob-disc-lnk">View courses →</span></div>
       </a>
@@ -1771,7 +1798,7 @@ body.light .review-card{background:#fff;border-color:rgba(17,17,24,.08);box-shad
   <section class="disc-section fu">
     <div class="disc-text">
       <div class="disc-tag">Water Sport 01</div>
-      <h2>Kite<em>surfing</em></h2>
+      <a href="kitesurfing/" class="disc-title-link"><h2>Kite<em>surfing</em></h2></a>
       <p>Kitesurfing at Kite Club Koh Phangan starts from 3,500 THB for a 2-hour Discovery Course. IKO-certified instructors teach using radio helmets. The flat lagoon at Thong Sala provides ideal conditions for beginners.</p>
       <div class="disc-facts">
         <div class="disc-fact"><strong>IKO</strong><span>Certified</span></div>
@@ -1779,8 +1806,9 @@ body.light .review-card{background:#fff;border-color:rgba(17,17,24,.08);box-shad
         <div class="disc-fact"><strong>All</strong><span>Levels</span></div>
       </div>
       <div class="disc-btns">
-        <a href="https://wa.me/66967203910" class="disc-btn-primary">Book a Lesson</a>
         <a href="kitesurfing/lessons/" class="disc-btn-secondary">View Courses</a>
+        <a href="kitesurfing/rental/" class="disc-btn-rent">Rent</a>
+        <a href="https://wa.me/66967203910" class="disc-btn-primary">Book a Lesson</a>
       </div>
     </div>
     <div class="disc-video">
@@ -1794,7 +1822,7 @@ body.light .review-card{background:#fff;border-color:rgba(17,17,24,.08);box-shad
     </div>
     <div class="disc-text">
       <div class="disc-tag">Water Sport 02</div>
-      <h2>Wing<em>Foil</em></h2>
+      <a href="wing-foil/" class="disc-title-link"><h2>Wing<em>Foil</em></h2></a>
       <p>Wing foil lessons start from 3,500 THB at Kite Club Koh Phangan. Students learn wing inflation, water balance and first foil flights in the protected lagoon. No prior experience required.</p>
       <div class="disc-facts">
         <div class="disc-fact"><strong>No</strong><span>Experience needed</span></div>
@@ -1802,8 +1830,9 @@ body.light .review-card{background:#fff;border-color:rgba(17,17,24,.08);box-shad
         <div class="disc-fact"><strong>Flat</strong><span>Water spot</span></div>
       </div>
       <div class="disc-btns">
-        <a href="https://wa.me/66967203910" class="disc-btn-primary">Book a Lesson</a>
         <a href="wing-foil/lessons/" class="disc-btn-secondary">View Courses</a>
+        <a href="wing-foil/rental/" class="disc-btn-rent">Rent</a>
+        <a href="https://wa.me/66967203910" class="disc-btn-primary">Book a Lesson</a>
       </div>
     </div>
   </section>
@@ -1811,7 +1840,7 @@ body.light .review-card{background:#fff;border-color:rgba(17,17,24,.08);box-shad
   <section class="disc-section fu">
     <div class="disc-text">
       <div class="disc-tag">Water Sport 03</div>
-      <h2>Wind<em>surfing</em></h2>
+      <a href="windsurfing/" class="disc-title-link"><h2>Wind<em>surfing</em></h2></a>
       <p>Windsurfing lessons at Kite Club Koh Phangan begin at 3,000 THB. The lagoon offers flat, calm water for learning sail control and board balance. All equipment included in every lesson.</p>
       <div class="disc-facts">
         <div class="disc-fact"><strong>All</strong><span>Ages welcome</span></div>
@@ -1819,8 +1848,9 @@ body.light .review-card{background:#fff;border-color:rgba(17,17,24,.08);box-shad
         <div class="disc-fact"><strong>Calm</strong><span>Lagoon spot</span></div>
       </div>
       <div class="disc-btns">
-        <a href="https://wa.me/66967203910" class="disc-btn-primary">Book a Lesson</a>
         <a href="windsurfing/lessons/" class="disc-btn-secondary">View Courses</a>
+        <a href="windsurfing/rental/" class="disc-btn-rent">Rent</a>
+        <a href="https://wa.me/66967203910" class="disc-btn-primary">Book a Lesson</a>
       </div>
     </div>
     <div class="disc-video">
@@ -1834,7 +1864,7 @@ body.light .review-card{background:#fff;border-color:rgba(17,17,24,.08);box-shad
     </div>
     <div class="disc-text">
       <div class="disc-tag">Water Sport 04</div>
-      <h2>Electric<em>Foil</em></h2>
+      <a href="efoil/" class="disc-title-link"><h2>Electric<em>Foil</em></h2></a>
       <p>E-foil sessions start from 4,500 THB. The electric hydrofoil requires zero wind — remote controlled up to 35 km/h. Maximum 1 student per session ensures full instructor attention.</p>
       <div class="disc-facts">
         <div class="disc-fact"><strong>Zero</strong><span>Wind needed</span></div>
@@ -1842,8 +1872,9 @@ body.light .review-card{background:#fff;border-color:rgba(17,17,24,.08);box-shad
         <div class="disc-fact"><strong>Silent</strong><span>Electric ride</span></div>
       </div>
       <div class="disc-btns">
-        <a href="https://wa.me/66967203910" class="disc-btn-primary">Book a Lesson</a>
         <a href="efoil/lessons/" class="disc-btn-secondary">View Courses</a>
+        <a href="efoil/rental/" class="disc-btn-rent">Rent</a>
+        <a href="https://wa.me/66967203910" class="disc-btn-primary">Book a Lesson</a>
       </div>
     </div>
   </section>
@@ -1851,7 +1882,7 @@ body.light .review-card{background:#fff;border-color:rgba(17,17,24,.08);box-shad
   <section class="disc-section fu">
     <div class="disc-text">
       <div class="disc-tag">Water Sport 05</div>
-      <h2>Kay<em>aking</em></h2>
+      <a href="kayaking/" class="disc-title-link"><h2>Kay<em>aking</em></h2></a>
       <p>Kayak rental at Kite Club lets you explore Koh Phangan's coastline independently. No experience needed — the calm lagoon at Thong Sala is safe for all ages. From 500 THB per hour.</p>
       <div class="disc-facts">
         <div class="disc-fact"><strong>No</strong><span>Experience needed</span></div>
@@ -1874,7 +1905,7 @@ body.light .review-card{background:#fff;border-color:rgba(17,17,24,.08);box-shad
     </div>
     <div class="disc-text">
       <div class="disc-tag">Water Sport 06</div>
-      <h2>SUP<em>Rental</em></h2>
+      <a href="sup-rental/" class="disc-title-link"><h2>SUP<em>Rental</em></h2></a>
       <p>SUP board rental available by the hour at Kite Club Koh Phangan. The flat-water lagoon at Thong Sala is ideal for paddleboarding — calm, shallow and warm year-round. From 400 THB per hour.</p>
       <div class="disc-facts">
         <div class="disc-fact"><strong>Easy</strong><span>To learn</span></div>
@@ -1887,239 +1918,6 @@ body.light .review-card{background:#fff;border-color:rgba(17,17,24,.08);box-shad
       </div>
     </div>
   </section>
-
-
-
-    <!-- ═══ ВСЕ КУРСЫ МОЗАИКОЙ ═══ -->
-  <div class="sh fu vis"><h2>All<br><em class="gt">Courses</em></h2><a href="courses/">View all courses</a></div>
-
-  <!-- KITESURFING -->
-  <div class="cc-section fu">
-    <div class="cc-label">Water Sport 01</div>
-    <h2 class="cc-title">Kite<em>surfing</em></h2>
-    <div class="cc-disc-label">Courses & Lessons</div>
-    <div class="cc-grid">
-      <div class="cc-card">
-        <img src="assets/discovery-course.jpg" alt="Discovery Course" class="cc-img">
-        <div class="cc-body">
-          <div class="cc-kicker">Starter</div>
-          <div class="cc-name">Discovery Course</div>
-          <p class="cc-desc">Safety theory, kite control and first water experience. 2h private or 3h group.</p>
-          <div class="cc-list-price">
-            <ul class="cc-list"><li>2h private · 1 day</li><li>3h group option</li><li>Theory & safety</li><li>Kite setup & control</li><li>All equipment included</li><li>IKO certified</li></ul>
-            <div class="cc-price-box"><strong>3,500</strong><span>THB</span></div>
-          </div>
-          <div class="cc-btns"><a href="kitesurfing/lessons/discovery-course/" class="btn-s">Learn More</a><a href="https://wa.me/66967203910" class="btn-p">Book Now</a></div>
-        </div>
-      </div>
-      <div class="cc-card" style="outline:2px solid #e8008a;position:relative">
-        <div class="cc-pop-tag">★ Most Popular</div>
-        <img src="assets/full-beginner.jpg" alt="Full Beginner Course" class="cc-img">
-        <div class="cc-body">
-          <div class="cc-kicker">Beginner</div>
-          <div class="cc-name">Full Beginner Course</div>
-          <p class="cc-desc">3-day course from zero to riding upwind. Body drag, waterstart, radio helmet coaching.</p>
-          <div class="cc-list-price">
-            <ul class="cc-list"><li>6h private — 3 days</li><li>Body drag & waterstart</li><li>Radio helmet coaching</li><li>Equipment + IKO cert</li></ul>
-            <div class="cc-price-box"><strong>11,000</strong><span>THB</span></div>
-          </div>
-          <div class="cc-btns"><a href="kitesurfing/lessons/full-beginner-course/" class="btn-s">Learn More</a><a href="https://wa.me/66967203910" class="btn-p">Book Now</a></div>
-        </div>
-      </div>
-      <div class="cc-card">
-        <img src="assets/independent-rider.jpg" alt="Independent Rider" class="cc-img">
-        <div class="cc-body">
-          <div class="cc-kicker">Advanced</div>
-          <div class="cc-name">Independent Rider</div>
-          <p class="cc-desc">5-day program: upwind, self-rescue, full independence in any conditions.</p>
-          <div class="cc-list-price">
-            <ul class="cc-list"><li>10h private — 5 days</li><li>Ride independently</li><li>Self-rescue</li><li>International IKO cert</li></ul>
-            <div class="cc-price-box"><strong>18,000</strong><span>THB</span></div>
-          </div>
-          <div class="cc-btns"><a href="kitesurfing/lessons/independent-course/" class="btn-s">Learn More</a><a href="https://wa.me/66967203910" class="btn-p">Book Now</a></div>
-        </div>
-      </div>
-      <div class="cc-card">
-        <img src="assets/kitesurfing.jpg" alt="Refresh Lesson" class="cc-img">
-        <div class="cc-body">
-          <div class="cc-kicker">Refresh</div>
-          <div class="cc-name">Refresh Lesson</div>
-          <p class="cc-desc">Return safely after a break. Rebuild confidence and correct technique.</p>
-          <div class="cc-list-price">
-            <ul class="cc-list"><li>2h private session</li><li>Safety review</li><li>Kite control refresh</li><li>Personal feedback</li></ul>
-            <div class="cc-price-box"><strong>3,500</strong><span>THB</span></div>
-          </div>
-          <div class="cc-btns"><a href="kitesurfing/lessons/refresh-lesson/" class="btn-s">Learn More</a><a href="https://wa.me/66967203910" class="btn-p">Book Now</a></div>
-        </div>
-      </div>
-      <div class="cc-card">
-        <img src="assets/independent-rider.jpg" alt="Pro Lesson" class="cc-img">
-        <div class="cc-body">
-          <div class="cc-kicker">Pro</div>
-          <div class="cc-name">Pro Lesson</div>
-          <p class="cc-desc">Private coaching for jumps, transitions and advanced tricks.</p>
-          <div class="cc-list-price">
-            <ul class="cc-list"><li>2h private coaching</li><li>Jump technique</li><li>Transitions & toeside</li><li>Video feedback</li></ul>
-            <div class="cc-price-box"><strong>4,000</strong><span>THB</span></div>
-          </div>
-          <div class="cc-btns"><a href="kitesurfing/lessons/pro-lesson/" class="btn-s">Learn More</a><a href="https://wa.me/66967203910" class="btn-p">Book Now</a></div>
-        </div>
-      </div>
-      <div class="cc-card">
-        <img src="assets/independent-rider.jpg" alt="Hydrofoil Lesson" class="cc-img">
-        <div class="cc-body">
-          <div class="cc-kicker">Foiling</div>
-          <div class="cc-name">Hydrofoil Lesson</div>
-          <p class="cc-desc">Fly above the water on a hydrofoil board. For independent kitesurfers ready for the next level. 1h private session.</p>
-          <div class="cc-list-price">
-            <ul class="cc-list"><li>Setup the foil board &amp; adjustments</li><li>Foot placement on board</li><li>Controlling the lift</li><li>Riding above water on foil</li><li>Body drag with foil board</li><li>Water start on foil</li><li>Riding upwind &amp; direction change</li><li>Self rescue</li></ul>
-            <div class="cc-price-box"><strong>3,000</strong><span>THB</span></div>
-          </div>
-          <div class="cc-btns"><a href="kitesurfing/lessons/hydrofoil-lesson/" class="btn-s">Learn More</a><a href="https://wa.me/66967203910" class="btn-p">Book Now</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="cc-disc-sep fu"></div>
-
-  <!-- WING FOIL -->
-  <div class="cc-section fu">
-    <div class="cc-label">Water Sport 02</div>
-    <h2 class="cc-title">Wing<em>Foil</em></h2>
-    <div class="cc-disc-label">Courses & Lessons</div>
-    <div class="cc-grid">
-      <div class="cc-card">
-        <img src="assets/wingfoil.jpg" alt="Wing Foil Intro" class="cc-img">
-        <div class="cc-body">
-          <div class="cc-kicker">Intro</div>
-          <div class="cc-name">Intro Lesson</div>
-          <p class="cc-desc">First wing foiling session. Wing inflation, water balance, safety rules.</p>
-          <div class="cc-list-price">
-            <ul class="cc-list"><li>2h private session</li><li>Wing inflation & safety</li><li>Water balance basics</li><li>All equipment included</li></ul>
-            <div class="cc-price-box"><strong>3,500</strong><span>THB</span></div>
-          </div>
-          <div class="cc-btns"><a href="wing-foil/lessons/intro-lesson/" class="btn-s">Learn More</a><a href="https://wa.me/66967203910" class="btn-p">Book Now</a></div>
-        </div>
-      </div>
-      <div class="cc-card" style="outline:2px solid #e8008a;position:relative">
-        <div class="cc-pop-tag">★ Most Popular</div>
-        <img src="assets/wingfoil.jpg" alt="Wing Foil Beginner" class="cc-img">
-        <div class="cc-body">
-          <div class="cc-kicker">Beginner</div>
-          <div class="cc-name">Beginner Course</div>
-          <p class="cc-desc">3-day complete course. Wing handling, board balance, first foil flights.</p>
-          <div class="cc-list-price">
-            <ul class="cc-list"><li>6h private — 3 days</li><li>Wing handling</li><li>First foil flights</li><li>IKO/IWO certification</li></ul>
-            <div class="cc-price-box"><strong>11,000</strong><span>THB</span></div>
-          </div>
-          <div class="cc-btns"><a href="wing-foil/lessons/beginner-course/" class="btn-s">Learn More</a><a href="https://wa.me/66967203910" class="btn-p">Book Now</a></div>
-        </div>
-      </div>
-      <div class="cc-card">
-        <img src="assets/wingfoil.jpg" alt="Wing Foil Advanced" class="cc-img">
-        <div class="cc-body">
-          <div class="cc-kicker">Advanced</div>
-          <div class="cc-name">Advanced Course</div>
-          <p class="cc-desc">4-5 day program. Tacks, jibes, upwind foiling, confident riding.</p>
-          <div class="cc-list-price">
-            <ul class="cc-list"><li>10h private — 5 days</li><li>Tacks & jibes</li><li>Upwind foiling</li><li>International IWO cert</li></ul>
-            <div class="cc-price-box"><strong>18,000</strong><span>THB</span></div>
-          </div>
-          <div class="cc-btns"><a href="wing-foil/lessons/advanced-course/" class="btn-s">Learn More</a><a href="https://wa.me/66967203910" class="btn-p">Book Now</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="cc-disc-sep fu"></div>
-
-  <!-- WINDSURFING -->
-  <div class="cc-section fu">
-    <div class="cc-label">Water Sport 03</div>
-    <h2 class="cc-title">Wind<em>surfing</em></h2>
-    <div class="cc-disc-label">Courses & Lessons</div>
-    <div class="cc-grid">
-      <div class="cc-card">
-        <img src="assets/windsurfing.jpg" alt="Windsurf Discovery" class="cc-img">
-        <div class="cc-body">
-          <div class="cc-kicker">Discovery</div>
-          <div class="cc-name">Discovery Lesson</div>
-          <p class="cc-desc">First session. Sail control, board balance, steering basics. All equipment included.</p>
-          <div class="cc-list-price">
-            <ul class="cc-list"><li>2h private session</li><li>Sail control basics</li><li>Board balance</li><li>All equipment included</li></ul>
-            <div class="cc-price-box"><strong>3,000</strong><span>THB</span></div>
-          </div>
-          <div class="cc-btns"><a href="windsurfing/lessons/discovery-lesson/" class="btn-s">Learn More</a><a href="https://wa.me/66967203910" class="btn-p">Book Now</a></div>
-        </div>
-      </div>
-      <div class="cc-card" style="outline:2px solid #e8008a;position:relative">
-        <div class="cc-pop-tag">★ Most Popular</div>
-        <img src="assets/windsurfing.jpg" alt="Windsurf Beginner" class="cc-img">
-        <div class="cc-body">
-          <div class="cc-kicker">Beginner</div>
-          <div class="cc-name">Beginner Course</div>
-          <p class="cc-desc">3-day course: tacking, steering, confident riding on flat water.</p>
-          <div class="cc-list-price">
-            <ul class="cc-list"><li>6h private — 3 days</li><li>Tacking technique</li><li>Steering & control</li><li>Equipment + certificate</li></ul>
-            <div class="cc-price-box"><strong>9,000</strong><span>THB</span></div>
-          </div>
-          <div class="cc-btns"><a href="windsurfing/lessons/beginner-course/" class="btn-s">Learn More</a><a href="https://wa.me/66967203910" class="btn-p">Book Now</a></div>
-        </div>
-      </div>
-      <div class="cc-card">
-        <img src="assets/windsurfing.jpg" alt="Windsurf Refresh" class="cc-img">
-        <div class="cc-body">
-          <div class="cc-kicker">Refresh</div>
-          <div class="cc-name">Refresh Lesson</div>
-          <p class="cc-desc">Return after a break. Rebuild your windsurfing technique with personal coaching.</p>
-          <div class="cc-list-price">
-            <ul class="cc-list"><li>2h private session</li><li>Technique correction</li><li>Confidence rebuild</li><li>Personal feedback</li></ul>
-            <div class="cc-price-box"><strong>3,000</strong><span>THB</span></div>
-          </div>
-          <div class="cc-btns"><a href="windsurfing/lessons/refresh-lesson/" class="btn-s">Learn More</a><a href="https://wa.me/66967203910" class="btn-p">Book Now</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="cc-disc-sep fu"></div>
-
-  <!-- E-FOIL -->
-  <div class="cc-section fu">
-    <div class="cc-label">Water Sport 04</div>
-    <h2 class="cc-title">Electric<em>Foil</em></h2>
-    <div class="cc-disc-label">Sessions</div>
-    <div class="cc-grid two-col">
-      <div class="cc-card">
-        <img src="assets/efoil-photo.jpg" alt="E-Foil Intro" class="cc-img">
-        <div class="cc-body">
-          <div class="cc-kicker">Intro</div>
-          <div class="cc-name">Intro Lesson</div>
-          <p class="cc-desc">First e-foil experience. Remote control, balance, first flights. No wind needed.</p>
-          <div class="cc-list-price">
-            <ul class="cc-list"><li>1h session</li><li>Remote control basics</li><li>Balance on board</li><li>1 student max</li></ul>
-            <div class="cc-price-box"><strong>4,500</strong><span>THB</span></div>
-          </div>
-          <div class="cc-btns"><a href="efoil/lessons/intro-lesson/" class="btn-s">Learn More</a><a href="https://wa.me/66967203910" class="btn-p">Book Now</a></div>
-        </div>
-      </div>
-      <div class="cc-card" style="outline:2px solid #e8008a;position:relative">
-        <div class="cc-pop-tag">★ Most Popular</div>
-        <img src="assets/efoil-photo.jpg" alt="E-Foil Session" class="cc-img">
-        <div class="cc-body">
-          <div class="cc-kicker">Pro</div>
-          <div class="cc-name">E-Foil Lesson</div>
-          <p class="cc-desc">2-hour session. Carving turns, speed management, confident flying above water.</p>
-          <div class="cc-list-price">
-            <ul class="cc-list"><li>2h session</li><li>Carving turns</li><li>Speed management</li><li>1 student max</li></ul>
-            <div class="cc-price-box"><strong>6,500</strong><span>THB</span></div>
-          </div>
-          <div class="cc-btns"><a href="efoil/lessons/efoil-lesson/" class="btn-s">Learn More</a><a href="https://wa.me/66967203910" class="btn-p">Book Now</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -2171,117 +1969,6 @@ body.light .review-card{background:#fff;border-color:rgba(17,17,24,.08);box-shad
     </div>
   </section>
 
-  <!-- RENTAL SECTION HOME -->
-  <div class="sh fu"><h2>Equipment<br><em class="gt">Rental</em></h2><a href="rental/">View all rental</a></div>
-
-  <!-- DESKTOP: grid -->
-  <section class="rental-home-desktop fu" style="padding:0 60px 70px">
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px">
-
-      <div class="rhc"><div class="rhc-icon">🪁</div><div class="rhc-cat">Kitesurfing</div><h3 class="rhc-name">Kite + Bar</h3><div class="rhc-price">1,100</div><div class="rhc-from">THB / hr</div><ul class="rhc-list"><li>4-line & 5-line systems</li></ul></div>
-      <div class="rhc"><div class="rhc-icon">🏄</div><div class="rhc-cat">Kitesurfing</div><h3 class="rhc-name">Full Set</h3><div class="rhc-price">1,400</div><div class="rhc-from">THB / hr</div><ul class="rhc-list"><li>Kite + bar + board + harness</li></ul></div>
-      <div class="rhc"><div class="rhc-icon">🏊</div><div class="rhc-cat">Kitesurfing</div><h3 class="rhc-name">Board Only</h3><div class="rhc-price">400</div><div class="rhc-from">THB / hr</div><ul class="rhc-list"><li>Twintip or surfboard</li></ul></div>
-      <div class="rhc"><div class="rhc-icon">🪂</div><div class="rhc-cat">Wing Foil</div><h3 class="rhc-name">Wing Foil Set</h3><div class="rhc-price">1,400</div><div class="rhc-from">THB / 1 hr · from</div><ul class="rhc-list"><li>1h — 1,400 THB</li><li>2h — 2,600 THB</li><li>3h — 3,600 THB</li></ul></div>
-      <div class="rhc"><div class="rhc-icon">🛶</div><div class="rhc-cat">Kayaking</div><h3 class="rhc-name">Kayak Rental</h3><div class="rhc-price">500</div><div class="rhc-from">THB / 1 hr · from</div><ul class="rhc-list"><li>1h — 500 THB</li><li>2h — 900 THB</li><li>3h — 1,200 THB</li></ul></div>
-      <div class="rhc"><div class="rhc-icon">🏄</div><div class="rhc-cat">SUP</div><h3 class="rhc-name">SUP Board</h3><div class="rhc-price">400</div><div class="rhc-from">THB / 1 hr · from</div><ul class="rhc-list"><li>1h — 400 THB</li><li>2h — 700 THB</li><li>All day — 1,000 THB</li></ul></div>
-
-    </div>
-    <div style="text-align:center;margin-top:32px">
-      <a class="btn-p" href="rental/">View Full Rental Page →</a>
-    </div>
-  </section>
-
-  <!-- MOBILE: horizontal snap slider -->
-  <section class="rental-home-mobile fu">
-    <!-- SLIDE: Kitesurfing -->
-    <div class="rhs-group">
-      <div class="rhs-group-label">🪁 Kitesurfing</div>
-      <div class="rhs-row">
-        <div class="rhs-card">
-          <div class="rhs-card-name">Kite + Bar</div>
-          <div class="rhs-card-price">1,100<span>THB / hr</span></div>
-          <div class="rhs-card-note">4/5-line systems</div>
-        </div>
-        <div class="rhs-card">
-          <div class="rhs-card-name">Full Set</div>
-          <div class="rhs-card-price">1,400<span>THB / hr</span></div>
-          <div class="rhs-card-note">Kite+bar+board+harness</div>
-        </div>
-        <div class="rhs-card">
-          <div class="rhs-card-name">Board Only</div>
-          <div class="rhs-card-price">400<span>THB / hr</span></div>
-          <div class="rhs-card-note">Twintip or surfboard</div>
-        </div>
-      </div>
-    </div>
-    <!-- SLIDE: Wing Foil -->
-    <div class="rhs-group">
-      <div class="rhs-group-label">🪂 Wing Foil</div>
-      <div class="rhs-row">
-        <div class="rhs-card">
-          <div class="rhs-card-name">1 Hour</div>
-          <div class="rhs-card-price">1,400<span>THB</span></div>
-          <div class="rhs-card-note">Full set</div>
-        </div>
-        <div class="rhs-card">
-          <div class="rhs-card-name">2 Hours</div>
-          <div class="rhs-card-price">2,600<span>THB</span></div>
-          <div class="rhs-card-note">Full set</div>
-        </div>
-        <div class="rhs-card">
-          <div class="rhs-card-name">3 Hours</div>
-          <div class="rhs-card-price">3,600<span>THB</span></div>
-          <div class="rhs-card-note">Full set</div>
-        </div>
-      </div>
-    </div>
-    <!-- SLIDE: Kayaking -->
-    <div class="rhs-group">
-      <div class="rhs-group-label">🛶 Kayaking</div>
-      <div class="rhs-row">
-        <div class="rhs-card">
-          <div class="rhs-card-name">1 Hour</div>
-          <div class="rhs-card-price">500<span>THB</span></div>
-          <div class="rhs-card-note">Life jacket incl.</div>
-        </div>
-        <div class="rhs-card">
-          <div class="rhs-card-name">2 Hours</div>
-          <div class="rhs-card-price">900<span>THB</span></div>
-          <div class="rhs-card-note">Life jacket incl.</div>
-        </div>
-        <div class="rhs-card">
-          <div class="rhs-card-name">3 Hours</div>
-          <div class="rhs-card-price">1,200<span>THB</span></div>
-          <div class="rhs-card-note">Life jacket incl.</div>
-        </div>
-      </div>
-    </div>
-    <!-- SLIDE: SUP -->
-    <div class="rhs-group">
-      <div class="rhs-group-label">🏄 SUP Board</div>
-      <div class="rhs-row">
-        <div class="rhs-card">
-          <div class="rhs-card-name">1 Hour</div>
-          <div class="rhs-card-price">400<span>THB</span></div>
-          <div class="rhs-card-note">Board + paddle</div>
-        </div>
-        <div class="rhs-card">
-          <div class="rhs-card-name">2 Hours</div>
-          <div class="rhs-card-price">700<span>THB</span></div>
-          <div class="rhs-card-note">Board + paddle</div>
-        </div>
-        <div class="rhs-card">
-          <div class="rhs-card-name">Full Day</div>
-          <div class="rhs-card-price">1,000<span>THB</span></div>
-          <div class="rhs-card-note">Best value</div>
-        </div>
-      </div>
-    </div>
-    <div style="text-align:center;padding:20px 22px 0">
-      <a class="btn-p" style="display:block;width:100%;text-align:center" href="rental/">View Full Rental Page →</a>
-    </div>
-  </section>
-  <!-- END RENTAL SECTION -->
 
 
   <!-- FAQ -->

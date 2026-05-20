@@ -1813,6 +1813,33 @@ body.light .seo-toggle-btn{color:rgba(17,17,24,.4);border-color:rgba(17,17,24,.1
 body.light #seoExpandable h2,body.light #seoExpandable h3{color:#2a2a3a}
 body.light #seoExpandable p,body.light #seoExpandable li,body.light #seoExpandable td{color:rgba(17,17,24,.55)}
 @media(max-width:768px){.seo-section{padding:30px 22px 40px}}
+
+/* ─── T3: Hero buttons side-by-side on mobile ─── */
+@media(max-width:900px){
+  .hero-btns{flex-wrap:nowrap !important;gap:8px !important}
+  .hero-btns a,.hero-btns .btn-p,.hero-btns .btn-s{flex:1;text-align:center;padding:14px 8px !important;font-size:14px !important;min-width:0}
+}
+
+/* ─── Discipline explore section: desktop cats / mobile cards ─── */
+.disc-cats-desktop{display:block}
+.disc-cats-mobile{display:none}
+.disc-4col{grid-template-columns:repeat(4,1fr) !important}
+.disc-3col{grid-template-columns:repeat(3,1fr) !important}
+@media(max-width:900px){
+  .disc-cats-desktop{display:none}
+  .disc-cats-mobile{display:block}
+}
+
+/* ─── Mobile discipline cards ─── */
+.mob-disc-list{display:flex;flex-direction:column;gap:12px;padding:0 0 40px}
+.mob-disc-card{position:relative;overflow:hidden;display:block;width:100%;aspect-ratio:4/3;text-decoration:none;cursor:pointer;border-radius:12px}
+.mob-disc-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.mob-disc-ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:24px 22px;background:linear-gradient(to top,rgba(0,0,0,.8) 0%,rgba(0,0,0,.2) 55%,transparent 100%)}
+.mob-disc-tag{font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#e8008a;margin-bottom:8px}
+.mob-disc-card h3{font-family:var(--FD);font-weight:900;font-size:38px;text-transform:uppercase;line-height:.95;margin:0 0 12px;color:#fff}
+.mob-disc-lnk{font-family:var(--FD);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+a.course-price-row{text-decoration:none}
+a.course-price-row:hover strong{color:var(--pink) !important}
 </style>
 </head>
 <body>
@@ -1925,6 +1952,56 @@ body.light #seoExpandable p,body.light #seoExpandable li,body.light #seoExpandab
     </div>
   </section>
 
+  <!-- ═══ EXPLORE WINDSURFING ═══ -->
+  <div class="disc-cats-desktop fu">
+    <div class="sh"><h2>Explore<br><em class="gt">Windsurfing</em></h2></div>
+    <div class="cats disc-3col">
+    <a href="lessons/" class="cat-card" style="aspect-ratio:4/5;text-decoration:none">
+      <img src="../assets/windsurfing.jpg" alt="Windsurfing Lessons" loading="lazy">
+      <div class="cat-ov">
+        <div class="cat-tag">Lessons</div>
+        <h3>Lessons</h3>
+        <span class="cat-lnk">Explore</span>
+      </div>
+    </a>
+    <a href="rental/" class="cat-card" style="aspect-ratio:4/5;text-decoration:none">
+      <img src="../assets/private-lessons.jpg" alt="Windsurfing Rental" loading="lazy">
+      <div class="cat-ov">
+        <div class="cat-tag">Rental</div>
+        <h3>Rental</h3>
+        <span class="cat-lnk">Explore</span>
+      </div>
+    </a>
+    <a href="../storage/" class="cat-card" style="aspect-ratio:4/5;text-decoration:none">
+      <img src="../assets/independent-rider.jpg" alt="Storage & Membership" loading="lazy">
+      <div class="cat-ov">
+        <div class="cat-tag">Storage & Membership</div>
+        <h3>Storage & Membership</h3>
+        <span class="cat-lnk">Explore</span>
+      </div>
+    </a>
+    </div>
+  </div>
+  <div class="disc-cats-mobile">
+    <div style="padding:40px 22px 20px"><h2 style="font-family:var(--FD);font-size:44px;font-weight:900;text-transform:uppercase;line-height:.95;margin:0">Explore<br><em class="gt" style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Windsurfing</em></h2></div>
+    <div class="mob-disc-list" style="padding:0 0 40px">
+      <a href="lessons/" class="mob-disc-card">
+        <img src="../assets/windsurfing.jpg" alt="Windsurfing Lessons" loading="lazy">
+        <div class="mob-disc-ov"><div class="mob-disc-tag">Windsurfing</div><h3>Lessons</h3><span class="mob-disc-lnk">View courses →</span></div>
+      </a>
+      <a href="rental/" class="mob-disc-card">
+        <img src="../assets/private-lessons.jpg" alt="Windsurfing Rental" loading="lazy">
+        <div class="mob-disc-ov"><div class="mob-disc-tag">Windsurfing</div><h3>Rental</h3><span class="mob-disc-lnk">Book gear →</span></div>
+      </a>
+      <a href="../storage/" class="mob-disc-card">
+        <img src="../assets/independent-rider.jpg" alt="Storage & Membership" loading="lazy">
+        <div class="mob-disc-ov"><div class="mob-disc-tag">Windsurfing</div><h3>Storage & Membership</h3><span class="mob-disc-lnk">Learn more →</span></div>
+      </a>
+    </div>
+  </div>
+
+
+
   <div class="sh fu"><h2>Why Koh Phangan<br><em class="gt">Is Perfect</em></h2></div>
   <div class="perk-grid">
     <div class="perk fu">
@@ -2023,7 +2100,7 @@ body.light #seoExpandable p,body.light #seoExpandable li,body.light #seoExpandab
     </div>
     <div class="course-price-list">
       <h3>Price List</h3>
-      <div class="course-price-row"><strong>Windsurf Discovery</strong><span>3,000 THB</span></div><div class="course-price-row"><strong>Windsurf Beginner Course</strong><span>9,000 THB</span></div><div class="course-price-row"><strong>Windsurf Refresh</strong><span>3,000 THB</span></div>
+      <a class="course-price-row" href="lessons/discovery-lesson/"><strong>Windsurf Discovery</strong><span>3,000 THB</span></a><a class="course-price-row" href="lessons/beginner-course/"><strong>Windsurf Beginner Course</strong><span>9,000 THB</span></a><a class="course-price-row" href="lessons/refresh-lesson/"><strong>Windsurf Refresh</strong><span>3,000 THB</span></a>
     </div>
     <div style="margin-top:24px">
       <a href="../windsurfing/lessons/" class="btn-s" style="color:var(--pink);border-color:var(--pink)">View All Lessons →</a>
