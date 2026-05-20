@@ -1,0 +1,116 @@
+# CHANGELOG — Kite Club Koh Phangan Website
+
+---
+
+## [Unreleased] — in progress
+
+### Added
+- `SEO_AUDIT.md` — full audit of old site vs new site
+- `COMPETITOR_ANALYSIS.md` — deep analysis of 5 competitors
+- `MIGRATION_MAP.md` — full URL migration strategy for 53+ indexed URLs
+- `_redirects` — Netlify 301 redirect file for all old WordPress URLs
+- `TODO.md` — prioritised implementation plan
+
+---
+
+## [v3.6.0] — 2026-05-20
+
+### New Pages — High-Priority SEO pages (Phase 9–11)
+- `/kitesurfing/koh-phangan/index.html` — GEO landing page targeting "kitesurfing koh phangan"
+  - Schema: EducationalOrganization + BreadcrumbList + FAQPage
+  - Sections: video hero, wind season cards (NE/SW), Thong Sala about-band, 3 course cards, 2-column SEO text, FAQ, CTA
+- `/best-kitesurf-spots-koh-phangan/index.html` — spots guide targeting "best kitesurf spots koh phangan"
+  - Schema: Article + BreadcrumbList + FAQPage
+  - Sections: 4-spot comparison perks, Thong Sala about-band, Ban Tai + Chaloklum 2-column, HTML comparison table, FAQ, internal links grid, CTA
+- `/best-time-kitesurfing-koh-phangan/index.html` — season guide targeting "best time kitesurfing koh phangan"
+  - Schema: Article + BreadcrumbList + FAQPage (4 wind-season questions)
+  - Sections: hero, 2-column season cards (NE/SW with stats grids), 12-month wind table with ratings, "Which Season is Right For You?" 3-card panel, 2-column SEO text, FAQ (5 questions), internal links, CTA
+- `sitemap.xml` — updated to 48 URLs (3 new pages at priority 0.8–0.85)
+
+---
+
+## [v3.5.0] — 2026-05-20
+
+### kitesurfing/lessons/index.html — 14 UX + SEO improvements
+- Title: → "Kitesurfing Lessons Koh Phangan | IKO School & Beginner Courses"
+- Meta desc: rewritten with target keywords (Thong Sala, IKO, private & group, prices)
+- og:url: fixed (was incorrectly pointing to /school/kitesurfing/)
+- Schema: added BreadcrumbList (3 levels) + FAQPage (9 questions) to JSON-LD graph
+- H1: → "Kitesurfing Lessons in Koh Phangan"
+- Hero paragraph: updated with location + price keyword
+- Course grid: added "Beginner Courses" / "Private Coaching" group headings
+- Added "Best for:" tag to all 6 course cards
+- Added "What's Included" 8-item grid section (kite, board, helmet, radio, instructor, boat, insurance, IKO cert)
+- "Result Guaranteed" perk → "Clear Progression" (honest, IKO-method description)
+- Added Thong Sala Beach GEO section (stats: 28°C, 15-25kn, Jan-Apr, Flat)
+- FAQ expanded: 5 → 9 questions (added: no experience, no wind policy, kids, same-day booking)
+- CTA: "Ready to Learn to Kitesurf?" with WhatsApp pre-filled messages
+- Reviews: "⭐ Google Reviews — 5.0 · 47 reviews" label
+- Added "Also at Kite Club" 6-card internal links section (wing foil, efoil, windsurf, rental, safari, map)
+- CSS: new components for cc-group-head, cc-best-for, inc-band, geo-band, also-band
+
+---
+
+## [v3.4.0] — 2026-05-20 (previous session)
+
+### Global — SEO meta coverage
+- og:image added to 37 pages
+- geo.placename added to 36 pages
+- Course schema (ItemList + Course) on 4 lesson listing pages
+
+### Homepage (index.html)
+- New title + JSON-LD (LocalBusiness + WebSite + FAQPage)
+- og:image + Twitter cards
+- geo.placename + hreflang x-default
+- H1 → "Learn to Kitesurf in Thailand"
+- Removed About band and excess desktop sections
+- Mobile cards: replaced autoplay videos with lazy images
+- Added visible .seo-block section
+- Fixed `<button href="">` → `<a>` tag
+
+### robots.txt
+- Added Allow for: GPTBot, Google-Extended, PerplexityBot, ClaudeBot
+
+### sitemap.xml
+- lastmod: 2026-05-20 on all 45 URLs
+- Priority hierarchy: homepage (1.0), activity pages (0.8), lesson pages (0.7), blog (0.6)
+
+---
+
+## [v3.3.0] — 2026-05-19 (previous session)
+
+### Global — Luxury button effects (all 46 pages)
+- btn-p: shimmer effect (::after with skewX -20deg)
+- btn-s: fill animation + border glow
+- cc-btns equal-size fix: box-sizing:border-box + min-width:0
+
+### Course listing pages (wing-foil/lessons/, windsurfing/lessons/, efoil/lessons/)
+- cc-list bullets: fixed &amp; encoding bug
+- Button order: btn-s left, btn-p (Book Now) right
+
+### Asset fixes
+- Replaced missing live-*.jpg images
+- wingfoil-mobile.mp4 → desktop video
+- windsurf-*.mp4 → windsurfing-desktop.mp4
+- E-foil hero: video → static image
+
+---
+
+## [v3.2.0] — 2026-05-18 (previous session)
+
+### 14 individual course pages
+- lesson-copy replaced with structured h3+ul phase content (beach/water session, logistics)
+- course-actions buttons: removed flex-wrap:wrap, added flex:1 + text-align:center
+
+---
+
+## [v3.1.0] — 2026-05-17 (initial session)
+
+### Site foundation
+- 46 HTML pages created (static export structure)
+- Navigation with dropdown menus on all pages
+- Light/dark theme toggle on all pages
+- WhatsApp floating button on all pages
+- Video heroes on activity pages
+- Blog page with 6 posts
+- Sitemap.xml and robots.txt created
