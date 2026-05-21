@@ -743,7 +743,8 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:55px 60
 
 
 .about-hero{position:relative;height:50vh;min-height:300px;display:flex;align-items:flex-end;overflow:hidden}
-.about-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center top}
+.about-hero-bg{position:absolute;inset:0;overflow:hidden}
+.about-hero-bg iframe{position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-height:177.78vh;min-width:100%;transform:translate(-50%,-50%);pointer-events:none;border:none}
 .about-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,13,26,.2),rgba(13,13,26,.85))}
 .about-hero-content{position:relative;z-index:2;padding:0 60px 48px}
 .about-hero-content h1{font-family:var(--FD);font-size:52px;font-weight:900;text-transform:uppercase;color:#fff;line-height:.95;margin:0}
@@ -891,7 +892,9 @@ body.light .team-card{background:#fff}
 <main id="page-content">
 
   <div class="about-hero">
-    <div class="about-hero-bg" style="background-image:url('../assets/kitesurfing.jpg')"></div>
+    <div class="about-hero-bg">
+      <iframe src="https://www.youtube.com/embed/pkCOJy17bgw?autoplay=1&mute=1&loop=1&playlist=pkCOJy17bgw&controls=0&rel=0&modestbranding=1&playsinline=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
     <div class="about-hero-content fu">
       <h1>About<br><em>Kite Club</em></h1>
     </div>
