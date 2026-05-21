@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Koh Phangan Wind &amp; Kite Season Guide 2026 | Best Times to Visit</title>
-<meta name="description" content="Complete wind season calendar for Koh Phangan 2026. NE trade winds January–April (18–28 kts), SW monsoon June–September. Month-by-month wind data for kitesurfing, wing foil and windsurfing.">
+<title>Koh Phangan Wind &amp; Kite Seasons 2026 | When to Come &amp; What to Ride</title>
+<meta name="description" content="Complete wind guide for Koh Phangan 2026. NE season Jan–Apr (18–28 kts, flat water), SW monsoon Jun–Sep. Month-by-month calendar, best spots, 'what to ride today' guide and local timing tips.">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#e8008a">
 <meta name="geo.region" content="TH-84">
@@ -17,8 +17,8 @@
 <link rel="alternate" hreflang="en" href="https://kiteclubkohphangan.com/seasons/">
 <link rel="alternate" hreflang="ru" href="https://kiteclubkohphangan.com/seasons/">
 <link rel="alternate" hreflang="x-default" href="https://kiteclubkohphangan.com/seasons/">
-<meta property="og:title" content="Koh Phangan Wind &amp; Kite Season Guide 2026 | Best Times to Visit">
-<meta property="og:description" content="Complete wind calendar: NE trade winds Jan–Apr (18–28 kts), SW monsoon Jun–Sep (15–22 kts). Month-by-month breakdown for kitesurfing, wing foil, windsurfing.">
+<meta property="og:title" content="Koh Phangan Wind &amp; Kite Seasons 2026 | When to Come &amp; What to Ride">
+<meta property="og:description" content="NE season Jan–Apr (18–28 kts, flat water), SW monsoon Jun–Sep. Month-by-month calendar, best spots (Thong Sala, Baan Tai, Chaloklum), what to ride guide.">
 <meta property="og:url" content="https://kiteclubkohphangan.com/seasons/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://kiteclubkohphangan.com/assets/kitesurfing.jpg">
@@ -1215,6 +1215,19 @@ body.light .snap-btn-learn{color:var(--pink);border-color:var(--pink);}
 /* ─── fu: always visible (no animation) ─── */
 .fu{opacity:1 !important;transform:translateY(0) !important;transition:none !important;}
 
+/* ─── Hero stats overlay: hide on mobile ─── */
+@media(max-width:768px){
+  .wnd-hero-stats{display:none !important;}
+  [style*="position:absolute;right:60px;bottom:80px"]{display:none !important;}
+}
+/* ─── What to Ride + Spots: stack on mobile ─── */
+@media(max-width:768px){
+  [style*="padding:70px 60px;background:var(--black)"],[style*="padding:70px 60px;background:var(--dark)"]{padding:50px 18px !important;}
+  [style*="grid-template-columns:repeat(3,1fr);gap:16px"],[style*="grid-template-columns:repeat(3,1fr);gap:20px"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns:1fr 1fr 1fr;gap:20px;align-items:center"]{grid-template-columns:1fr !important;}
+  [style*="border-left:1px solid var(--border);padding-left:20px"]{border-left:none !important;padding-left:0 !important;border-top:1px solid var(--border) !important;padding-top:16px !important;}
+}
+
 /* ─── Task 1b: Stretch snap card content to fill screen ─── */
 @media(max-width:768px){
   .snap-card{display:flex;flex-direction:column;}
@@ -1809,11 +1822,39 @@ body.light .also-name{color:#111}
 
 <main id="page-content">
 
-<section style="background:var(--dark);padding:100px 60px 70px;text-align:center;border-bottom:1px solid var(--border);">
-  <div style="max-width:720px;margin:0 auto;">
-    <div style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px;">Wind Calendar · Koh Phangan 2026</div>
-    <h1 style="font-family:var(--FD);font-size:clamp(38px,6vw,64px);font-weight:900;text-transform:uppercase;line-height:1;color:var(--white);margin-bottom:20px;">Wind &amp;<br><em style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal;">Kite Seasons</em></h1>
-    <p style="font-family:var(--FB);font-size:clamp(15px,1.8vw,17px);color:var(--muted);max-width:540px;margin:0 auto;">Two wind seasons per year. Here is the complete month-by-month wind calendar for kitesurfing, wing foil and windsurfing in Koh Phangan.</p>
+<!-- CINEMATIC HERO -->
+<section style="position:relative;min-height:90vh;display:flex;align-items:flex-end;overflow:hidden;background:#0d0d1a;">
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,13,26,.2) 0%,rgba(13,13,26,.55) 55%,rgba(13,13,26,.95) 100%),url('../assets/kitesurfing.jpg') center/cover no-repeat;transform:scale(1.04);animation:hzoom 18s ease-in-out infinite alternate"></div>
+  <div style="position:relative;z-index:2;padding:0 60px 80px;max-width:820px">
+    <div style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.28em;color:var(--pink);margin-bottom:18px;display:flex;align-items:center;gap:12px">
+      <span style="display:block;width:36px;height:2px;background:var(--grad);flex-shrink:0"></span>
+      Wind Calendar · Koh Phangan 2026
+    </div>
+    <h1 style="font-family:var(--FD);font-weight:900;font-size:clamp(48px,8vw,96px);line-height:.88;text-transform:uppercase;margin-bottom:24px;animation:wind-in 1.3s cubic-bezier(.22,1,.36,1) .2s both">Wind &amp;<br><em style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:italic">Kite Seasons</em></h1>
+    <p style="color:rgba(255,255,255,.8);font-size:clamp(14px,1.6vw,17px);font-weight:300;max-width:480px;line-height:1.75;margin-bottom:32px">Two wind seasons per year. Here is the complete month-by-month wind calendar for kitesurfing, wing foil and windsurfing — plus what to ride, when to come, and which spot to choose.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap">
+      <a href="#calendar" class="btn-p">View Wind Calendar</a>
+      <a href="https://wa.me/66967203910" target="_blank" class="btn-s">Book a Lesson</a>
+    </div>
+  </div>
+  <!-- Wind stats overlay -->
+  <div style="position:absolute;right:60px;bottom:80px;z-index:3;display:grid;grid-template-columns:1fr 1fr;gap:6px">
+    <div style="background:rgba(13,13,26,.85);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);padding:14px 18px;text-align:center">
+      <div style="font-family:var(--FD);font-size:28px;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1">18–28</div>
+      <div style="font-family:var(--FD);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:4px">kts peak</div>
+    </div>
+    <div style="background:rgba(13,13,26,.85);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);padding:14px 18px;text-align:center">
+      <div style="font-family:var(--FD);font-size:28px;font-weight:900;color:var(--white);line-height:1">Jan–Apr</div>
+      <div style="font-family:var(--FD);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:4px">NE season</div>
+    </div>
+    <div style="background:rgba(13,13,26,.85);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);padding:14px 18px;text-align:center">
+      <div style="font-family:var(--FD);font-size:28px;font-weight:900;color:var(--white);line-height:1">90%</div>
+      <div style="font-family:var(--FD);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:4px">rideable days</div>
+    </div>
+    <div style="background:rgba(13,13,26,.85);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);padding:14px 18px;text-align:center">
+      <div style="font-family:var(--FD);font-size:28px;font-weight:900;color:#00bcd4;line-height:1">Jun–Sep</div>
+      <div style="font-family:var(--FD);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:4px">SW season</div>
+    </div>
   </div>
 </section>
 
@@ -1841,8 +1882,77 @@ body.light .also-name{color:#111}
   </div>
 </section>
 
+<!-- WHAT TO RIDE TODAY -->
+<section style="padding:70px 60px;background:var(--black);border-top:1px solid var(--border)">
+  <div style="max-width:960px;margin:0 auto">
+    <div style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--pink);margin-bottom:10px;text-align:center">Quick Decision Guide</div>
+    <h2 style="font-family:var(--FD);font-size:clamp(28px,4vw,50px);font-weight:900;text-transform:uppercase;text-align:center;margin-bottom:8px;color:var(--white)">What to Ride <em style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:italic">Today?</em></h2>
+    <p style="font-family:var(--FB);font-size:14px;color:var(--muted);text-align:center;margin-bottom:40px">Check the wind speed and pick your sport. Simple.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <!-- Light wind -->
+      <div style="background:var(--card);border:1px solid var(--border);border-top:3px solid #555;border-radius:14px;padding:28px">
+        <div style="font-family:var(--FD);font-size:38px;font-weight:900;color:var(--muted);line-height:1;margin-bottom:8px">6–12<span style="font-size:.42em;color:var(--muted);margin-left:4px">kts</span></div>
+        <div style="font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:20px">Light / No Wind</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <a href="../efoil/" style="display:block;background:rgba(255,255,255,.04);border-radius:8px;padding:11px 14px;text-decoration:none;transition:background .2s" onmouseover="this.style.background='rgba(255,255,255,.09)'" onmouseout="this.style.background='rgba(255,255,255,.04)'">
+            <span style="font-family:var(--FD);font-size:14px;font-weight:700;color:var(--white)">⚡ E-Foil Session</span>
+            <span style="display:block;font-family:var(--FB);font-size:11px;color:var(--muted);margin-top:2px">Electric. No wind needed.</span>
+          </a>
+          <a href="../kayaking/" style="display:block;background:rgba(255,255,255,.04);border-radius:8px;padding:11px 14px;text-decoration:none;transition:background .2s" onmouseover="this.style.background='rgba(255,255,255,.09)'" onmouseout="this.style.background='rgba(255,255,255,.04)'">
+            <span style="font-family:var(--FD);font-size:14px;font-weight:700;color:var(--white)">🚣 Kayak Tour</span>
+            <span style="display:block;font-family:var(--FB);font-size:11px;color:var(--muted);margin-top:2px">Explore the reef coastline.</span>
+          </a>
+          <a href="../sup-rental/" style="display:block;background:rgba(255,255,255,.04);border-radius:8px;padding:11px 14px;text-decoration:none;transition:background .2s" onmouseover="this.style.background='rgba(255,255,255,.09)'" onmouseout="this.style.background='rgba(255,255,255,.04)'">
+            <span style="font-family:var(--FD);font-size:14px;font-weight:700;color:var(--white)">🏄 SUP Rental</span>
+            <span style="display:block;font-family:var(--FB);font-size:11px;color:var(--muted);margin-top:2px">Flat-water paddleboard.</span>
+          </a>
+        </div>
+      </div>
+      <!-- Medium wind -->
+      <div style="background:var(--card);border:1px solid rgba(0,188,212,.3);border-top:3px solid #00bcd4;border-radius:14px;padding:28px">
+        <div style="font-family:var(--FD);font-size:38px;font-weight:900;color:#00bcd4;line-height:1;margin-bottom:8px">12–18<span style="font-size:.42em;color:var(--muted);margin-left:4px">kts</span></div>
+        <div style="font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:#00bcd4;margin-bottom:20px">Wing Wind</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <a href="../wing-foil/" style="display:block;background:rgba(0,188,212,.07);border-radius:8px;padding:11px 14px;text-decoration:none;transition:background .2s" onmouseover="this.style.background='rgba(0,188,212,.14)'" onmouseout="this.style.background='rgba(0,188,212,.07)'">
+            <span style="font-family:var(--FD);font-size:14px;font-weight:700;color:var(--white)">🪁 Wing Foil</span>
+            <span style="display:block;font-family:var(--FB);font-size:11px;color:var(--muted);margin-top:2px">Ideal range. Fly the foil.</span>
+          </a>
+          <a href="../windsurfing/" style="display:block;background:rgba(0,188,212,.07);border-radius:8px;padding:11px 14px;text-decoration:none;transition:background .2s" onmouseover="this.style.background='rgba(0,188,212,.14)'" onmouseout="this.style.background='rgba(0,188,212,.07)'">
+            <span style="font-family:var(--FD);font-size:14px;font-weight:700;color:var(--white)">🏄 Windsurfing</span>
+            <span style="display:block;font-family:var(--FB);font-size:11px;color:var(--muted);margin-top:2px">Great learning range.</span>
+          </a>
+          <a href="../kitesurfing/" style="display:block;background:rgba(0,188,212,.04);border-radius:8px;padding:11px 14px;text-decoration:none;transition:background .2s" onmouseover="this.style.background='rgba(0,188,212,.09)'" onmouseout="this.style.background='rgba(0,188,212,.04)'">
+            <span style="font-family:var(--FD);font-size:14px;font-weight:700;color:var(--muted)">🪂 Kite (marginal)</span>
+            <span style="display:block;font-family:var(--FB);font-size:11px;color:var(--muted);margin-top:2px">Large kite 17m+. Possible.</span>
+          </a>
+        </div>
+      </div>
+      <!-- Kite day -->
+      <div style="background:var(--card);border:1px solid rgba(232,0,138,.3);border-top:3px solid var(--mag);border-radius:14px;padding:28px">
+        <div style="font-family:var(--FD);font-size:38px;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:8px">18+<span style="font-size:.42em;color:var(--muted);margin-left:4px">kts</span></div>
+        <div style="font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--pink);margin-bottom:20px">Prime Kite Day</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <a href="../kitesurfing/" style="display:block;background:rgba(232,0,138,.07);border-radius:8px;padding:11px 14px;text-decoration:none;transition:background .2s" onmouseover="this.style.background='rgba(232,0,138,.14)'" onmouseout="this.style.background='rgba(232,0,138,.07)'">
+            <span style="font-family:var(--FD);font-size:14px;font-weight:700;color:var(--white)">🪂 Kitesurfing</span>
+            <span style="display:block;font-family:var(--FB);font-size:11px;color:var(--muted);margin-top:2px">Flat water. All skill levels.</span>
+          </a>
+          <a href="../wing-foil/" style="display:block;background:rgba(232,0,138,.07);border-radius:8px;padding:11px 14px;text-decoration:none;transition:background .2s" onmouseover="this.style.background='rgba(232,0,138,.14)'" onmouseout="this.style.background='rgba(232,0,138,.07)'">
+            <span style="font-family:var(--FD);font-size:14px;font-weight:700;color:var(--white)">🪁 Wing Foil</span>
+            <span style="display:block;font-family:var(--FB);font-size:11px;color:var(--muted);margin-top:2px">Powered. Smaller wing.</span>
+          </a>
+          <a href="../windsurfing/" style="display:block;background:rgba(232,0,138,.07);border-radius:8px;padding:11px 14px;text-decoration:none;transition:background .2s" onmouseover="this.style.background='rgba(232,0,138,.14)'" onmouseout="this.style.background='rgba(232,0,138,.07)'">
+            <span style="font-family:var(--FD);font-size:14px;font-weight:700;color:var(--white)">🏄 Windsurfing</span>
+            <span style="display:block;font-family:var(--FB);font-size:11px;color:var(--muted);margin-top:2px">Use a 5.0–6.5m sail.</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;font-family:var(--FB);font-size:13px;color:var(--muted);margin-top:24px">Check live conditions: <a href="https://www.windy.com/?9.932,100.065,11" target="_blank" rel="noopener" style="color:var(--pink)">Windy.com — Koh Phangan</a> &nbsp;·&nbsp; <a href="https://www.windguru.cz/48993" target="_blank" rel="noopener" style="color:var(--pink)">Windguru</a></p>
+  </div>
+</section>
+
 <!-- FULL CALENDAR TABLE -->
-<section style="padding:50px 60px 70px;background:var(--dark);border-top:1px solid var(--border);">
+<section id="calendar" style="padding:50px 60px 70px;background:var(--dark);border-top:1px solid var(--border);">
   <div style="max-width:1000px;margin:0 auto;">
     <h2 style="font-family:var(--FD);font-size:clamp(24px,2.5vw,34px);font-weight:900;text-transform:uppercase;color:var(--white);text-align:center;margin-bottom:8px;">Month-by-Month Wind Calendar</h2>
     <p style="font-family:var(--FB);font-size:14px;color:var(--muted);text-align:center;margin-bottom:36px;">Thong Sala Beach · all activities</p>
@@ -1871,6 +1981,84 @@ body.light .also-name{color:#111}
           <tr><td style="padding:10px 14px;color:var(--muted);">December</td><td style="padding:10px 14px;text-align:center;color:var(--muted);">12–18 kts</td><td style="padding:10px 14px;text-align:center;color:var(--muted);">NE</td><td style="padding:10px 14px;text-align:center;color:#7b2fff;">★★★☆☆</td><td style="padding:10px 14px;text-align:center;color:#7b2fff;">★★★☆☆</td><td style="padding:10px 14px;text-align:center;color:#7b2fff;">★★★☆☆</td></tr>
         </tbody>
       </table>
+    </div>
+  </div>
+</section>
+
+<!-- SPOTS BY SEASON -->
+<section style="padding:70px 60px;background:var(--dark);border-top:1px solid var(--border)" id="spots">
+  <div style="max-width:1000px;margin:0 auto">
+    <div style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--pink);margin-bottom:10px;text-align:center">Local Knowledge</div>
+    <h2 style="font-family:var(--FD);font-size:clamp(28px,4vw,50px);font-weight:900;text-transform:uppercase;text-align:center;margin-bottom:8px;color:var(--white)">Best Spots <em style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:italic">by Season</em></h2>
+    <p style="font-family:var(--FB);font-size:14px;color:var(--muted);text-align:center;margin-bottom:48px">Three riding areas — each with its own character and optimal season.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+      <!-- Thong Sala -->
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden">
+        <div style="background:var(--grad);padding:18px 22px">
+          <div style="font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:rgba(255,255,255,.7);margin-bottom:4px">NE Season · Jan–Apr</div>
+          <div style="font-family:var(--FD);font-size:22px;font-weight:900;text-transform:uppercase;color:#fff">Thong Sala</div>
+          <div style="font-family:var(--FB);font-size:12px;color:rgba(255,255,255,.8);margin-top:2px">Our home beach · flat-water lagoon</div>
+        </div>
+        <div style="padding:22px">
+          <ul style="list-style:none;padding:0;margin:0 0 18px;display:flex;flex-direction:column;gap:8px">
+            <li style="display:flex;gap:10px;font-family:var(--FB);font-size:13px;color:var(--muted)"><span style="color:var(--pink);font-weight:700;flex-shrink:0">→</span>Depth: 0.5–2m sandy lagoon, 100m wide</li>
+            <li style="display:flex;gap:10px;font-family:var(--FB);font-size:13px;color:var(--muted)"><span style="color:var(--pink);font-weight:700;flex-shrink:0">→</span>Wind: side-onshore NE, perfectly cross at peak</li>
+            <li style="display:flex;gap:10px;font-family:var(--FB);font-size:13px;color:var(--muted)"><span style="color:var(--pink);font-weight:700;flex-shrink:0">→</span>Water: glassy and flat — ideal for beginners</li>
+            <li style="display:flex;gap:10px;font-family:var(--FB);font-size:13px;color:var(--muted)"><span style="color:var(--pink);font-weight:700;flex-shrink:0">→</span>Best months: Feb, Mar, Apr</li>
+          </ul>
+          <div style="background:rgba(232,0,138,.06);border-radius:8px;padding:10px 14px;font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--pink)">★ Best for beginners and all lessons</div>
+        </div>
+      </div>
+      <!-- Baan Tai -->
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden">
+        <div style="background:linear-gradient(135deg,#0097a7,#00bcd4);padding:18px 22px">
+          <div style="font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:rgba(255,255,255,.7);margin-bottom:4px">SW Season · Jun–Sep</div>
+          <div style="font-family:var(--FD);font-size:22px;font-weight:900;text-transform:uppercase;color:#fff">Baan Tai</div>
+          <div style="font-family:var(--FB);font-size:12px;color:rgba(255,255,255,.8);margin-top:2px">3km south · side-shore SW</div>
+        </div>
+        <div style="padding:22px">
+          <ul style="list-style:none;padding:0;margin:0 0 18px;display:flex;flex-direction:column;gap:8px">
+            <li style="display:flex;gap:10px;font-family:var(--FB);font-size:13px;color:var(--muted)"><span style="color:#00bcd4;font-weight:700;flex-shrink:0">→</span>Wind: true side-shore SW, cleaner than Thong Sala</li>
+            <li style="display:flex;gap:10px;font-family:var(--FB);font-size:13px;color:var(--muted)"><span style="color:#00bcd4;font-weight:700;flex-shrink:0">→</span>Water: slightly choppier, long downwind run</li>
+            <li style="display:flex;gap:10px;font-family:var(--FB);font-size:13px;color:var(--muted)"><span style="color:#00bcd4;font-weight:700;flex-shrink:0">→</span>Crowd: much less crowded than peak season</li>
+            <li style="display:flex;gap:10px;font-family:var(--FB);font-size:13px;color:var(--muted)"><span style="color:#00bcd4;font-weight:700;flex-shrink:0">→</span>Best months: Jul, Aug</li>
+          </ul>
+          <div style="background:rgba(0,188,212,.06);border-radius:8px;padding:10px 14px;font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#00bcd4">★ Best for intermediate and advanced riders</div>
+        </div>
+      </div>
+      <!-- Chaloklum -->
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden">
+        <div style="background:linear-gradient(135deg,#3f51b5,#7b2fff);padding:18px 22px">
+          <div style="font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:rgba(255,255,255,.7);margin-bottom:4px">Both Seasons</div>
+          <div style="font-family:var(--FD);font-size:22px;font-weight:900;text-transform:uppercase;color:#fff">Chaloklum</div>
+          <div style="font-family:var(--FB);font-size:12px;color:rgba(255,255,255,.8);margin-top:2px">North shore · cross-shore wind</div>
+        </div>
+        <div style="padding:22px">
+          <ul style="list-style:none;padding:0;margin:0 0 18px;display:flex;flex-direction:column;gap:8px">
+            <li style="display:flex;gap:10px;font-family:var(--FB);font-size:13px;color:var(--muted)"><span style="color:#7b2fff;font-weight:700;flex-shrink:0">→</span>Wind: cross-shore, consistent in both seasons</li>
+            <li style="display:flex;gap:10px;font-family:var(--FB);font-size:13px;color:var(--muted)"><span style="color:#7b2fff;font-weight:700;flex-shrink:0">→</span>Water: sheltered bay, medium chop on big days</li>
+            <li style="display:flex;gap:10px;font-family:var(--FB);font-size:13px;color:var(--muted)"><span style="color:#7b2fff;font-weight:700;flex-shrink:0">→</span>Vibe: local fishing village, uncrowded</li>
+            <li style="display:flex;gap:10px;font-family:var(--FB);font-size:13px;color:var(--muted)"><span style="color:#7b2fff;font-weight:700;flex-shrink:0">→</span>Access: 25 min from Thong Sala by scooter</li>
+          </ul>
+          <div style="background:rgba(123,47,255,.06);border-radius:8px;padding:10px 14px;font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#7b2fff">★ Best for experienced free-riders</div>
+        </div>
+      </div>
+    </div>
+    <!-- Morning window -->
+    <div style="margin-top:24px;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px 28px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;align-items:center">
+      <div>
+        <div style="font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--pink);margin-bottom:6px">Local Tip</div>
+        <div style="font-family:var(--FD);font-size:18px;font-weight:900;text-transform:uppercase;color:var(--white)">Best Riding Window</div>
+        <div style="font-family:var(--FB);font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5">Wind builds through the morning. The sweetest sessions are mid-day to late afternoon.</div>
+      </div>
+      <div style="border-left:1px solid var(--border);padding-left:20px">
+        <div style="font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--pink);margin-bottom:8px">NE Season (Jan–Apr)</div>
+        <div style="font-family:var(--FB);font-size:13px;color:var(--muted);line-height:1.6">Wind arrives 9–11am. Strongest 12–4pm. Tends to drop after sunset. Mornings can be glassy for foiling.</div>
+      </div>
+      <div style="border-left:1px solid var(--border);padding-left:20px">
+        <div style="font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:#00bcd4;margin-bottom:8px">SW Season (Jun–Sep)</div>
+        <div style="font-family:var(--FB);font-size:13px;color:var(--muted);line-height:1.6">More consistent all-day wind. Often gusty in the afternoon. Best sessions 10am–3pm at Baan Tai.</div>
+      </div>
     </div>
   </div>
 </section>
