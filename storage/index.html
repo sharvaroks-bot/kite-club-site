@@ -41,6 +41,7 @@ body.light{
   --black:#f5f5f2;--dark:#ebebeb;--mid:#f8f8f5;--card:#f8f8f5;
   --border:rgba(17,17,24,0.1);--border2:rgba(17,17,24,0.06);
   --white:#111118;--off:#2a2a3a;--muted:rgba(17,17,24,0.45);
+  --fg:#111118;--sub:#444455;
 }
 body.light nav{background:rgba(245,245,242,.96)}
 body.light .announce{background:var(--grad)}
@@ -56,6 +57,7 @@ body.light .cta-band h2{color:#fff}
 body.light .cta-band h2 em{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 body.light .cta-band p{color:rgba(255,255,255,.8)}
 body.light .cta-btns .btn-s{color:#fff;border-color:rgba(255,255,255,.5)}
+body.light .cta-band::after{background:linear-gradient(135deg,rgba(123,47,255,.78) 0%,rgba(232,0,138,.78) 100%)}
 body.light .loc-panel h2{color:#fff}
 body.light .loc-panel p{color:rgba(255,255,255,.8)}
 body.light .loc-explore{color:#fff}
@@ -808,7 +810,7 @@ body.light .pc.feat .pc-badge {
     display:grid !important;
     grid-template-columns:1fr !important;
     gap:12px !important;
-    padding:0 0 40px !important;
+    padding:0 22px 40px !important;
   }
   div[style*="grid-template-columns:1fr 1fr;gap:40px"] > div ul{
     display:flex;
@@ -1169,6 +1171,44 @@ body.light .amenity-card p{color:#444455}
 @media(max-width:580px){
   .amenities-grid{grid-template-columns:1fr !important}
 }
+/* ─── cc-card: Rider Passes ─── */
+.cc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:0 60px 80px}
+.cc-card{background:var(--mid);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;position:relative;transition:transform .3s,box-shadow .3s}
+body.light .cc-card{background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.07)}
+.cc-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.2)}
+.cc-pop-tag{position:absolute;top:16px;left:16px;background:linear-gradient(135deg,#7b2fff,#ff3aac);color:#fff;font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:6px;z-index:2}
+.cc-body{padding:20px;flex:1;display:flex;flex-direction:column;gap:8px}
+.cc-kicker{font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#e8008a}
+.cc-name{font-family:var(--FD);font-size:28px;font-weight:900;text-transform:uppercase;color:var(--white);margin:0}
+body.light .cc-name{color:#111}
+.cc-best-for{font-family:var(--FB);font-size:12px;color:var(--off);line-height:1.5;margin:0}
+.cc-list-price{display:flex;align-items:flex-start;gap:12px;margin-top:4px}
+.cc-list{list-style:none;padding:0;margin:0;flex:1;display:flex;flex-direction:column;gap:4px}
+.cc-list li{font-family:var(--FB);font-size:13px;color:var(--off);padding-left:14px;position:relative;line-height:1.4}
+.cc-list li::before{content:'✦';position:absolute;left:0;color:#e8008a;font-size:7px;top:3px}
+body.light .cc-list li{color:#555}
+.cc-price-box{position:relative;overflow:hidden;width:115px;height:115px;flex-shrink:0;border-radius:12px;background:linear-gradient(135deg,rgba(123,47,255,.1),rgba(255,58,172,.1));border:2px solid rgba(232,0,138,.25);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+body.light .cc-price-box{background:#fff;border-color:rgba(232,0,138,.3);box-shadow:0 4px 12px rgba(123,47,255,.1)}
+.cc-price-box strong{font-family:var(--FD);font-size:32px;font-weight:900;color:var(--white);line-height:1}
+body.light .cc-price-box strong{color:#111}
+.cc-price-box span{font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.1em;color:#e8008a;text-transform:uppercase}
+.cc-price-box::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-20deg);transition:left .6s ease}
+.cc-card:hover .cc-price-box::after{left:130%}
+.cc-btns{display:flex;flex-direction:row;gap:8px;margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,.08)}
+body.light .cc-btns{border-top-color:#eee}
+.cc-btns .btn-s{flex:1;text-align:center;padding:11px 8px;font-size:13px;border-color:#7b2fff;color:#7b2fff;box-sizing:border-box;min-width:0}
+body.light .cc-btns .btn-s{border-color:#7b2fff;color:#7b2fff}
+.cc-btns .btn-p{flex:1;text-align:center;padding:11px 8px;font-size:13px;box-sizing:border-box;min-width:0}
+@media(max-width:900px){
+  .cc-grid{grid-template-columns:1fr !important;padding:0 4px 55px !important}
+  [style*="padding:0 60px 70px"].fu{padding-left:22px!important;padding-right:22px!important;grid-template-columns:1fr!important;gap:28px!important}
+  .cc-btns{flex-direction:row !important;flex-wrap:nowrap !important;gap:6px}
+  .cc-btns .btn-s,.cc-btns .btn-p{flex:1 !important;text-align:center !important;padding:12px 6px !important;font-size:13px !important;min-width:0 !important;box-sizing:border-box !important}
+  .cc-body{padding:22px 18px}
+  .cc-name{font-size:28px !important}
+  .cc-price-box{width:110px;height:110px}
+  .cc-price-box strong{font-size:28px}
+}
 </style>
 </head>
 <body>
@@ -1311,53 +1351,71 @@ body.light .amenity-card p{color:#444455}
 
   <!-- RIDER PASSES -->
   <div class="sh fu"><h2>Rider<br><em class="gt">Passes</em></h2></div>
-  <div class="price-grid fu">
-    <div class="pc">
-      <div class="pc-label">Day Rider</div>
-      <h3>Day Pass</h3>
-      <div class="pc-price">200</div>
-      <div class="pc-cur">THB / day</div>
-      <ul>
-        <li>Beach access for 1 day</li>
-        <li>Air compressor</li>
-        <li>Gear storage (day)</li>
-        <li>Freshwater shower</li>
-        <li>Launch &amp; land assist</li>
-      </ul>
-      <a href="https://wa.me/66967203910" target="_blank" class="btn-o">Get Day Pass</a>
+  <div class="cc-grid fu">
+    <div class="cc-card">
+      <div class="cc-body">
+        <div class="cc-kicker">Day Rider</div>
+        <div class="cc-name">Day Pass</div>
+        <p class="cc-best-for"><strong>Best for:</strong> drop-in riders — no commitment needed.</p>
+        <div class="cc-list-price">
+          <ul class="cc-list">
+            <li>Beach access for 1 day</li>
+            <li>Air compressor</li>
+            <li>Gear storage (day)</li>
+            <li>Freshwater shower</li>
+            <li>Launch &amp; land assist</li>
+          </ul>
+          <div class="cc-price-box"><strong>200</strong><span>THB / day</span></div>
+        </div>
+        <div class="cc-btns">
+          <a href="https://wa.me/66967203910" target="_blank" class="btn-p">Get Day Pass</a>
+        </div>
+      </div>
     </div>
-    <div class="pc feat">
-      <div class="pc-badge">BEST VALUE</div>
-      <div class="pc-label">Week Rider</div>
-      <h3>Week Pass</h3>
-      <div class="pc-price">900</div>
-      <div class="pc-cur">THB / week</div>
-      <ul>
-        <li>7-day full beach access</li>
-        <li>Compressor (unlimited)</li>
-        <li>Gear storage (7 days)</li>
-        <li>Freshwater shower</li>
-        <li>Launch &amp; land assist</li>
-        <li>Beach Wi-Fi</li>
-        <li>Chill area access</li>
-      </ul>
-      <a href="https://wa.me/66967203910" target="_blank" class="btn-p">Get Week Pass</a>
+    <div class="cc-card" style="outline:2px solid #e8008a;">
+      <div class="cc-pop-tag">★ Best Value</div>
+      <div class="cc-body">
+        <div class="cc-kicker">Week Rider</div>
+        <div class="cc-name">Week Pass</div>
+        <p class="cc-best-for"><strong>Best for:</strong> travellers staying 1–2 weeks.</p>
+        <div class="cc-list-price">
+          <ul class="cc-list">
+            <li>7-day full beach access</li>
+            <li>Compressor (unlimited)</li>
+            <li>Gear storage (7 days)</li>
+            <li>Freshwater shower</li>
+            <li>Launch &amp; land assist</li>
+            <li>Beach Wi-Fi</li>
+            <li>Chill area access</li>
+          </ul>
+          <div class="cc-price-box"><strong>900</strong><span>THB / week</span></div>
+        </div>
+        <div class="cc-btns">
+          <a href="https://wa.me/66967203910" target="_blank" class="btn-p">Get Week Pass</a>
+        </div>
+      </div>
     </div>
-    <div class="pc">
-      <div class="pc-label">Month Rider</div>
-      <h3>Monthly Pass</h3>
-      <div class="pc-price">2,500</div>
-      <div class="pc-cur">THB / month</div>
-      <ul>
-        <li>All Week Pass benefits</li>
-        <li>Priority lesson booking</li>
-        <li>10% off all rentals</li>
-        <li>Member-only sessions</li>
-        <li>Daily wind alerts</li>
-        <li>Instructor safety support</li>
-        <li>Local rider community</li>
-      </ul>
-      <a href="https://wa.me/66967203910" target="_blank" class="btn-o">Get Month Pass</a>
+    <div class="cc-card">
+      <div class="cc-body">
+        <div class="cc-kicker">Month Rider</div>
+        <div class="cc-name">Monthly Pass</div>
+        <p class="cc-best-for"><strong>Best for:</strong> seasonal and local riders.</p>
+        <div class="cc-list-price">
+          <ul class="cc-list">
+            <li>All Week Pass benefits</li>
+            <li>Priority lesson booking</li>
+            <li>10% off all rentals</li>
+            <li>Member-only sessions</li>
+            <li>Daily wind alerts</li>
+            <li>Instructor safety support</li>
+            <li>Local rider community</li>
+          </ul>
+          <div class="cc-price-box"><strong>2,500</strong><span>THB / month</span></div>
+        </div>
+        <div class="cc-btns">
+          <a href="https://wa.me/66967203910" target="_blank" class="btn-p">Get Month Pass</a>
+        </div>
+      </div>
     </div>
   </div>
 
