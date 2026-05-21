@@ -779,13 +779,15 @@ body.light .team-card{background:#fff}
   .about-stats{grid-template-columns:repeat(2,1fr)}
   .team-section{padding:0 0 40px}
   .team-grid{display:flex;flex-direction:column;gap:0;padding:0;margin-top:0}
-  .team-card{min-height:100svh;display:flex;flex-direction:column;border-left:none;border-right:none;border-radius:0}
-  .team-photo{flex:1;width:100%;aspect-ratio:unset;object-fit:cover;object-position:center top;min-height:0}
-  .team-info{padding:22px 18px 28px;flex-shrink:0}
-  .team-name{font-size:32px}
-  .team-role{font-size:13px;margin-bottom:10px}
-  .team-bio{font-size:14px;line-height:1.6}
-  .new-member-card{min-height:60svh;margin:0;border-radius:0;border-left:none;border-right:none}
+  .team-card{height:100svh;display:flex;flex-direction:column;border:none;border-radius:0;overflow:hidden;padding:8px 8px 0;background:var(--dark)}
+  .team-photo{height:55svh;width:100%;flex-shrink:0;aspect-ratio:unset;object-fit:cover;object-position:center 15%;display:block;border-radius:10px}
+  .team-info{flex:1;padding:12px 10px 14px;display:flex;flex-direction:column;justify-content:flex-start;overflow:hidden}
+  .team-name{font-size:36px}
+  .team-role{font-size:14px;font-weight:700;margin-bottom:6px}
+  .team-bio{font-size:16px;font-weight:600;line-height:1.5;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+  .team-certs{margin-top:8px}
+  .team-cert{font-size:11px;font-weight:700}
+  .new-member-card{height:60svh;margin:0 8px;border-radius:10px;border-left:1px dashed var(--border);border-right:1px dashed var(--border)}
   .about-stat-num{font-size:30px}
 }
 .fu{opacity:1 !important;transform:translateY(0) !important;transition:none !important;}
