@@ -1,5 +1,5 @@
 # IMPLEMENTED — Kite Club Koh Phangan Website
-**Last updated:** 2026-05-20
+**Last updated:** 2026-05-21
 
 This file tracks what has been implemented and verified on the new dev site.
 
@@ -109,6 +109,17 @@ This file tracks what has been implemented and verified on the new dev site.
 - [x] No-wind rescheduling badge on 13 wind-dependent lesson pages
 - [x] AggregateRating schema (5.0 / 47 reviews) on 4 lesson listing pages
 
+### Phase 13 — Brand & Content (2026-05-21)
+- [x] Rescue boat claims removed from all 13 pages (production correction)
+- [x] `/seasons/` enhanced: cinematic hero, "What to Ride Today?" guide, 3-spot section, local knowledge
+- [x] Homepage: "Ride Today / Today in Koh Phangan" section added
+- [x] Homepage: 2 new FAQ entries (how long to learn, is Koh Phangan good)
+- [x] Homepage: FAQPage schema extended to 8 questions, grammar bug fixed
+- [x] `/compare/` — new sport comparison page (kite vs wing vs windsurf vs efoil)
+- [x] `/locations/` — 3 spot cards (Thong Sala, Baan Tai, Chaloklum) + ferry directions
+- [x] `sitemap.xml` updated with /compare/
+- [x] `CHANGELOG.md` updated to v3.17.0
+
 ---
 
 ## NOT YET IMPLEMENTED
@@ -120,6 +131,10 @@ This file tracks what has been implemented and verified on the new dev site.
 ### Medium Priority
 - [ ] Course schema on individual lesson pages
 - [ ] Instructor profiles section on school pages
+- [ ] Seasonal landing pages: /kitesurfing-january/, /kitesurfing-february/, /wingfoil-thailand-march/
+- [ ] Equipment explainer content: kite sizes, bar types, harnesses, boards
+- [ ] "No Wind Day" dedicated content hub
+- [ ] /wind/ redirect → /seasons/ (add to _redirects)
 
 ### Low Priority
 - [ ] WebP image conversion

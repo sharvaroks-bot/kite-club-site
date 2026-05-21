@@ -2,6 +2,41 @@
 
 ---
 
+## [v3.17.0] — 2026-05-21 (current)
+
+### Critical fix
+- Removed ALL rescue boat claims from 13 pages — rescue boat does not currently exist. Replaced with: instructor supervision, safety monitoring, beach safety support, launch & landing assistance.
+
+### Wind Center page — /seasons/ enhanced
+- Cinematic hero (90vh, wind-in H1, 4-stat overlay: 18-28 kts / Jan-Apr / 90% / Jun-Sep)
+- "What to Ride Today?" 3-column decision guide (6-12 kts / 12-18 kts / 18+ kts)
+- Spots by Season section: Thong Sala, Baan Tai, Chaloklum (depth, wind dir, season, skill)
+- Local knowledge timing block (NE vs SW morning window)
+- Windy.com + Windguru forecast links
+
+### Homepage additions
+- "Ride Today / Today in Koh Phangan" section — 3 sport tiles with season status badge
+- 2 new FAQ entries: "How long to learn kitesurfing?" + "Is Koh Phangan good for beginners?"
+- Schema: fixed grammar bug; added 2 new FAQPage entries for AI-search
+
+### New page — /compare/ (sport comparison)
+- Kitesurfing vs Wing Foil vs Windsurfing vs E-Foil
+- 4 sport cards with full specs (wind, learning time, speed, fitness, price)
+- 12-criteria comparison table
+- "Choose Your Sport if…" guide (4 decision boxes)
+- FAQPage schema with 5 questions
+
+### /locations/ — GEO authority expansion
+- 3 spot cards: Thong Sala (beginner, NE, Jan-Apr), Baan Tai (intermediate, SW, Jun-Sep), Chaloklum (advanced, both seasons)
+- Spot data: depth, wind direction, peak season, skill level, downwind run
+- Ferry & getting-here section: Bangkok, Koh Samui, pier-to-school walk
+- Updated title + meta description
+
+### /sitemap.xml updated
+- Added /compare/ (priority 0.8)
+
+---
+
 ## [Unreleased] — in progress
 
 ### Added
