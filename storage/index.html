@@ -1154,6 +1154,21 @@ body.light .pc.feat .pc-badge {
   .hero-btns{flex-wrap:nowrap !important;gap:8px !important}
   .hero-btns a,.hero-btns .btn-p,.hero-btns .btn-s{flex:1;text-align:center;padding:14px 8px !important;font-size:14px !important;min-width:0}
 }
+/* ─── AMENITY CARDS ─── */
+.amenity-card{background:var(--mid);border:1px solid var(--border);padding:32px 28px;transition:border-color .3s}
+.amenity-card:hover{border-color:var(--mag)}
+.amenity-icon{font-size:28px;margin-bottom:14px}
+.amenity-card h3{font-family:var(--FD);font-size:16px;font-weight:700;text-transform:uppercase;margin-bottom:8px;color:var(--fg,#fff)}
+.amenity-card p{font-size:13px;color:var(--off);line-height:1.65}
+body.light .amenity-card{background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.05)}
+body.light .amenity-card h3{color:#111118}
+body.light .amenity-card p{color:#444455}
+@media(max-width:900px){
+  .amenities-grid{grid-template-columns:1fr 1fr !important;padding:0 22px 55px !important}
+}
+@media(max-width:580px){
+  .amenities-grid{grid-template-columns:1fr !important}
+}
 </style>
 </head>
 <body>
@@ -1236,66 +1251,165 @@ body.light .pc.feat .pc-badge {
 </div>
 <main id="page-content">
 
-
   <div class="page-hero">
     <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1530053969600-caed2596d242?w=1600&q=85')"></div>
     <div class="page-hero-content fu">
-      <div class="eyebrow">Storage &amp; Membership</div>
-      <h1>Equipment<br><em>Storage</em></h1>
-      <p>Secure beachfront storage and Kite Club membership on Thong Sala Beach</p>
+      <div class="eyebrow">Rider Membership · Thong Sala Beach</div>
+      <h1>Your Base<br><em>on the Beach</em></h1>
+      <p>Gear storage, compressor, launch assist, rescue, shower and wind alerts — steps from the water.</p>
       <div class="hero-btns">
         <a href="https://wa.me/66967203910" target="_blank" class="btn-p">Join Now</a>
-        <a href="../contacts/" class="btn-s">Contact Us</a>
+        <a href="../contacts/" class="btn-s">Ask a Question</a>
       </div>
     </div>
   </div>
 
+  <!-- AMENITIES -->
+  <div class="sh fu"><h2>Everything<br><em class="gt">Included</em></h2></div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:3px;padding:0 60px 70px" class="fu amenities-grid">
+    <div class="amenity-card">
+      <div class="amenity-icon">🏄</div>
+      <h3>Gear Storage</h3>
+      <p>Secure locked compound directly on Thong Sala Beach. Your kit — always within reach, never at the hotel.</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">💨</div>
+      <h3>Air Compressor</h3>
+      <p>On-site compressor for kites. Pump up in under 2 minutes. No hauling your own pump to the beach.</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">✋</div>
+      <h3>Launch &amp; Land</h3>
+      <p>Instructor-assisted launch and landing on every session. Safe routine. No hunting for a stranger to help.</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">🚤</div>
+      <h3>Rescue Boat</h3>
+      <p>Rescue boat on the water during all member sessions. Standard, not optional.</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">🚿</div>
+      <h3>Freshwater Shower</h3>
+      <p>Rinse off after every session. Gear wash-down station at the compound.</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">📶</div>
+      <h3>Beach Wi-Fi</h3>
+      <p>Stay connected between sessions. Check the forecast, answer the remote work, relax.</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">☕</div>
+      <h3>Chill Area</h3>
+      <p>Shaded beach spot between sessions. Debrief. Watch the water. Talk shop with other riders.</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">🌬️</div>
+      <h3>Wind Alerts</h3>
+      <p>Same-morning WhatsApp forecast. Know before you arrive if it's worth suiting up.</p>
+    </div>
+  </div>
+
+  <!-- RIDER PASSES -->
+  <div class="sh fu"><h2>Rider<br><em class="gt">Passes</em></h2></div>
+  <div class="price-grid fu">
+    <div class="pc">
+      <div class="pc-label">Day Rider</div>
+      <h3>Day Pass</h3>
+      <div class="pc-price">200</div>
+      <div class="pc-cur">THB / day</div>
+      <ul>
+        <li>Beach access for 1 day</li>
+        <li>Air compressor</li>
+        <li>Gear storage (day)</li>
+        <li>Freshwater shower</li>
+        <li>Launch &amp; land assist</li>
+      </ul>
+      <a href="https://wa.me/66967203910" target="_blank" class="btn-o">Get Day Pass</a>
+    </div>
+    <div class="pc feat">
+      <div class="pc-badge">BEST VALUE</div>
+      <div class="pc-label">Week Rider</div>
+      <h3>Week Pass</h3>
+      <div class="pc-price">900</div>
+      <div class="pc-cur">THB / week</div>
+      <ul>
+        <li>7-day full beach access</li>
+        <li>Compressor (unlimited)</li>
+        <li>Gear storage (7 days)</li>
+        <li>Freshwater shower</li>
+        <li>Launch &amp; land assist</li>
+        <li>Beach Wi-Fi</li>
+        <li>Chill area access</li>
+      </ul>
+      <a href="https://wa.me/66967203910" target="_blank" class="btn-p">Get Week Pass</a>
+    </div>
+    <div class="pc">
+      <div class="pc-label">Month Rider</div>
+      <h3>Monthly Pass</h3>
+      <div class="pc-price">2,500</div>
+      <div class="pc-cur">THB / month</div>
+      <ul>
+        <li>All Week Pass benefits</li>
+        <li>Priority lesson booking</li>
+        <li>10% off all rentals</li>
+        <li>Member-only sessions</li>
+        <li>Daily wind alerts</li>
+        <li>Rescue boat included</li>
+        <li>Local rider community</li>
+      </ul>
+      <a href="https://wa.me/66967203910" target="_blank" class="btn-o">Get Month Pass</a>
+    </div>
+  </div>
+
+  <!-- COMMUNITY -->
   <section class="about-band fu">
     <div class="about-img" style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&q=85');background-size:cover;background-position:center;min-height:440px"></div>
     <div class="about-txt">
-      <div class="about-label">Our Facility</div>
-      <h2>Secure Storage<br><em class="gt">on the Beach</em></h2>
-      <p>Our beachfront storage facility is located directly at Thong Sala Beach — the main kite spot on Koh Phangan. Your equipment is always within reach, rigged and ready when the wind starts blowing.</p>
-      <p>The facility includes designated pumping and pack-down areas, fresh water wash-down stations, and on-site beach assistance for launching and landing. Whether you store your own kit or rent from us, we have you covered.</p>
-      <p>We offer three membership tiers from a simple daily service to our full all-inclusive package. Choose what fits your riding style and budget.</p>
+      <div class="about-label">Local Rider Network</div>
+      <h2>The Base for Every<br><em class="gt">Rider on the Island</em></h2>
+      <p>Kite Club is where Koh Phangan's kite and wing community gathers. Expats who've been riding the lagoon for three seasons. Travellers who arrive for a week and stay for a month. Digital nomads who work mornings and session every afternoon when the wind is on.</p>
+      <p>When conditions are good, everyone knows. When they're off, the chill area fills up. The community is informal, international, rider-first — no ego, just water.</p>
+      <p>Monthly members receive daily wind alerts, priority access and a place in the local rider group. Your kit is already at the beach. Just show up.</p>
+      <a href="https://wa.me/66967203910" target="_blank" class="btn-p" style="margin-top:20px;display:inline-block">Join the Club</a>
     </div>
   </section>
 
-  <div class="sh fu"><h2>Daily<br><em class="gt">Prices</em></h2></div>
-  
-  
-
-  <div class="sh fu"><h2>Kite Club<br><em class="gt">Membership</em></h2></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:0 60px 70px" class="fu">
-    <div style="background:var(--mid);border:1px solid var(--border);padding:36px 30px">
-      <div style="font-size:32px;margin-bottom:12px">🏄</div>
-      <h3 style="font-family:var(--FD);font-size:18px;font-weight:700;text-transform:uppercase;margin-bottom:12px">Kite Club Member</h3>
-      <p style="color:var(--off);font-size:14px;line-height:1.75">As a Kite Club member you become part of our beach community. Priority booking for lessons, access to member sessions, monthly wind alerts, and a community of riders at the same level as you.</p>
+  <!-- WHO IS THIS FOR -->
+  <div class="sh fu"><h2>Is This<br><em class="gt">Right for You?</em></h2></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:0 60px 70px" class="fu">
+    <div>
+      <h3 style="font-family:var(--FD);font-size:20px;font-weight:700;text-transform:uppercase;margin-bottom:18px;color:var(--fg,#fff)">Travelling Riders</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:4px">
+        <li style="color:var(--off);font-size:14px;padding:10px 14px;background:var(--mid);border:1px solid var(--border)">On the island for 1–4 weeks</li>
+        <li style="color:var(--off);font-size:14px;padding:10px 14px;background:var(--mid);border:1px solid var(--border)">Own gear or renting from us</li>
+        <li style="color:var(--off);font-size:14px;padding:10px 14px;background:var(--mid);border:1px solid var(--border)">Want beach access without hauling kit daily</li>
+        <li style="color:var(--off);font-size:14px;padding:10px 14px;background:var(--mid);border:1px solid var(--border)">Need rescue boat and launch assist every session</li>
+        <li style="color:var(--off);font-size:14px;padding:10px 14px;background:var(--mid);border:1px solid var(--border);border-left:3px solid var(--mag)"><strong>→ Week Pass is the move</strong></li>
+      </ul>
     </div>
-    <div style="background:var(--mid);border:1px solid var(--border);padding:36px 30px">
-      <div style="font-size:32px;margin-bottom:12px">🌊</div>
-      <h3 style="font-family:var(--FD);font-size:18px;font-weight:700;text-transform:uppercase;margin-bottom:12px">What's Included</h3>
-      <ul style="list-style:none;display:flex;flex-direction:column;gap:8px">
-        <li style="color:var(--off);font-size:14px;padding:6px 0;border-bottom:1px solid var(--border2)">Priority booking for lessons &amp; rentals</li>
-        <li style="color:var(--off);font-size:14px;padding:6px 0;border-bottom:1px solid var(--border2)">10% discount on all rentals</li>
-        <li style="color:var(--off);font-size:14px;padding:6px 0;border-bottom:1px solid var(--border2)">Access to member-only sessions</li>
-        <li style="color:var(--off);font-size:14px;padding:6px 0;border-bottom:1px solid var(--border2)">Monthly newsletter &amp; wind alerts</li>
-        <li style="color:var(--off);font-size:14px;padding:6px 0">Community events &amp; meetups</li>
+    <div>
+      <h3 style="font-family:var(--FD);font-size:20px;font-weight:700;text-transform:uppercase;margin-bottom:18px;color:var(--fg,#fff)">Local &amp; Seasonal Riders</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:4px">
+        <li style="color:var(--off);font-size:14px;padding:10px 14px;background:var(--mid);border:1px solid var(--border)">Based on the island or returning every season</li>
+        <li style="color:var(--off);font-size:14px;padding:10px 14px;background:var(--mid);border:1px solid var(--border)">Own kit stored on-site year-round</li>
+        <li style="color:var(--off);font-size:14px;padding:10px 14px;background:var(--mid);border:1px solid var(--border)">Riding 3–5 times per week in season</li>
+        <li style="color:var(--off);font-size:14px;padding:10px 14px;background:var(--mid);border:1px solid var(--border)">Want priority booking, discounts and community access</li>
+        <li style="color:var(--off);font-size:14px;padding:10px 14px;background:var(--mid);border:1px solid var(--border);border-left:3px solid var(--mag)"><strong>→ Monthly Pass is home</strong></li>
       </ul>
     </div>
   </div>
 
-  <div class="cta-band fu">
+  <!-- SUNSET CTA -->
+  <section class="cta-band fu">
     <div class="cta-inner">
-      <h2>Store Your Gear<br><em>at the Beach</em></h2>
-      <p>Join Kite Club membership and store your equipment right on Thong Sala Beach. Always ready when the wind starts blowing.</p>
+      <h2>Sunset<br><em>Sessions</em></h2>
+      <p>The best sessions at Thong Sala happen late afternoon — thermal wind picks up, the light goes golden, the lagoon is yours. Members get first access.</p>
       <div class="cta-btns">
         <a href="https://wa.me/66967203910" target="_blank" class="btn-p">Join via WhatsApp</a>
-        <a href="../contacts/" class="btn-s">Contact Us</a>
+        <a href="../contacts/" class="btn-s">Ask a Question</a>
       </div>
     </div>
-  </div>
-
+  </section>
 
 </main>
 <footer id="site-footer" role="contentinfo">
