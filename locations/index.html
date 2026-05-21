@@ -1161,6 +1161,26 @@ body.light .pc.feat .pc-badge {
   [style*="grid-template-columns:repeat(3,1fr);gap:20px"],
   [style*="grid-template-columns:1fr 1fr 1fr;gap:16px"]{grid-template-columns:1fr !important}
 }
+/* Spot card name shimmer */
+.spot-h{position:relative;overflow:hidden;display:inline-block}
+.spot-h::after{content:'';position:absolute;top:0;left:0;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);animation:glint-once 1.8s ease .9s both;pointer-events:none}
+/* Desktop: reduce side padding on spots section */
+.spots-sec{padding:70px 20px!important}
+.spots-inner{max-width:1200px!important}
+/* Mobile: 1 card per screen */
+@media(max-width:768px){
+  .spots-sec{padding:40px 0!important}
+  .spots-inner{padding:0!important;max-width:100%!important;overflow:hidden}
+  .spots-inner>div[style*="text-align:center"]{text-align:left!important;padding:0 18px 24px}
+  .spots-inner>p[style*="text-align:center"]{text-align:left!important;padding:0 18px 32px;margin-bottom:0!important}
+  .spots-grid{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:0!important;padding-bottom:20px;scrollbar-width:none}
+  .spots-grid::-webkit-scrollbar{display:none}
+  .spots-grid>div{flex:0 0 calc(100vw - 32px)!important;width:calc(100vw - 32px)!important;scroll-snap-align:center;border-radius:14px!important}
+  .spots-grid>div:first-child{margin-left:16px}
+  .spots-grid>div:last-child{margin-right:16px}
+  .spots-grid [style*="text-align:center"]{text-align:left!important}
+  .spots-grid [style*="padding:22px"]{padding:16px!important}
+}
 </style>
 </head>
 <body>
@@ -1262,17 +1282,17 @@ body.light .pc.feat .pc-badge {
     </div>
   </section>
   <!-- RIDING SPOTS -->
-  <section style="padding:70px 60px;background:var(--black);border-top:1px solid var(--border)">
-    <div style="max-width:1000px;margin:0 auto">
+  <section class="spots-sec" style="padding:70px 20px;background:var(--black);border-top:1px solid var(--border)">
+    <div class="spots-inner" style="max-width:1200px;margin:0 auto">
       <div style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--pink);margin-bottom:10px;text-align:center">Koh Phangan · Gulf of Thailand</div>
       <h2 style="font-family:var(--FD);font-size:clamp(28px,4vw,50px);font-weight:900;text-transform:uppercase;text-align:center;margin-bottom:8px;color:var(--white)">Riding Spots <em style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:italic">on the Island</em></h2>
       <p style="font-family:var(--FB);font-size:14px;color:var(--muted);text-align:center;margin-bottom:48px">Three beaches, three characters. Here is what each spot offers and which season to visit.</p>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+      <div class="spots-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
         <!-- Thong Sala -->
         <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden">
           <div style="background:var(--grad);padding:24px;position:relative">
             <div style="font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:rgba(255,255,255,.7);margin-bottom:6px">Main Beach · GPS 9.9320, 100.0647</div>
-            <div style="font-family:var(--FD);font-size:26px;font-weight:900;text-transform:uppercase;color:#fff;line-height:.95;margin-bottom:4px">Thong Sala</div>
+            <div class="spot-h" style="font-family:var(--FD);font-size:26px;font-weight:900;text-transform:uppercase;color:#fff;line-height:.95;margin-bottom:4px">Thong Sala</div>
             <div style="font-family:var(--FB);font-size:12px;color:rgba(255,255,255,.8)">Our home beach · closest to ferry pier</div>
             <div style="position:absolute;top:16px;right:16px;background:rgba(255,255,255,.2);font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;padding:4px 10px;border-radius:20px">⭐ Best for Beginners</div>
           </div>
@@ -1308,7 +1328,7 @@ body.light .pc.feat .pc-badge {
         <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden">
           <div style="background:linear-gradient(135deg,#0097a7,#00bcd4);padding:24px;position:relative">
             <div style="font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:rgba(255,255,255,.7);margin-bottom:6px">South Koh Phangan · 3km from Thong Sala</div>
-            <div style="font-family:var(--FD);font-size:26px;font-weight:900;text-transform:uppercase;color:#fff;line-height:.95;margin-bottom:4px">Baan Tai</div>
+            <div class="spot-h" style="font-family:var(--FD);font-size:26px;font-weight:900;text-transform:uppercase;color:#fff;line-height:.95;margin-bottom:4px">Baan Tai</div>
             <div style="font-family:var(--FB);font-size:12px;color:rgba(255,255,255,.8)">SW season spot · side-shore wind</div>
             <div style="position:absolute;top:16px;right:16px;background:rgba(255,255,255,.2);font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;padding:4px 10px;border-radius:20px">Intermediate+</div>
           </div>
@@ -1344,7 +1364,7 @@ body.light .pc.feat .pc-badge {
         <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden">
           <div style="background:linear-gradient(135deg,#3f51b5,#7b2fff);padding:24px;position:relative">
             <div style="font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:rgba(255,255,255,.7);margin-bottom:6px">North Shore · 25km from Thong Sala</div>
-            <div style="font-family:var(--FD);font-size:26px;font-weight:900;text-transform:uppercase;color:#fff;line-height:.95;margin-bottom:4px">Chaloklum</div>
+            <div class="spot-h" style="font-family:var(--FD);font-size:26px;font-weight:900;text-transform:uppercase;color:#fff;line-height:.95;margin-bottom:4px">Chaloklum</div>
             <div style="font-family:var(--FB);font-size:12px;color:rgba(255,255,255,.8)">North shore · cross-shore wind · local vibe</div>
             <div style="position:absolute;top:16px;right:16px;background:rgba(255,255,255,.2);font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;padding:4px 10px;border-radius:20px">Advanced</div>
           </div>
