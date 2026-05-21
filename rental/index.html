@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Equipment Rental Koh Phangan | Kite, Wing Foil & More</title>
-<meta name="description" content="Rent kitesurfing and wing foil equipment on Koh Phangan. Kite+Bar from 1,500 THB, full sets available.">
+<title>Equipment Rental Koh Phangan | Kite, Wing Foil, SUP & Kayak</title>
+<meta name="description" content="Rent kitesurfing, wing foil, SUP and kayak equipment in Koh Phangan. Hourly rates from 400 THB. Beach support, safety check and spot advice included. Thong Sala Beach.">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#e8008a">
 <meta name="geo.region" content="TH-84">
@@ -1154,6 +1154,91 @@ body.light .pc.feat .pc-badge {
   .hero-btns{flex-wrap:nowrap !important;gap:8px !important}
   .hero-btns a,.hero-btns .btn-p,.hero-btns .btn-s{flex:1;text-align:center;padding:14px 8px !important;font-size:14px !important;min-width:0}
 }
+/* ─── RENTAL PAGE — REDESIGN ─── */
+.rent-top-band{display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:0 60px;margin-bottom:3px}
+.rent-intro-text{padding:40px;background:var(--mid);border:1px solid var(--border)}
+.rent-intro-eyebrow{font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:12px}
+.rent-intro-text p{font-size:15px;color:var(--off);line-height:1.8;font-weight:300}
+.rent-badges-block{padding:30px 40px;background:var(--mid);border:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;align-content:center;gap:0}
+.rent-badge{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--border2)}
+.rent-badge:nth-child(3),.rent-badge:nth-child(4){border-bottom:none}
+.rent-badge:nth-child(odd){padding-right:16px}
+.rent-badge-icon{font-size:18px;flex-shrink:0}
+.rent-badge-text{font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--fg,#fff)}
+/* ─── DESKTOP PRICING MATRIX ─── */
+.rent-matrix-wrap{padding:0 60px 70px}
+.rent-matrix{width:100%;border-collapse:collapse}
+.rent-matrix thead tr{border-bottom:2px solid var(--mag)}
+.rent-matrix thead th{font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:10px 14px;text-align:center;color:var(--muted);white-space:nowrap}
+.rent-matrix thead th:first-child{text-align:left;padding-left:0;width:28%}
+.rent-matrix thead th:last-child{text-align:right;width:1%}
+.rmt-cat td{font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);padding:22px 0 8px;border-top:1px solid var(--border)}
+.rent-matrix tbody tr:first-child td{border-top:none;padding-top:14px}
+.rmt-row td{padding:11px 14px;border-bottom:1px solid var(--border2);vertical-align:middle;transition:background .15s}
+.rmt-row:hover td{background:rgba(123,47,255,.04)}
+.rmt-row td:first-child{padding-left:0}
+.rmt-row td:last-child{padding-right:0;text-align:right}
+.rmt-name{font-family:var(--FD);font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--fg,#fff)}
+.rmt-desc{font-size:11px;color:var(--muted);margin-top:2px}
+.rmt-price{text-align:center;font-family:var(--FD);font-weight:900;font-size:17px;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;white-space:nowrap}
+.rmt-price span{font-size:9px;letter-spacing:.08em;display:block;-webkit-text-fill-color:var(--muted);color:var(--muted);font-weight:600;margin-top:2px;text-transform:uppercase}
+.rmt-ask{text-align:center;font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.rmt-cta{display:inline-block;padding:7px 12px;background:rgba(232,0,138,.1);border:1px solid rgba(232,0,138,.2);font-family:var(--FD);font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--pink);transition:background .2s,border-color .2s;text-decoration:none;white-space:nowrap}
+.rmt-cta:hover{background:rgba(232,0,138,.22);border-color:var(--mag)}
+.rmt-efoil{margin-top:20px;display:flex;align-items:flex-start;gap:14px;background:rgba(123,47,255,.08);border:1px solid rgba(123,47,255,.2);padding:18px 22px}
+.rmt-efoil-icon{font-size:22px;flex-shrink:0;margin-top:1px}
+.rmt-efoil strong{font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--fg,#fff)}
+.rmt-efoil p{font-size:13px;color:var(--off);margin-top:4px;line-height:1.65}
+.rmt-efoil a{color:var(--pink);text-decoration:none;font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-left:6px}
+/* ─── MOBILE RENTAL CARDS ─── */
+.rent-mobile-section{display:none;padding:0 0 55px}
+.rmc-cat{font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);padding:18px 22px 6px;border-top:1px solid var(--border)}
+.rmc-cat:first-child{border-top:none;padding-top:0}
+.rmc-card{background:var(--mid);border-bottom:1px solid var(--border);padding:16px 22px}
+.rmc-name{font-family:var(--FD);font-size:17px;font-weight:700;text-transform:uppercase;color:var(--fg,#fff)}
+.rmc-desc{font-size:11px;color:var(--muted);margin-top:2px;margin-bottom:10px}
+.rmc-prices{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-bottom:12px}
+.rmc-price-box{background:rgba(123,47,255,.08);border:1px solid rgba(123,47,255,.12);padding:8px 4px;text-align:center}
+.rmc-dur{font-family:var(--FD);font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.rmc-val{font-family:var(--FD);font-size:14px;font-weight:900;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.rmc-val-ask{font-family:var(--FD);font-size:10px;font-weight:700;color:var(--muted);display:block;padding-top:3px}
+/* ─── REQUIREMENTS ─── */
+.rent-req-wrap{padding:0 60px 70px}
+.rent-req-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+.rent-req-card{background:var(--mid);border:1px solid var(--border);padding:22px;display:flex;flex-direction:column;gap:8px}
+.req-icon{font-size:20px}
+.req-title{font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--fg,#fff)}
+.req-text{font-size:12px;color:var(--muted);line-height:1.6}
+/* ─── RENTAL EXPLORE LINKS ─── */
+.rent-links-wrap{padding:0 60px 70px;display:grid;grid-template-columns:repeat(5,1fr);gap:3px}
+.rent-link-card{background:var(--mid);border:1px solid var(--border);padding:22px 18px;display:flex;flex-direction:column;gap:6px;transition:border-color .3s,transform .2s;text-decoration:none}
+.rent-link-card:hover{border-color:var(--mag);transform:translateY(-2px)}
+.rent-link-icon{font-size:20px}
+.rent-link-title{font-family:var(--FD);font-size:14px;font-weight:700;text-transform:uppercase;color:var(--fg,#fff)}
+.rent-link-sub{font-size:11px;color:var(--muted)}
+/* Light mode */
+body.light .rent-intro-text{background:#fff}
+body.light .rent-badges-block{background:#fff}
+body.light .rent-badge-text{color:#111118}
+body.light .rmt-name{color:#111118}
+body.light .rmt-efoil strong{color:#111118}
+body.light .rmt-efoil p{color:#2a2a3a}
+body.light .rmc-name{color:#111118}
+body.light .rent-req-card{background:#fff}
+body.light .req-title{color:#111118}
+body.light .rent-link-card{background:#fff}
+body.light .rent-link-title{color:#111118}
+/* Responsive */
+@media(max-width:900px){
+  .rent-top-band{grid-template-columns:1fr;padding:0}
+  .rent-intro-text{padding:26px 22px}
+  .rent-badges-block{padding:22px}
+  .rent-matrix-wrap{display:none}
+  .rent-mobile-section{display:block}
+  .rent-req-wrap{padding:0 0 55px}
+  .rent-req-grid{grid-template-columns:1fr;gap:2px}
+  .rent-links-wrap{grid-template-columns:1fr 1fr;padding:0 0 55px;gap:2px}
+}
 </style>
 </head>
 <body>
@@ -1236,327 +1321,296 @@ body.light .pc.feat .pc-badge {
 </div>
 <main id="page-content">
 
-
   <div class="page-hero">
     <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1600&q=85')"></div>
-    <div class="page-hero-content"><div class="eyebrow">All Equipment · Koh Phangan</div><h1>Equipment<br><em>Rental</em></h1></div>
+    <div class="page-hero-content fu">
+      <div class="eyebrow">Koh Phangan · Thong Sala Beach</div>
+      <h1>Equipment <em>Rental</em><br>in Koh Phangan</h1>
+    </div>
   </div>
 
-  <!-- RENTAL GROUPS -->
-  <div style="padding:0 60px 70px" class="fu rental-page-wrap">
+  <!-- INTRO + BADGES -->
+  <div class="rent-top-band fu">
+    <div class="rent-intro-text">
+      <div class="rent-intro-eyebrow">Kitesurf · Wing Foil · Windsurfing · SUP · Kayak</div>
+      <p>Rent premium watersports equipment in Koh Phangan. Choose hourly rental, half-day sessions or full rider packages. All rentals include equipment check, beach support and local spot advice.</p>
+      <p style="margin-top:10px;font-size:13px;color:var(--muted)">Thong Sala Beach · 2023–2024 equipment fleet · IKO-inspected gear</p>
+    </div>
+    <div class="rent-badges-block">
+      <div class="rent-badge"><div class="rent-badge-icon">🛡️</div><div class="rent-badge-text">Safety Check Before Launch</div></div>
+      <div class="rent-badge"><div class="rent-badge-icon">🏖️</div><div class="rent-badge-text">Beach Support Included</div></div>
+      <div class="rent-badge"><div class="rent-badge-icon">🏄</div><div class="rent-badge-text">Best for Independent Riders</div></div>
+      <div class="rent-badge"><div class="rent-badge-icon">📍</div><div class="rent-badge-text">Thong Sala, Koh Phangan</div></div>
+    </div>
+  </div>
 
-    <!-- GROUP: KITESURFING -->
-    <div class="rg-block">
-      <div class="rg-header">
-        <div class="rg-icon">🪁</div>
-        <div>
-          <div class="rg-label">Category 01</div>
-          <h2 class="rg-title">Kitesurfing</h2>
-        </div>
-        <a href="https://wa.me/66967203910" target="_blank" class="btn-o rg-book">Book</a>
-      </div>
-      <div class="rg-cards">
-        <div class="rfl">
-          <div class="rfl-left">
-            <div class="rfl-name">Kite + Bar</div>
-            <div class="rfl-note">4-line & 5-line systems available</div>
-          </div>
-          <div class="rfl-prices">
-            <div class="rfl-price-item">
-              <div class="rfl-amount">1,100</div>
-              <div class="rfl-unit">THB / HR</div>
-            </div>
-          </div>
-        </div>
-        <div class="rfl">
-          <div class="rfl-left">
-            <div class="rfl-name">Full Set Equipment</div>
-            <div class="rfl-note">Kite + bar + board + harness</div>
-          </div>
-          <div class="rfl-prices">
-            <div class="rfl-price-item">
-              <div class="rfl-amount">1,400</div>
-              <div class="rfl-unit">THB / HR</div>
-            </div>
-          </div>
-        </div>
-        <div class="rfl">
-          <div class="rfl-left">
-            <div class="rfl-name">Board Only</div>
-            <div class="rfl-note">Twintip or surfboard</div>
-          </div>
-          <div class="rfl-prices">
-            <div class="rfl-price-item">
-              <div class="rfl-amount">400</div>
-              <div class="rfl-unit">THB / HR</div>
-            </div>
-          </div>
-        </div>
+  <!-- SECTION HEADING -->
+  <div class="sh fu"><h2>Rental<br><em class="gt">Prices</em></h2></div>
+
+  <!-- DESKTOP PRICING MATRIX -->
+  <div class="rent-matrix-wrap fu" role="region" aria-label="Equipment rental price matrix">
+    <table class="rent-matrix">
+      <thead>
+        <tr>
+          <th>Equipment</th>
+          <th>1 Hour</th>
+          <th>2 Hours</th>
+          <th>3 Hours</th>
+          <th>5 Hours</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="rmt-cat"><td colspan="6">🪁 Kitesurfing Equipment</td></tr>
+        <tr class="rmt-row">
+          <td><div class="rmt-name">Kite + Bar</div><div class="rmt-desc">4-line &amp; 5-line · sizes 7–17m available</div></td>
+          <td class="rmt-price">1,100<span>THB</span></td>
+          <td class="rmt-price">2,000<span>THB</span></td>
+          <td class="rmt-price">2,800<span>THB</span></td>
+          <td class="rmt-ask">Ask</td>
+          <td><a href="https://wa.me/66967203910" target="_blank" rel="noopener" class="rmt-cta">Check Availability</a></td>
+        </tr>
+        <tr class="rmt-row">
+          <td><div class="rmt-name">Full Set</div><div class="rmt-desc">Kite + bar + board + harness</div></td>
+          <td class="rmt-price">1,400<span>THB</span></td>
+          <td class="rmt-price">2,600<span>THB</span></td>
+          <td class="rmt-price">3,600<span>THB</span></td>
+          <td class="rmt-ask">Ask</td>
+          <td><a href="https://wa.me/66967203910" target="_blank" rel="noopener" class="rmt-cta">Check Availability</a></td>
+        </tr>
+        <tr class="rmt-row">
+          <td><div class="rmt-name">Board Only</div><div class="rmt-desc">Twintip or surfboard · all sizes</div></td>
+          <td class="rmt-price">400<span>THB</span></td>
+          <td class="rmt-price">700<span>THB</span></td>
+          <td class="rmt-price">1,000<span>THB</span></td>
+          <td class="rmt-price">1,500<span>THB</span></td>
+          <td><a href="https://wa.me/66967203910" target="_blank" rel="noopener" class="rmt-cta">Check Availability</a></td>
+        </tr>
+        <tr class="rmt-row">
+          <td><div class="rmt-name">Harness</div><div class="rmt-desc">Seat &amp; waist · all sizes available</div></td>
+          <td class="rmt-ask">Ask</td>
+          <td class="rmt-ask">Ask</td>
+          <td class="rmt-ask">Ask</td>
+          <td class="rmt-ask">Ask</td>
+          <td><a href="https://wa.me/66967203910" target="_blank" rel="noopener" class="rmt-cta">Ask on WhatsApp</a></td>
+        </tr>
+        <tr class="rmt-cat"><td colspan="6">🪂 Wing Foil</td></tr>
+        <tr class="rmt-row">
+          <td><div class="rmt-name">Wing Foil Set</div><div class="rmt-desc">Wing + foil board + mast · full setup</div></td>
+          <td class="rmt-price">1,400<span>THB</span></td>
+          <td class="rmt-price">2,600<span>THB</span></td>
+          <td class="rmt-price">3,600<span>THB</span></td>
+          <td class="rmt-ask">Ask</td>
+          <td><a href="https://wa.me/66967203910" target="_blank" rel="noopener" class="rmt-cta">Check Availability</a></td>
+        </tr>
+        <tr class="rmt-cat"><td colspan="6">🌊 Windsurfing</td></tr>
+        <tr class="rmt-row">
+          <td><div class="rmt-name">Full Set</div><div class="rmt-desc">Sail + board + harness · IKO equipment</div></td>
+          <td class="rmt-price">800<span>THB</span></td>
+          <td class="rmt-price">1,400<span>THB</span></td>
+          <td class="rmt-price">1,800<span>THB</span></td>
+          <td class="rmt-ask">Ask</td>
+          <td><a href="https://wa.me/66967203910" target="_blank" rel="noopener" class="rmt-cta">Check Availability</a></td>
+        </tr>
+        <tr class="rmt-cat"><td colspan="6">🛶 Kayaking</td></tr>
+        <tr class="rmt-row">
+          <td><div class="rmt-name">Kayak</div><div class="rmt-desc">Single kayak · life jacket included</div></td>
+          <td class="rmt-price">500<span>THB</span></td>
+          <td class="rmt-price">900<span>THB</span></td>
+          <td class="rmt-price">1,200<span>THB</span></td>
+          <td class="rmt-ask">Ask</td>
+          <td><a href="https://wa.me/66967203910" target="_blank" rel="noopener" class="rmt-cta">Reserve Equipment</a></td>
+        </tr>
+        <tr class="rmt-cat"><td colspan="6">🏄 SUP Board</td></tr>
+        <tr class="rmt-row">
+          <td><div class="rmt-name">SUP Board</div><div class="rmt-desc">Board + paddle · all levels · Thong Sala Beach</div></td>
+          <td class="rmt-price">400<span>THB</span></td>
+          <td class="rmt-price">700<span>THB</span></td>
+          <td class="rmt-price">900<span>THB</span></td>
+          <td class="rmt-price">1,000<span>THB</span></td>
+          <td><a href="https://wa.me/66967203910" target="_blank" rel="noopener" class="rmt-cta">Reserve Equipment</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="rmt-efoil">
+      <div class="rmt-efoil-icon">⚡</div>
+      <div>
+        <strong>E-Foil Sessions</strong>
+        <p>E-Foil is booked by session — not hourly rental. Intro 2,000 THB · Foiling 3,000 THB · Freedom 3,500 THB. 1-on-1 coaching, no wind required. <a href="../efoil/lessons/">View E-Foil sessions →</a></p>
       </div>
     </div>
+  </div>
 
-    <!-- GROUP: WING FOIL -->
-    <div class="rg-block">
-      <div class="rg-header">
-        <div class="rg-icon">🪂</div>
-        <div>
-          <div class="rg-label">Category 02</div>
-          <h2 class="rg-title">Wing Foil</h2>
-        </div>
-        <a href="https://wa.me/66967203910" target="_blank" class="btn-o rg-book">Book</a>
+  <!-- MOBILE STACKED CARDS -->
+  <div class="rent-mobile-section">
+    <div class="rmc-cat">🪁 Kitesurfing Equipment</div>
+    <div class="rmc-card">
+      <div class="rmc-name">Kite + Bar</div><div class="rmc-desc">4-line &amp; 5-line · sizes 7–17m</div>
+      <div class="rmc-prices">
+        <div class="rmc-price-box"><div class="rmc-dur">1H</div><div class="rmc-val">1,100</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">2H</div><div class="rmc-val">2,000</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">3H</div><div class="rmc-val">2,800</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">5H</div><span class="rmc-val-ask">Ask</span></div>
       </div>
-      <div class="rg-cards">
-        <div class="rfl">
-          <div class="rfl-left">
-            <div class="rfl-name">1 Hour</div>
-            <div class="rfl-note">Full set — wing + foil + board</div>
-          </div>
-          <div class="rfl-prices">
-            <div class="rfl-price-item">
-              <div class="rfl-amount">1,400</div>
-              <div class="rfl-unit">THB</div>
-            </div>
-          </div>
-        </div>
-        <div class="rfl">
-          <div class="rfl-left">
-            <div class="rfl-name">2 Hours</div>
-            <div class="rfl-note">Full set — wing + foil + board</div>
-          </div>
-          <div class="rfl-prices">
-            <div class="rfl-price-item">
-              <div class="rfl-amount">2,600</div>
-              <div class="rfl-unit">THB</div>
-            </div>
-          </div>
-        </div>
-        <div class="rfl">
-          <div class="rfl-left">
-            <div class="rfl-name">3 Hours</div>
-            <div class="rfl-note">Full set — wing + foil + board</div>
-          </div>
-          <div class="rfl-prices">
-            <div class="rfl-price-item">
-              <div class="rfl-amount">3,600</div>
-              <div class="rfl-unit">THB</div>
-            </div>
-          </div>
-        </div>
+      <a href="https://wa.me/66967203910" target="_blank" class="btn-o">Check Availability</a>
+    </div>
+    <div class="rmc-card">
+      <div class="rmc-name">Full Set</div><div class="rmc-desc">Kite + bar + board + harness</div>
+      <div class="rmc-prices">
+        <div class="rmc-price-box"><div class="rmc-dur">1H</div><div class="rmc-val">1,400</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">2H</div><div class="rmc-val">2,600</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">3H</div><div class="rmc-val">3,600</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">5H</div><span class="rmc-val-ask">Ask</span></div>
+      </div>
+      <a href="https://wa.me/66967203910" target="_blank" class="btn-o">Check Availability</a>
+    </div>
+    <div class="rmc-card">
+      <div class="rmc-name">Board Only</div><div class="rmc-desc">Twintip or surfboard</div>
+      <div class="rmc-prices">
+        <div class="rmc-price-box"><div class="rmc-dur">1H</div><div class="rmc-val">400</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">2H</div><div class="rmc-val">700</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">3H</div><div class="rmc-val">1,000</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">5H</div><div class="rmc-val">1,500</div></div>
+      </div>
+      <a href="https://wa.me/66967203910" target="_blank" class="btn-o">Check Availability</a>
+    </div>
+    <div class="rmc-cat">🪂 Wing Foil</div>
+    <div class="rmc-card">
+      <div class="rmc-name">Wing Foil Set</div><div class="rmc-desc">Wing + foil board + mast</div>
+      <div class="rmc-prices">
+        <div class="rmc-price-box"><div class="rmc-dur">1H</div><div class="rmc-val">1,400</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">2H</div><div class="rmc-val">2,600</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">3H</div><div class="rmc-val">3,600</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">5H</div><span class="rmc-val-ask">Ask</span></div>
+      </div>
+      <a href="https://wa.me/66967203910" target="_blank" class="btn-o">Check Availability</a>
+    </div>
+    <div class="rmc-cat">🌊 Windsurfing</div>
+    <div class="rmc-card">
+      <div class="rmc-name">Full Set</div><div class="rmc-desc">Sail + board + harness</div>
+      <div class="rmc-prices">
+        <div class="rmc-price-box"><div class="rmc-dur">1H</div><div class="rmc-val">800</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">2H</div><div class="rmc-val">1,400</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">3H</div><div class="rmc-val">1,800</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">5H</div><span class="rmc-val-ask">Ask</span></div>
+      </div>
+      <a href="https://wa.me/66967203910" target="_blank" class="btn-o">Check Availability</a>
+    </div>
+    <div class="rmc-cat">🛶 Kayaking</div>
+    <div class="rmc-card">
+      <div class="rmc-name">Kayak</div><div class="rmc-desc">Single kayak · life jacket included</div>
+      <div class="rmc-prices">
+        <div class="rmc-price-box"><div class="rmc-dur">1H</div><div class="rmc-val">500</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">2H</div><div class="rmc-val">900</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">3H</div><div class="rmc-val">1,200</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">5H</div><span class="rmc-val-ask">Ask</span></div>
+      </div>
+      <a href="https://wa.me/66967203910" target="_blank" class="btn-o">Reserve Equipment</a>
+    </div>
+    <div class="rmc-cat">🏄 SUP Board</div>
+    <div class="rmc-card">
+      <div class="rmc-name">SUP Board</div><div class="rmc-desc">Board + paddle · all levels</div>
+      <div class="rmc-prices">
+        <div class="rmc-price-box"><div class="rmc-dur">1H</div><div class="rmc-val">400</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">2H</div><div class="rmc-val">700</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">3H</div><div class="rmc-val">900</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">Full Day</div><div class="rmc-val">1,000</div></div>
+      </div>
+      <a href="https://wa.me/66967203910" target="_blank" class="btn-o">Reserve Equipment</a>
+    </div>
+    <div class="rmc-cat">⚡ E-Foil Sessions</div>
+    <div class="rmc-card">
+      <div class="rmc-name">Intro · Foiling · Freedom</div><div class="rmc-desc">By session · 1-on-1 coaching · no wind required</div>
+      <div class="rmc-prices" style="grid-template-columns:1fr 1fr 1fr">
+        <div class="rmc-price-box"><div class="rmc-dur">Intro</div><div class="rmc-val">2,000</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">Foiling</div><div class="rmc-val">3,000</div></div>
+        <div class="rmc-price-box"><div class="rmc-dur">Freedom</div><div class="rmc-val">3,500</div></div>
+      </div>
+      <a href="https://wa.me/66967203910" target="_blank" class="btn-p">Book E-Foil Session</a>
+    </div>
+  </div>
+
+  <!-- REQUIREMENTS -->
+  <div class="sh fu"><h2>Rental<br><em class="gt">Requirements</em></h2></div>
+  <div class="rent-req-wrap fu">
+    <div class="rent-req-grid">
+      <div class="rent-req-card">
+        <div class="req-icon">🏄</div>
+        <div class="req-title">Independent Level Required</div>
+        <div class="req-text">Kitesurf and wing foil rental requires independent rider level. Not there yet? Book a lesson — we'll rent once you're ready.</div>
+      </div>
+      <div class="rent-req-card">
+        <div class="req-icon">🌬️</div>
+        <div class="req-title">Wind &amp; Sea Conditions</div>
+        <div class="req-text">Rental availability depends on daily wind and sea conditions. We confirm availability with you the same morning.</div>
+      </div>
+      <div class="rent-req-card">
+        <div class="req-icon">🪪</div>
+        <div class="req-title">ID or Deposit</div>
+        <div class="req-text">A deposit or ID may be required for kite and wing foil equipment. Ask on WhatsApp before arrival to confirm.</div>
+      </div>
+      <div class="rent-req-card">
+        <div class="req-icon">🚤</div>
+        <div class="req-title">Rescue on Request</div>
+        <div class="req-text">Beach support and rescue boat available on request for independent riders. Included automatically with Rider Pass membership.</div>
+      </div>
+      <div class="rent-req-card">
+        <div class="req-icon">🎓</div>
+        <div class="req-title">Beginner? Book a Lesson</div>
+        <div class="req-text">First time on the water? A lesson is safer, cheaper and faster than solo rental. IKO courses from 3,500 THB.</div>
+      </div>
+      <div class="rent-req-card">
+        <div class="req-icon">📱</div>
+        <div class="req-title">Reserve via WhatsApp</div>
+        <div class="req-text">Message +66 96 720 3910. We confirm equipment availability, wind forecast and your time slot within 30 minutes.</div>
       </div>
     </div>
+  </div>
 
-    <!-- GROUP: WINDSURFING -->
-    <div class="rg-block">
-      <div class="rg-header">
-        <div class="rg-icon">🌊</div>
-        <div>
-          <div class="rg-label">Category 03</div>
-          <h2 class="rg-title">Windsurfing</h2>
-        </div>
-        <a href="https://wa.me/66967203910" target="_blank" class="btn-o rg-book">Book</a>
-      </div>
-      <div class="rg-cards">
-        <div class="rfl">
-          <div class="rfl-left">
-            <div class="rfl-name">1 Hour</div>
-            <div class="rfl-note">Full set — sail + board + harness</div>
-          </div>
-          <div class="rfl-prices">
-            <div class="rfl-price-item">
-              <div class="rfl-amount">800</div>
-              <div class="rfl-unit">THB</div>
-            </div>
-          </div>
-        </div>
-        <div class="rfl">
-          <div class="rfl-left">
-            <div class="rfl-name">2 Hours</div>
-            <div class="rfl-note">Full set — sail + board + harness</div>
-          </div>
-          <div class="rfl-prices">
-            <div class="rfl-price-item">
-              <div class="rfl-amount">1,400</div>
-              <div class="rfl-unit">THB</div>
-            </div>
-          </div>
-        </div>
-        <div class="rfl">
-          <div class="rfl-left">
-            <div class="rfl-name">Half Day</div>
-            <div class="rfl-note">Best value · up to 4 hours</div>
-          </div>
-          <div class="rfl-prices">
-            <div class="rfl-price-item">
-              <div class="rfl-amount">1,800</div>
-              <div class="rfl-unit">THB</div>
-            </div>
-          </div>
-        </div>
+  <!-- EXPLORE MORE LINKS -->
+  <div class="sh fu"><h2>Explore<br><em class="gt">More</em></h2></div>
+  <div class="rent-links-wrap fu">
+    <a href="../kitesurfing/lessons/" class="rent-link-card">
+      <div class="rent-link-icon">🪁</div>
+      <div class="rent-link-title">Kitesurfing Lessons</div>
+      <div class="rent-link-sub">From 3,500 THB · IKO certified</div>
+    </a>
+    <a href="../wing-foil/lessons/" class="rent-link-card">
+      <div class="rent-link-icon">🪂</div>
+      <div class="rent-link-title">Wing Foil Lessons</div>
+      <div class="rent-link-sub">From 4,000 THB · IWO certified</div>
+    </a>
+    <a href="../storage/" class="rent-link-card">
+      <div class="rent-link-icon">🏖️</div>
+      <div class="rent-link-title">Rider Membership</div>
+      <div class="rent-link-sub">From 200 THB/day · beach access</div>
+    </a>
+    <a href="../locations/" class="rent-link-card">
+      <div class="rent-link-icon">📍</div>
+      <div class="rent-link-title">Locations</div>
+      <div class="rent-link-sub">Thong Sala · Koh Phangan spots</div>
+    </a>
+    <a href="../contacts/" class="rent-link-card">
+      <div class="rent-link-icon">💬</div>
+      <div class="rent-link-title">Contact Us</div>
+      <div class="rent-link-sub">WhatsApp · reply within 30 min</div>
+    </a>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-band fu" aria-label="Reserve equipment">
+    <div class="cta-inner">
+      <h2>Ready to<br><em>Ride?</em></h2>
+      <p>Premium kitesurf, wing foil and watersports equipment rental on Thong Sala Beach, Koh Phangan. Message us and we confirm availability within 30 minutes.</p>
+      <div class="cta-btns">
+        <a href="https://wa.me/66967203910" target="_blank" rel="noopener" class="btn-p">Ask on WhatsApp</a>
+        <a href="../contacts/" class="btn-s">Contact Us</a>
       </div>
     </div>
-
-    <!-- GROUP: KAYAKING -->
-    <div class="rg-block">
-      <div class="rg-header">
-        <div class="rg-icon">🛶</div>
-        <div>
-          <div class="rg-label">Category 04</div>
-          <h2 class="rg-title">Kayaking</h2>
-        </div>
-        <a href="https://wa.me/66967203910" target="_blank" class="btn-o rg-book">Book</a>
-      </div>
-      <div class="rg-cards">
-        <div class="rfl">
-          <div class="rfl-left">
-            <div class="rfl-name">1 Hour</div>
-            <div class="rfl-note">Life jacket included</div>
-          </div>
-          <div class="rfl-prices">
-            <div class="rfl-price-item">
-              <div class="rfl-amount">500</div>
-              <div class="rfl-unit">THB</div>
-            </div>
-          </div>
-        </div>
-        <div class="rfl">
-          <div class="rfl-left">
-            <div class="rfl-name">2 Hours</div>
-            <div class="rfl-note">Life jacket included</div>
-          </div>
-          <div class="rfl-prices">
-            <div class="rfl-price-item">
-              <div class="rfl-amount">900</div>
-              <div class="rfl-unit">THB</div>
-            </div>
-          </div>
-        </div>
-        <div class="rfl">
-          <div class="rfl-left">
-            <div class="rfl-name">3 Hours</div>
-            <div class="rfl-note">Life jacket included</div>
-          </div>
-          <div class="rfl-prices">
-            <div class="rfl-price-item">
-              <div class="rfl-amount">1,200</div>
-              <div class="rfl-unit">THB</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- GROUP: SUP -->
-    <div class="rg-block">
-      <div class="rg-header">
-        <div class="rg-icon">🏄</div>
-        <div>
-          <div class="rg-label">Category 05</div>
-          <h2 class="rg-title">SUP Board</h2>
-        </div>
-        <a href="https://wa.me/66967203910" target="_blank" class="btn-o rg-book">Book</a>
-      </div>
-      <div class="rg-cards">
-        <div class="rfl">
-          <div class="rfl-left">
-            <div class="rfl-name">1 Hour</div>
-            <div class="rfl-note">Board + paddle</div>
-          </div>
-          <div class="rfl-prices">
-            <div class="rfl-price-item">
-              <div class="rfl-amount">400</div>
-              <div class="rfl-unit">THB</div>
-            </div>
-          </div>
-        </div>
-        <div class="rfl">
-          <div class="rfl-left">
-            <div class="rfl-name">2 Hours</div>
-            <div class="rfl-note">Board + paddle</div>
-          </div>
-          <div class="rfl-prices">
-            <div class="rfl-price-item">
-              <div class="rfl-amount">700</div>
-              <div class="rfl-unit">THB</div>
-            </div>
-          </div>
-        </div>
-        <div class="rfl">
-          <div class="rfl-left">
-            <div class="rfl-name">Full Day</div>
-            <div class="rfl-note">Board + paddle, best value</div>
-          </div>
-          <div class="rfl-prices">
-            <div class="rfl-price-item">
-              <div class="rfl-amount">1,000</div>
-              <div class="rfl-unit">THB</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- GROUP: E-FOIL -->
-    <div class="rg-block">
-      <div class="rg-header">
-        <div class="rg-icon">⚡</div>
-        <div>
-          <div class="rg-label">Category 06</div>
-          <h2 class="rg-title">E-Foil Sessions</h2>
-        </div>
-        <a href="https://wa.me/66967203910" target="_blank" class="btn-o rg-book">Book</a>
-      </div>
-      <div class="rg-cards">
-        <div class="rfl">
-          <div class="rfl-left">
-            <div class="rfl-name">Intro</div>
-            <div class="rfl-note">15 min theory + 30 min riding · video incl.</div>
-          </div>
-          <div class="rfl-prices">
-            <div class="rfl-price-item">
-              <div class="rfl-amount">2,000</div>
-              <div class="rfl-unit">THB</div>
-            </div>
-          </div>
-        </div>
-        <div class="rfl">
-          <div class="rfl-left">
-            <div class="rfl-name">Foiling</div>
-            <div class="rfl-note">60 min riding · video incl.</div>
-          </div>
-          <div class="rfl-prices">
-            <div class="rfl-price-item">
-              <div class="rfl-amount">3,000</div>
-              <div class="rfl-unit">THB</div>
-            </div>
-          </div>
-        </div>
-        <div class="rfl">
-          <div class="rfl-left">
-            <div class="rfl-name">Freedom</div>
-            <div class="rfl-note">15 min theory + 60 min riding · video incl.</div>
-          </div>
-          <div class="rfl-prices">
-            <div class="rfl-price-item">
-              <div class="rfl-amount">3,500</div>
-              <div class="rfl-unit">THB</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- INCLUDED NOTE -->
-    <div class="rg-note fu">
-      <span class="rg-note-label">✦ Included with all rentals</span>
-      <span>Showers · Wi-Fi · Beachboy assistance · Lounge area · Daily equipment inspection</span>
-    </div>
-
-  </div><!-- end rental-page-wrap -->
-
-  <div class="cta-band fu"><div class="cta-inner"><h2>Need<br><em>Gear?</em></h2><p>Top-quality equipment right on the beach. Book via WhatsApp — fastest response guaranteed.</p><div class="cta-btns"><a href="https://wa.me/66967203910" target="_blank" class="btn-p">📱 Book on WhatsApp</a></div></div></div>
-
+  </section>
 
 </main>
+
 <footer id="site-footer" role="contentinfo">
   <div class="footer-top">
     <div class="fb-brand"><h3>Kite Club</h3><span class="since">Koh Phangan · Since 2021</span>
