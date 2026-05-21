@@ -1173,11 +1173,7 @@ body.light .pc.feat .pc-badge {
   .spots-inner{padding:0!important;max-width:100%!important;overflow:hidden}
   .spots-inner>div[style*="text-align:center"]{text-align:left!important;padding:0 18px 24px}
   .spots-inner>p[style*="text-align:center"]{text-align:left!important;padding:0 18px 32px;margin-bottom:0!important}
-  .spots-grid{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:0!important;padding-bottom:20px;scrollbar-width:none}
-  .spots-grid::-webkit-scrollbar{display:none}
-  .spots-grid>div{flex:0 0 calc(100vw - 32px)!important;width:calc(100vw - 32px)!important;scroll-snap-align:center;border-radius:14px!important}
-  .spots-grid>div:first-child{margin-left:16px}
-  .spots-grid>div:last-child{margin-right:16px}
+  .spots-grid{display:grid!important;grid-template-columns:1fr!important;gap:16px!important;padding:0 16px!important}
   .spots-grid [style*="text-align:center"]{text-align:left!important}
   .spots-grid [style*="padding:22px"]{padding:16px!important}
 }
