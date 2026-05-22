@@ -553,6 +553,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(13,13,26,.95);backdrop-fil
 .cta-band h2 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .cta-band p{color:rgba(255,255,255,.75);font-size:16px;font-weight:300;max-width:480px;margin:0 auto 36px;line-height:1.7}
 .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+@media(max-width:768px){.cta-btns{flex-wrap:nowrap;gap:8px}.cta-btns .btn-p,.cta-btns .btn-s{flex:1;text-align:center;font-size:13px!important;padding:13px 8px!important;min-width:0}}
 
 /* ─── PERKS ─── */
 .perks{display:flex;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:70px}
@@ -1742,7 +1743,7 @@ body.light .cc-btns .btn-s{border-color:#7b2fff;color:#7b2fff}
     <li><a href="../../storage/">Storage</a></li>
     <li><a href="../../locations/">Locations</a></li>
     <li><a href="../../blog/">Blog</a></li>
-    <li><a href="../../about/">About Us</a></li>
+    <li><a href="../../about/" style="color:var(--off);font-family:var(--FD);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:color .2s;padding:0 14px;height:64px;display:flex;align-items:center">Info ▾</a><div class="dropdown"><a href="../../about/">About Us</a><a href="../../seasons/">Wind Season</a><a href="../../best-kitesurf-spots-koh-phangan/">Kite Spots</a><a href="../../no-wind/">No-Wind Days</a></div></li>
     <li><a href="../../contacts/">Contacts</a></li>
   </ul>
   <div class="nav-actions">
@@ -1781,7 +1782,13 @@ body.light .cc-btns .btn-s{border-color:#7b2fff;color:#7b2fff}
   <a href="../../storage/" onclick="closeMobile()">Storage</a>
   <a href="../../locations/" onclick="closeMobile()">Locations</a>
   <a href="../../blog/" onclick="closeMobile()">Blog</a>
-  <a href="../../about/" onclick="closeMobile()">About Us</a>
+  <button onclick="toggleSub('subinfo')">Info ▾</button>
+  <div class="mobile-submenu" id="subinfo">
+    <a href="../../about/" onclick="closeMobile()">About Us</a>
+    <a href="../../seasons/" onclick="closeMobile()">Wind Season</a>
+    <a href="../../best-kitesurf-spots-koh-phangan/" onclick="closeMobile()">Kite Spots</a>
+    <a href="../../no-wind/" onclick="closeMobile()">No-Wind Days</a>
+  </div>
   <a href="../../contacts/" onclick="closeMobile()">Contacts</a>
   <a href="https://wa.me/66967203910?text=Hi!%20I%27d%20like%20to%20know%20more%20about%20e-foil%20sessions%20in%20Koh%20Phangan" target="_blank" class="btn-nav" style="text-align:center;margin-top:20px">Book Now</a>
 </div>
@@ -1838,6 +1845,22 @@ body.light .cc-btns .btn-s{border-color:#7b2fff;color:#7b2fff}
         <div class="cc-btns">
           <a href="efoil-lesson/" class="btn-s">Learn More</a>
           <a href="https://wa.me/66967203910?text=Hi!%20I%27d%20like%20to%20know%20more%20about%20e-foil%20sessions%20in%20Koh%20Phangan" class="btn-p">Book Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="cc-card">
+      <img src="../../assets/efoil-photo.jpg" alt="E-Foil Freedom Session Koh Phangan" class="cc-img" loading="lazy">
+      <div class="cc-body">
+        <div class="cc-kicker">Freedom</div>
+        <div class="cc-name">Freedom Session <span class="cc-dur">⏱ 1.5 Hours (1 day)</span></div>
+        <p class="cc-best-for"><strong>Best for:</strong> riders who can already foil and want to explore, carve and cruise independently.</p>
+        <div class="cc-list-price">
+          <ul class="cc-list"><li>Free Riding</li><li>Carving &amp; Turns</li><li>Speed Runs</li><li>Wave Riding Intro</li><li>1-on-1 · All gear included</li></ul>
+          <div class="cc-price-box"><strong>3,500</strong><span>THB</span></div>
+        </div>
+        <div class="cc-btns">
+          <a href="https://wa.me/66967203910?text=Hi!%20I%27d%20like%20to%20book%20the%20E-Foil%20Freedom%20Session%20in%20Koh%20Phangan" class="btn-s">Ask a Question</a>
+          <a href="https://wa.me/66967203910?text=Hi!%20I%27d%20like%20to%20book%20the%20E-Foil%20Freedom%20Session%20in%20Koh%20Phangan" class="btn-p">Book Now</a>
         </div>
       </div>
     </div>
