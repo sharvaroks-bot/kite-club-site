@@ -54,7 +54,7 @@ body.light .hero-btns .btn-s{color:#fff;border-color:rgba(255,255,255,.5)}
 body.light .hero-btns .btn-s:hover{border-color:var(--pink);color:var(--pink)}
 body.light .cat-card h3{color:#fff}
 body.light .page-hero-content h1{color:#fff}
-body.light .page-hero-content .eyebrow{color:var(--pink)}
+body.light .page-hero-content .eyebrow{color:#fff}
 body.light .cta-band h2{color:#fff}
 body.light .cta-band h2 em{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 body.light .cta-band p{color:rgba(255,255,255,.8)}
@@ -636,7 +636,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(13,13,26,.95);backdrop-fil
 .page-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.04)}
 .page-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,13,26,.2) 0%,rgba(13,13,26,.85) 100%)}
 .page-hero-content{position:relative;z-index:2;padding:0 60px 50px}
-.page-hero-content .eyebrow{font-family:var(--FD);font-size:11px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--pink);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.page-hero-content .eyebrow{font-family:var(--FD);font-size:11px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#fff;margin-bottom:12px;display:flex;align-items:center;gap:10px}
 .page-hero-content .eyebrow::before{content:'';width:30px;height:2px;background:var(--grad)}
 .page-hero-content h1{font-family:var(--FD);font-weight:900;font-size:clamp(44px,7vw,90px);text-transform:uppercase;line-height:.9}
 .page-hero-content h1 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
@@ -1588,7 +1588,7 @@ body.light .v2-footer{border-top-color:#eee}
 .v2-mob-bottom{display:none}
 @media(max-width:900px){
   .perks-section{padding:50px 22px}
-  .perks-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .perks-grid{grid-template-columns:1fr 1fr !important;gap:24px}
   .cond-section{grid-template-columns:1fr}
   .cond-media{min-height:280px;position:relative}
   .cond-text{padding:36px 22px}
@@ -1738,14 +1738,41 @@ body.light .also-name{color:#111}
   div[style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr 1fr !important;padding:0 22px 40px !important;}
   section[style*="padding:0 60px 70px"]{padding:0 22px 40px !important;}
   section[style*="padding:60px 60px 70px"]{padding:50px 22px 60px !important;grid-template-columns:1fr !important;}
+  #spots-table{padding:40px 0 40px !important;}
+}
+@media(max-width:768px){
+  .perks-grid{grid-template-columns:1fr !important;max-width:none;}
+  .perks-section{text-align:left !important}
+  .perks-title{text-align:center !important}
+  .perk-item{display:grid;grid-template-columns:60px 1fr;grid-template-rows:auto auto;gap:2px 12px;text-align:left}
+  .perk-icon{width:40px;height:40px;font-size:20px;margin:0;grid-column:1;grid-row:1}
+  .perk-name{font-size:13px;margin:0;text-align:left;grid-column:1;grid-row:2;line-height:1.2}
+  .perk-desc{grid-column:2;grid-row:1/3;font-size:13px;margin:0;line-height:1.55;display:flex;align-items:center}
+}
+
+/* ─── Comparison table: stacked cards on mobile (no horizontal scroll) ─── */
+@media(max-width:600px){
+  #spots-table{padding:20px 0 30px !important}
+  #spots-table>div{overflow:visible !important}
+  #spots-table .wt{display:block;min-width:0 !important;width:100% !important}
+  #spots-table .wt thead{display:none}
+  #spots-table .wt tbody{display:block}
+  #spots-table .wt tr{display:block;margin-bottom:10px;border:1px solid var(--border)}
+  #spots-table .wt td{display:flex;align-items:center;gap:10px;padding:7px 12px;font-size:12px;border:none;border-bottom:1px solid var(--border2);text-align:left !important}
+  #spots-table .wt td:last-child{border-bottom:none}
+  #spots-table .wt td:first-child{background:var(--mid);font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--pink);border-bottom:1px solid var(--border)}
+  #spots-table .wt td:nth-child(2)::before{content:"Thong Sala ";font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;color:var(--muted);min-width:76px;flex-shrink:0}
+  #spots-table .wt td:nth-child(3)::before{content:"Ban Tai ";font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;color:var(--muted);min-width:76px;flex-shrink:0}
+  #spots-table .wt td:nth-child(4)::before{content:"Chaloklum ";font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;color:var(--muted);min-width:76px;flex-shrink:0}
+  #spots-table .wt td:nth-child(5)::before{content:"Haad Rin ";font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;color:var(--muted);min-width:76px;flex-shrink:0}
+  #spots-table .wt td:nth-child(6)::before{content:"Hin Kong ";font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;color:var(--muted);min-width:76px;flex-shrink:0}
 }
 </style>
 </head>
-<div class="announce"><span>🏄 High Season Jan–Apr — Best Kite Conditions on Koh Phangan!</span> <a href="../contacts/">Book via WhatsApp →</a></div>
 <nav role="navigation" aria-label="Main navigation">
   <div class="nav-logo" style="cursor:pointer" onclick="location.href='../'" >
     <div class="nav-logo-circle" style="background:none;padding:0;overflow:hidden">
-      <img src="../assets/logo.jpg" alt="Kite Club" style="width:100%;height:100%;object-fit:cover;border-radius:50%" onerror="this.parentElement.style.background='linear-gradient(135deg,#7b2fff,#e8008a)';this.parentElement.innerHTML='KC'">
+      <img loading="lazy" src="../assets/logo.jpg" alt="Kite Club" style="width:100%;height:100%;object-fit:cover;border-radius:50%" onerror="this.parentElement.style.background='linear-gradient(135deg,#7b2fff,#e8008a)';this.parentElement.innerHTML='KC'">
     </div>
     <div class="nav-logo-text">Kite Club <span>Koh Phangan</span></div>
   </div>
@@ -1837,7 +1864,7 @@ body.light .also-name{color:#111}
     <div class="page-hero-content fu">
       <div class="eyebrow">Koh Phangan · Thailand</div>
       <h1>Best Kitesurf Spots<br><em>Koh Phangan</em></h1>
-      <p>Three main kite beaches on the island — rated for conditions, difficulty, and which season they work best.</p>
+      <p>Five kite beaches across the island — rated by season, difficulty and wind direction. Find your spot.</p>
       <div class="hero-btns">
         <a href="../kitesurfing/lessons/" class="btn-s">View Courses</a>
         <a href="https://wa.me/66967203910" target="_blank" class="btn-p">Book a Lesson</a>
@@ -1847,80 +1874,107 @@ body.light .also-name{color:#111}
 
   <!-- QUICK COMPARISON -->
   <section class="perks-section fu">
-    <div class="perks-label">Quick Comparison</div>
-    <h2 class="perks-title">3 Kitesurf Spots<br><em>at a Glance</em></h2>
-    <div class="perks-grid">
-      <div class="perk-item"><div class="perk-icon">🥇</div><div class="perk-name">Thong Sala Beach</div><p class="perk-desc">Best for beginners. Flat-water lagoon, sandy bottom, consistent NE wind Jan–Apr. Our home base.</p></div>
-      <div class="perk-item"><div class="perk-icon">🥈</div><div class="perk-name">Ban Tai Beach</div><p class="perk-desc">East of Thong Sala. Works in NE season. Slightly choppier water, good for intermediate riders.</p></div>
-      <div class="perk-item"><div class="perk-icon">🥉</div><div class="perk-name">Chaloklum Bay</div><p class="perk-desc">North side of the island. Best for SW season (Jul–Sep). Sheltered bay, experienced riders.</p></div>
-      <div class="perk-item"><div class="perk-icon">💡</div><div class="perk-name">Our Advice</div><p class="perk-desc">90% of beginners should go to Thong Sala. The flat water and NE wind make it the safest, fastest place to learn.</p></div>
+    <div class="perks-label">Quick Guide</div>
+    <h2 class="perks-title">5 Kitesurf Spots<br><em>at a Glance</em></h2>
+    <div class="perks-grid" style="grid-template-columns:repeat(5,1fr)">
+      <div class="perk-item"><div class="perk-icon">🥇</div><div class="perk-name">Thong Sala</div><p class="perk-desc">Flat-water lagoon, NE wind Jan–Apr. Best for beginners. Our home base.</p></div>
+      <div class="perk-item"><div class="perk-icon">🌊</div><div class="perk-name">Ban Tai</div><p class="perk-desc">3 km east of town. Same NE season, light chop. Good for post-beginner riders.</p></div>
+      <div class="perk-item"><div class="perk-icon">🌀</div><div class="perk-name">Chaloklum</div><p class="perk-desc">North coast. SW season Jun–Sep. Sheltered bay for experienced freeriders.</p></div>
+      <div class="perk-item"><div class="perk-icon">🌅</div><div class="perk-name">Haad Rin</div><p class="perk-desc">East-facing, southeast tip. East wind Jan–Feb. Intermediate / advanced only.</p></div>
+      <div class="perk-item"><div class="perk-icon">🌇</div><div class="perk-name">Hin Kong</div><p class="perk-desc">West coast, flat water. Rare west/NW wind windows. Ideal for freestyle.</p></div>
     </div>
   </section>
 
-  <!-- SPOT 1: THONG SALA -->
-  <div class="sh fu"><h2>Spot #1:<br><em class="gt">Thong Sala Beach</em></h2></div>
+  <!-- SPOT 1: THONG SALA — image left, text right -->
   <section class="about-band fu">
     <div class="about-img" style="background-image:url('../assets/kitesurfing.jpg');background-size:cover;background-position:center;min-height:440px"></div>
     <div class="about-txt">
-      <div class="about-label">⭐ Best for Beginners</div>
+      <div class="about-label">⭐ Best for Beginners · Our Home Beach</div>
       <h2>Thong Sala<br><em class="gt">The Main Spot</em></h2>
       <p><strong>Season:</strong> January–April (NE monsoon, 15–25 knots). Best months: March–April.</p>
-      <p><strong>Water:</strong> Flat-water lagoon, knee-deep entry, sandy bottom. Water temperature 28–30°C. Very safe for learning.</p>
-      <p><strong>Wind direction:</strong> Northeast — blows directly into the beach, creating an onshore wind that keeps beginners close to shore and easy to rescue.</p>
-      <p><strong>Access:</strong> 10 minutes from Thong Sala ferry pier. Accessible by scooter, taxi, or walk from town. Our school is on the beach.</p>
-      <p><strong>Why we teach here:</strong> The flat water allows beginners to stand up and practice board starts without fighting swell. The sandy bottom means soft landings. No reef, no rocks.</p>
+      <p><strong>Water:</strong> Flat-water lagoon, knee-deep entry, sandy bottom. Water temperature 28–30°C. No reef, no rocks — ideal for first lessons.</p>
+      <p><strong>Wind direction:</strong> Northeast — side-onshore, holding beginners close to shore and making rescues simple. Builds reliably by 10 am, peaks 12–4 pm.</p>
+      <p><strong>Why we teach here:</strong> The protected lagoon lets beginners stand up, practice board starts and develop confidence without fighting swell. 90 % of first lessons on Koh Phangan happen here.</p>
+      <p><strong>Access:</strong> 10 minutes from Thong Sala ferry pier by scooter, taxi or on foot. Our school is right on the beach.</p>
     </div>
   </section>
 
-  <!-- SPOT 2: BAN TAI -->
-  <div class="sh fu"><h2>Spot #2:<br><em class="gt">Ban Tai Beach</em></h2></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:0 60px 70px" class="fu">
-    <div>
-      <div style="font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e8008a;margin-bottom:16px">Intermediate Spot</div>
-      <h3 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,34px);font-weight:900;text-transform:uppercase;line-height:1.05;margin-bottom:20px;color:var(--fg)">Ban Tai<br>Beach</h3>
-      <p style="font-family:var(--FB);font-size:14px;color:var(--sub);line-height:1.7;margin-bottom:16px">Ban Tai is a long beach running east from Thong Sala. During the northeast monsoon season it picks up similar wind to Thong Sala but with slightly more chop — making it better suited to riders who have already done their first lessons.</p>
-      <p style="font-family:var(--FB);font-size:14px;color:var(--sub);line-height:1.7;margin-bottom:16px">The beach is longer and slightly less crowded than Thong Sala. There are a few restaurants and bungalows directly on the beach.</p>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px">
-        <li style="font-family:var(--FB);font-size:13px;color:var(--sub);padding-left:16px;position:relative"><span style="position:absolute;left:0;color:#e8008a">✦</span>Season: January–April (NE wind)</li>
-        <li style="font-family:var(--FB);font-size:13px;color:var(--sub);padding-left:16px;position:relative"><span style="position:absolute;left:0;color:#e8008a">✦</span>Wind: 12–22 knots typical</li>
-        <li style="font-family:var(--FB);font-size:13px;color:var(--sub);padding-left:16px;position:relative"><span style="position:absolute;left:0;color:#e8008a">✦</span>Water: Slightly choppy, sandy bottom</li>
-        <li style="font-family:var(--FB);font-size:13px;color:var(--sub);padding-left:16px;position:relative"><span style="position:absolute;left:0;color:#e8008a">✦</span>Best for: Intermediate / independent riders</li>
-        <li style="font-family:var(--FB);font-size:13px;color:var(--sub);padding-left:16px;position:relative"><span style="position:absolute;left:0;color:#e8008a">✦</span>Access: 10 min east of Thong Sala pier</li>
-      </ul>
+  <!-- SPOT 2: BAN TAI — text left, image right -->
+  <section class="about-band fu">
+    <div class="about-txt">
+      <div class="about-label">🌊 Intermediate · NE Season</div>
+      <h2>Ban Tai<br><em class="gt">Long Beach, Light Chop</em></h2>
+      <p><strong>Season:</strong> January–April (NE wind, 12–22 knots). Works best when the wind has a stronger easterly component in January–February.</p>
+      <p><strong>Water:</strong> Sandy bottom, waist-deep entry, light chop from the onshore wind angle. Longer downwind run than Thong Sala thanks to the extended beach.</p>
+      <p><strong>Wind direction:</strong> Northeast to east-northeast — slightly more side-shore than Thong Sala, cleaner for carving and transitions. Less crowded with kites during peak season.</p>
+      <p><strong>Best for:</strong> Riders who have completed a beginner course and want more space and a bit of chop challenge. Free-riding in a relaxed setting with beachside restaurants nearby.</p>
+      <p><strong>Access:</strong> 5–10 minutes east of Thong Sala pier by scooter along the coastal road.</p>
     </div>
-    <div>
-      <div style="font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e8008a;margin-bottom:16px">Best for SW Season</div>
-      <h3 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,34px);font-weight:900;text-transform:uppercase;line-height:1.05;margin-bottom:20px;color:var(--fg)">Chaloklum<br>Bay</h3>
-      <p style="font-family:var(--FB);font-size:14px;color:var(--sub);line-height:1.7;margin-bottom:16px">Chaloklum Bay is on the north coast of Koh Phangan. It comes alive during the southwest monsoon season (July–September) when wind wraps around the island and hits the north side.</p>
-      <p style="font-family:var(--FB);font-size:14px;color:var(--sub);line-height:1.7;margin-bottom:16px">The bay is sheltered by the headlands on either side, reducing chop and making conditions manageable even when SW winds are strong. It is primarily used by experienced riders during the secondary season.</p>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px">
-        <li style="font-family:var(--FB);font-size:13px;color:var(--sub);padding-left:16px;position:relative"><span style="position:absolute;left:0;color:#e8008a">✦</span>Season: July–September (SW wind)</li>
-        <li style="font-family:var(--FB);font-size:13px;color:var(--sub);padding-left:16px;position:relative"><span style="position:absolute;left:0;color:#e8008a">✦</span>Wind: 12–20 knots typical</li>
-        <li style="font-family:var(--FB);font-size:13px;color:var(--sub);padding-left:16px;position:relative"><span style="position:absolute;left:0;color:#e8008a">✦</span>Water: Sheltered bay, some chop</li>
-        <li style="font-family:var(--FB);font-size:13px;color:var(--sub);padding-left:16px;position:relative"><span style="position:absolute;left:0;color:#e8008a">✦</span>Best for: Experienced / independent riders</li>
-        <li style="font-family:var(--FB);font-size:13px;color:var(--sub);padding-left:16px;position:relative"><span style="position:absolute;left:0;color:#e8008a">✦</span>Access: 25 min north of Thong Sala</li>
-      </ul>
+    <div class="about-img" style="background-image:url('../assets/full-beginner.jpg');background-size:cover;background-position:center;min-height:440px"></div>
+  </section>
+
+  <!-- SPOT 3: CHALOKLUM — image left, text right -->
+  <section class="about-band fu">
+    <div class="about-img" style="background-image:url('../assets/independent-rider.jpg');background-size:cover;background-position:center;min-height:440px"></div>
+    <div class="about-txt">
+      <div class="about-label">🌀 Advanced · SW Season Specialist</div>
+      <h2>Chaloklum<br><em class="gt">North Coast Bay</em></h2>
+      <p><strong>Season:</strong> June–September (SW monsoon, 14–22 knots). July–August strongest.</p>
+      <p><strong>Water:</strong> Sheltered bay with manageable chop even in strong SW winds. Headlands on either side reduce swell. Coral reef off the headlands — stay in the main bay.</p>
+      <p><strong>Wind direction:</strong> Southwest to west-southwest, cross-shore — clean angle for carving, jumps and downwind runs. Open water to the north for long sessions without fences.</p>
+      <p><strong>Best for:</strong> Experienced and independent riders looking for a true SW season session away from the crowds. Local fishing-village atmosphere, uncrowded water.</p>
+      <p><strong>Access:</strong> 25 minutes north of Thong Sala by scooter. Ride the winding coastal road around the island's north tip.</p>
     </div>
-  </div>
+  </section>
+
+  <!-- SPOT 4: HAAD RIN — text left, image right -->
+  <section class="about-band fu">
+    <div class="about-txt">
+      <div class="about-label">🌅 Intermediate–Advanced · East Wind</div>
+      <h2>Haad Rin<br><em class="gt">East Wind &amp; Clear Water</em></h2>
+      <p><strong>Season:</strong> January–February, when the NE trade wind takes on a stronger easterly component. Reliable east wind sessions are shorter windows — check the forecast the evening before.</p>
+      <p><strong>Water:</strong> Clear turquoise water, sandy patches with some coral and reef near the edges of the bay. Tide-dependent — launch and land on the sandy centre strip.</p>
+      <p><strong>Wind direction:</strong> East to east-northeast — side-shore to cross-shore, which delivers clean lift and excellent angles for boosting. One of the few east-facing beaches on the island.</p>
+      <p><strong>Best for:</strong> Intermediate to advanced riders who want variety and a photogenic backdrop. Not suitable for beginners — reef awareness and self-rescue skills required.</p>
+      <p><strong>Access:</strong> 40–45 minutes from Thong Sala by scooter or 30 minutes by taxi via the main road over the hills.</p>
+    </div>
+    <div class="about-img" style="background-image:url('../assets/discovery-course.jpg');background-size:cover;background-position:center top;min-height:440px"></div>
+  </section>
+
+  <!-- SPOT 5: HIN KONG — image left, text right -->
+  <section class="about-band fu">
+    <div class="about-img" style="background-image:url('../assets/private-lessons.jpg');background-size:cover;background-position:center;min-height:440px"></div>
+    <div class="about-txt">
+      <div class="about-label">🌇 Advanced · West Wind · Flat Water</div>
+      <h2>Hin Kong<br><em class="gt">Sunset Sessions</em></h2>
+      <p><strong>Season:</strong> October–November transition winds and occasional northwest wind days in June–September. West wind is not the dominant pattern on Koh Phangan — but when it blows here, conditions are exceptional.</p>
+      <p><strong>Water:</strong> Very flat, glassy water sheltered by the island's central hills from the dominant northeast and southwest swells. Sandy bottom, easy entry. One of the flattest water surfaces on the island.</p>
+      <p><strong>Wind direction:</strong> West to northwest — side-offshore, producing side-shore riding conditions. Experienced riders get long upwind runs with the full width of the Gulf of Thailand downwind.</p>
+      <p><strong>Best for:</strong> Experienced riders chasing unusual wind windows and pristine flat-water conditions. Empty beach, zero crowds, golden sunset backdrop. Freestyle and foiling paradise when it fires.</p>
+      <p><strong>Access:</strong> 15 minutes west of Thong Sala by scooter. Easy sealed road all the way to the beach.</p>
+    </div>
+  </section>
 
   <!-- SPOT COMPARISON TABLE -->
-  <section class="fu" style="padding:0 60px 70px">
+  <section id="spots-table" class="fu" style="padding:70px 60px 70px">
     <div style="overflow-x:auto">
-      <table class="wt" style="width:100%;border-collapse:collapse">
+      <table class="wt" style="width:100%;border-collapse:collapse;min-width:700px">
         <thead>
           <tr>
-            <th style="background:var(--mid);border:1px solid var(--border);padding:14px 18px;font-family:var(--FD);text-transform:uppercase;font-size:12px;text-align:left">Criteria</th>
-            <th style="background:linear-gradient(135deg,rgba(123,47,255,.15),rgba(232,0,138,.15));border:1px solid var(--mag);padding:14px 18px;font-family:var(--FD);text-transform:uppercase;font-size:12px;text-align:center">Thong Sala</th>
-            <th style="background:var(--mid);border:1px solid var(--border);padding:14px 18px;font-family:var(--FD);text-transform:uppercase;font-size:12px;text-align:center">Ban Tai</th>
-            <th style="background:var(--mid);border:1px solid var(--border);padding:14px 18px;font-family:var(--FD);text-transform:uppercase;font-size:12px;text-align:center">Chaloklum</th>
+            <th style="background:var(--mid);border:1px solid var(--border);padding:14px 16px;font-family:var(--FD);text-transform:uppercase;font-size:11px;text-align:left">Criteria</th>
+            <th style="background:linear-gradient(135deg,rgba(123,47,255,.15),rgba(232,0,138,.15));border:1px solid var(--mag);padding:14px 12px;font-family:var(--FD);text-transform:uppercase;font-size:11px;text-align:center">Thong Sala</th>
+            <th style="background:var(--mid);border:1px solid var(--border);padding:14px 12px;font-family:var(--FD);text-transform:uppercase;font-size:11px;text-align:center">Ban Tai</th>
+            <th style="background:var(--mid);border:1px solid var(--border);padding:14px 12px;font-family:var(--FD);text-transform:uppercase;font-size:11px;text-align:center">Chaloklum</th>
+            <th style="background:var(--mid);border:1px solid var(--border);padding:14px 12px;font-family:var(--FD);text-transform:uppercase;font-size:11px;text-align:center">Haad Rin</th>
+            <th style="background:var(--mid);border:1px solid var(--border);padding:14px 12px;font-family:var(--FD);text-transform:uppercase;font-size:11px;text-align:center">Hin Kong</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub)">Best Season</td><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Jan–Apr</td><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Jan–Apr</td><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Jul–Sep</td></tr>
-          <tr><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub)">Water Type</td><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Flat lagoon</td><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Light chop</td><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Sheltered bay</td></tr>
-          <tr><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub)">Depth (entry)</td><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Knee-deep</td><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Waist-deep</td><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Variable</td></tr>
-          <tr><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub)">Beginner-friendly</td><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">⭐⭐⭐⭐⭐</td><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">⭐⭐⭐</td><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">⭐⭐</td></tr>
-          <tr><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub)">Our school here?</td><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">✅ Yes</td><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">—</td><td style="border:1px solid var(--border);padding:12px 18px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">—</td></tr>
+          <tr><td style="border:1px solid var(--border);padding:11px 16px;font-family:var(--FB);font-size:13px;color:var(--sub)">Best Season</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Jan–Apr</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Jan–Apr</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Jun–Sep</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Jan–Feb</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Oct–Nov</td></tr>
+          <tr><td style="border:1px solid var(--border);padding:11px 16px;font-family:var(--FB);font-size:13px;color:var(--sub)">Wind Direction</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">NE onshore</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">NE side-on</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">SW cross</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">E cross</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">W side-on</td></tr>
+          <tr><td style="border:1px solid var(--border);padding:11px 16px;font-family:var(--FB);font-size:13px;color:var(--sub)">Water Type</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Flat lagoon</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Light chop</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Bay, some chop</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Clear, reef edges</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">Very flat</td></tr>
+          <tr><td style="border:1px solid var(--border);padding:11px 16px;font-family:var(--FB);font-size:13px;color:var(--sub)">Difficulty</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">★ Beginner</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">★★★ Interm.</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">★★★★ Adv.</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">★★★★ Adv.</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">★★★ Interm.</td></tr>
+          <tr><td style="border:1px solid var(--border);padding:11px 16px;font-family:var(--FB);font-size:13px;color:var(--sub)">School on-site</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">✅ Yes</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">—</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">—</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">—</td><td style="border:1px solid var(--border);padding:11px 12px;font-family:var(--FB);font-size:13px;color:var(--sub);text-align:center">—</td></tr>
         </tbody>
       </table>
     </div>
@@ -1929,10 +1983,11 @@ body.light .also-name{color:#111}
   <!-- FAQ -->
   <div class="sh fu"><h2>Frequently Asked<br><em class="gt">Questions</em></h2></div>
   <div class="faq-wrap fu">
-    <div class="fq"><button class="fq-q">What is the best kitesurf spot on Koh Phangan for beginners?<span class="arr">+</span></button><div class="fq-a"><p>Thong Sala Beach is the best spot for beginners — flat-water lagoon, sandy bottom, consistent NE wind Jan–Apr. It is where our school is based and where 95% of first lessons happen on the island.</p></div></div>
-    <div class="fq"><button class="fq-q">Can you kitesurf year-round on Koh Phangan?<span class="arr">+</span></button><div class="fq-a"><p>There are two main seasons. The northeast monsoon (January–April) is the primary season at Thong Sala. The southwest monsoon (July–September) offers kitesurfing at Chaloklum Bay. May–June and October–November are transition periods with variable lighter wind — we still teach when conditions allow, but these months are not ideal for planning a dedicated kite trip.</p></div></div>
-    <div class="fq"><button class="fq-q">Which spot is safest for kitesurfing on Koh Phangan?<span class="arr">+</span></button><div class="fq-a"><p>Thong Sala Beach is the safest spot for learning. The flat-water lagoon with knee-deep entry means falls are gentle, the wind blows onshore keeping you close to the beach, and there are no rocks or reef in the teaching area. Our instructors are always on the water.</p></div></div>
-    <div class="fq"><button class="fq-q">Where do kitesurfers go outside of the NE wind season?<span class="arr">+</span></button><div class="fq-a"><p>During May–June and October–November, wind is lighter and less consistent. Many riders switch to e-foil (no wind needed) or wing foil on lighter-wind days. July–September, experienced kiters move to Chaloklum Bay for the southwest season.</p></div></div>
+    <div class="fq"><button class="fq-q">What is the best kitesurf spot on Koh Phangan for beginners?<span class="arr">+</span></button><div class="fq-a"><p>Thong Sala Beach is the best spot for beginners — flat-water lagoon, sandy bottom, consistent NE wind January–April. It is where our school is based and where 95% of first lessons happen on the island.</p></div></div>
+    <div class="fq"><button class="fq-q">Can you kitesurf year-round on Koh Phangan?<span class="arr">+</span></button><div class="fq-a"><p>Yes, across different spots. The northeast monsoon (January–April) serves Thong Sala, Ban Tai and Haad Rin. The southwest monsoon (June–September) opens Chaloklum Bay. Hin Kong fires on rare west/NW wind days in October–November. May and late October are transition months with lighter, variable conditions.</p></div></div>
+    <div class="fq"><button class="fq-q">What is the best spot for downwind kiting and freestyle?<span class="arr">+</span></button><div class="fq-a"><p>Chaloklum Bay during the SW season offers the longest open-water downwind runs. Hin Kong Sunset Beach delivers the flattest water on the island when the west wind fires — perfect for sliders, unhooked tricks and kite-loop practice.</p></div></div>
+    <div class="fq"><button class="fq-q">Is Haad Rin suitable for beginners?<span class="arr">+</span></button><div class="fq-a"><p>No. Haad Rin has reef near the edges of the bay and the east wind windows are narrow and require good self-rescue skills. It is an intermediate to advanced spot only. Beginners should always start at Thong Sala.</p></div></div>
+    <div class="fq"><button class="fq-q">Where do kitesurfers go outside of the NE wind season?<span class="arr">+</span></button><div class="fq-a"><p>During May–June and October–November, wind is lighter. Many riders switch to e-foil (no wind needed) or wing foil on light-wind days. In July–September, experienced kiters move to Chaloklum Bay for the SW season. Hin Kong is worth watching on west-wind days in October–November.</p></div></div>
   </div>
 
   <!-- INTERNAL LINKS -->
@@ -1943,13 +1998,13 @@ body.light .also-name{color:#111}
         <div style="font-family:var(--FD);font-size:16px;font-weight:900;text-transform:uppercase;color:var(--fg)">Kitesurfing Lessons</div>
         <div style="font-family:var(--FB);font-size:12px;color:#e8008a">from 3,500 THB · IKO certified</div>
       </a>
-      <a href="../best-time-kitesurfing-koh-phangan/" style="display:flex;flex-direction:column;gap:4px;background:var(--mid);border-radius:12px;padding:20px 22px;border:1px solid var(--border);text-decoration:none;transition:border-color .2s">
-        <div style="font-family:var(--FD);font-size:16px;font-weight:900;text-transform:uppercase;color:var(--fg)">Best Time to Kitesurf</div>
-        <div style="font-family:var(--FB);font-size:12px;color:#e8008a">Month-by-month wind guide</div>
+      <a href="../seasons/" style="display:flex;flex-direction:column;gap:4px;background:var(--mid);border-radius:12px;padding:20px 22px;border:1px solid var(--border);text-decoration:none;transition:border-color .2s">
+        <div style="font-family:var(--FD);font-size:16px;font-weight:900;text-transform:uppercase;color:var(--fg)">Wind Season Guide</div>
+        <div style="font-family:var(--FB);font-size:12px;color:#e8008a">Month-by-month wind calendar</div>
       </a>
       <a href="../locations/" style="display:flex;flex-direction:column;gap:4px;background:var(--mid);border-radius:12px;padding:20px 22px;border:1px solid var(--border);text-decoration:none;transition:border-color .2s">
-        <div style="font-family:var(--FD);font-size:16px;font-weight:900;text-transform:uppercase;color:var(--fg)">Find Us</div>
-        <div style="font-family:var(--FB);font-size:12px;color:#e8008a">Thong Sala Beach map</div>
+        <div style="font-family:var(--FD);font-size:16px;font-weight:900;text-transform:uppercase;color:var(--fg)">Find Us on the Map</div>
+        <div style="font-family:var(--FB);font-size:12px;color:#e8008a">Thong Sala Beach, Koh Phangan</div>
       </a>
     </div>
   </section>
