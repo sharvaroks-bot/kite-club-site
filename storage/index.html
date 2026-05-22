@@ -1167,10 +1167,11 @@ body.light .amenity-card{background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.05)}
 body.light .amenity-card h3{color:#111118}
 body.light .amenity-card p{color:#444455}
 @media(max-width:900px){
-  .amenities-grid{grid-template-columns:1fr 1fr !important;padding:0 22px 55px !important}
-}
-@media(max-width:580px){
-  .amenities-grid{grid-template-columns:1fr !important}
+  .amenities-grid{grid-template-columns:1fr 1fr !important;padding:0 12px 55px !important;gap:8px !important}
+  .amenity-card{padding:18px 14px}
+  .amenity-icon{font-size:24px;margin-bottom:8px}
+  .amenity-card h3{font-size:14px;margin-bottom:4px}
+  .amenity-card p{font-size:12px}
 }
 /* ─── cc-card: Rider Passes ─── */
 .cc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:0 60px 80px}
