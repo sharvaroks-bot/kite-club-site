@@ -265,3 +265,18 @@
   from = "/ride-the-tropical-wind-your-dream-kite-surfing-adventure-in-koh-phangan/"
   to = "/kitesurfing/"
   status = 301
+
+[[redirects]]
+  from = "/wind/"
+  to = "/seasons/"
+  status = 301
+
+[[redirects]]
+  from = "/wind-season-koh-phangan/"
+  to = "/seasons/"
+  status = 301
+
+[[redirects]]
+  from = "/koh-phangan-wind/"
+  to = "/seasons/"
+  status = 301
