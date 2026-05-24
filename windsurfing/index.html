@@ -1857,6 +1857,23 @@ body.light #seoExpandable p,body.light #seoExpandable li,body.light #seoExpandab
   .disc-cats-desktop{display:none}
   .disc-cats-mobile{display:block}
 }
+/* ─── MOSAIC ROWS ─── */
+.dmr{display:grid;grid-template-columns:1fr 1fr;min-height:100vh}
+.dmr-flip .dmr-img{order:-1}
+.dmr-text{display:flex;flex-direction:column;justify-content:center;padding:60px 80px;background:var(--dark)}
+.dmr-text.bg2{background:var(--black)}
+.dmr-img{position:relative;overflow:hidden}
+.dmr-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.dmr:hover .dmr-img img{transform:scale(1.04)}
+.dmr-eyebrow{font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--pink);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.dmr-eyebrow::before{content:'';width:28px;height:2px;background:var(--grad);flex-shrink:0}
+.dmr-title{font-family:var(--FD);font-size:clamp(40px,4.5vw,66px);font-weight:900;text-transform:uppercase;line-height:.92;color:var(--white);margin-bottom:22px}
+.dmr-title em{font-style:normal;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.dmr-desc{font-family:var(--FB);font-size:15px;color:var(--muted);line-height:1.75;max-width:420px;margin-bottom:26px}
+.dmr-stats{display:flex;gap:28px;margin-bottom:30px}
+.dmr-stat span{display:block;font-family:var(--FD);font-size:32px;font-weight:900;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.dmr-stat small{font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);display:block;margin-top:3px}
+.dmr-btns{display:flex;gap:10px;flex-wrap:wrap}
 
 /* ─── Mobile discipline cards ─── */
 .mob-disc-list{display:flex;flex-direction:column;gap:8px;padding:0 0 40px}
@@ -1986,34 +2003,74 @@ a.course-price-row:hover strong{color:var(--pink) !important}
   </section>
 
   <!-- ═══ EXPLORE WINDSURFING ═══ -->
-  <div class="disc-cats-desktop fu">
-    <div class="sh"><h2>Explore<br><em class="gt">Windsurfing</em></h2></div>
-    <div class="cats disc-3col">
-    <a href="lessons/" class="cat-card" style="aspect-ratio:4/5;text-decoration:none">
-      <img src="../assets/windsurfing.jpg" alt="Windsurfing Lessons" loading="lazy">
-      <div class="cat-ov">
-        <div class="cat-tag">Lessons</div>
-        <h3>Lessons</h3>
-        <span class="cat-lnk">Explore</span>
+  <div class="disc-cats-desktop">
+
+    <div class="dmr fu">
+      <div class="dmr-text">
+        <div class="dmr-eyebrow">01 · Lessons</div>
+        <h2 class="dmr-title">Learn to<br><em>Windsurf</em></h2>
+        <p class="dmr-desc">IKO-certified windsurfing courses from Discovery (2 hours) to Independent. Flat-water lagoon, certified instructors, all experience levels welcome.</p>
+        <div class="dmr-stats">
+          <div class="dmr-stat"><span>4,000</span><small>THB from</small></div>
+          <div class="dmr-stat"><span>IKO</span><small>Certified</small></div>
+          <div class="dmr-stat"><span>All</span><small>Levels</small></div>
+        </div>
+        <div class="dmr-btns">
+          <a href="../school/windsurfing/" class="btn-p">View Courses</a>
+          <a href="https://wa.me/66967203910?text=Hi!%20I%27d%20like%20to%20book%20a%20windsurfing%20lesson" target="_blank" class="btn-s">Book Now</a>
+        </div>
       </div>
-    </a>
-    <a href="rental/" class="cat-card" style="aspect-ratio:4/5;text-decoration:none">
-      <img src="../assets/private-lessons.jpg" alt="Windsurfing Rental" loading="lazy">
-      <div class="cat-ov">
-        <div class="cat-tag">Rental</div>
-        <h3>Rental</h3>
-        <span class="cat-lnk">Explore</span>
-      </div>
-    </a>
-    <a href="../storage/" class="cat-card" style="aspect-ratio:4/5;text-decoration:none">
-      <img src="../assets/independent-rider.jpg" alt="Storage & Membership" loading="lazy">
-      <div class="cat-ov">
-        <div class="cat-tag">Storage & Membership</div>
-        <h3>Storage & Membership</h3>
-        <span class="cat-lnk">Explore</span>
-      </div>
-    </a>
+      <div class="dmr-img"><img src="../assets/windsurfing.jpg" alt="Windsurfing Lessons Koh Phangan" loading="lazy"></div>
     </div>
+
+    <div class="dmr dmr-flip fu">
+      <div class="dmr-text bg2">
+        <div class="dmr-eyebrow">02 · Rental</div>
+        <h2 class="dmr-title">Rent Windsurf<br><em>Gear</em></h2>
+        <p class="dmr-desc">Boards, sails and rigs for all wind conditions. Hourly and daily rates. IKO Level 3 certification required for independent rental.</p>
+        <div class="dmr-btns">
+          <a href="../rental/" class="btn-p">View Rates</a>
+        </div>
+      </div>
+      <div class="dmr-img"><img src="../assets/private-lessons.jpg" alt="Windsurfing Gear Rental Koh Phangan" loading="lazy"></div>
+    </div>
+
+    <div class="dmr fu">
+      <div class="dmr-text">
+        <div class="dmr-eyebrow">03 · Storage & Membership</div>
+        <h2 class="dmr-title">Store Your<br><em>Gear</em></h2>
+        <p class="dmr-desc">Monthly beach storage for your board, sail and rig. Leave your setup between sessions — no carrying, no hassle.</p>
+        <div class="dmr-btns">
+          <a href="../storage/" class="btn-p">View Plans</a>
+        </div>
+      </div>
+      <div class="dmr-img"><img src="../assets/independent-rider.jpg" alt="Windsurf Gear Storage Koh Phangan" loading="lazy"></div>
+    </div>
+
+    <div class="dmr dmr-flip fu">
+      <div class="dmr-text bg2">
+        <div class="dmr-eyebrow">04 · Kite Spots</div>
+        <h2 class="dmr-title">Find Your<br><em>Spot</em></h2>
+        <p class="dmr-desc">Best windsurfing spots on Koh Phangan — Thong Sala for SE season, Baan Tai for SW, Chaloklum for NE. GPS, wind windows and skill levels.</p>
+        <div class="dmr-btns">
+          <a href="../locations/" class="btn-p">All Spots</a>
+        </div>
+      </div>
+      <div class="dmr-img"><img src="../assets/windsurfing.jpg" alt="Windsurfing Spots Koh Phangan" loading="lazy"></div>
+    </div>
+
+    <div class="dmr fu">
+      <div class="dmr-text">
+        <div class="dmr-eyebrow">05 · Wind & Seasons</div>
+        <h2 class="dmr-title">Plan by<br><em>Wind</em></h2>
+        <p class="dmr-desc">Two seasons per year: SE peak (February–April) for beginners, SW monsoon (June–September) for intermediate and advanced. Month-by-month wind calendar.</p>
+        <div class="dmr-btns">
+          <a href="../seasons/" class="btn-p">Season Guide</a>
+        </div>
+      </div>
+      <div class="dmr-img"><img src="../assets/independent-rider.jpg" alt="Wind Seasons Koh Phangan" loading="lazy"></div>
+    </div>
+
   </div>
   <div class="disc-cats-mobile">
     <div style="padding:40px 22px 20px"><h2 style="font-family:var(--FD);font-size:44px;font-weight:900;text-transform:uppercase;line-height:.95;margin:0">Explore<br><em class="gt" style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Windsurfing</em></h2></div>

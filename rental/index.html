@@ -88,17 +88,6 @@ body.light .nav-logo-text span{color:#888899}
 body.light .mobile-menu{background:rgba(245,245,242,.98)}
 body.light .mobile-menu a,body.light .mobile-menu button{color:#111118;border-color:rgba(17,17,24,.1)}
 body.light .mobile-menu a:hover,body.light .mobile-menu button:hover{color:var(--mag)}
-body.light .blog-card h3{color:#111118}
-body.light .blog-card p{color:#666677}
-body.light .blog-date{color:var(--mag)}
-body.light .contact-form h3{color:#111118}
-body.light .form-group label{color:#888899}
-body.light .form-group input,body.light .form-group select,body.light .form-group textarea{background:rgba(17,17,24,.05);border-color:rgba(17,17,24,.12);color:#111118}
-body.light .form-group input::placeholder,body.light .form-group textarea::placeholder{color:#aaa}
-body.light .form-group select option{background:#fff;color:#111}
-body.light .ci-text strong{color:#111118}
-body.light .ci-text p,body.light .ci-text a{color:#444455}
-body.light .ci-text a:hover{color:var(--mag)}
 body.light .page-hero-content .eyebrow::before{background:var(--grad)}
 body.light .act-name{color:#111118}
 body.light .act-arr{color:var(--mag)}
@@ -116,8 +105,6 @@ body.light .shop-cat-body p{color:#444455}
 body.light .shop-cat-tag{color:var(--mag)}
 body.light .shop-cat-body{background:#f8f8f5}
 body.light .shop-cat{border-color:rgba(17,17,24,.1)}
-body.light .storage-card h3{color:#111118}
-body.light .storage-card ul li{color:#444455}
 body.light .tc h4{color:#111118}
 body.light .tc-langs{color:#666677}
 body.light .si-label{color:#666677}
@@ -128,7 +115,7 @@ body.light .modal input,body.light .modal textarea{background:rgba(17,17,24,.05)
 body.light .modal-close{color:#888899}
 
 /* transitions */
-body,nav,.page,.about-txt,.about-band,.pc,.rc,.tc,.fq,.si,.perk,.blog-card,.contact-form,.contact-info,.ci-item,.storage-card,.shop-cat,.shop-cat-body,.modal,.mobile-menu,.act-info{transition:background .35s ease,color .35s ease,border-color .35s ease}
+body,nav,.page,.about-txt,.about-band,.pc,.rc,.tc,.fq,.si,.perk,.shop-cat,.shop-cat-body,.modal,.mobile-menu,.act-info{transition:background .35s ease,color .35s ease,border-color .35s ease}
 
 /* ─── RENTAL HOME — DESKTOP/MOBILE ─── */
 .rhc{background:var(--mid);border:1px solid var(--border);padding:28px;transition:border-color .3s}
@@ -423,17 +410,6 @@ nav{position:sticky;top:0;z-index:200;background:rgba(13,13,26,.95);backdrop-fil
 .loc-explore::after{content:'→';color:var(--pink)}
 .loc-panel:hover .loc-explore{gap:16px}
 
-/* ─── 3 DISCIPLINE CARDS ─── */
-.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;padding:0 60px 70px}
-.cat-card{position:relative;overflow:hidden;aspect-ratio:3/4;cursor:pointer}
-.cat-card img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.25,.46,.45,.94)}
-.cat-card:hover img{transform:scale(1.07)}
-.cat-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,13,26,.92) 0%,rgba(13,13,26,.08) 55%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:28px}
-.cat-tag{font-family:var(--FD);font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--pink);margin-bottom:6px}
-.cat-card h3{font-family:var(--FD);font-weight:900;font-size:38px;text-transform:uppercase;line-height:.95;margin-bottom:18px}
-.cat-lnk{display:inline-flex;align-items:center;gap:8px;color:#fff;font-family:var(--FD);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:0;transform:translateY(10px);transition:all .3s}
-.cat-card:hover .cat-lnk{opacity:1;transform:translateY(0)}
-.cat-lnk::after{content:'→';color:var(--pink)}
 
 /* ─── PRICING ─── */
 .price-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;padding:20px 60px 70px}
@@ -598,34 +574,6 @@ nav{position:sticky;top:0;z-index:200;background:rgba(13,13,26,.95);backdrop-fil
 .modal-actions{display:flex;gap:12px;margin-top:24px}
 
 
-/* ─── BLOG ─── */
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;padding:0 60px 70px}
-.blog-card{background:var(--mid);border:1px solid var(--border);overflow:hidden;cursor:pointer;transition:border-color .3s,transform .3s}
-.blog-card:hover{border-color:var(--mag);transform:translateY(-4px)}
-.blog-img{height:200px;background:linear-gradient(135deg,rgba(123,47,255,.4),rgba(232,0,138,.4));display:flex;align-items:center;justify-content:center;font-size:48px;overflow:hidden;position:relative}
-.blog-img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-.blog-img span{position:relative;z-index:1}
-.blog-body{padding:24px}
-.blog-date{font-family:var(--FD);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:10px}
-.blog-card h3{font-family:var(--FD);font-weight:700;font-size:19px;text-transform:uppercase;line-height:1.1;margin-bottom:10px}
-.blog-card p{color:var(--muted);font-size:13px;line-height:1.7}
-
-/* ─── CONTACTS ─── */
-.contacts-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:0 60px 70px}
-.contact-form{background:var(--mid);border:1px solid var(--border);padding:40px}
-.contact-form h3{font-family:var(--FD);font-weight:900;font-size:32px;text-transform:uppercase;margin-bottom:24px}
-.form-group{margin-bottom:18px}
-.form-group label{display:block;font-family:var(--FD);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,.06);border:1px solid var(--border);color:var(--white);font-family:var(--FB);font-size:14px;padding:11px 14px;outline:none;transition:border-color .2s}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--pink)}
-.form-group select option{background:var(--dark)}
-.form-group textarea{resize:vertical;min-height:100px}
-.contact-info{background:var(--mid);border:1px solid var(--border);padding:40px;display:flex;flex-direction:column;gap:20px;justify-content:center}
-.ci-item{display:flex;gap:14px;align-items:flex-start}
-.ci-icon{font-size:22px;flex-shrink:0}
-.ci-text strong{display:block;font-family:var(--FD);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
-.ci-text a,.ci-text p{color:var(--off);font-size:14px}
-.ci-text a:hover{color:var(--pink)}
 
 /* ─── PAGE HEROES (inner pages) ─── */
 .page-hero{position:relative;height:50vh;min-height:380px;display:flex;align-items:flex-end;overflow:hidden}
@@ -673,17 +621,6 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:55px 60
 .fu{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .fu.vis{opacity:1;transform:translateY(0)}
 
-/* ─── STORAGE PAGE ─── */
-.storage-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:0 60px 70px}
-.storage-card{background:var(--mid);border:1px solid var(--border);padding:40px;transition:border-color .3s}
-.storage-card:hover{border-color:var(--mag)}
-.storage-card .price-big{font-family:var(--FD);font-weight:900;font-size:54px;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:4px}
-.storage-card .price-label{color:var(--muted);font-size:13px;margin-bottom:20px;display:block}
-.storage-card h3{font-family:var(--FD);font-weight:700;font-size:24px;text-transform:uppercase;margin-bottom:14px}
-.storage-card ul{list-style:none;margin-bottom:24px}
-.storage-card ul li{padding:8px 0;border-bottom:1px solid var(--border2);color:var(--off);font-size:14px;display:flex;gap:8px;align-items:flex-start}
-.storage-card ul li::before{content:'✦';color:var(--pink);font-size:10px;flex-shrink:0;margin-top:3px}
-.storage-card ul li:last-child{border-bottom:none}
 
 /* ─── RESPONSIVE ─── */
 @media(max-width:900px){
@@ -693,8 +630,6 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:55px 60
   .hero-content{padding:0 22px 60px}
   .hero-badge{right:18px;bottom:66px;width:88px;height:88px;font-size:9px}
   .sh{padding:50px 22px 24px}
-  .cats{grid-template-columns:1fr;padding:0 22px 55px}
-  .cat-card{aspect-ratio:16/9}
   .act-track{padding:0 22px}
   .stats{grid-template-columns:1fr 1fr;margin:0 22px 55px}
   .team-grid{grid-template-columns:1fr 1fr;padding:0 22px 55px}
@@ -712,11 +647,8 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:55px 60
   .about-band{grid-template-columns:1fr}
   .about-img{height:260px}
   .about-txt{padding:40px 28px}
-  .blog-grid{grid-template-columns:1fr;padding:0 22px 55px}
-  .contacts-grid{grid-template-columns:1fr;padding:0 22px 55px}
   .shop-header{padding:50px 22px 24px;flex-direction:column;align-items:flex-start;gap:14px}
   .shop-cats{padding:0 22px 55px}
-  .storage-grid{grid-template-columns:1fr;padding:0 22px 55px}
   .rent-home-grid{grid-template-columns:1fr!important;padding:0 22px!important}
   .footer-top{grid-template-columns:1fr 1fr;gap:30px}
   footer{padding:40px 22px}
@@ -822,14 +754,6 @@ body.light .pc.feat .pc-badge {
   }
 }
 
-/* ─── S3: Cat-cards full width no side padding ─── */
-@media(max-width:768px){
-  .cats{
-    padding:0 0 55px !important;
-    gap:2px !important;
-  }
-  .cat-card{aspect-ratio:16/7 !important;}
-}
 
 /* ─── S4 & S6: All Courses rows - full width ─── */
 @media(max-width:768px){
@@ -842,37 +766,6 @@ body.light .pc.feat .pc-badge {
   }
 }
 
-/* ─── S5: School price pages - snap scroll sections ─── */
-@media(max-width:768px){
-  .school-snap-wrap{
-    scroll-snap-type:y mandatory;
-    overflow-y:scroll;
-    height:100dvh;
-  }
-  .school-snap-section{
-    scroll-snap-align:start;
-    min-height:100dvh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    padding:20px 16px;
-    position:relative;
-  }
-  .scroll-hint{
-    position:absolute;
-    bottom:16px;
-    left:50%;
-    transform:translateX(-50%);
-    animation:bounceDown 2s ease-in-out infinite;
-    opacity:.4;
-    font-size:20px;
-    display:block;
-  }
-  @keyframes bounceDown{
-    0%,100%{transform:translateX(-50%) translateY(0)}
-    50%{transform:translateX(-50%) translateY(6px)}
-  }
-}
 
 
 /* ─── Variant A: Mobile price cards layout ─── */
@@ -1201,7 +1094,7 @@ body.light .pc.feat .pc-badge {
 .rmc-prices{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-bottom:12px}
 .rmc-price-box{background:rgba(123,47,255,.08);border:1px solid rgba(123,47,255,.12);padding:8px 4px;text-align:center}
 .rmc-dur{font-family:var(--FD);font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
-.rmc-val{font-family:var(--FD);font-size:14px;font-weight:900;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.rmc-val{font-family:var(--FD);font-size:26px;font-weight:900;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .rmc-val-ask{font-family:var(--FD);font-size:10px;font-weight:700;color:var(--muted);display:block;padding-top:3px}
 /* ─── REQUIREMENTS ─── */
 .rent-req-wrap{padding:0 60px 70px}
