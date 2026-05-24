@@ -1,2 +1,267 @@
 # Multi-page static site — no SPA redirect needed.
 # Each directory has its own index.html and is served directly.
+
+# ── 301 redirects: old WordPress slugs → new static pages ──────────────────
+# Preserves Google rankings from the old site on deployment.
+# Priority pages (ranking #1-2): best-kiteboarding-spots, when-is-best-time,
+# kiteboarding-vs-samui, where-to-find-best-kitesurfing.
+
+[[redirects]]
+  from = "/best-kiteboarding-spots-in-koh-phangan/"
+  to = "/best-kitesurf-spots-koh-phangan/"
+  status = 301
+
+[[redirects]]
+  from = "/when-is-the-best-time-for-kitesurfing-in-koh-phangan/"
+  to = "/blog/posts/best-time-koh-phangan.html"
+  status = 301
+
+[[redirects]]
+  from = "/kiteboarding-on-koh-phangan-vs-koh-samui-which-island-is-better/"
+  to = "/blog/posts/koh-phangan-vs-samui.html"
+  status = 301
+
+[[redirects]]
+  from = "/where-to-find-the-best-kitesurfing-on-koh-phangan/"
+  to = "/best-kitesurf-spots-koh-phangan/"
+  status = 301
+
+[[redirects]]
+  from = "/an-honest-guide-to-the-best-kitesurfing-on-koh-phangan/"
+  to = "/blog/posts/guide-kitesurfing-thailand.html"
+  status = 301
+
+[[redirects]]
+  from = "/best-kitesurfing-beaches-on-koh-phangan-for-beginners/"
+  to = "/best-kitesurf-spots-koh-phangan/"
+  status = 301
+
+[[redirects]]
+  from = "/best-kite-spots-in-koh-phangan-for-beginners-safety-first-beach-rankings/"
+  to = "/best-kitesurf-spots-koh-phangan/"
+  status = 301
+
+[[redirects]]
+  from = "/best-kitesurfing-beaches-on-koh-phangan/"
+  to = "/best-kitesurf-spots-koh-phangan/"
+  status = 301
+
+[[redirects]]
+  from = "/where-are-the-best-kiteboarding-water-spots-on-koh-phangan/"
+  to = "/best-kitesurf-spots-koh-phangan/"
+  status = 301
+
+[[redirects]]
+  from = "/best-time-to-kitesurf-on-koh-phangan-complete-monthly-wind-weather-guide/"
+  to = "/blog/posts/best-time-koh-phangan.html"
+  status = 301
+
+[[redirects]]
+  from = "/best-time-to-visit-kite-club-koh-phangan-wind-conditions-and-seasons-for-kite-surfing/"
+  to = "/blog/posts/best-time-koh-phangan.html"
+  status = 301
+
+[[redirects]]
+  from = "/koh-phangan-vs-koh-samui-for-kitesurfing-which-island-should-you-choose/"
+  to = "/blog/posts/koh-phangan-vs-samui.html"
+  status = 301
+
+[[redirects]]
+  from = "/how-long-does-it-take-to-learn-kitesurfing-or-wing-foiling-in-koh-phangan-honest-timelines-for-beginners/"
+  to = "/blog/posts/how-long-to-learn.html"
+  status = 301
+
+[[redirects]]
+  from = "/how-many-days-does-it-actually-take-to-learn-kitesurfing-on-koh-phangan/"
+  to = "/blog/posts/how-long-to-learn.html"
+  status = 301
+
+[[redirects]]
+  from = "/what-to-expect-your-first-kitesurfing-lesson-on-koh-phangan/"
+  to = "/blog/posts/first-kite-lesson.html"
+  status = 301
+
+[[redirects]]
+  from = "/what-to-expect-your-first-kitesurfing-lesson-in-koh-phangan/"
+  to = "/blog/posts/first-kite-lesson.html"
+  status = 301
+
+[[redirects]]
+  from = "/what-kitesurfing-equipment-you-need-on-koh-phangan-tropical-conditions-guide/"
+  to = "/blog/posts/kitesurfing-equipment-guide.html"
+  status = 301
+
+[[redirects]]
+  from = "/koh-phangan-for-the-active-wellness-traveller-combining-yoga-kitesurfing-and-wing-foiling-on-the-island/"
+  to = "/blog/posts/koh-phangan-active-wellness-traveller.html"
+  status = 301
+
+[[redirects]]
+  from = "/wind-seasons-on-koh-phangan-the-complete-calendar-for-kitesurfing-and-wing-foil-riders/"
+  to = "/blog/posts/wind-season-2026.html"
+  status = 301
+
+[[redirects]]
+  from = "/first-time-on-the-water-should-you-start-with-kitesurfing-or-wing-foiling-on-koh-phangan/"
+  to = "/blog/posts/kitesurfing-vs-wing-foil.html"
+  status = 301
+
+[[redirects]]
+  from = "/kitesurfing-vs-wing-foiling-which-one-should-you-learn-first-on-koh-phangan/"
+  to = "/blog/posts/kitesurfing-vs-wing-foil.html"
+  status = 301
+
+[[redirects]]
+  from = "/from-kite-to-wing-why-experienced-kitesurfers-are-switching-to-wing-foil/"
+  to = "/blog/posts/kite-to-wing.html"
+  status = 301
+
+[[redirects]]
+  from = "/family-holidays-why-wing-foiling-and-kitesurfing-are-the-perfect-combo-for-active-groups/"
+  to = "/blog/posts/family-holidays.html"
+  status = 301
+
+[[redirects]]
+  from = "/top-10-common-mistakes-when-transitioning-from-kitesurfing-to-wing-foil/"
+  to = "/blog/posts/top-10-mistakes.html"
+  status = 301
+
+[[redirects]]
+  from = "/the-ultimate-water-sports-guide-can-you-learn-kitesurfing-and-wing-foil-at-the-same-time/"
+  to = "/blog/posts/learn-kitesurfing-and-wing-foil-together.html"
+  status = 301
+
+[[redirects]]
+  from = "/wing-foil-vs-efoil-which-is-right-for-you/"
+  to = "/blog/posts/efoil-vs-wing.html"
+  status = 301
+
+[[redirects]]
+  from = "/wing-foil-safety-essential-gear-and-tips-for-new-riders/"
+  to = "/blog/posts/wing-foil-safety-gear-guide.html"
+  status = 301
+
+[[redirects]]
+  from = "/why-wing-foiling-is-the-fastest-growing-water-sport-in-the-world/"
+  to = "/blog/posts/why-wing-foiling-fastest-growing-sport.html"
+  status = 301
+
+[[redirects]]
+  from = "/top-5-common-beginner-mistakes-in-wing-foiling-and-how-to-avoid-them/"
+  to = "/blog/posts/top-5-beginner-mistakes-wing-foiling.html"
+  status = 301
+
+[[redirects]]
+  from = "/how-to-choose-your-first-wing-foil-board-on-koh-phangan-size-volume-and-stability/"
+  to = "/blog/posts/how-to-choose-wing-foil-board.html"
+  status = 301
+
+[[redirects]]
+  from = "/top-5-reasons-why-koh-phangan-is-the-best-place-for-kitesurfing/"
+  to = "/blog/posts/top-5-reasons-koh-phangan-best-kitesurfing.html"
+  status = 301
+
+[[redirects]]
+  from = "/top-reasons-to-choose-koh-phangan-for-your-next-kitesurf-trip/"
+  to = "/blog/posts/top-5-reasons-koh-phangan-best-kitesurfing.html"
+  status = 301
+
+[[redirects]]
+  from = "/is-koh-phangan-good-for-learning-kitesurfing-honest-beginners-guide/"
+  to = "/blog/posts/is-koh-phangan-good-for-learning-kitesurfing.html"
+  status = 301
+
+[[redirects]]
+  from = "/top-kitesurf-school-in-koh-phangan-why-kite-club-rules/"
+  to = "/blog/posts/top-kitesurf-school-koh-phangan.html"
+  status = 301
+
+[[redirects]]
+  from = "/why-choose-kite-club-koh-phangan-for-your-first-kite-surfing-lesson/"
+  to = "/blog/posts/top-kitesurf-school-koh-phangan.html"
+  status = 301
+
+[[redirects]]
+  from = "/what-makes-kitesurfing-on-koh-phangan-different-from-bali-sri-lanka-or-vietnam/"
+  to = "/blog/posts/koh-phangan-vs-bali-sri-lanka-vietnam.html"
+  status = 301
+
+[[redirects]]
+  from = "/what-makes-the-kitesurf-community-best-on-koh-phangan/"
+  to = "/blog/posts/kitesurf-community-koh-phangan.html"
+  status = 301
+
+[[redirects]]
+  from = "/why-koh-phangan-is-the-best-place-in-thailand-to-learn-kiteboarding/"
+  to = "/blog/posts/why-koh-phangan-best-thailand-kiteboarding.html"
+  status = 301
+
+[[redirects]]
+  from = "/the-guide-to-kitesurfing-on-koh-phangan/"
+  to = "/blog/posts/guide-kitesurfing-thailand.html"
+  status = 301
+
+[[redirects]]
+  from = "/the-complete-guide-to-kitesurf-in-koh-phangan-spots-seasons-kitesurfing-schools/"
+  to = "/blog/posts/complete-guide-koh-phangan.html"
+  status = 301
+
+[[redirects]]
+  from = "/kitesurf-koh-phangan-kiteboarding-guide-the-best-spots-in-thailand/"
+  to = "/blog/posts/guide-kitesurfing-thailand.html"
+  status = 301
+
+[[redirects]]
+  from = "/10-best-beaches-koh-phangan-a-beach-guide-to-paradise/"
+  to = "/blog/posts/10-best-beaches-koh-phangan.html"
+  status = 301
+
+[[redirects]]
+  from = "/wakeboarding-wakesurfing-koh-phangan-best-spots-lessons-tips/"
+  to = "/blog/posts/wakeboarding-wakesurfing-koh-phangan.html"
+  status = 301
+
+[[redirects]]
+  from = "/discover-kitesurfing-how-to-choose-the-best-kiteschool-koh-phangan/"
+  to = "/blog/posts/discover-kitesurfing-choose-kiteschool.html"
+  status = 301
+
+[[redirects]]
+  from = "/ready-to-stand-up-paddleboarding-the-best-sup-rental-koh-phangan/"
+  to = "/sup-rental/"
+  status = 301
+
+[[redirects]]
+  from = "/top-activities-in-thailand-why-kayaking-koh-phangan-to-coral-reefs-is-a-must-do/"
+  to = "/kayaking/"
+  status = 301
+
+[[redirects]]
+  from = "/wing-foil-koh-phangan-how-to-start-with-wing-foil-rental-in-thailand/"
+  to = "/blog/posts/wing-foil-rental-lessons-koh-phangan.html"
+  status = 301
+
+[[redirects]]
+  from = "/efoil-board-lessons-koh-phangan-learn-to-fly-above-the-water-in-thailand/"
+  to = "/blog/posts/efoil-lessons-koh-phangan.html"
+  status = 301
+
+[[redirects]]
+  from = "/a-day-in-the-life-the-real-vibe-of-kitesurfing-on-koh-phangan/"
+  to = "/blog/posts/a-day-kitesurfing-koh-phangan.html"
+  status = 301
+
+[[redirects]]
+  from = "/your-first-day-kitesurf-on-the-water-a-step-by-step-guide-to-kitesurfing-on-koh-phangan/"
+  to = "/blog/posts/your-first-day-kitesurfing-koh-phangan.html"
+  status = 301
+
+[[redirects]]
+  from = "/7-essential-tips-for-your-first-kite-surfing-trip-to-koh-phangan/"
+  to = "/blog/posts/7-tips-first-kitesurf-trip-koh-phangan.html"
+  status = 301
+
+[[redirects]]
+  from = "/ride-the-tropical-wind-your-dream-kite-surfing-adventure-in-koh-phangan/"
+  to = "/kitesurfing/"
+  status = 301
