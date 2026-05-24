@@ -1418,6 +1418,13 @@ body.light .disc-btn-secondary:hover{border-color:#e8008a;color:#e8008a}
 .mob-disc-tag{font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#e8008a;margin-bottom:8px}
 .mob-disc-card h3{font-family:var(--FD);font-weight:900;font-size:38px;text-transform:uppercase;line-height:.95;margin:0 0 12px;color:#fff}
 .mob-disc-lnk{font-family:var(--FD);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.mob-also-wrap{padding:0 0 40px}
+.mob-also-label{font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding:20px 0 10px;text-align:center}
+.mob-also-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mob-also-card{position:relative;overflow:hidden;display:block;aspect-ratio:4/3;text-decoration:none;border-radius:12px}
+.mob-also-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mob-also-ov{position:absolute;inset:0;display:flex;align-items:flex-end;padding:12px 14px;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,transparent 70%)}
+.mob-also-ov span{font-family:var(--FD);font-size:16px;font-weight:900;text-transform:uppercase;color:#fff}
 .sh-disc-desktop{justify-content:center;text-align:center;flex-direction:column;align-items:center;gap:12px}
 .sh-disc-mobile{display:none}
 /* Секции преимуществ, условий, отзывов (для school/) */
@@ -1921,14 +1928,20 @@ body.light .prog-num,body.light .prog-day{color:#888}
         <img src="assets/efoil-photo.jpg" alt="E-Foil sessions Koh Phangan" loading="lazy">
         <div class="mob-disc-ov"><div class="mob-disc-tag">Water Sport 04</div><h3>E-Foil</h3><span class="mob-disc-lnk">View courses →</span></div>
       </a>
-      <a href="kayaking/" class="mob-disc-card">
-        <img src="assets/kayaking.jpg" alt="Kayaking Koh Phangan" loading="lazy">
-        <div class="mob-disc-ov"><div class="mob-disc-tag">Water Sport 05</div><h3>Kayaking</h3><span class="mob-disc-lnk">Explore →</span></div>
-      </a>
-      <a href="sup-rental/" class="mob-disc-card">
-        <img src="assets/sup.jpg" alt="SUP rental Koh Phangan" loading="lazy">
-        <div class="mob-disc-ov"><div class="mob-disc-tag">Water Sport 06</div><h3>SUP Rental</h3><span class="mob-disc-lnk">Explore →</span></div>
-      </a>
+    </div>
+    <!-- Also available -->
+    <div class="mob-also-wrap">
+      <div class="mob-also-label">Also available</div>
+      <div class="mob-also-row">
+        <a href="kayaking/" class="mob-also-card">
+          <img src="assets/kayaking.jpg" alt="Kayaking Koh Phangan" loading="lazy">
+          <div class="mob-also-ov"><span>Kayaking</span></div>
+        </a>
+        <a href="sup-rental/" class="mob-also-card">
+          <img src="assets/sup.jpg" alt="SUP rental Koh Phangan" loading="lazy">
+          <div class="mob-also-ov"><span>SUP Rental</span></div>
+        </a>
+      </div>
     </div>
   </div>
 
