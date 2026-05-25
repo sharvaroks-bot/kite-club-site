@@ -1872,7 +1872,7 @@ body.light #seoExpandable p,body.light #seoExpandable li,body.light #seoExpandab
 /* ─── Mobile discipline cards ─── */
 .mob-disc-list{display:flex;flex-direction:column;gap:8px;padding:0 0 40px}
 .mob-disc-card{position:relative;overflow:hidden;display:block;width:100%;aspect-ratio:5/3;text-decoration:none;cursor:pointer;border-radius:12px}
-.mob-disc-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.mob-disc-card img,.mob-disc-card video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 .mob-disc-ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:14px 16px;background:linear-gradient(to top,rgba(0,0,0,.8) 0%,rgba(0,0,0,.2) 55%,transparent 100%)}
 .mob-disc-tag{font-family:var(--FD);font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#e8008a;margin-bottom:4px}
 .mob-disc-card h3{font-family:var(--FD);font-weight:900;font-size:22px;text-transform:uppercase;line-height:.95;margin:0 0 4px;color:#fff}
@@ -2009,7 +2009,7 @@ a.course-price-row:hover strong{color:var(--pink) !important}
           <a href="https://wa.me/66967203910?text=Hi!%20I%27d%20like%20to%20book%20an%20e-foil%20session" target="_blank" class="btn-s">Book Now</a>
         </div>
       </div>
-      <div class="dmr-img"><img src="../assets/efoil.jpg" alt="E-Foil Sessions Koh Phangan" loading="lazy"></div>
+      <div class="dmr-img"><video autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="../assets/efoil-lesson.mp4" type="video/mp4"></video></div>
     </div>
 
     <div class="dmr dmr-flip fu">
@@ -2066,7 +2066,7 @@ a.course-price-row:hover strong{color:var(--pink) !important}
     <div style="padding:40px 22px 20px"><h2 style="font-family:var(--FD);font-size:44px;font-weight:900;text-transform:uppercase;line-height:.95;margin:0">Explore<br><em class="gt" style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">E-Foil</em></h2></div>
     <div class="mob-disc-list" style="padding:0 0 40px">
       <a href="lessons/" class="mob-disc-card">
-        <img src="../assets/efoil.jpg" alt="E-Foil Sessions" loading="lazy">
+        <video src="../assets/efoil-lesson.mp4" autoplay muted loop playsinline poster="../assets/efoil.jpg"></video>
         <div class="mob-disc-ov"><div class="mob-disc-tag">E-Foil</div><h3>Lessons</h3><span class="mob-disc-lnk">View sessions →</span></div>
       </a>
       <a href="rental/" class="mob-disc-card">
