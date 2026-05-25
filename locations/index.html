@@ -1190,6 +1190,10 @@ body.light .pc.feat .pc-badge {
   .spots-grid>div:nth-child(4){order:4}
   .spots-grid>div:nth-child(5){order:5}
 }
+@media(max-width:768px){
+  .plan-grid{grid-template-columns:1fr !important}
+  .plan-grid-section{padding:44px 18px !important}
+}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://kiteclubkohphangan.com/#business","name":"Kite Club Koh Phangan","url":"https://kiteclubkohphangan.com/","telephone":"+66967203910","address":{"@type":"PostalAddress","streetAddress":"Thong Sala Beach","addressLocality":"Koh Phangan","addressRegion":"Surat Thani","addressCountry":"TH"},"geo":{"@type":"GeoCoordinates","latitude":9.9320,"longitude":100.0647}},{"@type":"SportsActivityLocation","name":"Thong Sala Kitesurf Beach","description":"Main kitesurfing spot on Koh Phangan — flat-water lagoon, side-onshore SE wind, all skill levels. Active Feb–Apr (SE season) and Jun–Sep (SW season).","url":"https://kiteclubkohphangan.com/locations/","geo":{"@type":"GeoCoordinates","latitude":9.9320,"longitude":100.0647},"address":{"@type":"PostalAddress","addressLocality":"Thong Sala, Koh Phangan","addressCountry":"TH"},"sport":"Kitesurfing"},{"@type":"SportsActivityLocation","name":"Baan Tai Beach Koh Phangan","description":"Kitesurf spot 3 km south of Thong Sala. True side-shore SW wind in SW season (Jun–Sep), also works with SE. Best for intermediate riders.","url":"https://kiteclubkohphangan.com/locations/","geo":{"@type":"GeoCoordinates","latitude":9.9150,"longitude":100.0700},"address":{"@type":"PostalAddress","addressLocality":"Baan Tai, Koh Phangan","addressCountry":"TH"},"sport":"Kitesurfing"},{"@type":"SportsActivityLocation","name":"Chaloklum Bay Koh Phangan","description":"North-shore kitesurf spot, NE/NW wind. Active Dec–Jan (NE season). Cross-shore angle, best for advanced riders. 25 min from Thong Sala.","url":"https://kiteclubkohphangan.com/locations/","geo":{"@type":"GeoCoordinates","latitude":9.9970,"longitude":100.0040},"address":{"@type":"PostalAddress","addressLocality":"Chaloklum, Koh Phangan","addressCountry":"TH"},"sport":"Kitesurfing"},{"@type":"SportsActivityLocation","name":"Haad Rin Beach Koh Phangan","description":"Southeast corner of Koh Phangan. Works in SE season (Feb–Apr) with light winds. Popular beach, not ideal for kite training but works for experienced riders.","url":"https://kiteclubkohphangan.com/locations/","geo":{"@type":"GeoCoordinates","latitude":9.8860,"longitude":100.1220},"address":{"@type":"PostalAddress","addressLocality":"Haad Rin, Koh Phangan","addressCountry":"TH"},"sport":"Kitesurfing"},{"@type":"SportsActivityLocation","name":"Hin Kong Beach Koh Phangan","description":"West coast kitesurf spot, SW/W wind. Low-tide flat water, ideal for freestyle. Active Jun–Sep (SW season). Experienced riders only.","url":"https://kiteclubkohphangan.com/locations/","geo":{"@type":"GeoCoordinates","latitude":9.9250,"longitude":99.9870},"address":{"@type":"PostalAddress","addressLocality":"Hin Kong, Koh Phangan","addressCountry":"TH"},"sport":"Kitesurfing"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kiteclubkohphangan.com/"},{"@type":"ListItem","position":2,"name":"Kite Spots","item":"https://kiteclubkohphangan.com/locations/"}]}]}</script>
 </head>
@@ -1200,7 +1204,7 @@ body.light .pc.feat .pc-badge {
 <nav role="navigation" aria-label="Main navigation">
   <div class="nav-logo" style="cursor:pointer" onclick="location.href='../'" >
     <div class="nav-logo-circle" style="background:none;padding:0;overflow:hidden">
-      <img loading="lazy" src="../assets/logo.jpg" alt="Kite Club" style="width:100%;height:100%;object-fit:cover;border-radius:50%" onerror="this.parentElement.style.background='linear-gradient(135deg,#7b2fff,#e8008a)';this.parentElement.innerHTML='KC'">
+      <picture><source srcset="../assets/logo.avif" type="image/avif"><img loading="lazy" src="../assets/logo.jpg" alt="Kite Club" style="width:100%;height:100%;object-fit:cover;border-radius:50%" onerror="this.parentElement.style.background='linear-gradient(135deg,#7b2fff,#e8008a)';this.parentElement.innerHTML='KC'"></picture>
     </div>
     <div class="nav-logo-text">Kite Club <span>Koh Phangan</span></div>
   </div>
@@ -1563,11 +1567,11 @@ body.light .pc.feat .pc-badge {
   </section>
 
   <!-- INTERNAL LINKS -->
-  <section style="padding:55px 60px;background:var(--black);border-top:1px solid var(--border)">
+  <section class="plan-grid-section" style="padding:55px 60px;background:var(--black);border-top:1px solid var(--border)">
     <div style="max-width:900px;margin:0 auto">
       <div style="font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--pink);margin-bottom:10px">Explore More</div>
       <h2 style="font-family:var(--FD);font-size:clamp(22px,3vw,36px);font-weight:900;text-transform:uppercase;color:var(--white);margin-bottom:28px">Plan Your Session</h2>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+      <div class="plan-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
         <a href="../seasons/" style="background:var(--card);border:1px solid var(--border);padding:20px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
           <div style="font-size:20px;margin-bottom:8px">🌬️</div>
           <div style="font-family:var(--FD);font-size:14px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Wind Season Guide</div>

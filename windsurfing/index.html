@@ -1863,7 +1863,7 @@ body.light #seoExpandable p,body.light #seoExpandable li,body.light #seoExpandab
 .dmr-text{display:flex;flex-direction:column;justify-content:center;padding:60px 80px;background:var(--dark)}
 .dmr-text.bg2{background:var(--black)}
 .dmr-img{position:relative;overflow:hidden}
-.dmr-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.dmr-img img,.dmr-img video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
 .dmr:hover .dmr-img img{transform:scale(1.04)}
 .dmr-eyebrow{font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--pink);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .dmr-eyebrow::before{content:'';width:28px;height:2px;background:var(--grad);flex-shrink:0}
@@ -1878,7 +1878,7 @@ body.light #seoExpandable p,body.light #seoExpandable li,body.light #seoExpandab
 /* ─── Mobile discipline cards ─── */
 .mob-disc-list{display:flex;flex-direction:column;gap:8px;padding:0 0 40px}
 .mob-disc-card{position:relative;overflow:hidden;display:block;width:100%;aspect-ratio:5/3;text-decoration:none;cursor:pointer;border-radius:12px}
-.mob-disc-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.mob-disc-card img,.mob-disc-card video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 .mob-disc-ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:14px 16px;background:linear-gradient(to top,rgba(0,0,0,.8) 0%,rgba(0,0,0,.2) 55%,transparent 100%)}
 .mob-disc-tag{font-family:var(--FD);font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#e8008a;margin-bottom:4px}
 .mob-disc-card h3{font-family:var(--FD);font-weight:900;font-size:22px;text-transform:uppercase;line-height:.95;margin:0 0 4px;color:#fff}
@@ -1894,7 +1894,7 @@ a.course-price-row:hover strong{color:var(--pink) !important}
 <nav role="navigation" aria-label="Main navigation">
   <div class="nav-logo" style="cursor:pointer" onclick="location.href='../'" >
     <div class="nav-logo-circle" style="background:none;padding:0;overflow:hidden">
-      <img loading="lazy" src="../assets/logo.jpg" alt="Kite Club" style="width:100%;height:100%;object-fit:cover;border-radius:50%" onerror="this.parentElement.style.background='linear-gradient(135deg,#7b2fff,#e8008a)';this.parentElement.innerHTML='KC'">
+      <picture><source srcset="../assets/logo.avif" type="image/avif"><img loading="lazy" src="../assets/logo.jpg" alt="Kite Club" style="width:100%;height:100%;object-fit:cover;border-radius:50%" onerror="this.parentElement.style.background='linear-gradient(135deg,#7b2fff,#e8008a)';this.parentElement.innerHTML='KC'"></picture>
     </div>
     <div class="nav-logo-text">Kite Club <span>Koh Phangan</span></div>
   </div>
@@ -1978,7 +1978,7 @@ a.course-price-row:hover strong{color:var(--pink) !important}
     <video class="page-hero-video page-hero-video-desktop" autoplay muted loop playsinline preload="auto">
       <source src="../assets/windsurfing-desktop.mp4" type="video/mp4">
     </video>
-    <img loading="lazy" class="page-hero-video page-hero-video-mobile" src="../assets/windsurfing.jpg" alt="Windsurfing on Koh Phangan" style="object-fit:cover">
+    <picture><source srcset="../assets/windsurfing.avif" type="image/avif"><img loading="lazy" class="page-hero-video page-hero-video-mobile" src="../assets/windsurfing.jpg" alt="Windsurfing on Koh Phangan" style="object-fit:cover"></picture>
   </div>
     <div class="page-hero-content fu">
       <div class="eyebrow">Activity Guide</div>
@@ -2020,7 +2020,7 @@ a.course-price-row:hover strong{color:var(--pink) !important}
           <a href="https://wa.me/66967203910?text=Hi!%20I%27d%20like%20to%20book%20a%20windsurfing%20lesson" target="_blank" class="btn-s">Book Now</a>
         </div>
       </div>
-      <div class="dmr-img"><img src="../assets/windsurfing.jpg" alt="Windsurfing Lessons Koh Phangan" loading="lazy"></div>
+      <div class="dmr-img"><video autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="../assets/thong-sala-aerial.mp4" type="video/mp4"></video></div>
     </div>
 
     <div class="dmr dmr-flip fu">
@@ -2033,7 +2033,7 @@ a.course-price-row:hover strong{color:var(--pink) !important}
           <a href="https://wa.me/66967203910" class="btn-o" target="_blank" rel="noopener">Book Now</a>
         </div>
       </div>
-      <div class="dmr-img"><img src="../assets/private-lessons.jpg" alt="Windsurfing Gear Rental Koh Phangan" loading="lazy"></div>
+      <div class="dmr-img"><video autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="../assets/kite-rental-gear.mp4" type="video/mp4"></video></div>
     </div>
 
     <div class="dmr fu">
@@ -2046,7 +2046,7 @@ a.course-price-row:hover strong{color:var(--pink) !important}
           <a href="https://wa.me/66967203910" class="btn-o" target="_blank" rel="noopener">Join Us</a>
         </div>
       </div>
-      <div class="dmr-img"><img src="../assets/independent-rider.jpg" alt="Windsurf Gear Storage Koh Phangan" loading="lazy"></div>
+      <div class="dmr-img"><video autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="../assets/thong-sala-kiting-aerial.mp4" type="video/mp4"></video></div>
     </div>
 
     <div class="dmr dmr-flip fu">
@@ -2058,7 +2058,7 @@ a.course-price-row:hover strong{color:var(--pink) !important}
           <a href="../locations/" class="btn-p">All Spots</a>
         </div>
       </div>
-      <div class="dmr-img"><img src="../assets/windsurfing.jpg" alt="Windsurfing Spots Koh Phangan" loading="lazy"></div>
+      <div class="dmr-img"><video autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="../assets/kitesurf-sunset-drone.mp4" type="video/mp4"></video></div>
     </div>
 
     <div class="dmr fu">
@@ -2070,7 +2070,7 @@ a.course-price-row:hover strong{color:var(--pink) !important}
           <a href="../seasons/" class="btn-p">Season Guide</a>
         </div>
       </div>
-      <div class="dmr-img"><img src="../assets/independent-rider.jpg" alt="Wind Seasons Koh Phangan" loading="lazy"></div>
+      <div class="dmr-img"><video autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="../assets/kite-storage-beach.mp4" type="video/mp4"></video></div>
     </div>
 
   </div>
@@ -2078,15 +2078,15 @@ a.course-price-row:hover strong{color:var(--pink) !important}
     <div style="padding:40px 22px 20px"><h2 style="font-family:var(--FD);font-size:44px;font-weight:900;text-transform:uppercase;line-height:.95;margin:0">Explore<br><em class="gt" style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Windsurfing</em></h2></div>
     <div class="mob-disc-list" style="padding:0 0 40px">
       <a href="lessons/" class="mob-disc-card">
-        <img src="../assets/windsurfing.jpg" alt="Windsurfing Lessons" loading="lazy">
+        <video src="../assets/thong-sala-aerial.mp4" autoplay muted loop playsinline poster="../assets/windsurfing.jpg"></video>
         <div class="mob-disc-ov"><div class="mob-disc-tag">Windsurfing</div><h3>Lessons</h3><span class="mob-disc-lnk">View courses →</span></div>
       </a>
       <a href="rental/" class="mob-disc-card">
-        <img src="../assets/private-lessons.jpg" alt="Windsurfing Rental" loading="lazy">
+        <video src="../assets/kite-rental-gear.mp4" autoplay muted loop playsinline poster="../assets/private-lessons.jpg"></video>
         <div class="mob-disc-ov"><div class="mob-disc-tag">Windsurfing</div><h3>Rental</h3><span class="mob-disc-lnk">Book gear →</span></div>
       </a>
       <a href="../storage/" class="mob-disc-card">
-        <img src="../assets/independent-rider.jpg" alt="Storage & Membership" loading="lazy">
+        <video src="../assets/kite-storage-beach.mp4" autoplay muted loop playsinline poster="../assets/independent-rider.jpg"></video>
         <div class="mob-disc-ov"><div class="mob-disc-tag">Windsurfing</div><h3>Storage & Membership</h3><span class="mob-disc-lnk">Learn more →</span></div>
       </a>
     </div>
