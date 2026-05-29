@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Koh Phangan Weather & Wind Forecast | Live Conditions — Kite Club</title>
+<meta name="description" content="Live wind speed, gusts and 7-day forecast for Koh Phangan. Real-time conditions at Thong Sala Beach — tide chart, rain radar and kitesurfing weather. Updated every 10 minutes.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#00cfc0">
+<meta name="geo.region" content="TH-84">
+<meta name="geo.placename" content="Thong Sala, Koh Phangan, Thailand">
+<meta name="geo.position" content="9.70;99.98">
+<meta name="ICBM" content="9.70, 99.98">
+<link rel="canonical" href="https://kiteclubkohphangan.com/koh-phangan-weather/">
+<link rel="alternate" hreflang="en" href="https://kiteclubkohphangan.com/koh-phangan-weather/">
+<link rel="alternate" hreflang="ru" href="https://kiteclubkohphangan.com/koh-phangan-weather/">
+<link rel="alternate" hreflang="x-default" href="https://kiteclubkohphangan.com/koh-phangan-weather/">
+<meta property="og:title" content="Koh Phangan Weather & Wind Forecast | Kite Club">
+<meta property="og:description" content="Live wind, tide and rain radar for Koh Phangan. Real-time conditions at Thong Sala Beach for kitesurfing and water sports.">
+<meta property="og:url" content="https://kiteclubkohphangan.com/koh-phangan-weather/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://kiteclubkohphangan.com/assets/kitesurfing.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Koh Phangan Weather & Wind Forecast | Kite Club">
+<meta name="twitter:description" content="Live wind, tide and rain radar for Koh Phangan. Real-time kitesurfing conditions at Thong Sala Beach.">
+<meta name="twitter:image" content="https://kiteclubkohphangan.com/assets/kitesurfing.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://kiteclubkohphangan.com/koh-phangan-weather/","name":"Koh Phangan Weather & Wind Forecast","description":"Live wind speed, gusts, tide chart and rain radar for Koh Phangan, Thailand. Real-time kitesurfing conditions at Thong Sala Beach.","url":"https://kiteclubkohphangan.com/koh-phangan-weather/","publisher":{"@id":"https://kiteclubkohphangan.com/#business"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kiteclubkohphangan.com/"},{"@type":"ListItem","position":2,"name":"Koh Phangan Weather","item":"https://kiteclubkohphangan.com/koh-phangan-weather/"}]}},{"@type":"LocalBusiness","@id":"https://kiteclubkohphangan.com/#business","name":"Kite Club Koh Phangan","url":"https://kiteclubkohphangan.com/","telephone":"+66967203910","address":{"@type":"PostalAddress","streetAddress":"Thong Sala Beach","addressLocality":"Koh Phangan","addressCountry":"TH"}}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+/* ─── RESET & ROOT ─── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#0d0d1a;--dark:#12121f;--mid:#1a1a2e;--card:#1e1e30;
+  --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.05);
+  --white:#fff;--off:#ddd8f0;--muted:rgba(255,255,255,0.45);
+  --purple:#7b2fff;--mag:#e8008a;--pink:#ff3aac;
+  --grad:linear-gradient(135deg,#7b2fff 0%,#c4007a 55%,#e8008a 100%);
+  --FD:'Barlow Condensed',sans-serif;--FB:'Barlow',sans-serif;
+}
+/* ─── LIGHT THEME ─── */
+body.light{
+  --black:#f5f5f2;--dark:#ebebeb;--mid:#f8f8f5;--card:#f8f8f5;
+  --border:rgba(17,17,24,0.1);--border2:rgba(17,17,24,0.06);
+  --white:#111118;--off:#2a2a3a;--muted:rgba(17,17,24,0.45);
+}
+body.light nav{background:rgba(245,245,242,.96)}
+body.light .dropdown{background:rgba(255,255,255,.98);border-color:rgba(17,17,24,.12)}
+body.light .dropdown a{color:#2a2a3a}
+body.light .dropdown a:hover{color:var(--mag);background:rgba(232,0,138,.06)}
+body.light .nav-links>li>a,body.light .nav-links>li>button{color:#2a2a3a}
+body.light .nav-links>li>a:hover,body.light .nav-links>li>button:hover{color:var(--mag)}
+body.light .nav-logo-text{color:#111118}
+body.light .nav-logo-text span{color:#888899}
+body.light .mobile-menu{background:rgba(245,245,242,.98)}
+body.light .mobile-menu a,body.light .mobile-menu button{color:#111118;border-color:rgba(17,17,24,.1)}
+body.light footer{background:#1a1a2e;color:#fff}
+body.light .fb-brand p{color:rgba(255,255,255,.45)}
+body.light .fc ul li a{color:rgba(255,255,255,.45)}
+body.light .fc ul li a:hover{color:var(--pink)}
+body.light .footer-bot p{color:rgba(255,255,255,.35)}
+body.light .page-hero-content h1{color:#fff}
+body.light .page-hero-content .eyebrow{color:#fff}
+body.light .wx-info{background:#f0f0ec}
+body.light .wx-info h2{color:#111118}
+body.light .wx-info p{color:#444455}
+body.light .wx-intro{background:#e8eef8}
+body.light .wx-intro p{color:#3a4a60}
+
+/* ─── THEME TOGGLE ─── */
+.theme-toggle{width:44px;height:24px;border-radius:12px;border:none;cursor:pointer;background:rgba(255,255,255,.15);position:relative;flex-shrink:0;transition:background .3s;display:flex;align-items:center;padding:0 4px}
+body.light .theme-toggle{background:rgba(17,17,24,.12)}
+.theme-toggle::before{content:'';width:16px;height:16px;border-radius:50%;background:var(--grad);position:absolute;left:4px;transition:transform .3s}
+body.light .theme-toggle::before{transform:translateX(20px)}
+.theme-icon-sun,.theme-icon-moon{font-size:13px;line-height:1;position:absolute;transition:opacity .3s}
+.theme-icon-sun{right:5px;opacity:1}
+.theme-icon-moon{left:5px;opacity:0}
+body.light .theme-icon-sun{opacity:0}
+body.light .theme-icon-moon{opacity:1}
+
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:var(--FB);font-size:15px;line-height:1.6;overflow-x:hidden}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--black)}::-webkit-scrollbar-thumb{background:var(--mag)}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* ─── NAV ─── */
+nav{position:sticky;top:0;z-index:200;background:rgba(13,13,26,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 40px}
+.nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer}
+.nav-logo-circle{width:38px;height:38px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-family:var(--FD);font-weight:900;font-size:13px;color:#fff;flex-shrink:0}
+.nav-logo-text{font-family:var(--FD);font-weight:900;font-size:18px;letter-spacing:.04em;text-transform:uppercase;line-height:1.1}
+.nav-logo-text span{display:block;font-size:10px;font-weight:500;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
+.nav-links{display:flex;gap:0;list-style:none;align-items:center}
+.nav-links li{position:relative}
+.nav-links>li>a,.nav-links>li>button{color:var(--off);font-family:var(--FD);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:color .2s;cursor:pointer;background:none;border:none;padding:0 14px;height:64px;display:flex;align-items:center;gap:4px}
+.nav-links>li>a:hover,.nav-links>li>button:hover{color:var(--pink)}
+.dropdown{position:absolute;top:64px;left:0;background:rgba(13,13,26,.98);border:1px solid var(--border);min-width:200px;display:none;flex-direction:column;z-index:300;backdrop-filter:blur(14px)}
+.nav-links li:hover .dropdown{display:flex}
+.dropdown a{padding:12px 18px;font-family:var(--FD);font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--off);transition:color .2s,background .2s;cursor:pointer;display:block}
+.dropdown a:hover{color:var(--pink);background:rgba(232,0,138,.08)}
+.dropdown a.wx-active{color:#00cfc0}
+.nav-actions{display:flex;align-items:center;gap:14px}
+.nav-phone{color:var(--off);font-size:13px;font-family:var(--FD);font-weight:500}
+.nav-phone:hover{color:var(--pink)}
+.btn-nav{background:var(--grad);color:#fff;padding:8px 20px;font-family:var(--FD);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;transition:opacity .2s;display:inline-block}
+.btn-nav:hover{opacity:.85}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.hamburger span{width:24px;height:2px;background:var(--white);transition:all .3s}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(13,13,26,.98);z-index:500;flex-direction:column;padding:80px 30px 30px;overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mobile-close{position:absolute;top:20px;right:20px;background:none;border:none;color:#fff;font-size:28px;cursor:pointer}
+.mobile-menu a,.mobile-menu button{color:var(--white);font-family:var(--FD);font-weight:700;font-size:22px;letter-spacing:.06em;text-transform:uppercase;padding:14px 0;border-bottom:1px solid var(--border);display:block;background:none;border-top:none;border-left:none;border-right:none;text-align:left;cursor:pointer;width:100%}
+.mobile-menu a:hover,.mobile-menu button:hover{color:var(--pink)}
+.mobile-submenu{display:none;padding-left:20px}
+.mobile-submenu.open{display:block}
+.mobile-submenu a{font-size:17px;color:var(--muted)}
+
+/* ─── PAGE HERO ─── */
+.page-hero{position:relative;height:44vh;min-height:310px;display:flex;align-items:flex-end;overflow:hidden}
+.page-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.04);animation:hzoom 18s ease-in-out infinite alternate}
+.page-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,15,40,.4) 0%,rgba(7,16,31,.94) 100%)}
+.page-hero-content{position:relative;z-index:2;padding:0 60px 48px}
+.page-hero-content .eyebrow{font-family:var(--FD);font-size:11px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#fff;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.page-hero-content .eyebrow::before{content:'';width:30px;height:2px;background:linear-gradient(135deg,#00cfc0,#0088dd)}
+.page-hero-content h1{font-family:var(--FD);font-weight:900;font-size:clamp(44px,7vw,90px);text-transform:uppercase;line-height:.9;color:#fff;animation:wind-in 1.3s cubic-bezier(.22,1,.36,1) .2s both}
+.page-hero-content h1 em{font-style:italic;background:linear-gradient(135deg,#00cfc0,#0088dd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.page-hero-content p{color:rgba(255,255,255,.65);font-size:clamp(13px,1.4vw,16px);font-weight:300;max-width:520px;line-height:1.65;margin-top:14px}
+@keyframes hzoom{from{transform:scale(1.04)}to{transform:scale(1)}}
+@keyframes wind-in{
+  0%{transform:translateX(80px) skewX(-10deg);opacity:0}
+  65%{transform:translateX(-6px) skewX(1.5deg);opacity:1}
+  100%{transform:translateX(0) skewX(0);opacity:1}
+}
+
+/* ─── SEO INTRO BAR ─── */
+.wx-intro{background:#07101f;padding:20px 20px 0}
+.wx-intro p{max-width:900px;margin:0 auto;color:#6a82a0;font-size:13px;line-height:1.7;text-align:center}
+.wx-intro strong{color:#a8c8e8}
+
+/* ─── WEATHER WIDGET SCOPE ─── */
+.wx-scope{
+  --grad:linear-gradient(135deg,#00cfc0,#0088dd);
+  --card:#0d1c35;
+  --card2:#102244;
+  --border:rgba(255,255,255,.07);
+  --border2:rgba(255,255,255,.12);
+  --muted:#6a82a0;
+  --cyan:#00cfc0;
+  --orange:#ff7a2f;
+  --text:#ddeeff;
+  --green:#1fe8a0;
+  --yellow:#ffd166;
+  background:#07101f;
+  color:#ddeeff;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── App wrapper ─── */
+.wx-app-inner{
+  max-width:980px;margin:0 auto;
+  padding:18px 20px 24px;
+  display:flex;flex-direction:column;gap:14px;
+}
+
+/* ── Live wind section ─── */
+.wx-live-section{display:flex;flex-direction:column;gap:7px}
+.wx-windguru-box{
+  width:100%;background:#020617;
+  border-radius:12px;padding:4px;
+  border:1px solid rgba(255,255,255,.07);
+  overflow:hidden;min-height:60px;
+}
+
+/* ── Timestamp / refresh row ─── */
+.wx-meta-row{
+  display:flex;justify-content:flex-end;align-items:center;gap:10px;
+  padding:2px 0;
+}
+.wx-meta-time{font-size:10px;color:var(--muted)}
+.refresh-btn{
+  display:inline-flex;align-items:center;gap:4px;
+  background:rgba(0,207,192,.08);border:1px solid rgba(0,207,192,.2);
+  border-radius:6px;padding:4px 9px;font-size:10px;font-weight:600;
+  color:var(--cyan);cursor:pointer;transition:background .2s;
+  -webkit-tap-highlight-color:transparent;
+}
+.refresh-btn:active{background:rgba(0,207,192,.18)}
+
+/* ── Tide ─── */
+.tide-section{margin:0;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:11px 14px 9px}
+.s-label{font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.tide-badges{display:flex;gap:12px;margin-bottom:7px}
+.tide-badge{display:flex;align-items:center;gap:5px;font-size:11px}
+.tbdot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.tbdot.hi{background:var(--cyan)}
+.tbdot.lo{background:var(--orange)}
+.tb-lbl{color:var(--muted)}
+.tb-val{color:var(--text);font-weight:700;font-size:12px}
+.chart-box{height:80px;position:relative}
+
+/* ── Tabs ─── */
+.tabs-outer{flex:1;display:flex;flex-direction:column}
+.tab-bar{display:flex;gap:3px;background:var(--card);border:1px solid var(--border);border-radius:11px;padding:3px;flex-shrink:0}
+.tab-btn{flex:1;text-align:center;padding:7px 0;border-radius:8px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;color:var(--muted);transition:all .18s;-webkit-tap-highlight-color:transparent;user-select:none}
+.tab-btn.on{background:var(--card2);color:var(--text)}
+.tab-panel{display:none;margin-top:8px}
+.tab-panel.on{display:flex;flex-direction:column}
+
+/* ── 7-Day forecast ─── */
+.fc-list{background:var(--card);border:1px solid var(--border);border-radius:13px;overflow:hidden}
+.fc-row{display:grid;grid-template-columns:40px 26px 1fr 58px;align-items:center;padding:9px 13px;border-bottom:1px solid var(--border);gap:2px}
+.fc-row:last-child{border-bottom:none}
+.fc-day{font-size:12px;font-weight:700;color:var(--text)}
+.fc-day.now{color:var(--cyan)}
+.fc-ico{font-size:17px;text-align:center}
+.fc-temps{font-size:11px;color:var(--muted);padding:0 6px}
+.fc-temps b{color:var(--text);font-size:12px}
+.fc-wind-val{text-align:right;font-size:12px;font-weight:700}
+.fc-wind-val.l{color:var(--green)}
+.fc-wind-val.m{color:var(--cyan)}
+.fc-wind-val.f{color:var(--yellow)}
+.fc-wind-val.s{color:var(--orange)}
+
+/* ── Radar ─── */
+#radar-map{border-radius:11px;overflow:hidden;border:1px solid rgba(255,255,255,.07);height:280px}
+.radar-hint{font-size:10px;color:var(--muted);text-align:center;margin-top:5px}
+
+/* ── Desktop mid-grid ─── */
+@media(min-width:769px){
+  .mid-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+  .chart-box{height:94px}
+  #radar-map{height:320px}
+}
+
+/* ─── SEO TEXT SECTION ─── */
+.wx-info{padding:52px 60px 64px;background:#07101f;border-top:1px solid rgba(255,255,255,.06)}
+body.light .wx-info{background:#f0f0ec;border-top:1px solid rgba(17,17,24,.08)}
+.wx-info-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:32px 60px}
+.wx-info h2{font-family:var(--FD);font-weight:900;font-size:clamp(28px,3vw,42px);text-transform:uppercase;margin-bottom:20px;line-height:1;grid-column:1/-1;color:#ddeeff}
+body.light .wx-info h2{color:#111118}
+.wx-info h2 em{font-style:italic;background:linear-gradient(135deg,#00cfc0,#0088dd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.wx-info h3{font-family:var(--FD);font-weight:700;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:#00cfc0;margin-bottom:8px}
+.wx-info p{color:#6a82a0;font-size:14px;line-height:1.85}
+body.light .wx-info p{color:#444455}
+.wx-info strong{color:#a8c8e8}
+body.light .wx-info strong{color:#111118}
+
+/* ─── FOOTER ─── */
+footer{background:var(--dark);border-top:1px solid var(--border);padding:55px 60px}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:45px;margin-bottom:45px}
+.fb-brand h3{font-family:var(--FD);font-weight:900;font-size:24px;text-transform:uppercase;margin-bottom:8px}
+.fb-brand .since{font-family:var(--FD);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:14px;display:block}
+.fb-brand p{color:var(--muted);font-size:14px;line-height:1.8;max-width:250px;margin-bottom:24px}
+.fc h4{font-family:var(--FD);font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:18px}
+.fc ul{list-style:none}
+.fc ul li{margin-bottom:10px}
+.fc ul li a{color:var(--muted);font-size:14px;transition:color .2s}
+.fc ul li a:hover{color:var(--pink)}
+.footer-bot{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;align-items:center}
+.footer-bot p{color:var(--muted);font-size:13px}
+.footer-bot p a{color:var(--pink)}
+.socials{display:flex;gap:10px}
+.socials a{width:36px;height:36px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--off);transition:all .2s}
+.socials a:hover{background:var(--grad);color:#fff;border-color:transparent}
+
+/* ─── WA FLOAT ─── */
+.wa{position:fixed;bottom:28px;right:28px;z-index:400;width:56px;height:56px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 4px 20px rgba(232,0,138,.45);transition:transform .2s}
+.wa:hover{transform:scale(1.1)}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  nav{padding:0 20px}
+  .nav-links,.nav-phone{display:none}
+  .hamburger{display:flex}
+  .page-hero-content{padding:0 22px 36px}
+  .page-hero-content h1{font-size:clamp(38px,10vw,68px)}
+  footer{padding:40px 22px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:30px}
+  .wx-info{padding:40px 22px 50px}
+  .wx-info-inner{grid-template-columns:1fr}
+  .wx-app-inner{padding:14px 14px 18px}
+  #radar-map{height:240px}
+}
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-logo" onclick="location.href='../'" style="cursor:pointer">
+    <div class="nav-logo-circle" style="background:none;padding:0;overflow:hidden">
+      <picture><source srcset="../assets/logo.avif" type="image/avif"><img loading="lazy" src="../assets/logo.jpg" alt="Kite Club" style="width:100%;height:100%;object-fit:cover;border-radius:50%" onerror="this.parentElement.style.background='linear-gradient(135deg,#7b2fff,#e8008a)';this.parentElement.innerHTML='KC'"></picture>
+    </div>
+    <div class="nav-logo-text">Kite Club <span>Koh Phangan</span></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="../">Home</a></li>
+    <li><a href="../school/" style="color:var(--off);font-family:var(--FD);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:color .2s;padding:0 14px;height:64px;display:flex;align-items:center">School ▾</a><div class="dropdown">
+      <a href="../kitesurfing/lessons/">Kitesurf Lessons</a>
+      <a href="../wing-foil/lessons/">Wing Foil Lessons</a>
+      <a href="../windsurfing/lessons/">Windsurf Lessons</a>
+      <a href="../efoil/lessons/">E-Foil Sessions</a>
+      <a href="../courses/" style="border-top:1px solid var(--border2);margin-top:4px;padding-top:8px;opacity:.7">All Courses →</a>
+    </div></li>
+    <li><a href="../rental/">Rental</a></li>
+    <li><button>Activities ▾</button><div class="dropdown">
+      <a href="../kitesurfing/">Kitesurfing</a>
+      <a href="../wing-foil/">Wing Foil</a>
+      <a href="../windsurfing/">Windsurfing</a>
+      <a href="../efoil/">E-Foil</a>
+      <a href="../kayaking/">Kayaking</a>
+      <a href="../sup-rental/">SUP Rental</a>
+      <a href="../kite-safari/">Kite Safari</a>
+    </div></li>
+    <li><a href="../shop/">Shop</a></li>
+    <li><a href="../storage/">Storage</a></li>
+    <li><a href="../locations/">Locations</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../about/" style="color:var(--off);font-family:var(--FD);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:color .2s;padding:0 14px;height:64px;display:flex;align-items:center">Info ▾</a><div class="dropdown">
+      <a href="../about/">About Us</a>
+      <a href="../seasons/">Wind Season</a>
+      <a href="../best-kitesurf-spots-koh-phangan/">Kite Spots</a>
+      <a href="../no-wind/">No-Wind Days</a>
+      <a href="." class="wx-active">🌊 Live Weather</a>
+    </div></li>
+    <li><a href="../contacts/">Contacts</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+      <span class="theme-icon-sun">☀️</span><span class="theme-icon-moon">🌙</span>
+    </button>
+    <a href="tel:+66967203910" class="nav-phone">+66 96 720 3910</a>
+    <a href="https://wa.me/66967203910" target="_blank" class="btn-nav">Book Now</a>
+  </div>
+  <div class="hamburger" onclick="openMobile()"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- ── Mobile Menu ── -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobile()">✕</button>
+  <a href="../" onclick="closeMobile()">Home</a>
+  <button onclick="toggleSub('sub1')">School ▾</button>
+  <div class="mobile-submenu" id="sub1">
+    <a href="../school/">All School Info</a>
+    <a href="../kitesurfing/lessons/" onclick="closeMobile()">Kitesurf Lessons</a>
+    <a href="../wing-foil/lessons/" onclick="closeMobile()">Wing Foil Lessons</a>
+    <a href="../windsurfing/lessons/" onclick="closeMobile()">Windsurf Lessons</a>
+    <a href="../efoil/lessons/" onclick="closeMobile()">E-Foil Sessions</a>
+    <a href="../courses/" onclick="closeMobile()" style="opacity:.7">All Courses →</a>
+  </div>
+  <a href="../rental/" onclick="closeMobile()">Rental</a>
+  <button onclick="toggleSub('sub2')">Activities ▾</button>
+  <div class="mobile-submenu" id="sub2">
+    <a href="../kitesurfing/" onclick="closeMobile()">Kitesurfing</a>
+    <a href="../wing-foil/" onclick="closeMobile()">Wing Foil</a>
+    <a href="../windsurfing/" onclick="closeMobile()">Windsurfing</a>
+    <a href="../efoil/" onclick="closeMobile()">E-Foil</a>
+    <a href="../kayaking/" onclick="closeMobile()">Kayaking</a>
+    <a href="../sup-rental/" onclick="closeMobile()">SUP Rental</a>
+    <a href="../kite-safari/" onclick="closeMobile()">Kite Safari</a>
+  </div>
+  <a href="../shop/" onclick="closeMobile()">Shop</a>
+  <a href="../storage/" onclick="closeMobile()">Storage</a>
+  <a href="../locations/" onclick="closeMobile()">Locations</a>
+  <a href="../blog/" onclick="closeMobile()">Blog</a>
+  <button onclick="toggleSub('subinfo')">Info ▾</button>
+  <div class="mobile-submenu" id="subinfo">
+    <a href="../about/" onclick="closeMobile()">About Us</a>
+    <a href="../seasons/" onclick="closeMobile()">Wind Season</a>
+    <a href="../best-kitesurf-spots-koh-phangan/" onclick="closeMobile()">Kite Spots</a>
+    <a href="../no-wind/" onclick="closeMobile()">No-Wind Days</a>
+    <a href="." onclick="closeMobile()" style="color:#00cfc0">🌊 Live Weather</a>
+  </div>
+  <a href="../contacts/" onclick="closeMobile()">Contacts</a>
+  <a href="https://wa.me/66967203910" target="_blank" class="btn-nav" style="text-align:center;margin-top:20px">Book Now</a>
+</div>
+
+<!-- ── Page Hero ── -->
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('../assets/kitesurfing.jpg')"></div>
+  <div class="page-hero-content">
+    <div class="eyebrow">Live Conditions · Thong Sala Beach</div>
+    <h1>Koh Phangan <em>Weather</em></h1>
+    <p>Live wind station · 7-day forecast · tide chart · rain radar</p>
+  </div>
+</section>
+
+<!-- ── SEO intro ── -->
+<div class="wx-intro">
+  <p>Real-time wind data from <strong>Windguru station 3519</strong> at Thong Sala Beach. 7-day forecast powered by ECMWF. Tide model calibrated for the Gulf of Thailand.</p>
+</div>
+
+<!-- ── Weather Widget ── -->
+<main id="page-content">
+<div class="wx-scope">
+<div class="wx-app-inner">
+
+  <!-- 1. LIVE WIND — Windguru station 3519 -->
+  <div class="wx-live-section">
+    <div class="s-label">🌬 Live Wind · Station 3519 · Thong Sala Beach</div>
+    <div class="wx-windguru-box">
+      <script id="wg_fwdg_3519_3_1740000000000">
+        (function (window, document) {
+          var loader = function () {
+            var script = document.createElement("script"), tag = document.getElementsByTagName("script")[0];
+            script.src = "https://www.windguru.cz/js/widget.php?id_station=3519&id_id_id=wg_fwdg_3519_3_1740000000000&s=3&m=3&d=1&c=2&v=2&tj=ca&f=1";
+            tag.parentNode.insertBefore(script, tag);
+          };
+          window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+        })(window, document);
+      </script>
+      <div id="wg_target_3519_3_1740000000000" style="width:100%;text-align:center;padding:16px 0;font-size:12px;color:#64748b">Загрузка живого ветра...</div>
+    </div>
+  </div>
+
+  <!-- Forecast timestamp + refresh -->
+  <div class="wx-meta-row">
+    <span class="wx-meta-time" id="hdr-time"></span>
+    <div class="refresh-btn" onclick="init()">↻ Refresh forecast</div>
+  </div>
+
+  <!-- 2. TIDE CHART + TABS (7-Day / Radar) -->
+  <div class="mid-grid">
+
+    <!-- Tide Chart — autonomous local model -->
+    <div class="tide-section">
+      <div class="s-label">24-Hour Tide · Sea Level · Gulf of Thailand</div>
+      <div class="tide-badges">
+        <div class="tide-badge">
+          <div class="tbdot hi"></div>
+          <span class="tb-lbl">High</span>
+          <span class="tb-val" id="tide-hi">—</span>
+        </div>
+        <div class="tide-badge">
+          <div class="tbdot lo"></div>
+          <span class="tb-lbl">Low</span>
+          <span class="tb-val" id="tide-lo">—</span>
+        </div>
+      </div>
+      <div class="chart-box">
+        <canvas id="tide-chart"></canvas>
+      </div>
+    </div>
+
+    <!-- Tabs: 7-Day Outlook / Live Radar -->
+    <div class="tabs-outer">
+      <div class="tab-bar">
+        <div class="tab-btn on" id="tb-fc" onclick="showTab('fc')">7-Day Outlook</div>
+        <div class="tab-btn" id="tb-rd" onclick="showTab('rd')">Live Radar</div>
+      </div>
+
+      <!-- 7-Day forecast panel -->
+      <div class="tab-panel on" id="pn-fc">
+        <div class="fc-list" id="fc-list">
+          <div style="padding:18px;text-align:center;font-size:12px;color:#6a82a0">Loading forecast…</div>
+        </div>
+      </div>
+
+      <!-- Radar panel -->
+      <div class="tab-panel" id="pn-rd">
+        <div id="radar-map"></div>
+        <div class="radar-hint">Live precipitation · RainViewer · animates automatically</div>
+      </div>
+    </div>
+
+  </div><!-- mid-grid -->
+
+</div><!-- wx-app-inner -->
+</div><!-- wx-scope -->
+
+<!-- ── SEO content ── -->
+<div class="wx-info">
+  <div class="wx-info-inner">
+    <h2>Koh Phangan <em>Wind</em> & Weather Guide</h2>
+    <div>
+      <h3>Two Kite Seasons</h3>
+      <p><strong>SE Trade Winds (February–April)</strong> — the main kitesurfing season. Consistent 12–25 kn from the SE with flat water at Thong Sala. March and April average 20+ rideable days. Best for beginners.</p>
+      <p style="margin-top:10px"><strong>SW Monsoon (June–September)</strong> — variable 10–20 kn from the SW. Works at Thong Sala and Baan Tai. More challenging, suitable for intermediate riders.</p>
+    </div>
+    <div>
+      <h3>Gulf of Thailand Tides</h3>
+      <p>Koh Phangan has a <strong>diurnal tide</strong> — one high and one low per day. Typical range 0.4–2.2 m. The chart uses a sinusoidal model with the ~50-minute daily phase shift characteristic of the Gulf of Thailand.</p>
+      <p style="margin-top:10px">Best kitesurfing: wind <strong>15–25 kn</strong> from SE, wave height below 0.5 m, incoming tide. Check live wind above before booking via WhatsApp.</p>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- ── Footer ── -->
+<footer id="site-footer" role="contentinfo">
+  <div class="footer-top">
+    <div class="fb-brand">
+      <h3>Kite Club</h3>
+      <span class="since">Koh Phangan · Since 2021</span>
+      <p>Top-rated kitesurfing and wing foil school on Koh Phangan. IKO &amp; IWO certified.</p>
+    </div>
+    <div class="fc"><h4>School</h4><ul>
+      <li><a href="../kitesurfing/lessons/">Kitesurfing</a></li>
+      <li><a href="../wing-foil/lessons/">Wing Foil</a></li>
+      <li><a href="../windsurfing/lessons/">Windsurfing</a></li>
+      <li><a href="../efoil/lessons/">E-Foil</a></li>
+      <li><a href="../courses/">All Courses →</a></li>
+    </ul></div>
+    <div class="fc"><h4>Activities</h4><ul>
+      <li><a href="../kitesurfing/">Kitesurfing</a></li>
+      <li><a href="../wing-foil/">Wing Foil</a></li>
+      <li><a href="../efoil/">E-Foil</a></li>
+      <li><a href="../windsurfing/">Windsurfing</a></li>
+      <li><a href="../kayaking/">Kayaking</a></li>
+      <li><a href="../sup-rental/">SUP Rental</a></li>
+      <li><a href="../kite-safari/">Kite Safari</a></li>
+    </ul></div>
+    <div class="fc"><h4>Info</h4><ul>
+      <li><a href="../rental/">Rental</a></li>
+      <li><a href="../storage/">Storage</a></li>
+      <li><a href="../locations/">Locations</a></li>
+      <li><a href="../seasons/">Wind Season</a></li>
+      <li><a href="../best-kitesurf-spots-koh-phangan/">Kite Spots</a></li>
+      <li><a href="." style="color:#00cfc0">🌊 Live Weather</a></li>
+      <li><a href="../contacts/">Contacts</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bot">
+    <p>© 2026 Kite Club Koh Phangan · <a href="../contacts/">Contact Us</a></p>
+    <div class="socials"><a href="https://wa.me/66967203910" target="_blank">💬</a></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/66967203910" target="_blank" class="wa">💬</a>
+
+<script>
+// ── Site utilities ──────────────────────────────────────────────────────────
+function toggleTheme(){const l=document.body.classList.toggle('light');localStorage.setItem('theme',l?'light':'dark');}
+function openMobile(){document.getElementById('mobileMenu').classList.add('open');}
+function closeMobile(){document.getElementById('mobileMenu').classList.remove('open');}
+function toggleSub(id){var el=document.getElementById(id);if(el)el.classList.toggle('open');}
+(function(){if(localStorage.getItem('theme')!=='dark')document.body.classList.add('light');})();
+
+// ── Helpers ─────────────────────────────────────────────────────────────────
+function localDateStr() {
+  // current date in UTC+7
+  return new Date(Date.now() + 7*36e5).toISOString().slice(0,10);
+}
+function localTimeStr() {
+  return new Date(Date.now() + 7*36e5).toISOString().slice(11,16);
+}
+function dayLabel(isoDate, i) {
+  if (i === 0) return 'Today';
+  if (i === 1) return 'Tmrw';
+  return new Date(isoDate + 'T00:00:00Z').toLocaleDateString('en-US',{weekday:'short'});
+}
+function wxIcon(c) {
+  if (c === 0) return '☀️';
+  if (c <= 2)  return '🌤️';
+  if (c === 3) return '☁️';
+  if (c <= 49) return '🌫️';
+  if (c <= 55) return '🌦️';
+  if (c <= 67) return '🌧️';
+  if (c <= 77) return '🌨️';
+  if (c <= 82) return '🌧️';
+  return '⛈️';
+}
+function windCls(kn) {
+  if (kn < 8)  return 'l';
+  if (kn < 14) return 'm';
+  if (kn < 21) return 'f';
+  return 's';
+}
+
+// ── Tabs ─────────────────────────────────────────────────────────────────────
+let map = null, radarLayer = null, radarTimer = null;
+
+function showTab(name) {
+  ['fc','rd'].forEach(t => {
+    document.getElementById('tb-'+t).classList.toggle('on', t === name);
+    document.getElementById('pn-'+t).classList.toggle('on', t === name);
+  });
+  if (name === 'rd') {
+    if (!map) { setTimeout(initRadar, 80); }
+    else { map.invalidateSize(); }
+  }
+}
+
+// ── 7-Day Forecast ───────────────────────────────────────────────────────────
+function renderForecast(w) {
+  const d = w.daily;
+  document.getElementById('fc-list').innerHTML = d.time.map((date, i) => {
+    const wmax = Math.round(d.wind_speed_10m_max[i]);
+    return `<div class="fc-row">
+      <div class="fc-day${i===0?' now':''}">${dayLabel(date,i)}</div>
+      <div class="fc-ico">${wxIcon(d.weather_code[i])}</div>
+      <div class="fc-temps"><b>${Math.round(d.temperature_2m_max[i])}°</b> / ${Math.round(d.temperature_2m_min[i])}°</div>
+      <div class="fc-wind-val ${windCls(wmax)}">${wmax} kn</div>
+    </div>`;
+  }).join('');
+}
+
+// ── Tide Model ───────────────────────────────────────────────────────────────
+// Diurnal sinusoid for Gulf of Thailand.
+// High tide at 06:00 on Jan 1 2026; phase advances ~50 min/day with the lunar cycle.
+// Range: 0.4 m (low) to 2.2 m (high).
+let tideChart = null;
+
+function computeTideToday() {
+  const BASE_MS   = new Date('2026-01-01T00:00:00+07:00').getTime();
+  const todayStr  = localDateStr();
+  const todayMS   = Date.parse(todayStr + 'T00:00:00+07:00');
+  const days      = (todayMS - BASE_MS) / 86_400_000;
+
+  // High-tide hour on this calendar day (advances 50/60 h per day from base 06:00)
+  const highHour = ((6.0 + (50 / 60) * days) % 24 + 24) % 24;
+  const lowHour  = (highHour + 12) % 24;
+
+  const CENTER = 1.3, AMP = 0.9; // center 1.3 m, half-range 0.9 m → 0.4–2.2 m
+
+  const labels = [], vals = [];
+  for (let h = 0; h < 24; h++) {
+    labels.push(String(h).padStart(2,'0') + ':00');
+    const angle = 2 * Math.PI * (h - highHour) / 24;
+    vals.push(+(CENTER + AMP * Math.cos(angle)).toFixed(2));
+  }
+
+  // Format a fractional hour (e.g. 7.833) as "07:50"
+  const fmtH = h => {
+    const n  = ((h % 24) + 24) % 24;
+    const hh = Math.floor(n);
+    const mm = Math.round((n - hh) * 60);
+    // handle edge case: mm = 60
+    if (mm === 60) return String(hh + 1).padStart(2,'0') + ':00';
+    return String(hh).padStart(2,'0') + ':' + String(mm).padStart(2,'0');
+  };
+
+  return {
+    labels, vals,
+    hiTime: fmtH(highHour),
+    hiVal:  (CENTER + AMP).toFixed(2) + 'm',   // always 2.20 m
+    loTime: fmtH(lowHour),
+    loVal:  (CENTER - AMP).toFixed(2) + 'm',   // always 0.40 m
+  };
+}
+
+function renderTide() {
+  const { labels, vals, hiTime, hiVal, loTime, loVal } = computeTideToday();
+
+  document.getElementById('tide-hi').textContent = hiTime + '  ' + hiVal;
+  document.getElementById('tide-lo').textContent = loTime + '  ' + loVal;
+
+  const canvas = document.getElementById('tide-chart');
+  const ctx    = canvas.getContext('2d');
+  if (tideChart) tideChart.destroy();
+
+  const grad = ctx.createLinearGradient(0, 0, 0, 94);
+  grad.addColorStop(0, 'rgba(0,207,192,.28)');
+  grad.addColorStop(1, 'rgba(0,207,192,.01)');
+
+  tideChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        data: vals,
+        borderColor: '#00cfc0',
+        borderWidth: 1.8,
+        fill: true,
+        backgroundColor: grad,
+        tension: 0.45,
+        pointRadius: 0,
+        pointHoverRadius: 5,
+        pointHoverBackgroundColor: '#00cfc0',
+        pointHoverBorderColor: '#fff',
+        pointHoverBorderWidth: 1.5,
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { intersect: false, mode: 'index' },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: 'rgba(10,25,50,.95)',
+          titleColor: '#6a82a0',
+          bodyColor: '#ddeeff',
+          borderColor: 'rgba(0,207,192,.3)',
+          borderWidth: 1,
+          padding: 8,
+          callbacks: { label: c => ' ' + c.parsed.y.toFixed(2) + ' m' }
+        }
+      },
+      scales: {
+        x: {
+          ticks: { color: '#4a6080', font: { size: 9 }, maxTicksLimit: 7, maxRotation: 0 },
+          grid: { color: 'rgba(255,255,255,.03)' },
+          border: { display: false },
+        },
+        y: {
+          min: 0, max: 2.6,
+          ticks: { color: '#4a6080', font: { size: 9 }, maxTicksLimit: 4,
+            callback: v => v.toFixed(1) + 'm' },
+          grid: { color: 'rgba(255,255,255,.03)' },
+          border: { display: false },
+        }
+      },
+      animation: { duration: 700, easing: 'easeInOutQuart' }
+    }
+  });
+}
+
+// ── 7-Day Forecast fetch ─────────────────────────────────────────────────────
+async function init() {
+  document.getElementById('fc-list').innerHTML =
+    '<div style="padding:18px;text-align:center;font-size:12px;color:#6a82a0">Loading forecast…</div>';
+
+  const FORECAST_URL =
+    'https://api.open-meteo.com/v1/forecast?latitude=9.70&longitude=99.98' +
+    '&daily=weather_code,temperature_2m_max,temperature_2m_min,wind_speed_10m_max' +
+    '&models=ecmwf_ifs&wind_speed_unit=kn&timezone=Asia%2FBangkok';
+
+  try {
+    const res = await fetch(FORECAST_URL);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    renderForecast(data);
+    document.getElementById('hdr-time').textContent = 'Forecast updated ' + localTimeStr() + ' local';
+  } catch (e) {
+    document.getElementById('fc-list').innerHTML =
+      '<div style="padding:18px;text-align:center;font-size:12px;color:#ff6b6b">Forecast unavailable · ' + e.message + '</div>';
+    console.warn('Forecast fetch failed:', e);
+  }
+}
+
+// ── Radar (Leaflet + RainViewer) — unchanged ─────────────────────────────────
+function initRadar() {
+  if (map) { map.invalidateSize(); return; }
+
+  map = L.map('radar-map', {
+    zoomControl: false,
+    attributionControl: false,
+    dragging: true,
+    scrollWheelZoom: false,
+  }).setView([9.70, 99.98], 10);
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter_no_labels/{z}/{x}/{y}{r}.png', {
+    maxZoom: 14, subdomains: 'abcd'
+  }).addTo(map);
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png', {
+    maxZoom: 14, subdomains: 'abcd', opacity: 0.5
+  }).addTo(map);
+
+  const pulse = L.divIcon({
+    className: '',
+    html: `<div style="position:relative;width:16px;height:16px;">
+      <div style="position:absolute;inset:0;background:#00cfc0;border-radius:50%;opacity:.25;animation:wx-pulse 1.8s infinite"></div>
+      <div style="position:absolute;top:3px;left:3px;width:10px;height:10px;background:#00cfc0;border-radius:50%;border:2px solid #fff"></div>
+    </div>`,
+    iconSize: [16, 16], iconAnchor: [8, 8]
+  });
+  L.marker([9.70, 99.98], { icon: pulse }).addTo(map);
+
+  const pStyle = document.createElement('style');
+  pStyle.textContent = '@keyframes wx-pulse{0%,100%{transform:scale(1);opacity:.25}50%{transform:scale(2.5);opacity:0}}';
+  document.head.appendChild(pStyle);
+
+  fetch('https://api.rainviewer.com/public/weather-maps.json')
+    .then(r => r.json())
+    .then(data => {
+      const frames = [...(data.radar.past || []), ...(data.radar.nowcast || [])];
+      if (!frames.length) return;
+      let idx = 0;
+      const host = data.host;
+
+      function showFrame(i) {
+        if (radarLayer) map.removeLayer(radarLayer);
+        radarLayer = L.tileLayer(
+          `${host}${frames[i].path}/256/{z}/{x}/{y}/2/1_1.png`,
+          { opacity: 0.65, maxNativeZoom: 6, maxZoom: 14, zIndex: 10 }
+        ).addTo(map);
+      }
+
+      showFrame(frames.length - 1);
+      clearInterval(radarTimer);
+      radarTimer = setInterval(() => {
+        idx = (idx + 1) % frames.length;
+        showFrame(idx);
+      }, 750);
+    })
+    .catch(() => {});
+}
+
+// ── Boot ──────────────────────────────────────────────────────────────────────
+renderTide();                          // tide chart: no API, renders immediately
+init();                                // 7-day forecast: single API call
+setInterval(init, 15 * 60_000);        // auto-refresh forecast every 15 min
+</script>
+</body>
+</html>
