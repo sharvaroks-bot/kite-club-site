@@ -189,8 +189,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(13,13,26,.95);backdrop-fil
 
 /* ── Radar ─── */
 .wx-radar-section{display:flex;flex-direction:column;gap:7px}
-.wx-radar-wrap{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.07);background:#07101f;width:100%;aspect-ratio:16/9;position:relative}
-.wx-radar-wrap iframe{width:100%;height:100%;border:none;display:block}
+.wx-radar-wrap{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.07);background:#07101f;width:100%;position:relative}
 
 /* ─── SEO TEXT SECTION ─── */
 .wx-info{padding:52px 60px 64px;background:#07101f;border-top:1px solid rgba(255,255,255,.06)}
@@ -366,13 +365,14 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:55px 60
   <!-- 2. WEATHER RADAR — Thai Meteorological Department -->
   <div class="wx-radar-section">
     <div class="s-label">🌧 Weather Radar · Thailand Meteorological Department</div>
-    <div class="wx-radar-wrap">
+    <div class="wx-radar-wrap" id="radar-wrap">
       <iframe
+        id="tmd-radar"
         src="https://weather.tmd.go.th/srtLoop.php"
         title="Thailand weather radar"
         scrolling="no"
         loading="lazy"
-        allowfullscreen>
+        style="width:880px;height:560px;border:none;display:block;transform-origin:top left">
       </iframe>
     </div>
   </div>
@@ -449,6 +449,20 @@ function closeMobile(){document.getElementById('mobileMenu').classList.remove('o
 function toggleSub(id){var el=document.getElementById(id);if(el)el.classList.toggle('open');}
 (function(){if(localStorage.getItem('theme')!=='dark')document.body.classList.add('light');})();
 
+// ── TMD Radar scaling ──────────────────────────────────────────────────────
+(function(){
+  var NATIVE_W = 880, NATIVE_H = 560;
+  function scaleRadar() {
+    var wrap = document.getElementById('radar-wrap');
+    var fr   = document.getElementById('tmd-radar');
+    if (!wrap || !fr) return;
+    var s = wrap.offsetWidth / NATIVE_W;
+    fr.style.transform = 'scale(' + s + ')';
+    wrap.style.height  = Math.round(NATIVE_H * s) + 'px';
+  }
+  scaleRadar();
+  window.addEventListener('resize', scaleRadar);
+})();
 </script>
 </body>
 </html>
