@@ -171,20 +171,24 @@ nav{position:sticky;top:0;z-index:200;background:rgba(13,13,26,.95);backdrop-fil
 
 /* ── Live wind section ─── */
 .wx-live-section{display:flex;flex-direction:column;gap:7px}
-.wg-live-card{
-  display:flex;align-items:center;gap:16px;
-  background:linear-gradient(135deg,rgba(0,207,192,.08),rgba(0,136,221,.12));
-  border:1px solid rgba(0,207,192,.25);
-  border-radius:14px;padding:18px 22px;
-  color:#fff;text-decoration:none;
-  transition:background .2s,border-color .2s;
-}
-.wg-live-card:hover{background:linear-gradient(135deg,rgba(0,207,192,.16),rgba(0,136,221,.2));border-color:rgba(0,207,192,.5)}
-.wg-live-icon{color:#00cfc0;flex-shrink:0}
-.wg-live-text{flex:1;display:flex;flex-direction:column;gap:3px}
-.wg-live-text strong{font-size:1rem;font-weight:700;letter-spacing:.02em}
-.wg-live-text span{font-size:.78rem;opacity:.65}
-.wg-live-arrow{font-size:1.4rem;opacity:.5;flex-shrink:0}
+/* ── Windy.app widget skin ─── */
+.windy-widget-wrap{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.07)}
+[data-windywidget],
+[data-windywidget] *{font-family:'Barlow Condensed',sans-serif !important}
+/* dark bg to match site cards */
+[data-windywidget] .ww-wrapper,
+[data-windywidget] .ww-container,
+[data-windywidget] .ww-header,
+[data-windywidget] .ww-footer{background:#12122a !important;border-color:rgba(255,255,255,.07) !important}
+/* accent colour → magenta */
+[data-windywidget] .ww-value-wind strong,
+[data-windywidget] .ww-speed,
+[data-windywidget] .ww-label-wind{color:#e8008a !important}
+/* text colours */
+[data-windywidget] .ww-label,
+[data-windywidget] .ww-spot-name,
+[data-windywidget] .ww-title{color:rgba(255,255,255,.85) !important}
+[data-windywidget] .ww-secondary{color:rgba(255,255,255,.45) !important}
 
 /* ── Timestamp / refresh row ─── */
 .wx-meta-row{
@@ -400,11 +404,6 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:55px 60
   </div>
 </section>
 
-<!-- ── SEO intro ── -->
-<div class="wx-intro">
-  <p>Real-time wind data from <strong>Windguru station 3519</strong> at Thong Sala Beach. 7-day forecast powered by ECMWF. Tide model calibrated for the Gulf of Thailand.</p>
-</div>
-
 <!-- ── Weather Widget ── -->
 <main id="page-content">
 <div class="wx-scope">
@@ -413,10 +412,10 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:55px 60
   <!-- 1. LIVE WIND — Windy.app spot 302766 -->
   <div class="wx-live-section">
     <div class="s-label">🌬 Live Wind · Thong Sala Beach</div>
-    <div style="width:100%;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.07)">
+    <div class="windy-widget-wrap" style="width:100%">
       <div
         data-windywidget="forecast"
-        data-thememode="white"
+        data-thememode="dark"
         data-spotid="302766"
         data-appid="f38b389ba13fb16f336cec37404bb45f">
       </div>
