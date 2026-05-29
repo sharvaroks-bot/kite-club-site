@@ -449,17 +449,33 @@ function closeMobile(){document.getElementById('mobileMenu').classList.remove('o
 function toggleSub(id){var el=document.getElementById(id);if(el)el.classList.toggle('open');}
 (function(){if(localStorage.getItem('theme')!=='dark')document.body.classList.add('light');})();
 
-// ── TMD Radar scaling ──────────────────────────────────────────────────────
+// ── TMD Radar scaling + Koh Phangan zoom ──────────────────────────────────
 (function(){
-  var NATIVE_W = 880, NATIVE_H = 560;
+  // Estimated pixel position of Koh Phangan inside the 880×560 TMD iframe.
+  // SRT radar center ≈ Surat Thani (9°N, 99.3°E); KP is ~80 km NE.
+  // Adjust KP_X / KP_Y if the island isn't centred — increase X to go right, Y to go down.
+  var KP_X = 545, KP_Y = 250;
+  var ZOOM  = 2.5; // zoom factor
+
   function scaleRadar() {
     var wrap = document.getElementById('radar-wrap');
     var fr   = document.getElementById('tmd-radar');
     if (!wrap || !fr) return;
-    var s = wrap.offsetWidth / NATIVE_W;
-    fr.style.transform = 'scale(' + s + ')';
-    wrap.style.height  = Math.round(NATIVE_H * s) + 'px';
+
+    var cw = wrap.offsetWidth;
+    var ch = Math.round(cw * 0.65); // container height
+
+    // We want KP to appear at (cw/2, ch*0.4) in the container.
+    // With transform: scale(ZOOM) translate(tx, ty):
+    //   screen_pos = (point + translate) * ZOOM  →  tx = target/ZOOM - point
+    var tx = (cw / 2) / ZOOM - KP_X;
+    var ty = (ch * 0.4) / ZOOM - KP_Y;
+
+    fr.style.transformOrigin = '0 0';
+    fr.style.transform = 'scale(' + ZOOM + ') translate(' + tx + 'px,' + ty + 'px)';
+    wrap.style.height  = ch + 'px';
   }
+
   scaleRadar();
   window.addEventListener('resize', scaleRadar);
 })();
