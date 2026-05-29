@@ -463,8 +463,8 @@ function toggleSub(id){var el=document.getElementById(id);if(el)el.classList.tog
     var cw = wrap.offsetWidth;
     if (cw === 0) return; // layout not ready yet
 
-    // Mobile gets tighter zoom; desktop shows broader region
-    var ZOOM = cw < 600 ? 3.5 : 2.5;
+    // Mobile: zoom out enough to show both Koh Phangan + Koh Samui
+    var ZOOM = cw < 600 ? 2.0 : 2.5;
     var ch   = Math.round(cw * 0.65);
 
     // With transform: scale(ZOOM) translate(tx, ty)
