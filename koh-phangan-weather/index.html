@@ -451,11 +451,9 @@ function toggleSub(id){var el=document.getElementById(id);if(el)el.classList.tog
 
 // ── TMD Radar scaling + Koh Phangan zoom ──────────────────────────────────
 (function(){
-  // Estimated pixel position of Koh Phangan inside the 880×560 TMD iframe.
-  // SRT radar center ≈ Surat Thani (9°N, 99.3°E); KP is ~80 km NE.
-  // Adjust KP_X / KP_Y if the island isn't centred — increase X to go right, Y to go down.
-  var KP_X = 545, KP_Y = 250;
-  var ZOOM  = 2.5; // zoom factor
+  // Pixel position of Koh Phangan inside the 880×560 TMD iframe.
+  // Increase X → shift right, increase Y → shift down.
+  var KP_X = 610, KP_Y = 305;
 
   function scaleRadar() {
     var wrap = document.getElementById('radar-wrap');
@@ -463,12 +461,15 @@ function toggleSub(id){var el=document.getElementById(id);if(el)el.classList.tog
     if (!wrap || !fr) return;
 
     var cw = wrap.offsetWidth;
-    var ch = Math.round(cw * 0.65); // container height
+    if (cw === 0) return; // layout not ready yet
 
-    // We want KP to appear at (cw/2, ch*0.4) in the container.
-    // With transform: scale(ZOOM) translate(tx, ty):
-    //   screen_pos = (point + translate) * ZOOM  →  tx = target/ZOOM - point
-    var tx = (cw / 2) / ZOOM - KP_X;
+    // Mobile gets tighter zoom; desktop shows broader region
+    var ZOOM = cw < 600 ? 3.5 : 2.5;
+    var ch   = Math.round(cw * 0.65);
+
+    // With transform: scale(ZOOM) translate(tx, ty)
+    // screen = (point + t) * ZOOM  →  t = target/ZOOM - point
+    var tx = (cw / 2)   / ZOOM - KP_X;
     var ty = (ch * 0.4) / ZOOM - KP_Y;
 
     fr.style.transformOrigin = '0 0';
@@ -476,7 +477,10 @@ function toggleSub(id){var el=document.getElementById(id);if(el)el.classList.tog
     wrap.style.height  = ch + 'px';
   }
 
+  // Run immediately, on DOMContentLoaded, on load, and on resize
   scaleRadar();
+  document.addEventListener('DOMContentLoaded', scaleRadar);
+  window.addEventListener('load', scaleRadar);
   window.addEventListener('resize', scaleRadar);
 })();
 </script>
