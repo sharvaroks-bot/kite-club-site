@@ -410,22 +410,18 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:55px 60
 <div class="wx-scope">
 <div class="wx-app-inner">
 
-  <!-- 1. LIVE WIND — Windguru station 3519 -->
+  <!-- 1. LIVE WIND — Windy.app spot 302766 -->
   <div class="wx-live-section">
-    <div class="s-label">🌬 Live Wind · Station 3519 · Thong Sala Beach</div>
-    <a href="https://www.windguru.cz/1132210" target="_blank" rel="noopener" class="wg-live-card">
-      <div class="wg-live-icon">
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
-          <path d="M8 32 Q20 16 32 32 Q44 48 56 32" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none"/>
-          <path d="M8 22 Q20 6 32 22 Q44 38 56 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".5"/>
-        </svg>
+    <div class="s-label">🌬 Live Wind · Thong Sala Beach</div>
+    <div style="width:100%;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.07)">
+      <div
+        data-windywidget="forecast"
+        data-thememode="white"
+        data-spotid="302766"
+        data-appid="f38b389ba13fb16f336cec37404bb45f">
       </div>
-      <div class="wg-live-text">
-        <strong>Real-time wind data</strong>
-        <span>Thong Sala Beach · Windguru Station 3519</span>
-      </div>
-      <div class="wg-live-arrow">→</div>
-    </a>
+      <script async="true" data-cfasync="false" type="text/javascript" src="https://windy.app/widgets-code/forecast/windy_forecast_async.js?v193"></script>
+    </div>
   </div>
 
   <!-- Forecast timestamp + refresh -->
