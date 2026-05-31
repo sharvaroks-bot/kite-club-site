@@ -1774,7 +1774,39 @@ body.light .also-name{color:#111}
     <a href="https://wa.me/66967203910" target="_blank" class="btn-nav">Book Now</a>
   </div>
   <div class="hamburger" onclick="openMobile()"><span></span><span></span><span></span></div>
-</nav><main id="page-content"><section style="background:var(--dark);padding:100px 60px 60px;border-bottom:1px solid var(--border)">
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobile()">✕</button>
+  <a href="../../" onclick="closeMobile()">Home</a>
+  <button onclick="toggleSub('sub1')">School ▾</button>
+  <div class="mobile-submenu" id="sub1">
+    <a href="../../school/">All School Info</a>
+    <a href="../../kitesurfing/lessons/" onclick="closeMobile()">Kitesurf Lessons</a>
+    <a href="../../wing-foil/lessons/" onclick="closeMobile()">Wing Foil Lessons</a>
+    <a href="../../windsurfing/lessons/" onclick="closeMobile()">Windsurf Lessons</a>
+    <a href="../../efoil/lessons/" onclick="closeMobile()">E-Foil Sessions</a>
+    <a href="../../courses/" onclick="closeMobile()" style="opacity:.7">All Courses →</a>
+  </div>
+  <a href="../../rental/" onclick="closeMobile()">Rental</a>
+  <button onclick="toggleSub('sub2')">Activities ▾</button>
+  <div class="mobile-submenu" id="sub2">
+    <a href="../../kitesurfing/" onclick="closeMobile()">Kitesurfing</a>
+    <a href="../../wing-foil/" onclick="closeMobile()">Wing Foil</a>
+    <a href="../../windsurfing/" onclick="closeMobile()">Windsurfing</a>
+    <a href="../../efoil/" onclick="closeMobile()">E-Foil</a>
+    <a href="../../kayaking/" onclick="closeMobile()">Kayaking</a>
+    <a href="../../sup-rental/" onclick="closeMobile()">SUP Rental</a>
+    <a href="../../kite-safari/" onclick="closeMobile()">Kite Safari</a>
+  </div>
+  <a href="../../shop/" onclick="closeMobile()">Shop</a>
+  <a href="../../storage/" onclick="closeMobile()">Storage</a>
+  <a href="../../locations/" onclick="closeMobile()">Locations</a>
+  <a href="../../blog/" onclick="closeMobile()">Blog</a>
+  <a href="../../about/" onclick="closeMobile()">About Us</a>
+  <a href="../../contacts/" onclick="closeMobile()">Contacts</a>
+  <a href="https://wa.me/66967203910" target="_blank" class="btn-nav" style="text-align:center;margin-top:20px">Book Now</a>
+</div>
+<main id="page-content"><section style="background:var(--dark);padding:100px 60px 60px;border-bottom:1px solid var(--border)">
 <div>
 <div style="font-family:var(--FB);font-size:12px;color:var(--muted);margin-bottom:12px"><a href="../../" style="color:var(--muted);text-decoration:none">Home</a> <span style="margin:0 6px">›</span> <a href="../../blog/" style="color:var(--muted);text-decoration:none">Blog</a> <span style="margin:0 6px">›</span> <span style="color:var(--white)">A Day on the Water</span></div>
 <div style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--purple);margin-bottom:14px">Experience</div>
