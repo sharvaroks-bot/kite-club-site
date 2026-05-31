@@ -1740,6 +1740,7 @@ body.light .also-card{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 body.light .also-name{color:#111}
 .also-sub{font-family:var(--FB);font-size:12px;color:#e8008a}
 @media(max-width:900px){.also-band{padding:50px 22px 60px}.also-grid{grid-template-columns:1fr 1fr;gap:8px}}
+@media(max-width:768px){main#page-content section{padding-left:22px!important;padding-right:22px!important}}
 </style>
 </head>
 <body>
@@ -1822,15 +1823,15 @@ body.light .also-name{color:#111}
 
 <main id="page-content">
 <section style="background:var(--dark);padding:100px 60px 60px;border-bottom:1px solid var(--border);">
-  <div style="max-width:800px;margin:0 auto;">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
     <div style="font-family:var(--FB);font-size:12px;color:var(--muted);margin-bottom:12px;"><a href="../../" style="color:var(--muted);text-decoration:none;">Home</a> <span style="margin:0 6px;">›</span> <a href="../../blog/" style="color:var(--muted);text-decoration:none;">Blog</a> <span style="margin:0 6px;">›</span> <span style="color:var(--white);">Koh Phangan Guide</span></div>
     <div style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px;">Koh Phangan Guide</div>
     <h1 style="font-family:var(--FD);font-size:clamp(32px,5vw,56px);font-weight:900;text-transform:uppercase;line-height:1.05;color:var(--white);margin-bottom:20px;">10 Best Beaches<br><em style='background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal;'>on Koh Phangan 2026</em></h1>
     <p style="font-family:var(--FB);font-size:clamp(15px,1.8vw,18px);color:var(--muted);line-height:1.7;">Koh Phangan has more beaches than most visitors realise — and they are very different from each other. Here is the honest guide: which ones are worth the journey, what each is genuinely best for, and a few things the tourist brochures leave out.</p>
   </div>
 </section>
-<section style="padding:60px 60px 80px;background:var(--black);">
-  <div style="max-width:800px;margin:0 auto;font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8;">
+<section style="padding:0 60px 40px;background:var(--black)">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8;">
 <div style="background:var(--dark);border:1px solid var(--border);padding:28px;margin-bottom:40px;">
   <p style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px;">Contents</p>
   <ol style="padding-left:20px;color:var(--muted);font-size:14px;line-height:2;">
@@ -1937,7 +1938,7 @@ body.light .also-name{color:#111}
   </div>
 </section>
 <section style="padding:60px 60px 70px;background:var(--dark);border-top:1px solid var(--border);">
-  <div style="max-width:800px;margin:0 auto;">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
     <h2 style="font-family:var(--FD);font-size:clamp(24px,3vw,34px);font-weight:900;text-transform:uppercase;color:var(--white);margin-bottom:32px;">FAQ</h2>
     <div class="faq">
 <div class="fq"><button class="fq-q" aria-expanded="false">Which beach on Koh Phangan is best for swimming?<span class="arr">+</span></button><div class="fq-a"><p>Haad Yao and Haad Chao Phao on the west coast have the calmest, clearest water for swimming, particularly in the NE season. Bottle Beach (Haad Khuat) is the most beautiful but requires a longtail boat to reach. Mae Haad is excellent for families and snorkelling.</p></div></div>
@@ -1947,12 +1948,38 @@ body.light .also-name{color:#111}
     </div>
   </div>
 </section>
+
+<section style="padding:60px 0">
+  <div class="wrap">
+    <div style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--pink);margin-bottom:10px">Our Services</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <a href="../../kitesurfing/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Kitesurfing</div>
+        <div style="font-size:11px;color:var(--muted)">Lessons, equipment and booking on Koh Phangan</div>
+      </a>
+      <a href="../../kayaking/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Kayaking</div>
+        <div style="font-size:11px;color:var(--muted)">Guided tours and rentals from 500 THB</div>
+      </a>
+      <a href="../../sup-rental/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">SUP Rental</div>
+        <div style="font-size:11px;color:var(--muted)">Stand-up paddleboard rental from 400 THB</div>
+      </a>
+    </div>
+  </div>
+</section>
 <section style="background:var(--grad);padding:60px;text-align:center;">
   <h2 style="font-family:var(--FD);font-size:clamp(28px,3.5vw,44px);font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:12px;">Water Sports at Thong Sala Beach</h2>
   <p style="font-family:var(--FB);font-size:15px;color:rgba(255,255,255,.85);margin-bottom:24px;">Kite Club Koh Phangan · Thong Sala Beach · +66 96 720 3910</p>
   <a href="https://wa.me/66967203910?text=Hi%21%20I%27d%20like%20to%20book%20water%20sports%20at%20Thong%20Sala%20Beach" class="btn-p" style="background:#fff;color:var(--mag);min-width:200px;">Book via WhatsApp</a>
 </section>
-</main>
+
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
+<h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Finding Your Perfect Beach on Koh Phangan</h2>
+<p>Koh Phangan's ten best beaches are as diverse as the visitors who seek them, ranging from the lively commercial southern beaches where the full moon party infrastructure has created an international social scene to the isolated northern bays that require genuine effort to reach and reward that effort with a quality of solitude and natural beauty increasingly rare on any Thai island. The beach experience on Koh Phangan is inseparable from the time of day — the same beach that bustles with activity during the afternoon wind window becomes serene and reflective at sunrise when the trade wind has not yet built and the water surface catches the morning light without the chop and activity that afternoon brings. Water sports enthusiasts who prioritize session quality over beach aesthetics will find Thong Sala Beach and the southern bay's consistent conditions most aligned with their objectives, while swimmers, snorkelers, and relaxation-focused visitors will find more varied and in some cases more pristine environments in the northern and western parts of the island. The island's accessibility by motorbike means that a single day can reasonably include two or three different beaches experienced across different hours, taking advantage of the morning calm for swimming and the afternoon wind for kite or wing foil sessions before returning to a southern beach for sunset. Understanding the specific character and optimal conditions of each beach prevents the disappointment of arriving at a spot during the wrong hour or season for what that beach does best, and rewards visitors who plan their beach time thoughtfully rather than simply gravitating toward whichever beach is most convenient from their accommodation. The kite school team at Thong Sala Beach is a reliable local knowledge resource for current beach conditions across the island, particularly useful for identifying which spots are currently experiencing the best water clarity, wave conditions, or marine life activity based on the most recent local observations.</p>
+<p>The diversity of beach character across Koh Phangan reflects the island's complex geography of volcanic rock headlands, protected bays, coral outcroppings, and mangrove-fringed estuaries that create distinct microclimates even over small distances. The east coast beaches, facing the open Gulf, experience stronger onshore swells during the northeast season that make them less suitable for swimming but appealing for surf-style water activities, while the west coast beaches in the shadow of the island's central ridge enjoy calm, almost lagoon-like conditions during the same period that create ideal swimming, snorkeling, and paddleboard conditions. The far north coast around Haad Khom and the secluded Bottle Beach maintain a quality of coastal wilderness that makes them genuinely worth the effort of reaching, whether by boat from the Chaloklum pier or by the challenging dirt road that winds over the northern hills. The central western beaches around Mae Haad offer a balance of accessibility and quality — close enough to Thong Sala for easy day trips by motorbike, but far enough from the tourist density of the south that the atmosphere retains a genuine local character that the most developed southern beaches have largely lost. Koh Ma, the small island connected to the mainland by a sandbar at low tide near Mae Haad, offers exceptional snorkeling in clear water around healthy coral gardens that are accessible without diving equipment or boat transport — a remarkable free natural resource within easy reach of the kite school for visitors who want to add marine exploration to their island experience.</p>
+</div></section>
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8"><h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Water Sports Access from Each Beach</h2><p>The proximity of different beaches to watersport infrastructure varies significantly across the island, and visitors who want to combine beach exploration with kite or wing foil sessions benefit from understanding which beaches offer the most convenient access to the school at Thong Sala. Thong Sala Beach itself is the primary kite and wing foil location and also a perfectly enjoyable swimming and relaxation beach in its own right, making it the natural home base for active water sports visitors who want to spend the morning in a session and the afternoon relaxing in the same general area without requiring transport between activity zones. Haad Yao, approximately fifteen kilometers north of Thong Sala on the western coast, is one of the island's most picturesque swimming beaches with calm clear water, excellent snorkeling on the reef at its northern end, and a relaxed cafe and restaurant strip that makes it an ideal afternoon destination following a morning kite session. Haad Salad further north combines a small fishing community character with tourist-friendly facilities and water that is consistently clearer and calmer than the southern beaches, making it excellent for swimming families with young children who want a beach that is genuinely safe and comfortable for extended water time. Contact Kite Club Koh Phangan via WhatsApp at +66 96 720 3910 for current recommendations on which beaches offer the best conditions for swimming, snorkeling, and paddleboarding alongside your kite sessions during your specific visit period.</p></div></section><p style="font-family:var(--FB);font-size:16px;color:var(--muted);padding:8px 60px">Koh Phangan offers ten genuinely distinct beaches ranging from the active southern kite spots to the remote northern wilderness beaches that reward the effort of reaching them. A motorbike rental at 200-300 THB per day allows thorough coastal exploration within a single visit. The kite school team at Thong Sala Beach provides local knowledge about current conditions, access roads, and seasonal beach quality across all parts of the island.</p></main>
 
 <footer id="site-footer" role="contentinfo">
   <div class="footer-top">

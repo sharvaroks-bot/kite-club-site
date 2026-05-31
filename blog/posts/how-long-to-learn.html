@@ -1729,6 +1729,7 @@ body.light .also-card{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 body.light .also-name{color:#111}
 .also-sub{font-family:var(--FB);font-size:12px;color:#e8008a}
 @media(max-width:900px){.also-band{padding:50px 22px 60px}.also-grid{grid-template-columns:1fr 1fr;gap:8px}}
+@media(max-width:768px){main#page-content section{padding-left:22px!important;padding-right:22px!important}}
 </style>
 </head>
 <body>
@@ -1773,68 +1774,275 @@ body.light .also-name{color:#111}
     <a href="https://wa.me/66967203910" target="_blank" class="btn-nav">Book Now</a>
   </div>
   <div class="hamburger" onclick="openMobile()"><span></span><span></span><span></span></div>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" onclick="closeMobile()">✕</button>
-  <a href="../../" onclick="closeMobile()">Home</a>
-  <button onclick="toggleSub('sub1')">School ▾</button>
-  <div class="mobile-submenu" id="sub1">
-    <a href="../../school/">All School Info</a>
-    <a href="../../kitesurfing/lessons/" onclick="closeMobile()">Kitesurf Lessons</a>
-    <a href="../../wing-foil/lessons/" onclick="closeMobile()">Wing Foil Lessons</a>
-    <a href="../../windsurfing/lessons/" onclick="closeMobile()">Windsurf Lessons</a>
-    <a href="../../efoil/lessons/" onclick="closeMobile()">E-Foil Sessions</a>
-    <a href="../../courses/" onclick="closeMobile()" style="opacity:.7">All Courses →</a>
-  </div>
-  <a href="../../rental/" onclick="closeMobile()">Rental</a>
-  <button onclick="toggleSub('sub2')">Activities ▾</button>
-  <div class="mobile-submenu" id="sub2">
-    <a href="../../kitesurfing/" onclick="closeMobile()">Kitesurfing</a>
-    <a href="../../wing-foil/" onclick="closeMobile()">Wing Foil</a>
-    <a href="../../windsurfing/" onclick="closeMobile()">Windsurfing</a>
-    <a href="../../efoil/" onclick="closeMobile()">E-Foil</a>
-    <a href="../../kayaking/" onclick="closeMobile()">Kayaking</a>
-    <a href="../../sup-rental/" onclick="closeMobile()">SUP Rental</a>
-    <a href="../../kite-safari/" onclick="closeMobile()">Kite Safari</a>
-  </div>
-  <a href="../../shop/" onclick="closeMobile()">Shop</a>
-  <a href="../../storage/" onclick="closeMobile()">Storage</a>
-  <a href="../../locations/" onclick="closeMobile()">Locations</a>
-  <a href="../../blog/" onclick="closeMobile()">Blog</a>
-  <a href="../../about/" onclick="closeMobile()">About Us</a>
-  <a href="../../contacts/" onclick="closeMobile()">Contacts</a>
-  <a href="https://wa.me/66967203910" target="_blank" class="btn-nav" style="text-align:center;margin-top:20px">Book Now</a>
+</nav><main id="page-content">
+<section style="background:var(--dark);padding:100px 60px 60px;border-bottom:1px solid var(--border)">
+<div>
+<div style="font-family:var(--FB);font-size:12px;color:var(--muted);margin-bottom:12px"><a href="../../" style="color:var(--muted);text-decoration:none">Home</a> <span style="margin:0 6px">›</span> <a href="../../blog/" style="color:var(--muted);text-decoration:none">Blog</a> <span style="margin:0 6px">›</span> <span style="color:var(--white)">Learning Timeline</span></div>
+<div style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px">Learning Guide</div>
+<h1 style="font-family:var(--FD);font-size:clamp(32px,5vw,56px);font-weight:900;text-transform:uppercase;line-height:1.05;color:var(--white);margin-bottom:20px">How Long to Learn<br><em style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal">Kitesurfing: The Real Timeline</em></h1>
+<p style="font-family:var(--FB);font-size:clamp(15px,1.8vw,18px);color:var(--muted);line-height:1.7">Most students ride independently after 6–10 hours of instruction spread over 3–5 days. But that number hides enormous variation. This guide gives you the honest, IKO-verified progression — skill by skill, hour by hour — and explains exactly why some people take half the time and others take twice as long.</p>
+<p style="font-family:var(--FB);font-size:13px;color:var(--muted);margin-top:14px">📖 15 min read · Updated May 2026 · By Kite Club Koh Phangan</p>
+</div></section>
+
+<section style="padding:60px 60px 80px;background:var(--black)">
+<div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
+
+<div style="background:var(--dark);border:1px solid var(--border);padding:28px;margin-bottom:40px">
+<p style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px">Contents</p>
+<ol style="padding-left:20px;color:var(--muted);font-size:14px;line-height:2">
+<li><a href="#s1" style="color:var(--muted);text-decoration:none">The Short Answer: What the Numbers Mean</a></li>
+<li><a href="#s2" style="color:var(--muted);text-decoration:none">IKO Progression Hour by Hour</a></li>
+<li><a href="#s3" style="color:var(--muted);text-decoration:none">The Three IKO Course Levels Explained</a></li>
+<li><a href="#s4" style="color:var(--muted);text-decoration:none">What Makes Some People Learn Faster?</a></li>
+<li><a href="#s5" style="color:var(--muted);text-decoration:none">Common Plateaus and How to Break Them</a></li>
+<li><a href="#s6" style="color:var(--muted);text-decoration:none">Comparing Kitesurfing to Other Watersports</a></li>
+<li><a href="#s7" style="color:var(--muted);text-decoration:none">Days vs Hours: How to Structure Your Learning</a></li>
+<li><a href="#s8" style="color:var(--muted);text-decoration:none">The Role of Wind Conditions in Learning Speed</a></li>
+<li><a href="#s9" style="color:var(--muted);text-decoration:none">After You Can Ride: The Next 50 Hours</a></li>
+<li><a href="#faq" style="color:var(--muted);text-decoration:none">Frequently Asked Questions</a></li>
+</ol></div>
+
+<h2 id="s1" style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">The Short Answer: What the Numbers Mean</h2>
+<p>The "6–10 hours to independent riding" figure is a median, not a minimum or a maximum. In our experience teaching hundreds of students at Koh Phangan:</p>
+
+<table style="width:100%;border-collapse:collapse;font-size:14px;margin:24px 0">
+<thead><tr>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Student Profile</th>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Hours to Independent Riding</th>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Days (3h/day)</th>
+</tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Athletic background, strong wind feel, low fear</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;color:#4ade80">5–7 hours</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;color:#4ade80">2–3 days</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Average fitness, no prior board sports</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;color:#fbbf24">8–12 hours</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;color:#fbbf24">3–5 days</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Lower fitness or significant anxiety about water/height</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;color:#f87171">12–18 hours</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;color:#f87171">5–7 days</td></tr>
+</tbody></table>
+
+<p>These ranges assume consistent instruction with IKO-certified instructors, appropriate wind conditions (15–20 knots side-onshore), and full concentration during sessions. They do not account for days lost to no-wind conditions or illness.</p>
+
+<div style="background:var(--card);border-left:4px solid var(--pink);padding:18px 22px;margin:28px 0;border-radius:0 8px 8px 0"><p style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--pink);margin-bottom:8px">Expert Tip</p><p style="margin:0">The biggest single variable is not your athletic background or board-sport experience — it is whether you fully commit to the body drag phase. Students who rush through body drag to get on the board almost always take longer overall. The body drag teaches kite control through every part of the wind window, which is the foundation for everything that follows.</p></div>
+
+<h2 id="s2" style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">IKO Progression Hour by Hour</h2>
+<p>The IKO curriculum breaks kitesurfing progression into clearly defined skill milestones. Here is how the hours map to those milestones:</p>
+
+<table style="width:100%;border-collapse:collapse;font-size:14px;margin:24px 0">
+<thead><tr>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Hours</th>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">IKO Skill Level</th>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">What You Learn</th>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Where You Do It</th>
+</tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">0 – 1h</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Theory & Safety</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Wind window theory, IKO right-of-way rules, safety release systems, wind assessment</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Beach / classroom</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">1 – 3h</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Kite Control</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Trainer kite (3m) or depowered kite on land: figure-eights, parking position, power strokes, controlled dives</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Beach, knee-deep water</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">3 – 5h</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Body Drag</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Kite in water, no board: body drag downwind, upwind recovery, one-hand body drag, kite relaunch from water</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Shallow water (chest deep)</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">5 – 7h</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Board Introduction</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Board handling in water, kite positioning for water start, first water start attempts</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Waist-deep water</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">7 – 9h</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">First Rides</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Consistent water starts, short rides in one direction, controlled stops</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Open water</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">9 – 12h</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Independent Riding</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Riding both directions, controlled gybes, riding upwind, self-rescue, independent session management</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Open water</td></tr>
+</tbody></table>
+
+<h3 style="font-family:var(--FD);font-size:clamp(18px,2vw,26px);font-weight:700;text-transform:uppercase;color:var(--white);margin:28px 0 12px">Hours 0–1: Theory and Safety</h3>
+<p>Every student begins with a theory session, regardless of their experience with other board sports. The IKO theory module covers the wind window (the 3D space where a kite flies and generates power), the three zones (neutral, active, power), right-of-way rules, equipment overview, and safety system operation.</p>
+<p>This session is not optional or abbreviated. Students who skip or rush the theory session consistently make predictable safety errors in subsequent sessions.</p>
+
+<h3 style="font-family:var(--FD);font-size:clamp(18px,2vw,26px);font-weight:700;text-transform:uppercase;color:var(--white);margin:28px 0 12px">Hours 1–3: Kite Control</h3>
+<p>Kite control is the most important phase of the entire progression. Using either a small trainer kite or a full-sized kite on a long leash with greatly reduced power, you learn the fundamental movement: moving the kite through the wind window with consistent, smooth input.</p>
+<p>The goal at the end of this phase: fly the kite through a figure-eight without looking at it. When you can feel the kite's position through bar tension alone, you are ready for water.</p>
+
+<h3 style="font-family:var(--FD);font-size:clamp(18px,2vw,26px);font-weight:700;text-transform:uppercase;color:var(--white);margin:28px 0 12px">Hours 3–5: Body Drag</h3>
+<p>Body drag is the phase where students who were making fast progress often plateau. The concept — flying the kite while being dragged through the water without a board — feels counterintuitive to many people. Why spend time without the board you came to learn on?</p>
+<p>Body drag builds the single most important skill in kitesurfing: the ability to control the kite and your body position simultaneously, without having to think about it. The kite must become background noise before the board can be foreground. Students who rush this phase spend many more hours failing water starts than students who master it.</p>
+
+<div style="background:var(--card);border-left:4px solid #0ea5e9;padding:18px 22px;margin:28px 0;border-radius:0 8px 8px 0"><p style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:#0ea5e9;margin-bottom:8px">Local Insight</p><p style="margin:0">At Thong Sala Beach, the water is flat and the sandy bottom extends 100 metres at waist depth. This makes it ideal for body drag training. Our instructors typically keep students in the body drag phase for at least 2 hours before introducing the board, even if the student feels ready sooner.</p></div>
+
+<h3 style="font-family:var(--FD);font-size:clamp(18px,2vw,26px);font-weight:700;text-transform:uppercase;color:var(--white);margin:28px 0 12px">Hours 5–7: Board Introduction</h3>
+<p>The board introduction phase begins in shallow water. You learn to hold the board perpendicular to the wind, position the kite correctly for power, and understand the timing of the water start: kite at 11 or 1 o'clock, power stroke, stand up as the kite pulls.</p>
+<p>Most students need 30–50 attempts before their first successful water start. This is completely normal. The failure modes are consistent and predictable: kite too high (pulls you forward instead of up), too much or too little power, board angle wrong, standing too early. Each failure teaches you exactly what to adjust.</p>
+
+<h3 style="font-family:var(--FD);font-size:clamp(18px,2vw,26px);font-weight:700;text-transform:uppercase;color:var(--white);margin:28px 0 12px">Hours 7–9: First Rides</h3>
+<p>The water start clicks at different moments for different students. When it does, the feeling is unmistakable — the kite lifts you out of the water and you are riding. First rides are typically 5–15 seconds and end with a fall. That is fine. The goal in this phase is consistent starts and the beginning of directional control.</p>
+
+<h3 style="font-family:var(--FD);font-size:clamp(18px,2vw,26px);font-weight:700;text-transform:uppercase;color:var(--white);margin:28px 0 12px">Hours 9–12: Independent Riding</h3>
+<p>Riding both directions, controlled gybes (changing direction), upwind riding, and self-rescue form the final block of instruction. This is also where the IKO assessment criteria for Level 3 (Independent Rider) are verified. Passing this assessment means you are certified to kite without direct supervision.</p>
+
+<h2 id="s3" style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">The Three IKO Course Levels</h2>
+<p>Kite Club Koh Phangan offers three course structures aligned to the IKO curriculum:</p>
+
+<table style="width:100%;border-collapse:collapse;font-size:14px;margin:24px 0">
+<thead><tr>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Course</th>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Duration</th>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Price</th>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">IKO Level</th>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Outcome</th>
+</tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top"><strong style="color:var(--white)">Discovery</strong></td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">3 hours</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">3,500 THB</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Level 1–2</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Kite control, first body drag, experience the sport</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top"><strong style="color:var(--white)">Beginner</strong></td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">9 hours</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">11,000 THB</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Level 3</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">First independent rides, basic control in both directions</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top"><strong style="color:var(--white)">Independent</strong></td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">12 hours</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">18,000 THB</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Level 3+ full cert</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Independent riding, gybes, upwind, full IKO certification</td></tr>
+</tbody></table>
+
+<p>Most students who want to leave Koh Phangan as independent kitesurfers choose the Independent Course (18,000 THB / 12 hours). Students who want to try the sport before committing to the full progression start with Discovery (3,500 THB / 3 hours).</p>
+
+<h2 id="s4" style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">What Makes Some People Learn Faster?</h2>
+<p>In our experience with hundreds of students, five factors consistently separate faster and slower learners:</p>
+
+<h3 style="font-family:var(--FD);font-size:clamp(18px,2vw,26px);font-weight:700;text-transform:uppercase;color:var(--white);margin:28px 0 12px">1. Prior Board Sport Experience</h3>
+<p>Surfing, skateboarding, snowboarding, and wakeboarding all develop the edge-control instinct that kitesurfing requires. Students with these backgrounds typically reach the water start phase 1–2 hours faster than complete beginners, because the muscle memory for weighting and edging the board is already present.</p>
+<p>However, board sport experience does not help with kite control — that is an entirely new skill set. Experienced boarders who underestimate the kite control phase often plateau at the water start stage.</p>
+
+<h3 style="font-family:var(--FD);font-size:clamp(18px,2vw,26px);font-weight:700;text-transform:uppercase;color:var(--white);margin:28px 0 12px">2. Wind Feel and Spatial Awareness</h3>
+<p>Some people have a natural instinct for reading the wind — sensing gusts, direction shifts, and power changes through the bar. This is difficult to teach explicitly; it comes from time flying the kite. Students who grew up sailing, paragliding, or even flying recreational kites often develop wind feel significantly faster.</p>
+
+<h3 style="font-family:var(--FD);font-size:clamp(18px,2vw,26px);font-weight:700;text-transform:uppercase;color:var(--white);margin:28px 0 12px">3. Physical Fitness</h3>
+<p>Kitesurfing is physically demanding, particularly in the early phases. Tired muscles make poor decisions. Students with good core strength and endurance maintain concentration and correct body position throughout 3-hour sessions. Students who fatigue in the second hour are less able to process new information and fix technical errors.</p>
+
+<h3 style="font-family:var(--FD);font-size:clamp(18px,2vw,26px);font-weight:700;text-transform:uppercase;color:var(--white);margin:28px 0 12px">4. Fear Management</h3>
+<p>Fear is the most significant hidden variable in kitesurfing progression. Moderate anxiety about the kite's power is normal and healthy — it keeps you attentive. But excessive fear about water depth, losing control, or falling causes students to make defensive, hesitant movements that are exactly wrong for kitesurfing. Technique requires commitment; half-hearted water start attempts almost never work.</p>
+<p>If fear is a factor, tell your instructor. The IKO curriculum has specific protocols for building confidence progressively. Rushing a fearful student is counterproductive.</p>
+
+<h3 style="font-family:var(--FD);font-size:clamp(18px,2vw,26px);font-weight:700;text-transform:uppercase;color:var(--white);margin:28px 0 12px">5. Session Spacing</h3>
+<p>The spacing between sessions significantly affects learning rate. Sessions spread over consecutive days are more effective than the same number of hours spread over two weeks. Skills consolidate during sleep — there is genuine neurological evidence that motor skills learned in a session are better retained after a night of sleep than after a day without practice.</p>
+
+<h2 id="s5" style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Common Plateaus and How to Break Them</h2>
+<p>Almost every student hits one or more of these specific plateaus during the learning curve:</p>
+
+<table style="width:100%;border-collapse:collapse;font-size:14px;margin:24px 0">
+<thead><tr>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Plateau</th>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Signs</th>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">How to Break It</th>
+</tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top"><strong style="color:var(--white)">Kite steering inconsistency</strong></td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Kite keeps going to power zone; figure-eight becomes figure-O</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Slow down inputs; focus on the exit of each turn, not the turn itself</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top"><strong style="color:var(--white)">Body drag going downwind only</strong></td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Cannot body drag upwind; always drifting downwind</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Focus on edge: dig shoulder into water, extend arm upwind, kite at 11 or 1 o'clock only</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top"><strong style="color:var(--white)">Water start — cannot stand up</strong></td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Kite pulls you but you stay low or fall forward</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Kite position: lower and slower power stroke; board angle: more angled, not flat; timing: wait longer for pull</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top"><strong style="color:var(--white)">Short rides only, always crash same way</strong></td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Ride 10–20 seconds then same fall pattern repeats</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Analyse the crash: is kite going to power zone (steer more actively), or are you losing edge (weight your heels more)?</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top"><strong style="color:var(--white)">One direction only</strong></td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Ride heel-side fine but cannot ride toe-side or vice versa</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Practice full body rotation before gybe; use kite at 1 o'clock for heel-side direction</td></tr>
+</tbody></table>
+
+<h2 id="s6" style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Comparing Kitesurfing to Other Watersports</h2>
+<p>Context helps calibrate expectations:</p>
+
+<table style="width:100%;border-collapse:collapse;font-size:14px;margin:24px 0">
+<thead><tr>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Sport</th>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Hours to Basic Independence</th>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Comparison to Kitesurfing</th>
+</tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Surfing</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">10–20 hours (pop-up and basic turns)</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;color:#fbbf24">Similar — both require feel for power and edge</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Windsurfing</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">6–10 hours to basic sailing</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;color:#4ade80">Faster to stand; slower to advanced technique</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Wing Foil</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">8–15 hours to foiling independently</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;color:#fbbf24">Slightly more complex; foil adds variable</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Wakeboarding</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">1–3 hours (boat does the work)</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;color:#4ade80">Much faster — no kite to control</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Kitesurfing</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">6–12 hours (instructor-assessed)</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Baseline — the reference point</td></tr>
+</tbody></table>
+
+<h2 id="s7" style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Days vs Hours: How to Structure Your Learning</h2>
+<p>How you spread your hours across days matters. The optimal pattern for a one-week kite trip:</p>
+<ul style="padding-left:22px;margin:12px 0">
+<li style="margin-bottom:10px"><strong style="color:var(--white)">Day 1:</strong> 3-hour Discovery course or first 3 hours of Beginner — theory, trainer kite, first body drag</li>
+<li style="margin-bottom:10px"><strong style="color:var(--white)">Day 2:</strong> 3 hours — body drag mastery, kite relaunch, one-hand drag</li>
+<li style="margin-bottom:10px"><strong style="color:var(--white)">Day 3:</strong> 3 hours — board introduction, first water start attempts</li>
+<li style="margin-bottom:10px"><strong style="color:var(--white)">Day 4:</strong> 3 hours — consistent water starts, first rides, directional control</li>
+<li style="margin-bottom:10px"><strong style="color:var(--white)">Day 5:</strong> Free riding + instructor check-in — consolidate both directions</li>
+</ul>
+<p>Spreading beyond 3 hours per day produces diminishing returns for most beginners — concentration lapses and muscle fatigue create poor movement patterns that then need to be unlearned.</p>
+
+<div style="background:var(--card);border-left:4px solid #0ea5e9;padding:18px 22px;margin:28px 0;border-radius:0 8px 8px 0"><p style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:#0ea5e9;margin-bottom:8px">Local Insight</p><p style="margin:0">At Koh Phangan, the best learning window is typically 11 am to 3 pm when the sea breeze comes in consistently at 15–20 knots. Sessions outside this window often have variable or insufficient wind, which can add hours to the learning timeline. We schedule all beginner sessions in this window.</p></div>
+
+<h2 id="s8" style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">The Role of Wind Conditions in Learning Speed</h2>
+<p>Wind conditions directly affect how quickly you can progress. In ideal conditions (15–20 knots, steady, side-onshore), the feedback from the kite is consistent and predictable. In poor conditions, even good technique produces unpredictable results, making it difficult to diagnose what you are doing wrong.</p>
+
+<table style="width:100%;border-collapse:collapse;font-size:14px;margin:24px 0">
+<thead><tr>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Condition</th>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Effect on Learning</th>
+</tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">12–20 knots, steady</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;color:#4ade80">Optimal. Consistent feedback, manageable power, forgiving of errors.</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">10–12 knots</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;color:#fbbf24">Sub-optimal. Power drops require larger kite; inconsistent lift makes water starts harder.</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">20–25 knots</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;color:#fbbf24">Challenging for beginners. Too much power during water start phase; smaller kite required.</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Gusty (variable speed)</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;color:#f87171">Poor. Unpredictable power makes it hard to isolate technique errors. Learning significantly slower.</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Onshore/side-onshore</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;color:#4ade80">Best direction for beginners — natural safety margin if something goes wrong.</td></tr>
+</tbody></table>
+
+<p>March and April at Koh Phangan typically deliver the best combination: 18–25 knots steady SE trades, onshore direction at Thong Sala Beach. Students arriving in these months often progress noticeably faster than those arriving in the lighter winter months.</p>
+
+<h2 id="s9" style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">After You Can Ride: The Next 50 Hours</h2>
+<p>IKO Level 3 independence is not the end of the learning curve — it is the beginning of the actual progression. Here is what the next 50 hours typically look like:</p>
+
+<table style="width:100%;border-collapse:collapse;font-size:14px;margin:24px 0">
+<thead><tr>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Hours (cumulative)</th>
+<th style="background:var(--mid);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--FD);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Skills Being Developed</th>
+</tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">10–20h</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Consistent gybes in both directions, riding upwind to retrieve board position, increasing ride duration</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">20–35h</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Body drags without kite, toeside riding, beginning jump attempts (kite loops for lift only)</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">35–50h</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Controlled jumps 1–3 metres, board-off tricks, riding in chop and light swell</td></tr>
+<tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">50–100h</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top">Consistent 5m+ jumps, hooked-out riding, handle pass tricks, wave riding</td></tr>
+</tbody></table>
+
+<p>The progression curve in kitesurfing is unusual: it is very steep at the beginning (slow learning, high frustration), then flattens as basic riding becomes consistent, then steepens again as you develop tricks and style. Most riders describe the first water start as their biggest milestone — after that, progress feels fast.</p>
+
+<h2 id="s10" style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Choosing the Right Course Length for Your Schedule</h2>
+<p>One of the most common planning mistakes is booking too few lesson hours. Students who arrive for a 3-day trip and book only 6 hours of instruction often run out of time just as the water start starts clicking. Here are the scenario-based recommendations:</p>
+<ul style="padding-left:22px;margin:12px 0">
+<li style="margin-bottom:10px"><strong style="color:var(--white)">Weekend trip (2 days):</strong> Book the Discovery course (3 hours). You will get genuine kite control and body drag experience. Independent riding is unlikely in 2 days but possible for very fast learners.</li>
+<li style="margin-bottom:10px"><strong style="color:var(--white)">Short trip (3–4 days):</strong> Book the Beginner course (9 hours). Spread across 3 days, this gives enough time for most students to reach first rides. Athletic or boarding-experienced students may reach independent riding.</li>
+<li style="margin-bottom:10px"><strong style="color:var(--white)">Standard trip (5–7 days):</strong> Book the Independent course (12 hours). This is the right choice for anyone who wants to leave as a certified independent kitesurfer. The extra hours create space for wind variability and normal learning plateaus.</li>
+<li style="margin-bottom:10px"><strong style="color:var(--white)">Extended trip (10+ days):</strong> Book the Independent course and budget for additional free-riding sessions after certification. Consolidating your skills with 4–6 hours of supervised free riding after your first independent session accelerates long-term development significantly.</li>
+</ul>
+<p>If you are unsure what level to book, the Discovery course is always a safe starting point. It counts toward the Beginner and Independent courses — if you decide to continue, the 3,500 THB is credited against the next course price.</p>
+
+<div style="background:var(--card);border-left:4px solid var(--pink);padding:18px 22px;margin:28px 0;border-radius:0 8px 8px 0"><p style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--pink);margin-bottom:8px">Expert Tip</p><p style="margin:0">Book your lessons for the first half of your trip, not the last. If you book lessons for your final days and the wind does not cooperate, you have no buffer. Book for days 1–4 and leave days 5–7 for free riding or weather contingency. This simple scheduling choice dramatically reduces the chance of leaving disappointed.</p></div>
+
+<h2 id="faq" style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Frequently Asked Questions</h2>
+<details style="border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-bottom:12px">
+<summary style="font-family:var(--FD);font-weight:700;color:var(--white);cursor:pointer;font-size:16px">Can I learn kitesurfing in one day?</summary>
+<p style="margin-top:12px">You can complete the Discovery course (3 hours) in one day and experience the basics: kite control, body drag, and the feeling of the sport. Most people cannot independently ride in one day. The water start alone requires multiple sessions to develop consistently. That said, athletic individuals with strong wind feel sometimes achieve first rides within 5–6 hours.</p>
+</details>
+<details style="border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-bottom:12px">
+<summary style="font-family:var(--FD);font-weight:700;color:var(--white);cursor:pointer;font-size:16px">Is kitesurfing harder to learn than surfing?</summary>
+<p style="margin-top:12px">Kitesurfing has a steeper initial learning curve than surfing because you must control the kite and the board simultaneously. However, once you pass the body drag phase, the progression to riding can feel faster than surfing because the kite provides consistent power rather than depending on catching waves. People with surfing experience often learn the board skills faster, but still need the full kite control progression.</p>
+</details>
+<details style="border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-bottom:12px">
+<summary style="font-family:var(--FD);font-weight:700;color:var(--white);cursor:pointer;font-size:16px">Can I learn kitesurfing on holiday in 5 days?</summary>
+<p style="margin-top:12px">Yes — a 5-day holiday with 3 hours of instruction per day (15 hours total) is more than enough for most people to reach independent riding. We recommend arriving on a Monday so you have consecutive days for lessons. Students who reach their first rides by Day 3 can spend Days 4–5 consolidating with free riding and instructor check-ins.</p>
+</details>
+<details style="border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-bottom:12px">
+<summary style="font-family:var(--FD);font-weight:700;color:var(--white);cursor:pointer;font-size:16px">What age is too old to learn kitesurfing?</summary>
+<p style="margin-top:12px">There is no strict age limit. We have taught students in their 60s who progressed to independent riding. Older students often have lower fitness and sometimes longer reaction times, but they also tend to be more patient, more methodical, and better at following instruction. Learning may take more hours, but the outcome is the same. Good physical condition (able to swim, basic fitness) matters more than age.</p>
+</details>
+<details style="border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-bottom:12px">
+<summary style="font-family:var(--FD);font-weight:700;color:var(--white);cursor:pointer;font-size:16px">Do I need to be fit to learn kitesurfing?</summary>
+<p style="margin-top:12px">Basic fitness helps — you need to be able to swim 50 metres, stand and balance for 3 hours, and handle the physical demands of water starts and falls. You do not need to be an athlete. The kite does most of the work once you can ride. During the learning phase, the main physical demands are core stability (for board position), arm strength (for pulling the bar), and hip/knee flexibility (for the water start position).</p>
+</details>
+<details style="border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-bottom:12px">
+<summary style="font-family:var(--FD);font-weight:700;color:var(--white);cursor:pointer;font-size:16px">Should I try a Discovery lesson before committing to the full Beginner course?</summary>
+<p style="margin-top:12px">If you have never tried kitesurfing and are not sure whether you will enjoy it, the Discovery course (3,500 THB for 3 hours) is a sensible first step. It gives you genuine kite control experience and a realistic taste of the progression before you commit to 9–12 hours. If you already know you want to learn to ride independently, booking the full Beginner or Independent course saves you time.</p>
+</details>
+
+</div></section>
+<section style="background:var(--dark);border-top:1px solid var(--border);padding:50px 60px">
+<div style="">
+<p style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--pink);margin-bottom:20px">Read Next</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+<a href="beginner-guide-koh-phangan.html" style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px;text-decoration:none;display:block" onmouseover="this.style.borderColor='var(--purple)'" onmouseout="this.style.borderColor='var(--border)'"><p style="font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--pink);margin-bottom:8px">Beginners</p><p style="font-family:var(--FD);font-size:17px;font-weight:700;color:var(--white);line-height:1.3">Complete Beginner Guide</p></a>
+<a href="first-kite-lesson.html" style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px;text-decoration:none;display:block" onmouseover="this.style.borderColor='var(--purple)'" onmouseout="this.style.borderColor='var(--border)'"><p style="font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--pink);margin-bottom:8px">First Session</p><p style="font-family:var(--FD);font-size:17px;font-weight:700;color:var(--white);line-height:1.3">Your First Kite Lesson</p></a>
+<a href="iko-certification-guide.html" style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px;text-decoration:none;display:block" onmouseover="this.style.borderColor='var(--purple)'" onmouseout="this.style.borderColor='var(--border)'"><p style="font-family:var(--FD);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--pink);margin-bottom:8px">Certification</p><p style="font-family:var(--FD);font-size:17px;font-weight:700;color:var(--white);line-height:1.3">IKO Certification Guide</p></a>
+</div></div></section><section style="background:var(--mid);border-top:1px solid var(--border);padding:50px 60px">
+<div style="">
+<p style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--pink);margin-bottom:20px">Start Learning</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:32px">
+<a href="../../school/kitesurfing/" style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;text-decoration:none"><p style="font-family:var(--FD);font-size:15px;font-weight:700;color:var(--white);margin-bottom:4px">Discovery Course</p><p style="font-size:13px;color:var(--muted)">3,500 THB · 3 hours · IKO certified</p></a>
+<a href="../../school/kitesurfing/" style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;text-decoration:none"><p style="font-family:var(--FD);font-size:15px;font-weight:700;color:var(--white);margin-bottom:4px">Beginner Course</p><p style="font-size:13px;color:var(--muted)">11,000 THB · 9 hours · Ride independently</p></a>
+<a href="../../school/kitesurfing/" style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;text-decoration:none"><p style="font-family:var(--FD);font-size:15px;font-weight:700;color:var(--white);margin-bottom:4px">Independent Course</p><p style="font-size:13px;color:var(--muted)">18,000 THB · Full IKO certification</p></a>
 </div>
-
-
-<main id="page-content">
-
-<section style="background:var(--dark);padding:100px 60px 60px;border-bottom:1px solid var(--border);">
-  <div style="max-width:800px;margin:0 auto;">
-    <div style="font-family:var(--FB);font-size:12px;color:var(--muted);margin-bottom:12px;"><a href="../../" style="color:var(--muted);text-decoration:none;">Home</a> <span style="margin:0 6px;">›</span> <a href="../../blog/" style="color:var(--muted);text-decoration:none;">Blog</a> <span style="margin:0 6px;">›</span> <span style="color:var(--white);">Learning Guide</span></div>
-    <div style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px;">Learning Guide</div>
-    <h1 style="font-family:var(--FD);font-size:clamp(32px,5vw,56px);font-weight:900;text-transform:uppercase;line-height:1.05;color:var(--white);margin-bottom:20px;">How Long Does It Take<br><em style='background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal;'>to Learn Kitesurfing?</em></h1>
-    <p style="font-family:var(--FB);font-size:clamp(15px,1.8vw,18px);color:var(--muted);line-height:1.7;">The honest answer: most people ride independently in 6–10 hours spread over 3–5 days. Here is the realistic IKO progression broken down hour by hour.</p>
-  </div>
-</section>
-
-<section style="padding:60px 60px 80px;background:var(--black);">
-  <div style="max-width:800px;margin:0 auto;font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8;">
-    <h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px;">Hours 1–2: Kite Control (Discovery Course)</h2><p>Your first 2 hours are on the beach. By the end of this session you will be flying a full-size trainer kite confidently in the wind window, know how to use all safety systems, and complete your first body drag in the water. Most students are surprised by how quickly the kite feels intuitive — the power bar and depower are very responsive.</p><p style='margin-top:16px;'>The Discovery Course is the minimum to understand whether kitesurfing is for you. Cost: 3,500 THB.</p><h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px;">Hours 3–8: First Rides (Full Beginner Course)</h2><p>Hours 3–8 are spread over 3 days (2h per day). This is where the progression moves to the water. By the end you will: body drag one-handed (to simulate board recovery), waterstart successfully, ride the board for 10–20 metre stretches, steer basic upwind and downwind, and have the radio helmet coaching from the instructor during water time.</p><p style='margin-top:16px;'>The waterstart is the hardest milestone — getting the kite in the right position while simultaneously getting your feet on the board in moving water. Most students nail it within 4–6 hours total.</p><h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px;">Hours 9–18: Full Independence (Independent Rider Course)</h2><p>The final 10-hour course (5 days × 2h) converts a rider who can go downwind into someone who can ride safely alone anywhere in the world. The key skill is <strong>upwind riding</strong> — without it you drift downwind and cannot get back to shore. You will also learn self-rescue, self-launch, body drag upwind, and complete the IKO Level 3–4 assessment.</p><h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px;">Factors That Affect How Fast You Learn</h2><p><strong>Wind consistency:</strong> Flat consistent winds (like Koh Phangan SE season) accelerate learning. Gusty or offshore winds slow it down.<br><strong>Water state:</strong> Flat water = easier waterstart and body drag. Chop = harder.<br><strong>Private vs group:</strong> Private 1:1 is measurably faster — full instructor attention.<br><strong>Physical condition:</strong> Kitesurfing uses core and back muscles — fatigue limits daily lesson length to 2–3h.<br><strong>Natural aptitude:</strong> Some students ride on day 2, others take 5–6 sessions. Both are normal.</p>
-  </div>
-</section>
-
-<section style="padding:60px 60px 70px;background:var(--dark);border-top:1px solid var(--border);"><div style="max-width:800px;margin:0 auto;"><h2 style="font-family:var(--FD);font-size:clamp(24px,3vw,34px);font-weight:900;text-transform:uppercase;color:var(--white);margin-bottom:32px;">FAQ</h2><div class="faq"><div class="fq"><button class="fq-q" aria-expanded="false">Can I learn kitesurfing in one day?</button><div class="fq-a"><p>You can complete the Discovery Course (kite control + first body drag) in one 2-hour session. Riding the board requires 6–10 total hours over multiple days — your muscles and spatial awareness need time to consolidate each skill.</p></div></div><div class="fq"><button class="fq-q" aria-expanded="false">How many hours per day can I train?</button><div class="fq-a"><p>Typical lesson length is 2 hours per day. More than 3 hours in one day leads to fatigue and slower learning — kitesurfing uses muscles you do not normally exercise. We recommend 2h/day over consecutive days rather than cramming 6h in one day.</p></div></div><div class="fq"><button class="fq-q" aria-expanded="false">Can I complete the full course in one week?</button><div class="fq-a"><p>Yes — the Full Beginner Course (6h, 3 days) plus rest days fits comfortably in one week. The Independent Rider Course (10h, 5 days) fits in 7–10 days with buffer days for lower-wind periods.</p></div></div></div></div></section>
-
-<section style="background:var(--grad);padding:60px;text-align:center;">
-  <h2 style="font-family:var(--FD);font-size:clamp(28px,3.5vw,44px);font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:12px;">Start Learning This Week</h2>
-  <p style="font-family:var(--FB);font-size:15px;color:rgba(255,255,255,.85);margin-bottom:24px;">Kite Club Koh Phangan · Thong Sala Beach · +66 96 720 3910</p>
-  <a href="https://wa.me/66967203910?text=Hi!%20I%27d%20like%20to%20start%20kitesurfing%20lessons%20in%20Koh%20Phangan" class="btn-p" style="background:#fff;color:var(--mag);min-width:200px;">Book via WhatsApp</a>
-</section>
-
-</main>
-
-<footer id="site-footer" role="contentinfo">
+<div style="text-align:center">
+<a href="https://wa.me/66967203910" style="display:inline-block;background:var(--grad);color:#fff;font-family:var(--FD);font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:16px 40px;border-radius:30px;text-decoration:none">Book a Lesson on WhatsApp</a>
+</div></div></section>
+</main><footer id="site-footer" role="contentinfo">
   <div class="footer-top">
     <div class="fb-brand"><h3>Kite Club</h3><span class="since">Koh Phangan · Since 2021</span>
     <p>Top-rated kitesurfing and wing foil school on Koh Phangan. IKO &amp; IWO certified.</p></div>

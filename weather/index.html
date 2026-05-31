@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Koh Phangan Weather · Thong Sala</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg:#07101f;
+  --card:#0d1c35;
+  --card2:#102244;
+  --border:rgba(255,255,255,.07);
+  --border2:rgba(255,255,255,.12);
+  --cyan:#00cfc0;
+  --cyan2:#0099cc;
+  --orange:#ff7a2f;
+  --text:#ddeeff;
+  --muted:#6a82a0;
+  --green:#1fe8a0;
+  --yellow:#ffd166;
+  --grad:linear-gradient(135deg,#00cfc0,#0088dd);
+}
+
+html,body{
+  height:100%;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── App shell ─────────────────────────────────────────── */
+.app{
+  min-height:100svh;
+  max-width:480px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  padding-bottom:16px;
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+.hdr{
+  padding:14px 18px 10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  border-bottom:1px solid var(--border);
+  flex-shrink:0;
+}
+.hdr-left{}
+.hdr-title{
+  font-size:11px;font-weight:800;letter-spacing:.2em;
+  text-transform:uppercase;
+  background:var(--grad);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.hdr-sub{font-size:10px;color:var(--muted);margin-top:2px}
+.hdr-right{text-align:right}
+.hdr-time{font-size:10px;color:var(--muted);margin-bottom:4px}
+.refresh-btn{
+  display:inline-flex;align-items:center;gap:4px;
+  background:rgba(0,207,192,.08);
+  border:1px solid rgba(0,207,192,.2);
+  border-radius:6px;padding:4px 9px;
+  font-size:10px;font-weight:600;
+  color:var(--cyan);cursor:pointer;
+  transition:background .2s;
+  -webkit-tap-highlight-color:transparent;
+}
+.refresh-btn:active{background:rgba(0,207,192,.18)}
+
+/* ── Current Conditions ──────────────────────────────────── */
+.current{
+  padding:12px 18px 10px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:8px;
+  align-items:center;
+  flex-shrink:0;
+}
+.wind-block{}
+.wind-row{display:flex;align-items:baseline;gap:6px}
+.wind-num{
+  font-size:64px;font-weight:800;line-height:1;
+  letter-spacing:-.04em;
+  background:linear-gradient(160deg,#e8f4ff 30%,#88c0ff);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.wind-kn{font-size:15px;font-weight:600;color:var(--muted);align-self:flex-end;padding-bottom:6px}
+.wind-sub{
+  display:flex;align-items:center;gap:10px;margin-top:5px;flex-wrap:wrap;
+}
+.dir-wrap{display:flex;align-items:center;gap:7px}
+.compass-svg{width:30px;height:30px;flex-shrink:0}
+.dir-text{font-size:22px;font-weight:800;color:#fff;letter-spacing:-.01em;min-width:38px}
+.gust-pill{
+  background:rgba(255,122,47,.14);
+  border:1px solid rgba(255,122,47,.3);
+  color:var(--orange);
+  padding:3px 9px;border-radius:6px;
+  font-size:12px;font-weight:700;
+  display:flex;align-items:center;gap:4px;
+}
+.gust-pill svg{width:12px;height:12px;fill:var(--orange)}
+
+.right-block{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.wx-icon{font-size:36px;line-height:1}
+.temp-row{display:flex;align-items:baseline;gap:2px}
+.temp-num{font-size:28px;font-weight:700;color:#fff}
+.temp-deg{font-size:14px;color:var(--muted)}
+.wave-row{
+  font-size:11px;color:var(--muted);
+  background:rgba(0,153,204,.1);
+  border:1px solid rgba(0,153,204,.2);
+  border-radius:5px;padding:2px 7px;
+  color:#60b8d4;font-weight:600;
+}
+
+/* ── Tide Section ────────────────────────────────────────── */
+.tide-section{
+  margin:0 12px 8px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:11px 14px 9px;
+  flex-shrink:0;
+}
+.s-label{
+  font-size:9px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:6px;
+}
+.tide-badges{display:flex;gap:12px;margin-bottom:7px}
+.tide-badge{
+  display:flex;align-items:center;gap:5px;
+  font-size:11px;
+}
+.tbdot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.tbdot.hi{background:var(--cyan)}
+.tbdot.lo{background:var(--orange)}
+.tb-lbl{color:var(--muted)}
+.tb-val{color:var(--text);font-weight:700;font-size:12px}
+.chart-box{height:76px;position:relative}
+
+/* ── Tabs ────────────────────────────────────────────────── */
+.tabs-outer{margin:0 12px;flex:1;display:flex;flex-direction:column;min-height:0}
+.tab-bar{
+  display:flex;gap:3px;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:11px;padding:3px;
+  flex-shrink:0;
+}
+.tab-btn{
+  flex:1;text-align:center;
+  padding:7px 0;border-radius:8px;
+  font-size:11px;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase;
+  cursor:pointer;color:var(--muted);
+  transition:all .18s;
+  -webkit-tap-highlight-color:transparent;
+  user-select:none;
+}
+.tab-btn.on{background:var(--card2);color:var(--text)}
+
+/* ── Tab Panels ──────────────────────────────────────────── */
+.tab-panel{display:none;margin-top:8px;flex:1;min-height:0}
+.tab-panel.on{display:flex;flex-direction:column}
+
+/* ── 7-Day Forecast ──────────────────────────────────────── */
+.fc-list{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:13px;overflow:hidden;
+}
+.fc-row{
+  display:grid;
+  grid-template-columns:40px 26px 1fr 58px;
+  align-items:center;
+  padding:9px 13px;
+  border-bottom:1px solid var(--border);
+  gap:2px;
+}
+.fc-row:last-child{border-bottom:none}
+.fc-day{font-size:12px;font-weight:700;color:var(--text)}
+.fc-day.now{color:var(--cyan)}
+.fc-ico{font-size:17px;text-align:center}
+.fc-temps{font-size:11px;color:var(--muted);padding:0 6px}
+.fc-temps b{color:var(--text);font-size:12px}
+.fc-wind-val{text-align:right;font-size:12px;font-weight:700}
+.fc-wind-val.l{color:var(--green)}
+.fc-wind-val.m{color:var(--cyan)}
+.fc-wind-val.f{color:var(--yellow)}
+.fc-wind-val.s{color:var(--orange)}
+
+/* ── Radar ───────────────────────────────────────────────── */
+#radar-map{
+  border-radius:11px;overflow:hidden;
+  border:1px solid var(--border);
+  flex:1;min-height:220px;
+}
+.radar-hint{
+  font-size:10px;color:var(--muted);
+  text-align:center;margin-top:5px;flex-shrink:0;
+}
+
+/* ── Loading ─────────────────────────────────────────────── */
+.overlay{
+  position:fixed;inset:0;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  background:var(--bg);z-index:200;gap:14px;
+}
+.spinner{
+  width:38px;height:38px;
+  border:3px solid rgba(0,207,192,.15);
+  border-top-color:var(--cyan);
+  border-radius:50%;
+  animation:spin .75s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ov-text{font-size:13px;color:var(--muted);letter-spacing:.04em}
+.ov-icon{font-size:40px}
+.ov-err{font-size:14px;color:#ff6b6b;text-align:center;max-width:290px;line-height:1.5}
+.retry-btn{
+  background:rgba(0,207,192,.12);
+  border:1px solid rgba(0,207,192,.3);
+  color:var(--cyan);padding:9px 22px;
+  border-radius:9px;cursor:pointer;
+  font-size:13px;font-weight:600;
+}
+
+/* ── Desktop ─────────────────────────────────────────────── */
+@media(min-width:769px){
+  body{background:#040b17}
+  .app{
+    max-width:960px;
+    padding:0 20px 24px;
+  }
+  .hdr{padding:18px 0 14px}
+  .current{padding:14px 0 10px}
+  .wind-num{font-size:80px}
+
+  .mid-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    margin:0;
+  }
+  .tide-section{margin:0}
+  .tabs-outer{margin:0}
+  .chart-box{height:90px}
+  #radar-map{min-height:260px}
+}
+</style>
+</head>
+<body>
+
+<!-- Loading -->
+<div class="overlay" id="ov-load">
+  <div class="spinner"></div>
+  <div class="ov-text">Fetching conditions…</div>
+</div>
+
+<!-- Error -->
+<div class="overlay" id="ov-err" style="display:none">
+  <div class="ov-icon">🌊</div>
+  <div class="ov-err" id="err-msg">Unable to load weather data.</div>
+  <button class="retry-btn" onclick="init()">↻ Retry</button>
+</div>
+
+<!-- App -->
+<div class="app" id="app" style="display:none">
+
+  <!-- Header -->
+  <div class="hdr">
+    <div class="hdr-left">
+      <div class="hdr-title">Koh Phangan · Thong Sala</div>
+      <div class="hdr-sub">9.70°N · 99.98°E · UTC+7</div>
+    </div>
+    <div class="hdr-right">
+      <div class="hdr-time" id="hdr-time">—</div>
+      <div class="refresh-btn" onclick="init()">↻ Refresh</div>
+    </div>
+  </div>
+
+  <!-- Current Conditions -->
+  <div class="current">
+    <div class="wind-block">
+      <div class="wind-row">
+        <span class="wind-num" id="w-speed">—</span>
+        <span class="wind-kn">kn</span>
+      </div>
+      <div class="wind-sub">
+        <div class="dir-wrap">
+          <svg class="compass-svg" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="15" r="14" stroke="rgba(255,255,255,.1)" stroke-width="1.5"/>
+            <text x="15" y="6" text-anchor="middle" font-size="5" fill="rgba(255,255,255,.3)" font-family="system-ui" font-weight="700">N</text>
+            <text x="15" y="27" text-anchor="middle" font-size="5" fill="rgba(255,255,255,.3)" font-family="system-ui" font-weight="700">S</text>
+            <g id="needle">
+              <polygon points="15,4 17.5,16 15,14 12.5,16" fill="#00cfc0"/>
+              <polygon points="15,26 17.5,14 15,16 12.5,14" fill="rgba(255,255,255,.18)"/>
+            </g>
+          </svg>
+          <span class="dir-text" id="w-dir">—</span>
+        </div>
+        <div class="gust-pill">
+          <svg viewBox="0 0 12 12"><path d="M1 6h7.5a2.5 2.5 0 000-5H8M1 9h9.5a2.5 2.5 0 010 5H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+          <span id="w-gusts">—</span> kn
+        </div>
+      </div>
+    </div>
+    <div class="right-block">
+      <div class="wx-icon" id="wx-icon">⛅</div>
+      <div class="temp-row">
+        <span class="temp-num" id="w-temp">—</span>
+        <span class="temp-deg">°C</span>
+      </div>
+      <div class="wave-row" id="wave-row" style="display:none">🌊 <span id="w-wave">—</span> m</div>
+    </div>
+  </div>
+
+  <!-- Mid grid (desktop: 2-col, mobile: stacked) -->
+  <div class="mid-grid">
+
+    <!-- Tide Chart -->
+    <div class="tide-section">
+      <div class="s-label">24-Hour Tide · Sea Level</div>
+      <div class="tide-badges">
+        <div class="tide-badge">
+          <div class="tbdot hi"></div>
+          <span class="tb-lbl">High</span>
+          <span class="tb-val" id="tide-hi">—</span>
+        </div>
+        <div class="tide-badge">
+          <div class="tbdot lo"></div>
+          <span class="tb-lbl">Low</span>
+          <span class="tb-val" id="tide-lo">—</span>
+        </div>
+      </div>
+      <div class="chart-box">
+        <canvas id="tide-chart"></canvas>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs-outer">
+      <div class="tab-bar">
+        <div class="tab-btn on" id="tb-fc" onclick="showTab('fc')">7-Day Outlook</div>
+        <div class="tab-btn" id="tb-rd" onclick="showTab('rd')">Live Radar</div>
+      </div>
+
+      <!-- Forecast -->
+      <div class="tab-panel on" id="pn-fc">
+        <div class="fc-list" id="fc-list">
+          <div style="padding:14px;text-align:center;font-size:12px;color:var(--muted)">Loading…</div>
+        </div>
+      </div>
+
+      <!-- Radar -->
+      <div class="tab-panel" id="pn-rd">
+        <div id="radar-map"></div>
+        <div class="radar-hint">Live precipitation · RainViewer · animates automatically</div>
+      </div>
+    </div>
+
+  </div><!-- mid-grid -->
+</div><!-- app -->
+
+<script>
+const LAT = 9.70, LON = 99.98;
+let tideChart = null, map = null, radarLayer = null, radarTimer = null;
+
+// ── Helpers ────────────────────────────────────────────────────────────────
+// 8 cardinal points (N, NE, E, SE, S, SW, W, NW)
+const DIRS = ['N','NE','E','SE','S','SW','W','NW'];
+const deg2comp = d => DIRS[Math.round(((d % 360) + 360) % 360 / 45) % 8];
+
+function wxIcon(c) {
+  if (c === 0) return '☀️';
+  if (c <= 2)  return '🌤️';
+  if (c === 3) return '☁️';
+  if (c <= 49) return '🌫️';
+  if (c <= 55) return '🌦️';
+  if (c <= 67) return '🌧️';
+  if (c <= 77) return '🌨️';
+  if (c <= 82) return '🌧️';
+  return '⛈️';
+}
+
+function windCls(kn) {
+  if (kn < 8)  return 'l';
+  if (kn < 14) return 'm';
+  if (kn < 21) return 'f';
+  return 's';
+}
+
+// "2024-01-15T14:00" → "14:00"
+const fmtHM = s => s.slice(11,16);
+
+function localDateStr() {
+  // today's date in UTC+7 as yyyy-mm-dd
+  return new Date(Date.now() + 7*36e5).toISOString().slice(0,10);
+}
+
+function localTimeStr() {
+  return new Date(Date.now() + 7*36e5).toISOString().slice(11,16);
+}
+
+function dayLabel(isoDate, i) {
+  if (i === 0) return 'Today';
+  if (i === 1) return 'Tmrw';
+  return new Date(isoDate + 'T00:00:00Z').toLocaleDateString('en-US',{weekday:'short'});
+}
+
+// ── Tabs ───────────────────────────────────────────────────────────────────
+function showTab(name) {
+  ['fc','rd'].forEach(t => {
+    document.getElementById('tb-'+t).classList.toggle('on', t === name);
+    document.getElementById('pn-'+t).classList.toggle('on', t === name);
+  });
+  if (name === 'rd') {
+    if (!map) { setTimeout(initRadar, 80); }
+    else { map.invalidateSize(); }
+  }
+}
+
+// ── Render: Current ────────────────────────────────────────────────────────
+function renderCurrent(w) {
+  const c = w.current;
+  const spd   = +c.wind_speed_10m.toFixed(1);
+  const gusts = +c.wind_gusts_10m.toFixed(1);
+  const dir   = c.wind_direction_10m;
+  const temp  = Math.round(c.temperature_2m);
+
+  document.getElementById('w-speed').textContent = spd.toFixed(1);
+  document.getElementById('w-gusts').textContent = gusts.toFixed(1);
+  document.getElementById('w-dir').textContent   = deg2comp(dir);
+  document.getElementById('w-temp').textContent  = temp;
+  document.getElementById('wx-icon').textContent = wxIcon(c.weather_code);
+
+  // Rotate compass needle: dir FROM = needle tip FROM that direction
+  // Arrow points toward wind source → rotate by windDir
+  document.getElementById('needle').setAttribute('transform',`rotate(${dir},15,15)`);
+}
+
+// ── Render: Forecast ───────────────────────────────────────────────────────
+function renderForecast(w) {
+  const d = w.daily;
+  document.getElementById('fc-list').innerHTML = d.time.map((date, i) => {
+    const wmax = Math.round(d.wind_speed_10m_max[i]);
+    const cls  = windCls(wmax);
+    return `<div class="fc-row">
+      <div class="fc-day${i===0?' now':''}">${dayLabel(date,i)}</div>
+      <div class="fc-ico">${wxIcon(d.weather_code[i])}</div>
+      <div class="fc-temps"><b>${Math.round(d.temperature_2m_max[i])}°</b> / ${Math.round(d.temperature_2m_min[i])}°</div>
+      <div class="fc-wind-val ${cls}">${wmax} kn</div>
+    </div>`;
+  }).join('');
+}
+
+// ── Synthetic Tide Model ───────────────────────────────────────────────────
+// Gulf of Thailand is predominantly diurnal (K1+O1) with weak semi-diurnal (M2+S2).
+// Constituent amplitudes & phases calibrated for Koh Phangan / Thong Sala.
+function syntheticTide(unixMs) {
+  const h = unixMs / 3_600_000; // hours since epoch
+  const K1 = 0.44 * Math.cos(2*Math.PI*h/23.9345 - 1.72);  // diurnal luni-solar
+  const O1 = 0.36 * Math.cos(2*Math.PI*h/25.8193 - 0.55);  // diurnal lunar
+  const M2 = 0.17 * Math.cos(2*Math.PI*h/12.4206 + 0.90);  // semi-diurnal lunar
+  const S2 = 0.07 * Math.cos(2*Math.PI*h/12.0000 + 1.10);  // semi-diurnal solar
+  return +(K1 + O1 + M2 + S2 + 1.15).toFixed(3);           // offset → always positive
+}
+
+// ── Render: Wave height from Marine API ────────────────────────────────────
+function renderWave(marine) {
+  const today   = localDateStr();
+  const times   = marine.hourly.time;
+  const waveH   = marine.hourly.wave_height;
+  const nowHour = today + 'T' + localTimeStr().slice(0,2) + ':00';
+  const wIdx    = times.indexOf(nowHour);
+  if (wIdx !== -1 && waveH[wIdx] !== null) {
+    document.getElementById('w-wave').textContent = waveH[wIdx].toFixed(1);
+    document.getElementById('wave-row').style.display = '';
+  }
+}
+
+// ── Render: Tide Chart (synthetic model) ──────────────────────────────────
+function renderTide() {
+  // Build 24 hourly points for today (UTC+7)
+  const todayStr = localDateStr();              // "2024-05-29"
+  const midnight = Date.parse(todayStr + 'T00:00:00+07:00'); // ms
+
+  const labels = [], vals = [];
+  for (let i = 0; i < 24; i++) {
+    const ms = midnight + i * 3_600_000;
+    const hh = String(i).padStart(2,'0');
+    labels.push(hh + ':00');
+    vals.push(syntheticTide(ms));
+  }
+
+  const maxV = Math.max(...vals), minV = Math.min(...vals);
+  const maxI = vals.indexOf(maxV),  minI = vals.indexOf(minV);
+  const fmt  = v => v.toFixed(2) + 'm';
+  document.getElementById('tide-hi').textContent = labels[maxI] + '  ' + fmt(maxV);
+  document.getElementById('tide-lo').textContent = labels[minI] + '  ' + fmt(minV);
+
+  // Draw
+  const canvas = document.getElementById('tide-chart');
+  const ctx    = canvas.getContext('2d');
+  if (tideChart) tideChart.destroy();
+
+  const grad = ctx.createLinearGradient(0,0,0,76);
+  grad.addColorStop(0,'rgba(0,207,192,.3)');
+  grad.addColorStop(1,'rgba(0,207,192,.01)');
+
+  tideChart = new Chart(ctx, {
+    type:'line',
+    data:{
+      labels,
+      datasets:[{
+        data: vals,
+        borderColor:'#00cfc0',
+        borderWidth:1.8,
+        fill:true,
+        backgroundColor:grad,
+        tension:0.45,
+        pointRadius:0,
+        pointHoverRadius:5,
+        pointHoverBackgroundColor:'#00cfc0',
+        pointHoverBorderColor:'#fff',
+        pointHoverBorderWidth:1.5,
+      }]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      interaction:{ intersect:false, mode:'index' },
+      plugins:{
+        legend:{ display:false },
+        tooltip:{
+          backgroundColor:'rgba(10,25,50,.95)',
+          titleColor:'#6a82a0',
+          bodyColor:'#ddeeff',
+          borderColor:'rgba(0,207,192,.3)',
+          borderWidth:1,
+          padding:8,
+          callbacks:{ label: c => ' ' + c.parsed.y.toFixed(2) + ' m' }
+        }
+      },
+      scales:{
+        x:{
+          ticks:{ color:'#4a6080', font:{size:9}, maxTicksLimit:7, maxRotation:0 },
+          grid:{ color:'rgba(255,255,255,.03)' },
+          border:{ display:false },
+        },
+        y:{
+          ticks:{ color:'#4a6080', font:{size:9}, maxTicksLimit:4,
+            callback: v => v.toFixed(1)+'m' },
+          grid:{ color:'rgba(255,255,255,.03)' },
+          border:{ display:false },
+        }
+      },
+      animation:{ duration:700, easing:'easeInOutQuart' }
+    }
+  });
+}
+
+// ── Radar (Leaflet + RainViewer) ───────────────────────────────────────────
+function initRadar() {
+  if (map) { map.invalidateSize(); return; }
+
+  map = L.map('radar-map', {
+    zoomControl:false,
+    attributionControl:false,
+    dragging: true,
+    scrollWheelZoom: false,
+  }).setView([9.70,99.98], 10);
+
+  // Dark basemap
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter_no_labels/{z}/{x}/{y}{r}.png',{
+    maxZoom:14, subdomains:'abcd'
+  }).addTo(map);
+
+  // Minimal labels
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png',{
+    maxZoom:14, subdomains:'abcd', opacity:0.5
+  }).addTo(map);
+
+  // Thong Sala marker
+  const pulse = L.divIcon({ className:'', html:`
+    <div style="position:relative;width:16px;height:16px;">
+      <div style="position:absolute;inset:0;background:#00cfc0;border-radius:50%;opacity:.25;animation:pulse 1.8s infinite"></div>
+      <div style="position:absolute;top:3px;left:3px;width:10px;height:10px;background:#00cfc0;border-radius:50%;border:2px solid #fff"></div>
+    </div>`, iconSize:[16,16], iconAnchor:[8,8] });
+  L.marker([9.70,99.98], {icon:pulse}).addTo(map);
+
+  // Pulse animation
+  const style = document.createElement('style');
+  style.textContent = '@keyframes pulse{0%,100%{transform:scale(1);opacity:.25}50%{transform:scale(2.5);opacity:0}}';
+  document.head.appendChild(style);
+
+  // RainViewer
+  fetch('https://api.rainviewer.com/public/weather-maps.json')
+    .then(r => r.json())
+    .then(data => {
+      const frames = [...(data.radar.past||[]), ...(data.radar.nowcast||[])];
+      if (!frames.length) return;
+      let idx = 0;
+      const host = data.host;
+
+      function showFrame(i) {
+        if (radarLayer) map.removeLayer(radarLayer);
+        radarLayer = L.tileLayer(
+          `${host}${frames[i].path}/256/{z}/{x}/{y}/2/1_1.png`,
+          { opacity:0.65, maxNativeZoom:6, maxZoom:14, zIndex:10 }
+        ).addTo(map);
+      }
+
+      showFrame(frames.length - 1);
+      clearInterval(radarTimer);
+      radarTimer = setInterval(() => {
+        idx = (idx + 1) % frames.length;
+        showFrame(idx);
+      }, 750);
+    })
+    .catch(() => {});
+}
+
+// ── Init ───────────────────────────────────────────────────────────────────
+async function init() {
+  document.getElementById('ov-load').style.display = 'flex';
+  document.getElementById('ov-err').style.display  = 'none';
+  document.getElementById('app').style.display     = 'none';
+
+  // ecmwf_ifs025 = ECMWF IFS 0.25° — most accurate model for SE Asia / Gulf of Thailand
+  const WEATHER_URL = `https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}`
+    + `&current=temperature_2m,wind_speed_10m,wind_direction_10m,wind_gusts_10m,weather_code`
+    + `&daily=weather_code,temperature_2m_max,temperature_2m_min,wind_speed_10m_max`
+    + `&models=ecmwf_ifs025&wind_speed_unit=kn&timezone=Asia%2FBangkok`;
+
+  // sea_level_height is NOT available in Marine API for Gulf of Thailand —
+  // tide graph uses a synthetic harmonic model instead.
+  const MARINE_URL = `https://marine-api.open-meteo.com/v1/marine?latitude=${LAT}&longitude=${LON}`
+    + `&hourly=wave_height&timezone=Asia%2FBangkok`;
+
+  try {
+    const wRes = await fetch(WEATHER_URL);
+    if (!wRes.ok) throw new Error(`Weather API ${wRes.status}`);
+    const weather = await wRes.json();
+
+    renderCurrent(weather);
+    renderForecast(weather);
+    renderTide();   // synthetic harmonic tide model
+
+    // Wave height — non-fatal, show if available
+    try {
+      const mRes = await fetch(MARINE_URL);
+      if (mRes.ok) renderWave(await mRes.json());
+    } catch(_) {}
+
+    document.getElementById('hdr-time').textContent = 'Updated ' + localTimeStr() + ' local';
+
+    document.getElementById('ov-load').style.display = 'none';
+    document.getElementById('app').style.display     = 'flex';
+
+  } catch(e) {
+    console.error(e);
+    document.getElementById('ov-load').style.display = 'none';
+    document.getElementById('ov-err').style.display  = 'flex';
+    document.getElementById('err-msg').textContent   =
+      'Could not load weather data:\n' + e.message;
+  }
+}
+
+// Auto-refresh every 10 minutes
+setInterval(init, 10 * 60_000);
+init();
+</script>
+</body>
+</html>

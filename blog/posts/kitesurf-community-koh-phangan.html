@@ -1740,6 +1740,7 @@ body.light .also-card{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 body.light .also-name{color:#111}
 .also-sub{font-family:var(--FB);font-size:12px;color:#e8008a}
 @media(max-width:900px){.also-band{padding:50px 22px 60px}.also-grid{grid-template-columns:1fr 1fr;gap:8px}}
+@media(max-width:768px){main#page-content section{padding-left:22px!important;padding-right:22px!important}}
 </style>
 </head>
 <body>
@@ -1822,15 +1823,15 @@ body.light .also-name{color:#111}
 
 <main id="page-content">
 <section style="background:var(--dark);padding:100px 60px 60px;border-bottom:1px solid var(--border);">
-  <div style="max-width:800px;margin:0 auto;">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
     <div style="font-family:var(--FB);font-size:12px;color:var(--muted);margin-bottom:12px;"><a href="../../" style="color:var(--muted);text-decoration:none;">Home</a> <span style="margin:0 6px;">›</span> <a href="../../blog/" style="color:var(--muted);text-decoration:none;">Blog</a> <span style="margin:0 6px;">›</span> <span style="color:var(--white);">Koh Phangan Life</span></div>
     <div style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px;">Koh Phangan Life</div>
     <h1 style="font-family:var(--FD);font-size:clamp(32px,5vw,56px);font-weight:900;text-transform:uppercase;line-height:1.05;color:var(--white);margin-bottom:20px;">The Kitesurf Community<br><em style='background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal;'>on Koh Phangan</em></h1>
     <p style="font-family:var(--FB);font-size:clamp(15px,1.8vw,18px);color:var(--muted);line-height:1.7;">Not every kite beach has a community. Some are just beaches with wind. Thong Sala Beach on Koh Phangan is different — here is why, and what to expect when you show up for the first time.</p>
   </div>
 </section>
-<section style="padding:60px 60px 80px;background:var(--black);">
-  <div style="max-width:800px;margin:0 auto;font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8;">
+<section style="padding:0 60px 40px;background:var(--black)">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8;">
 <div style="background:var(--dark);border:1px solid var(--border);padding:28px;margin-bottom:40px;">
   <p style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px;">Contents</p>
   <ol style="padding-left:20px;color:var(--muted);font-size:14px;line-height:2;">
@@ -1901,7 +1902,7 @@ body.light .also-name{color:#111}
   </div>
 </section>
 <section style="padding:60px 60px 70px;background:var(--dark);border-top:1px solid var(--border);">
-  <div style="max-width:800px;margin:0 auto;">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
     <h2 style="font-family:var(--FD);font-size:clamp(24px,3vw,34px);font-weight:900;text-transform:uppercase;color:var(--white);margin-bottom:32px;">FAQ</h2>
     <div class="faq">
 <div class="fq"><button class="fq-q" aria-expanded="false">Is there a kite community on Koh Phangan?<span class="arr">+</span></button><div class="fq-a"><p>Yes. A small but genuinely international community centred on Thong Sala Beach. During the SE season you share the water with riders from 20–30 countries. The community is beginner-friendly and collaborative.</p></div></div>
@@ -1911,12 +1912,49 @@ body.light .also-name{color:#111}
     </div>
   </div>
 </section>
+
+<section style="padding:60px 0">
+  <div class="wrap">
+    <div style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--pink);margin-bottom:10px">Our Services</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <a href="../../kitesurfing/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Kitesurfing</div>
+        <div style="font-size:11px;color:var(--muted)">Lessons, equipment and booking on Koh Phangan</div>
+      </a>
+      <a href="../../kite-safari/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Kite Safari</div>
+        <div style="font-size:11px;color:var(--muted)">7-day island-hopping kite adventure</div>
+      </a>
+      <a href="../../school/kitesurfing/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Kitesurfing Courses</div>
+        <div style="font-size:11px;color:var(--muted)">Discovery 3,500 · Beginner 11,000 · Independent 18,000 THB</div>
+      </a>
+    </div>
+  </div>
+</section>
 <section style="background:var(--grad);padding:60px;text-align:center;">
   <h2 style="font-family:var(--FD);font-size:clamp(28px,3.5vw,44px);font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:12px;">Join Us at Thong Sala Beach</h2>
   <p style="font-family:var(--FB);font-size:15px;color:rgba(255,255,255,.85);margin-bottom:24px;">Kite Club Koh Phangan · Thong Sala Beach · +66 96 720 3910</p>
   <a href="https://wa.me/66967203910?text=Hi%21%20I%27d%20like%20to%20join%20the%20kite%20sessions%20at%20Thong%20Sala%20Beach" class="btn-p" style="background:#fff;color:var(--mag);min-width:200px;">Book via WhatsApp</a>
 </section>
-</main>
+
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
+<h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">The Koh Phangan Kite Community: Who Rides Here</h2>
+<p>The kite community at Koh Phangan has developed over more than a decade into one of the most genuinely diverse and welcoming groups of wind sport enthusiasts in Southeast Asia, drawn from dozens of countries by the island's combination of excellent learning conditions, accessible prices, and the authentic island atmosphere that has made Koh Phangan a long-stay destination for independent travelers who value genuine local culture over resort infrastructure. The community includes a rotating cast of first-time students from Europe, Russia, the Middle East, Australia, and North America who arrive for their initial IKO certification and leave as converts; long-stay enthusiasts who have visited multiple times and spend weeks or months developing their skills across multiple seasonal visits; a smaller group of year-round residents who run accommodation, restaurants, and supporting businesses around the kite community; and the professional instructor team whose expertise and daily presence creates the consistent quality standard that maintains the school's reputation across the constantly rotating student population. This mixture of experience levels, nationalities, and lengths of stay creates a social dynamic that is simultaneously welcoming to complete beginners who may feel self-conscious about their skills relative to more experienced riders, and stimulating for advanced practitioners who benefit from the presence of skilled riders to observe, learn from, and occasionally compete with informally during the free-riding sessions that follow formal lessons. The community self-organizes around the natural gathering point of the beach bar near the school, where post-session analysis, wind forecasting discussion, equipment talk, and the broader social exchange of an international beach community converge into the informal education network that supplements formal instruction with the peer learning that occurs naturally when people share a challenging passion.</p>
+<p>The social media dimension of the Koh Phangan kite community provides visibility and connection that extends the island's reach far beyond the visitors currently present on the beach. Instagram accounts documenting the conditions, sessions, and community of Thong Sala Beach have accumulated followings from potential visitors across multiple continents, creating a pipeline of future students who have been following the community online for months or years before finally booking their visit. The school's own WhatsApp groups provide an ongoing connection channel that keeps former students engaged with the community after returning home, sharing session reports from their local spots, asking technique questions that the instructor team responds to, and occasionally organizing group return visits that bring cohorts of students who met during an earlier season back to the island for their next progression step. This digital community infrastructure has transformed the social dynamic of kite school alumni relationships from the historically brief encounter between students and school that ended when the student returned home, into an ongoing relationship that enriches everyone involved — the school maintains connection with a global community of graduates, the graduates maintain access to expert advice and local knowledge from the school, and the broader community benefits from the knowledge sharing and mutual encouragement that occurs naturally when people with shared passion are connected across geography and time. Contact the school via WhatsApp at +66 96 720 3910 to join the community before your visit by expressing your interest and receiving the pre-arrival information and forecast updates that help students maximize the productive value of their time once they arrive on the island.</p>
+
+</div></section>
+
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
+<h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Frequently Asked Questions — The Koh Phangan Kite Community</h2>
+<p><strong>Is the community welcoming to solo travelers who don't know anyone?</strong> Solo travel to Koh Phangan for kite instruction is one of the most socially productive solo travel experiences available in Southeast Asia because the shared challenge of learning a demanding skill creates natural social bonds between students who are experiencing the same physical challenges, making the same mistakes, and achieving the same breakthroughs simultaneously. Students who arrive knowing nobody consistently report leaving with meaningful connections to people from multiple countries who share both the kite passion and the specific memory of learning together at Thong Sala Beach. The school's social media channels and WhatsApp groups provide pre-arrival connection opportunities that allow solo travelers to identify other students scheduled for the same period, making it possible to arrive already knowing potential companions before the first day on the beach.</p>
+<p><strong>What language does the community primarily operate in?</strong> The community operates primarily in English as the common language connecting the diverse international student population, with the school team providing instruction and communication in English, Russian, Arabic, German, and Ukrainian depending on student preference and instructor availability. The practical reality of learning on the water is that instruction quality in your own language makes a significant difference to learning speed, particularly for the technical corrections and safety instructions that require precise understanding rather than approximate communication. Students who prefer instruction in Russian, Arabic, German, or Ukrainian should specify this preference at booking to ensure appropriate instructor scheduling for their sessions. Contact via WhatsApp at +66 96 720 3910.</p>
+</div></section>
+
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
+<p>The kite community at Koh Phangan represents one of the genuine intangible values of choosing this destination for kite instruction — a value that does not appear in course price comparisons but that consistently features in the reasons returning students give for choosing to come back rather than trying a competing destination for their second visit. The combination of welcoming community culture, diverse international student population, strong social infrastructure around the school and beach, and the digital connection that keeps the community active between visits creates a total experience that extends far beyond the hours of direct instruction and that enriches the overall holiday value in ways that purely metric comparisons between kite schools cannot capture. Message the school at +66 96 720 3910 to connect before your visit.</p>
+</div></section>
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8"><p>The Koh Phangan kite community is a genuine asset that returns value long after the holiday ends, through the connections, shared knowledge, and ongoing motivation that active membership provides to riders at every level from newly certified beginners to experienced practitioners planning their next progression step. Becoming part of this community starts with the first contact at +66 96 720 3910, and the welcome that first message receives reflects the culture that has made the community worth joining in the first place.</p></div></section></main>
 
 <footer id="site-footer" role="contentinfo">
   <div class="footer-top">

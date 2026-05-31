@@ -1740,6 +1740,7 @@ body.light .also-card{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 body.light .also-name{color:#111}
 .also-sub{font-family:var(--FB);font-size:12px;color:#e8008a}
 @media(max-width:900px){.also-band{padding:50px 22px 60px}.also-grid{grid-template-columns:1fr 1fr;gap:8px}}
+@media(max-width:768px){main#page-content section{padding-left:22px!important;padding-right:22px!important}}
 </style>
 </head>
 <body>
@@ -1822,15 +1823,15 @@ body.light .also-name{color:#111}
 
 <main id="page-content">
 <section style="background:var(--dark);padding:100px 60px 60px;border-bottom:1px solid var(--border);">
-  <div style="max-width:800px;margin:0 auto;">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
     <div style="font-family:var(--FB);font-size:12px;color:var(--muted);margin-bottom:12px;"><a href="../../" style="color:var(--muted);text-decoration:none;">Home</a> <span style="margin:0 6px;">›</span> <a href="../../blog/" style="color:var(--muted);text-decoration:none;">Blog</a> <span style="margin:0 6px;">›</span> <span style="color:var(--white);">Family & Lifestyle</span></div>
     <div style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px;">Family & Lifestyle</div>
     <h1 style="font-family:var(--FD);font-size:clamp(32px,5vw,56px);font-weight:900;text-transform:uppercase;line-height:1.05;color:var(--white);margin-bottom:20px;">Family Water Sports<br><em style='background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal;'>on Koh Phangan</em></h1>
     <p style="font-family:var(--FB);font-size:clamp(15px,1.8vw,18px);color:var(--muted);line-height:1.7;">Every family has different ages, different abilities, and different risk tolerances. This guide breaks down exactly which water sports work at each age, what to expect from a day at Kite Club, and how to make the most of a family trip to Koh Phangan.</p>
   </div>
 </section>
-<section style="padding:60px 60px 80px;background:var(--black);">
-  <div style="max-width:800px;margin:0 auto;font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8;">
+<section style="padding:0 60px 40px;background:var(--black)">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8;">
 <div style="background:var(--dark);border:1px solid var(--border);padding:28px;margin-bottom:40px;">
   <p style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px;">Contents</p>
   <ol style="padding-left:20px;color:var(--muted);font-size:14px;line-height:2;">
@@ -1911,7 +1912,7 @@ body.light .also-name{color:#111}
   </div>
 </section>
 <section style="padding:60px 60px 70px;background:var(--dark);border-top:1px solid var(--border);">
-  <div style="max-width:800px;margin:0 auto;">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
     <h2 style="font-family:var(--FD);font-size:clamp(24px,3vw,34px);font-weight:900;text-transform:uppercase;color:var(--white);margin-bottom:32px;">FAQ</h2>
     <div class="faq">
 <div class="fq"><button class="fq-q" aria-expanded="false">What age can children start kitesurfing lessons?<span class="arr">+</span></button><div class="fq-a"><p>We recommend a minimum age of 14 and minimum weight of 45 kg for kitesurfing lessons. Below these thresholds, controlling a training kite safely is physically demanding and the risk of injury increases. Younger teens are excellent candidates for e-foil intro sessions, SUP, and kayaking.</p></div></div>
@@ -1921,12 +1922,69 @@ body.light .also-name{color:#111}
     </div>
   </div>
 </section>
+
+<section style="padding:60px 0">
+  <div class="wrap">
+    <div style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--pink);margin-bottom:10px">Our Services</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <a href="../../school/kitesurfing/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Kitesurfing Courses</div>
+        <div style="font-size:11px;color:var(--muted)">Discovery 3,500 · Beginner 11,000 · Independent 18,000 THB</div>
+      </a>
+      <a href="../../kayaking/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Kayaking</div>
+        <div style="font-size:11px;color:var(--muted)">Guided tours and rentals from 500 THB</div>
+      </a>
+      <a href="../../sup-rental/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">SUP Rental</div>
+        <div style="font-size:11px;color:var(--muted)">Stand-up paddleboard rental from 400 THB</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section style="padding:60px 0;border-top:1px solid var(--border)">
+  <div class="wrap">
+    <div style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--pink);margin-bottom:10px">Read Next</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <a href="../kayaking-koh-phangan.html" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Kayaking Koh Phangan</div>
+        <div style="font-size:11px;color:var(--muted)">Guided tours and rentals for all ages</div>
+      </a>
+      <a href="../sup-rental-koh-phangan.html" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">SUP Rental</div>
+        <div style="font-size:11px;color:var(--muted)">Stand-up paddleboarding on calm waters</div>
+      </a>
+      <a href="../efoil-guide-koh-phangan.html" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">E-Foil Guide</div>
+        <div style="font-size:11px;color:var(--muted)">Everything about electric foiling</div>
+      </a>
+    </div>
+  </div>
+</section>
 <section style="background:var(--grad);padding:60px;text-align:center;">
   <h2 style="font-family:var(--FD);font-size:clamp(28px,3.5vw,44px);font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:12px;">Plan Your Family Water Sports Day</h2>
   <p style="font-family:var(--FB);font-size:15px;color:rgba(255,255,255,.85);margin-bottom:24px;">Kite Club Koh Phangan · Thong Sala Beach · +66 96 720 3910</p>
   <a href="https://wa.me/66967203910?text=Hi%21%20I%27d%20like%20to%20plan%20a%20family%20water%20sports%20day%20on%20Koh%20Phangan" class="btn-p" style="background:#fff;color:var(--mag);min-width:200px;">Book via WhatsApp</a>
 </section>
-</main>
+
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
+<h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Planning a Family Kitesurfing Holiday on Koh Phangan</h2>
+<p>Family holidays at Koh Phangan that include kitesurfing work best when each family member has a specific activity matched to their age, ability, and interest level rather than everyone attempting the same programme simultaneously. Adults pursuing IKO certification in the morning while teenagers work with a dedicated instructor on beginner kite control and younger children join guided paddleboard sessions creates a parallel activity structure where every family member is engaged, progressing, and part of a shared water sports experience that becomes the defining memory of the trip. The school accommodates family bookings with flexible scheduling that recognizes the different session lengths appropriate for different ages — children typically manage ninety-minute sessions productively while adults can sustain three-hour lesson blocks — and with the geographical convenience of all activities based at the same beach, so families can gather, share lunch, and check in on each other's progress throughout the day rather than being dispersed across different activity sites around the island. The bond that develops between family members who learn a challenging new skill together is qualitatively different from the relationship quality produced by passive resort holidays where shared experience is limited to meals and beach chairs, and the specific combination of mutual encouragement, gentle competition, and shared achievement that characterizes successful family kite holidays consistently generates the kind of holiday memories that families describe as among their most meaningful travel experiences together.</p>
+<p>Children between ten and sixteen represent a particularly rewarding age group for kite learning within family holiday contexts because their learning speed often exceeds their parents' rate of progress — an inversion of the usual adult-child competence hierarchy that many families find genuinely entertaining and that young riders experience as a rare and empowering reversal of normal family dynamics. Teenagers who master water starts before their parents develop a specific kind of confidence and independence that extends beyond the kite session itself, and parents who witness this competence development often describe it as one of the most satisfying parenting experiences of recent years. The parallel discovery — parents and teenagers both genuinely discovering a new skill simultaneously, both genuinely challenged, both genuinely achieving — creates the authentic common ground that modern family life sometimes struggles to find amidst the different screens, different friend groups, and different daily rhythms that characterize many contemporary family structures. Contact Kite Club Koh Phangan via WhatsApp at +66 96 720 3910 to discuss a family booking that accommodates the specific ages, experience levels, and activity preferences of your family group and that creates the maximum shared value from your Koh Phangan holiday time.</p>
+<p>The island's practical infrastructure for families is better than its reputation as a full-moon party destination might suggest. Family-friendly accommodation exists at multiple price points, with several resorts and villa complexes in the southern part of the island specifically designed for groups that include children, offering the pool access, reliable air conditioning, and proximity to both beach and local amenities that make a family base comfortable and practical for a multi-day active holiday. The local food market in Thong Sala operates most days and offers fresh fruit, simple cooked dishes, and the kind of straightforward Thai food that children generally enjoy alongside the more adventurous dining options that parents often appreciate after a day of physical activity. Medical facilities in Thong Sala provide basic health care access for the minor ailments and injuries that are a normal part of active family travel, and the school maintains a well-stocked first aid kit for immediate response to any session-related incidents that require basic treatment before more comprehensive care is sought.</p>
+</div></section>
+
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
+<h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Frequently Asked Questions — Family Kite Holidays</h2>
+<p><strong>What is the minimum age for children to try kitesurfing on a family holiday?</strong> The school welcomes children from approximately ten years of age for formal kite instruction, with the understanding that physical readiness, attention span, and the ability to follow safety instructions vary considerably between individual children and that an honest pre-booking conversation about a specific child's maturity and physical development is more useful than a rigid age threshold. Children younger than ten can participate in paddleboard and kayaking activities that form part of the family activity programme and that provide genuine water sports engagement appropriate to their developmental stage. Contact via WhatsApp at +66 96 720 3910 to discuss your specific family group's ages and activity preferences before booking.</p>
+<p><strong>Can adults and children take lessons simultaneously?</strong> Yes. The school is structured to accommodate parallel adult and child instruction running simultaneously at different skill levels and with different session durations, making it practical for a family to arrive together, split into age-appropriate groups for instruction, and reunite for lunch and the social part of the day. The beach location of all activities means that family members can observe each other's sessions from the beach between their own water time, creating the shared witness experience that is one of the specific values of a family kite holiday compared to resort activities that disperse family members to completely separate physical locations.</p>
+</div></section>
+
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
+<p>Family kite holidays at Koh Phangan work best when the booking conversation with the school at +66 96 720 3910 includes honest information about each family member's experience level, physical fitness, and activity goals so that the programme can be structured to deliver maximum shared value across the full age range. The difference between a well-planned family kite holiday and one that leaves some members frustrated and disengaged typically traces directly to the quality of the pre-booking conversation that identified each person's needs and matched those needs to the available activities and scheduling options.</p>
+</div></section>
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8"><p>Families who invest the planning effort to structure their Koh Phangan holiday around the parallel activity model consistently describe the result as one of their most successful family travel experiences, combining the physical achievement of learning a real skill, the natural beauty of a world-class tropical island, and the shared memories that active holidays generate more reliably than passive resort stays. Contact the school at +66 96 720 3910 to start planning your family kite adventure.</p></div></section></main>
 
 <footer id="site-footer" role="contentinfo">
   <div class="footer-top">

@@ -1740,6 +1740,7 @@ body.light .also-card{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 body.light .also-name{color:#111}
 .also-sub{font-family:var(--FB);font-size:12px;color:#e8008a}
 @media(max-width:900px){.also-band{padding:50px 22px 60px}.also-grid{grid-template-columns:1fr 1fr;gap:8px}}
+@media(max-width:768px){main#page-content section{padding-left:22px!important;padding-right:22px!important}}
 </style>
 </head>
 <body>
@@ -1822,15 +1823,15 @@ body.light .also-name{color:#111}
 
 <main id="page-content">
 <section style="background:var(--dark);padding:100px 60px 60px;border-bottom:1px solid var(--border);">
-  <div style="max-width:800px;margin:0 auto;">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
     <div style="font-family:var(--FB);font-size:12px;color:var(--muted);margin-bottom:12px;"><a href="../../" style="color:var(--muted);text-decoration:none;">Home</a> <span style="margin:0 6px;">›</span> <a href="../../blog/" style="color:var(--muted);text-decoration:none;">Blog</a> <span style="margin:0 6px;">›</span> <span style="color:var(--white);">Wing Foil</span></div>
     <div style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px;">Wing Foil</div>
     <h1 style="font-family:var(--FD);font-size:clamp(32px,5vw,56px);font-weight:900;text-transform:uppercase;line-height:1.05;color:var(--white);margin-bottom:20px;">Kitesurfers Switching<br><em style='background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal;'>to Wing Foil</em></h1>
     <p style="font-family:var(--FB);font-size:clamp(15px,1.8vw,18px);color:var(--muted);line-height:1.7;">If you already kitesurf and are curious about wing foiling, this guide is specifically for you. Not a generic intro — this is what changes, what your kite skills are actually worth, and what is going to surprise you.</p>
   </div>
 </section>
-<section style="padding:60px 60px 80px;background:var(--black);">
-  <div style="max-width:800px;margin:0 auto;font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8;">
+<section style="padding:0 60px 40px;background:var(--black)">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8;">
 <div style="background:var(--dark);border:1px solid var(--border);padding:28px;margin-bottom:40px;">
   <p style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px;">Contents</p>
   <ol style="padding-left:20px;color:var(--muted);font-size:14px;line-height:2;">
@@ -1914,7 +1915,7 @@ body.light .also-name{color:#111}
   </div>
 </section>
 <section style="padding:60px 60px 70px;background:var(--dark);border-top:1px solid var(--border);">
-  <div style="max-width:800px;margin:0 auto;">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
     <h2 style="font-family:var(--FD);font-size:clamp(24px,3vw,34px);font-weight:900;text-transform:uppercase;color:var(--white);margin-bottom:32px;">FAQ</h2>
     <div class="faq">
 <div class="fq"><button class="fq-q" aria-expanded="false">Is wing foil easier if you can already kitesurf?<span class="arr">+</span></button><div class="fq-a"><p>Yes, significantly. Kitesurfers already understand wind direction, the power window, and board edging. They learn wing foil 2–3x faster than non-kiters. The main new skill is managing the wing in your hands and foil balance — but the foundational wind reading is already there.</p></div></div>
@@ -1924,12 +1925,49 @@ body.light .also-name{color:#111}
     </div>
   </div>
 </section>
+
+<section style="padding:60px 0">
+  <div class="wrap">
+    <div style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--pink);margin-bottom:10px">Our Services</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <a href="../../school/wing-foil/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Wing Foil Courses</div>
+        <div style="font-size:11px;color:var(--muted)">Intro 4,000 · Beginner 11,900 · Advanced 16,900 THB</div>
+      </a>
+      <a href="../../wing-foil/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Wing Foil</div>
+        <div style="font-size:11px;color:var(--muted)">Lessons, equipment and booking on Koh Phangan</div>
+      </a>
+      <a href="../../kitesurfing/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Kitesurfing</div>
+        <div style="font-size:11px;color:var(--muted)">Lessons, equipment and booking on Koh Phangan</div>
+      </a>
+    </div>
+  </div>
+</section>
 <section style="background:var(--grad);padding:60px;text-align:center;">
   <h2 style="font-family:var(--FD);font-size:clamp(28px,3.5vw,44px);font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:12px;">Book Your First Wing Foil Session</h2>
   <p style="font-family:var(--FB);font-size:15px;color:rgba(255,255,255,.85);margin-bottom:24px;">Kite Club Koh Phangan · Thong Sala Beach · +66 96 720 3910</p>
   <a href="https://wa.me/66967203910?text=Hi%21%20I%27m%20a%20kitesurfer%20and%20want%20to%20try%20wing%20foil%20at%20Koh%20Phangan" class="btn-p" style="background:#fff;color:var(--mag);min-width:200px;">Book via WhatsApp</a>
 </section>
-</main>
+
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
+<h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Transitioning from Kitesurfing to Wing Foiling</h2>
+<p>The transition from kitesurfing to wing foiling is one of the most natural progressions in wind-powered watersports, and experienced kite riders consistently find the initial wing foil learning phase faster and more intuitive than their first kite sessions were, precisely because the foundational wind sport knowledge accumulated through kite riding transfers directly to the new discipline. The wind window concept, the understanding of upwind and downwind sailing forces, the body positioning principles for generating and managing power, and the board balance developed through kite riding all activate immediately in the first wing foil session, reducing the disorientation that complete beginners experience and accelerating the progression from first attempts to productive riding by a factor that instructors consistently estimate at twenty to forty percent compared to non-kite-background beginners. The specific adaptation challenge for experienced kiters transitioning to wing foiling is releasing the bar-control habits built through kite riding and replacing them with the hand-held wing management that feels less mechanically supported and initially more physically demanding than the leverage of a kite control bar. The absence of fixed mechanical tension in a wing — the pull comes through your hands and arms without the leverage advantage of a bar — requires shoulder and forearm conditioning that kiters have not developed even after years of riding, and the most common physical challenge for transitioning kite riders in their first wing sessions is the upper arm fatigue that limits session duration before the new holding technique becomes habitual and efficient.</p>
+<p>The foiling dimension of wing foiling represents a genuinely new challenge for even the most experienced kite riders, because foil board control demands a different quality of weight distribution sensitivity and timing precision than twin-tip kitesurfing technique has developed. Kite riders who are accustomed to the wide, stable platform of a twin-tip board will find the narrow foil board initially less stable and more demanding of dynamic balance responses, and the pitch sensitivity of the foil system — the tendency for the board to rotate nose-up or nose-down in response to small weight shifts that would be inconsequential on a flat board — requires a recalibration period even for physically capable kite riders whose general board balance is well-developed. The reward for navigating this adaptation period is access to the foiling flight experience that represents the most compelling sensation currently available in recreational wind sports, and experienced kite riders who commit to the full transition consistently describe foiling as the most significant evolution in their sporting life since they first learned to ride a kite independently. The IWO Beginner course at 11,900 THB at Kite Club Koh Phangan provides the most efficient structured pathway through this transition, with experienced instructors who understand the specific adaptation challenges that kite riders face and can target their instruction to address precisely those challenges rather than repeating foundational wind sport concepts that experienced kiters already possess. Contact via WhatsApp at +66 96 720 3910 to discuss a combined programme that builds on your kite experience and maximizes the efficiency of your wing foil learning progression.</p>
+
+</div></section>
+
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
+<h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Frequently Asked Questions — Kitesurfer Transitioning to Wing Foil</h2>
+<p><strong>How many sessions does a kitesurfer typically need to reach independent wing foil riding?</strong> Experienced kite riders with solid board balance and wind sport understanding typically reach independent wing foil riding — consistent water starts, basic directional control, sustained foiling in both directions — within six to nine hours of structured instruction, compared to twelve to fifteen hours for complete beginners with no wind sport background. The variance around this average is substantial and reflects individual factors including foil board balance adaptation speed, upper body conditioning for wing handling, and the willingness to commit fully to the foiling balance learning that represents the steepest part of the curve for kite-background riders. The IWO Beginner course at 11,900 THB provides nine hours of structured instruction that typically delivers independent riding capability for kite-background students, with optional additional sessions available at 4,000 THB per session for students who want more supervised time before transitioning to independent practice.</p>
+<p><strong>Can a kitesurfer use their existing board sport skills on a foil board immediately?</strong> Some board sport skills transfer immediately — general balance, dynamic weight shift responses, and the instinctive reactions to unexpected board movement that twin-tip riding develops are all genuinely useful on a foil board. What does not transfer is the specific sensitivity to pitch axis rotation that foil boards require, which is both the most critical skill for foiling and the most different from any skill developed through twin-tip riding. The foil board's tendency to pitch nose-up or nose-down in response to small weight shifts that would be inconsequential on a flat board is a genuinely new physical sensation that requires specific adaptation practice regardless of prior board sport background. Acknowledging this specific learning requirement rather than assuming that prior board sport competence makes foil board balance automatic significantly accelerates the transition by directing practice attention to precisely the challenge that needs to be addressed.</p>
+</div></section>
+
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
+<p>The transition from kitesurfing to wing foiling at Koh Phangan is supported by instructors who have specifically worked with kite-background students and understand the precise adaptation challenges and the sequence of corrections that accelerates progress most effectively for this student profile. The combination of world-class foiling conditions at Thong Sala Beach and instruction designed specifically for the kite-to-wing transition makes this the most efficient destination available for experienced kite riders who want to add wing foiling to their water sport repertoire during a focused holiday. Contact the school via WhatsApp at +66 96 720 3910 to discuss a combined programme that maximizes the use of your existing kite background.</p>
+</div></section>
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8"><p>The kite-to-wing transition at Koh Phangan delivers the most efficient pathway from kite certification to independent wing foiling available anywhere in Southeast Asia, combining appropriate conditions, targeted instruction for kite-background students, and the motivating experience of learning a genuinely new and exciting discipline in a beautiful tropical setting. Reach out to the school at +66 96 720 3910 via WhatsApp to plan your progression from kite rider to wing foil pilot.</p></div></section></main>
 
 <footer id="site-footer" role="contentinfo">
   <div class="footer-top">

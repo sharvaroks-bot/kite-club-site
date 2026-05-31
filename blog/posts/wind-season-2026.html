@@ -1740,6 +1740,7 @@ body.light .also-card{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 body.light .also-name{color:#111}
 .also-sub{font-family:var(--FB);font-size:12px;color:#e8008a}
 @media(max-width:900px){.also-band{padding:50px 22px 60px}.also-grid{grid-template-columns:1fr 1fr;gap:8px}}
+@media(max-width:768px){main#page-content section{padding-left:22px!important;padding-right:22px!important}}
 </style>
 </head>
 <body>
@@ -1822,15 +1823,15 @@ body.light .also-name{color:#111}
 
 <main id="page-content">
 <section style="background:var(--dark);padding:100px 60px 60px;border-bottom:1px solid var(--border);">
-  <div style="max-width:800px;margin:0 auto;">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
     <div style="font-family:var(--FB);font-size:12px;color:var(--muted);margin-bottom:12px;"><a href="../../" style="color:var(--muted);text-decoration:none;">Home</a> <span style="margin:0 6px;">›</span> <a href="../../blog/" style="color:var(--muted);text-decoration:none;">Blog</a> <span style="margin:0 6px;">›</span> <span style="color:var(--white);">Wind & Weather</span></div>
     <div style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px;">Wind & Weather</div>
     <h1 style="font-family:var(--FD);font-size:clamp(32px,5vw,56px);font-weight:900;text-transform:uppercase;line-height:1.05;color:var(--white);margin-bottom:20px;">Best Wind Season<br><em style='background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal;'>Koh Phangan 2026</em></h1>
     <p style="font-family:var(--FB);font-size:clamp(15px,1.8vw,18px);color:var(--muted);line-height:1.7;">Koh Phangan has two kite seasons. Knowing which one suits you — and exactly when to arrive — is the difference between an epic trip and a frustrating one.</p>
   </div>
 </section>
-<section style="padding:60px 60px 80px;background:var(--black);">
-  <div style="max-width:800px;margin:0 auto;font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8;">
+<section style="padding:0 60px 40px;background:var(--black)">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8;">
 <div style="background:var(--dark);border:1px solid var(--border);padding:28px;margin-bottom:40px;">
   <p style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px;">Contents</p>
   <ol style="padding-left:20px;color:var(--muted);font-size:14px;line-height:2;">
@@ -1936,7 +1937,7 @@ body.light .also-name{color:#111}
   </div>
 </section>
 <section style="padding:60px 60px 70px;background:var(--dark);border-top:1px solid var(--border);">
-  <div style="max-width:800px;margin:0 auto;">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
     <h2 style="font-family:var(--FD);font-size:clamp(24px,3vw,34px);font-weight:900;text-transform:uppercase;color:var(--white);margin-bottom:32px;">FAQ</h2>
     <div class="faq">
 <div class="fq"><button class="fq-q" aria-expanded="false">When is the best month to kitesurf on Koh Phangan?<span class="arr">+</span></button><div class="fq-a"><p>March and April are peak season: SE trade winds averaging 18–25 kts, flat glassy water at Thong Sala Beach, consistent daily wind. February is also excellent and less crowded. Book at least 3 weeks ahead for March–April.</p></div></div>
@@ -1946,12 +1947,58 @@ body.light .also-name{color:#111}
     </div>
   </div>
 </section>
+
+<section style="padding:60px 0">
+  <div class="wrap">
+    <div style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--pink);margin-bottom:10px">Our Services</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <a href="../../kitesurfing/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Kitesurfing</div>
+        <div style="font-size:11px;color:var(--muted)">Lessons, equipment and booking on Koh Phangan</div>
+      </a>
+      <a href="../../wing-foil/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Wing Foil</div>
+        <div style="font-size:11px;color:var(--muted)">Lessons, equipment and booking on Koh Phangan</div>
+      </a>
+      <a href="../../school/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">All Courses</div>
+        <div style="font-size:11px;color:var(--muted)">Kitesurfing, wing foil, windsurfing and e-foil</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section style="padding:60px 0;border-top:1px solid var(--border)">
+  <div class="wrap">
+    <div style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--pink);margin-bottom:10px">Read Next</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <a href="../best-time-koh-phangan.html" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Best Time to Visit</div>
+        <div style="font-size:11px;color:var(--muted)">Month-by-month wind and weather guide</div>
+      </a>
+      <a href="../kitesurf-spots-koh-phangan.html" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Kitesurf Spots</div>
+        <div style="font-size:11px;color:var(--muted)">Best beaches and conditions on Koh Phangan</div>
+      </a>
+      <a href="../beginner-guide-koh-phangan.html" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Beginner Guide</div>
+        <div style="font-size:11px;color:var(--muted)">Complete guide for first-time kitesurfers</div>
+      </a>
+    </div>
+  </div>
+</section>
 <section style="background:var(--grad);padding:60px;text-align:center;">
   <h2 style="font-family:var(--FD);font-size:clamp(28px,3.5vw,44px);font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:12px;">Plan Your Kite Season</h2>
   <p style="font-family:var(--FB);font-size:15px;color:rgba(255,255,255,.85);margin-bottom:24px;">Kite Club Koh Phangan · Thong Sala Beach · +66 96 720 3910</p>
   <a href="https://wa.me/66967203910?text=Hi%21%20I%27d%20like%20to%20plan%20my%20kite%20season%20on%20Koh%20Phangan" class="btn-p" style="background:#fff;color:var(--mag);min-width:200px;">Book via WhatsApp</a>
 </section>
-</main>
+
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
+<h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Understanding the 2026 Koh Phangan Wind Season</h2>
+<p>The 2026 wind season at Koh Phangan follows the established pattern of the northeast monsoon cycle that has defined the island's peak kitesurfing and wing foiling conditions for decades, with the January-April window continuing to offer the most reliable and strongest trade wind conditions of any period in the annual cycle. Long-range weather pattern analysis for the 2026 season suggests a broadly normal northeast monsoon with the typical mid-February through early April peak delivering the eighteen to twenty-five knot averages that make this period the preferred booking window for both beginner instruction and intermediate progression riding. The La Nina and El Nino cycle phase that influences global wind patterns on multi-year timescales is expected to remain in a neutral-to-mild La Nina state for the first half of 2026, which historically correlates with slightly stronger and more persistent northeast trade winds in the Gulf of Thailand compared to El Nino years when the trade system weakens and produces more variable conditions. January typically begins the season with fifteen to eighteen knot averages as the trade system establishes itself after the transitional December period, building to the most consistent phase in mid-February when morning trades strengthen reliably by nine in the morning and persist through mid-afternoon before the evening relaxation. February and March represent the statistical peak of the season, with the highest frequency of eighteen-plus-knot sessions, the most consistent direction stability that minimizes the gusty, shifting wind that complicates beginner instruction, and the optimal combination of trade wind speed and Gulf of Thailand water temperature that makes extended sessions in light tropical clothing comfortable for the entire learning day. April continues strong through the first three weeks before the seasonal transition begins to introduce more variable conditions as the inter-tropical convergence zone migrates northward and the northeast trade gradually yields to the lighter south and southeast winds that characterize the late spring transition period.</p>
+<p>The practical implications of the 2026 season pattern for visitors planning kite holidays are straightforward: book within the February-March core window for maximum conditions reliability, consider January and early April as high-quality secondary options if core window dates are unavailable, and plan the overall visit duration with enough flexibility to capitalize on the strongest wind days within the window rather than scheduling every lesson day in advance with no ability to adapt to actual conditions as they develop. The school team monitors multiple forecast sources including Windy.com, Windguru.cz, and local anemometer data to provide daily conditions updates via WhatsApp that help students make informed scheduling decisions in real time. Students who contact the school at +66 96 720 3910 in advance of their visit can receive preliminary season outlook information and scheduling recommendations based on the most current long-range forecast data, allowing travel and accommodation bookings to be aligned with the periods of highest conditions confidence. Equipment availability and instructor scheduling at the school are confirmed on a first-come, first-served basis, making early booking advisable for visits during the most popular late February through early April period when demand from returning students and first-time visitors simultaneously peaks within the same narrow optimal window of the season calendar.</p>
+</div></section>
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8"><h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Planning Around the 2026 Season Calendar</h2><p>Translating the 2026 season outlook into a specific booking plan requires matching the optimal wind windows against your available holiday dates and making accommodation and lesson reservations that align all three variables — wind, availability, and timing — into a coherent holiday that maximizes the return on the time and money you invest. The school's WhatsApp channel (+66 96 720 3910) is the most direct route to current availability information, real-time forecast data, and the specific scheduling advice that helps you build a programme matched to your goals and the actual conditions your dates are likely to deliver. Early booking for the peak February-March window is particularly important in 2026 as the school's growing reputation continues to increase demand from returning and first-time students simultaneously, creating a booking competition for the prime lesson slots that rewards early planners with more options than late arrivals are likely to find. Students who book three to four months before their target travel dates consistently report having more flexibility in scheduling, instructor assignment, and lesson timing than those who book on shorter notice, and the confidence of having confirmed reservations in place allows the rest of the holiday planning — flights, accommodation, activities — to proceed around a fixed and reliable kite programme foundation.</p></div></section><p style="font-family:var(--FB);font-size:16px;color:var(--muted);padding:8px 60px">The 2026 Koh Phangan wind season peaks from February through early April with consistent northeast trades averaging eighteen to twenty-five knots. January and late April offer good secondary windows. Book your IKO certified kite or IWO certified wing foil sessions via WhatsApp at +66 96 720 3910 to secure your preferred dates within the peak season window before availability fills.</p><p style="font-family:var(--FB);font-size:16px;color:var(--muted);padding:8px 60px">The school offers IKO Discovery sessions at 3,500 THB, Beginner courses at 11,000 THB, and Independent courses at 18,000 THB with all equipment included. Wing foil courses from 4,000 THB. Morning sessions typically begin at 9am when the trade wind builds to its first daily peak, with afternoon sessions available on high-wind days when conditions extend through the midday hours.</p><p style="font-family:var(--FB);font-size:16px;color:var(--muted);padding:8px 60px">E-foil sessions are available year-round independent of wind conditions, providing a guaranteed water activity option on any day of the season. Kayak and SUP rentals from 400 THB per hour supplement the wind sport programme on lighter wind days.</p></main>
 
 <footer id="site-footer" role="contentinfo">
   <div class="footer-top">

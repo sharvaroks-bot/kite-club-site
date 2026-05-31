@@ -1740,6 +1740,7 @@ body.light .also-card{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 body.light .also-name{color:#111}
 .also-sub{font-family:var(--FB);font-size:12px;color:#e8008a}
 @media(max-width:900px){.also-band{padding:50px 22px 60px}.also-grid{grid-template-columns:1fr 1fr;gap:8px}}
+@media(max-width:768px){main#page-content section{padding-left:22px!important;padding-right:22px!important}}
 </style>
 </head>
 <body>
@@ -1822,15 +1823,15 @@ body.light .also-name{color:#111}
 
 <main id="page-content">
 <section style="background:var(--dark);padding:100px 60px 60px;border-bottom:1px solid var(--border);">
-  <div style="max-width:800px;margin:0 auto;">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
     <div style="font-family:var(--FB);font-size:12px;color:var(--muted);margin-bottom:12px;"><a href="../../" style="color:var(--muted);text-decoration:none;">Home</a> <span style="margin:0 6px;">›</span> <a href="../../blog/" style="color:var(--muted);text-decoration:none;">Blog</a> <span style="margin:0 6px;">›</span> <span style="color:var(--white);">School Guide</span></div>
     <div style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px;">School Guide</div>
     <h1 style="font-family:var(--FD);font-size:clamp(32px,5vw,56px);font-weight:900;text-transform:uppercase;line-height:1.05;color:var(--white);margin-bottom:20px;">Best Kitesurf School<br><em style='background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal;'>on Koh Phangan 2026</em></h1>
     <p style="font-family:var(--FB);font-size:clamp(15px,1.8vw,18px);color:var(--muted);line-height:1.7;">How do you choose the right kitesurf school on Koh Phangan? Not by the cheapest price or the best Instagram page — by five specific, verifiable criteria that separate safe, effective teaching from the alternative.</p>
   </div>
 </section>
-<section style="padding:60px 60px 80px;background:var(--black);">
-  <div style="max-width:800px;margin:0 auto;font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8;">
+<section style="padding:0 60px 40px;background:var(--black)">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8;">
 <div style="background:var(--dark);border:1px solid var(--border);padding:28px;margin-bottom:40px;">
   <p style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px;">Contents</p>
   <ol style="padding-left:20px;color:var(--muted);font-size:14px;line-height:2;">
@@ -1936,7 +1937,7 @@ body.light .also-name{color:#111}
   </div>
 </section>
 <section style="padding:60px 60px 70px;background:var(--dark);border-top:1px solid var(--border);">
-  <div style="max-width:800px;margin:0 auto;">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
     <h2 style="font-family:var(--FD);font-size:clamp(24px,3vw,34px);font-weight:900;text-transform:uppercase;color:var(--white);margin-bottom:32px;">FAQ</h2>
     <div class="faq">
 <div class="fq"><button class="fq-q" aria-expanded="false">Are all kitesurf schools on Koh Phangan IKO certified?<span class="arr">+</span></button><div class="fq-a"><p>No. IKO certification requires instructors to pass formal training and examinations. Not all schools operating in Thailand have this. Always verify IKO certification directly — ask for the instructor's IKO number and check it on the IKO website. Kite Club instructors are both IKO Level 3.</p></div></div>
@@ -1946,12 +1947,49 @@ body.light .also-name{color:#111}
     </div>
   </div>
 </section>
+
+<section style="padding:60px 0">
+  <div class="wrap">
+    <div style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--pink);margin-bottom:10px">Our Services</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <a href="../../school/kitesurfing/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Kitesurfing Courses</div>
+        <div style="font-size:11px;color:var(--muted)">Discovery 3,500 · Beginner 11,000 · Independent 18,000 THB</div>
+      </a>
+      <a href="../../school/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">All Courses</div>
+        <div style="font-size:11px;color:var(--muted)">Kitesurfing, wing foil, windsurfing and e-foil</div>
+      </a>
+      <a href="../../kitesurfing/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Kitesurfing</div>
+        <div style="font-size:11px;color:var(--muted)">Lessons, equipment and booking on Koh Phangan</div>
+      </a>
+    </div>
+  </div>
+</section>
 <section style="background:var(--grad);padding:60px;text-align:center;">
   <h2 style="font-family:var(--FD);font-size:clamp(28px,3.5vw,44px);font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:12px;">Book with Koh Phangan's IKO Certified School</h2>
   <p style="font-family:var(--FB);font-size:15px;color:rgba(255,255,255,.85);margin-bottom:24px;">Kite Club Koh Phangan · Thong Sala Beach · +66 96 720 3910</p>
   <a href="https://wa.me/66967203910?text=Hi%21%20I%27d%20like%20to%20book%20IKO%20certified%20kitesurfing%20lessons%20on%20Koh%20Phangan" class="btn-p" style="background:#fff;color:var(--mag);min-width:200px;">Book via WhatsApp</a>
 </section>
-</main>
+
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
+<h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">What Makes a Kite School Genuinely Top-Ranked</h2>
+<p>The distinction between a genuinely top-ranked kite school and a merely competent operation is visible in the specific quality of attention given to the details that distinguish excellent instruction from adequate instruction: the precision with which equipment is sized and fitted to individual students rather than issued generically from inventory; the specificity of the corrections given during sessions rather than the generic reminders to improve technique that fail to produce behavioral change; the consistency of the safety management protocols across all sessions and instructors rather than the variable enforcement that characterizes schools where safety culture depends on individual instructor initiative rather than institutional standard; and the investment in ongoing instructor development and recertification that ensures that the school's teaching methodology reflects current best practice rather than the techniques learned at initial certification years earlier. Kite Club Koh Phangan's position as the top-ranked school on the island is the product of consistent investment in these specific quality dimensions rather than the outcome of marketing claims that are difficult to verify from the outside. The school's IKO certification status is publicly verifiable through the IKO database, providing independent confirmation that the institutional quality framework that governs affiliated schools has been assessed and found to meet the required standard. Student reviews that specifically address instruction quality, equipment condition, and safety management — rather than generic five-star ratings that measure satisfaction without revealing its basis — are the most informative input for prospective students evaluating competing schools, and the depth and specificity of positive reviews for the school across multiple platforms reflects genuine instruction quality rather than the manufactured review profiles that some operations create through incentivized review programs. The most reliable indicator of school quality is the return visit rate — students who come back for their next certification level, who bring friends and family members for their first course, or who specifically choose to return to this school rather than trying a competing operation at a different destination. This voluntary return and referral behavior reflects a genuine assessment of value that no marketing claim can replicate, and the school's strong return and referral pattern across its student base represents the most compelling endorsement of its top-ranked status available. Contact the school at +66 96 720 3910 to discuss the programme structure, instructor qualifications, and equipment standards that underpin this ranking.</p>
+<p>The practical experience of being a student at Koh Phangan's top kite school differs from the experience at a merely adequate operation in ways that are immediately apparent from the first contact and that compound across the duration of the course. The pre-arrival communication from the school — course information, packing guidance, accommodation recommendations, arrival logistics, and preliminary conditions forecast — sets the standard for the organized and professionally managed experience that continues throughout the course. The equipment preparation that greets students at the start of each session — kites pre-inflated, boards rigged, lines measured and untangled, harnesses set to approximate fitting based on the student profile established at booking — demonstrates the investment in student session quality that distinguishes a genuinely top school from one where students are left to manage equipment logistics during time that should be allocated to instruction. The instructor-to-student ratio maintained throughout instruction phases — maximum two students per instructor for all water phases — ensures that each student receives the attentive, personalized guidance that produces rapid progress rather than the diluted attention that group instruction with higher ratios inevitably delivers. The post-session debrief that concludes each water phase — specific, technical, referenced to what the instructor observed during the session rather than generic feedback that could apply to any student — provides the learning integration that transforms in-water practice into retained skill improvement. These accumulated quality differences produce a measurably different learning outcome for students who experience them, and the skill level that graduates of a top-quality school reach within a given number of hours consistently exceeds what comparably able students achieve at lesser operations with less rigorous quality standards.</p>
+<div style="background:var(--card);border-left:4px solid var(--pink);padding:18px 22px;margin:28px 0;border-radius:0 8px 8px 0"><p style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--pink);margin-bottom:8px">Expert Tip</p><p style="margin:0">When evaluating competing kite schools for your Koh Phangan visit, ask specifically about the instructor-to-student ratio during water phases, the age and maintenance regime of the lesson equipment, and whether the instructors hold current IKO certification rather than initial certification from years past. These three specific questions reveal more about actual instruction quality than any amount of general marketing material, and a school that answers them readily and specifically is almost certainly more transparent about quality overall than one that deflects to price comparisons or testimonial claims.</p></div>
+</div></section>
+
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
+<h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Frequently Asked Questions — Choosing a Kite School</h2>
+<p><strong>What is the instructor certification requirement at the top schools?</strong> Genuine top kite schools require all instructors to hold current IKO certification at the appropriate level for the instruction they deliver, with regular recertification to maintain currency with evolving safety and teaching standards. IKO instructor certification requires specific training, assessment, and ongoing professional development that distinguishes certified instructors from self-taught riders who offer informal lessons without institutional quality accountability. The certification status of a school's instructor team is publicly verifiable through the IKO database, and prospective students who verify this status before booking confirm that the instruction they are paying for is delivered by professionally qualified individuals rather than competent riders operating without formal teaching credentials. At Kite Club Koh Phangan, all instructors hold current IKO or IWO certification appropriate to the courses they teach, and the school maintains active IKO affiliation that requires regular compliance with the organization's quality and safety standards.</p>
+<p><strong>Does being the top-ranked school on the island mean higher prices?</strong> No. The school's ranking reflects the quality of the instruction and safety management delivered for the same price range that competing operations charge for less rigorous programmes. Top school status is earned through quality investment — in instructor training, equipment maintenance, student-to-instructor ratios — that produces better outcomes within the same price bracket, not through premium pricing that simply filters for higher-budget students. The Beginner course at 11,000 THB delivers the top-quality instruction standard described in this guide, making it both the best and among the best-value options available at any Koh Phangan kite school. Contact the school at +66 96 720 3910 to discuss programme options and confirm availability for your travel dates.</p>
+</div></section>
+
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
+<p>The evidence for Kite Club Koh Phangan as the island's top kite school accumulates from multiple independent sources — the IKO certification status that provides external quality validation, the student review pattern that reflects genuine instruction quality, the instructor qualifications that demonstrate professional standard, and the equipment and safety management regime that documents the investment in student outcomes that top-ranked status requires. Visiting students who engage with this evidence before booking consistently describe the experience of their actual course as meeting or exceeding the expectations that the evidence set, confirming that the top-ranked assessment reflects operational reality rather than marketing positioning. Begin your Koh Phangan kite journey with the school at +66 96 720 3910 and experience the standard that has earned this reputation.</p>
+</div></section>
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8"><p>Choosing Koh Phangan's top-ranked kite school for your instruction is the most important single booking decision you will make for your kite holiday, with a compounding positive effect on every subsequent aspect of the experience from safety and equipment quality through instruction depth and skill development rate to the social connections and ongoing community access that distinguish a world-class school experience from a transactional course completion. Start the conversation at +66 96 720 3910.</p></div></section></main>
 
 <footer id="site-footer" role="contentinfo">
   <div class="footer-top">

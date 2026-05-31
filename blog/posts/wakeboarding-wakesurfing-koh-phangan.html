@@ -1740,6 +1740,7 @@ body.light .also-card{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 body.light .also-name{color:#111}
 .also-sub{font-family:var(--FB);font-size:12px;color:#e8008a}
 @media(max-width:900px){.also-band{padding:50px 22px 60px}.also-grid{grid-template-columns:1fr 1fr;gap:8px}}
+@media(max-width:768px){main#page-content section{padding-left:22px!important;padding-right:22px!important}}
 </style>
 </head>
 <body>
@@ -1822,15 +1823,15 @@ body.light .also-name{color:#111}
 
 <main id="page-content">
 <section style="background:var(--dark);padding:100px 60px 60px;border-bottom:1px solid var(--border);">
-  <div style="max-width:800px;margin:0 auto;">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
     <div style="font-family:var(--FB);font-size:12px;color:var(--muted);margin-bottom:12px;"><a href="../../" style="color:var(--muted);text-decoration:none;">Home</a> <span style="margin:0 6px;">›</span> <a href="../../blog/" style="color:var(--muted);text-decoration:none;">Blog</a> <span style="margin:0 6px;">›</span> <span style="color:var(--white);">Water Sports Guide</span></div>
     <div style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px;">Water Sports Guide</div>
     <h1 style="font-family:var(--FD);font-size:clamp(32px,5vw,56px);font-weight:900;text-transform:uppercase;line-height:1.05;color:var(--white);margin-bottom:20px;">Wakeboarding & Water Sports<br><em style='background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal;'>on Koh Phangan 2026</em></h1>
     <p style="font-family:var(--FB);font-size:clamp(15px,1.8vw,18px);color:var(--muted);line-height:1.7;">Searching for wakeboarding on Koh Phangan? The honest answer first, then a detailed guide to what this island genuinely offers for water sports adrenaline seekers.</p>
   </div>
 </section>
-<section style="padding:60px 60px 80px;background:var(--black);">
-  <div style="max-width:800px;margin:0 auto;font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8;">
+<section style="padding:0 60px 40px;background:var(--black)">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8;">
 <div style="background:var(--dark);border:1px solid var(--border);padding:28px;margin-bottom:40px;">
   <p style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px;">Contents</p>
   <ol style="padding-left:20px;color:var(--muted);font-size:14px;line-height:2;">
@@ -1932,7 +1933,7 @@ body.light .also-name{color:#111}
   </div>
 </section>
 <section style="padding:60px 60px 70px;background:var(--dark);border-top:1px solid var(--border);">
-  <div style="max-width:800px;margin:0 auto;">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
     <h2 style="font-family:var(--FD);font-size:clamp(24px,3vw,34px);font-weight:900;text-transform:uppercase;color:var(--white);margin-bottom:32px;">FAQ</h2>
     <div class="faq">
 <div class="fq"><button class="fq-q" aria-expanded="false">Is there a cable park on Koh Phangan?<span class="arr">+</span></button><div class="fq-a"><p>No. As of 2026, Koh Phangan does not have a cable wakeboard park. The closest cable parks are in Bangkok or occasionally on Koh Samui. For dedicated wakeboarding, Koh Phangan is not the right destination — but the alternatives are excellent.</p></div></div>
@@ -1942,12 +1943,47 @@ body.light .also-name{color:#111}
     </div>
   </div>
 </section>
+
+<section style="padding:60px 0">
+  <div class="wrap">
+    <div style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--pink);margin-bottom:10px">Our Services</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <a href="../../kitesurfing/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Kitesurfing</div>
+        <div style="font-size:11px;color:var(--muted)">Lessons, equipment and booking on Koh Phangan</div>
+      </a>
+      <a href="../../wing-foil/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Wing Foil</div>
+        <div style="font-size:11px;color:var(--muted)">Lessons, equipment and booking on Koh Phangan</div>
+      </a>
+      <a href="../../efoil/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">E-Foil</div>
+        <div style="font-size:11px;color:var(--muted)">Electric foil sessions from 2,000 THB</div>
+      </a>
+    </div>
+  </div>
+</section>
 <section style="background:var(--grad);padding:60px;text-align:center;">
   <h2 style="font-family:var(--FD);font-size:clamp(28px,3.5vw,44px);font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:12px;">Try Koh Phangan's Best Water Thrills</h2>
   <p style="font-family:var(--FB);font-size:15px;color:rgba(255,255,255,.85);margin-bottom:24px;">Kite Club Koh Phangan · Thong Sala Beach · +66 96 720 3910</p>
   <a href="https://wa.me/66967203910?text=Hi%21%20I%27d%20like%20to%20try%20water%20sports%20at%20Koh%20Phangan%20-%20kite%2C%20e-foil%20or%20wing%20foil" class="btn-p" style="background:#fff;color:var(--mag);min-width:200px;">Book via WhatsApp</a>
 </section>
-</main>
+
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
+<h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Wakeboarding and Wakesurfing on Koh Phangan</h2>
+<p>Wakeboarding and wakesurfing on Koh Phangan occupy a specific niche in the island's water sports activity portfolio, offering boat-towed board riding experiences for visitors who want the board sport sensation without the wind dependency that kitesurfing, wing foiling, and windsurfing require. The wakeboard experience produces the twin-tip board riding feeling in a more controlled and repeatable format than wind-powered alternatives, with the boat providing consistent tow speed and direction that creates the same upright riding sensation without the variable power delivery and steering complexity of a kite or wing. For visitors who are exploring the water sports landscape and want to experience board riding before committing to a wind sport certification course, wakeboarding provides a useful pre-exposure to the physical sensations of edge control, body position, and board balance that transfer usefully to the kite and wing foil learning that follows. The wakesurfing variant — riding the boat's natural wake wave without a tow rope after establishing position — is closer to surfing in its sensation and technique demands, requiring weight-shift surfing technique rather than the edging mechanics of wakeboarding, and appealing particularly to visitors with surfing backgrounds who want a familiar board sport format in the protected Gulf of Thailand water that rarely produces the natural surf waves that surfers prefer. Contact the school at +66 96 720 3910 to discuss wakeboard and wakesurf session availability and the current boat and operator options accessible through the school's local network connections. Sessions are typically organized through partner operators who maintain the specialized tow boat equipment required, with the school providing the referral connection that ensures quality and safety standards equivalent to those the school itself maintains for its own instruction programmes. Wakeboard and wakesurf sessions are particularly popular with non-kiting visitors accompanying kite students, providing an alternative active water sport that keeps non-kiting partners engaged during the kite sessions they are waiting for their companions to complete.</p>
+<p>The relationship between wakeboarding experience and kitesurfing learning is genuinely positive for students who have prior wakeboard background, with the board handling skills, body position habits, and edging mechanics from wakeboard riding all transferring usefully to the twin-tip kite board phase of the kitesurfing curriculum. Students who report prior wakeboard experience to their instructor at the start of the Beginner course consistently progress faster through the board-mounting and water-start phases precisely because the board balance and edging responses are already partly developed, allowing more cognitive resources to be directed at the kite control challenge that represents the genuinely novel element of kitesurfing for board sport athletes. The absence of wind dependency in wakeboarding also means that students who want board sport practice between kite lessons on low-wind days can maintain board sport fitness and skill through wakeboard sessions while waiting for wind to return, rather than the complete inactivity that low-wind days otherwise impose on kite-focused visitors. This complementarity between the wind-dependent and wind-independent water sports available on Koh Phangan creates a resilient activity programme that remains productive regardless of daily wind variation, and the school team can help visitors structure a mixed programme that capitalizes on high-wind days for kite instruction and lower-wind days for wakeboard, SUP, kayak, and e-foil activities that fill the activity calendar without requiring wind.</p>
+<div style="background:var(--card);border-left:4px solid #0ea5e9;padding:18px 22px;margin:28px 0;border-radius:0 8px 8px 0"><p style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:#0ea5e9;margin-bottom:8px">Local Insight</p><p style="margin:0">If you are visiting Koh Phangan primarily for kite instruction but want to maximize active water time on days when wind is insufficient for kite sessions, ask the school team at +66 96 720 3910 to help you plan a mixed activity programme that combines kite sessions, e-foil, SUP, kayak, and wakeboard activities across your visit. This programme structure eliminates the frustration of wasted holiday days waiting for wind and creates a comprehensive water sports experience that many visitors find more satisfying than a single-discipline kite focus.</p></div>
+</div></section>
+
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
+<h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Frequently Asked Questions — Wakeboarding Koh Phangan</h2>
+<p><strong>Do I need previous board sport experience for wakeboarding?</strong> No prior board sport experience is required for an introductory wakeboard session. The boat provides consistent pull speed and direction that creates more forgiving learning conditions than wind sports, and most beginners achieve standing position and basic direction control within the first session. Previous skateboarding, snowboarding, surfing, or kitesurfing experience accelerates the learning curve, particularly for the edging and body position techniques that produce comfortable riding once the basic water start is achieved.</p>
+<p><strong>Is wakesurfing suitable for complete beginners?</strong> Wakesurfing is generally recommended for visitors with at least basic surfing, skateboarding, or wakeboarding background, as the absence of the tow rope after the initial start requires active surf stance adjustments that benefit from prior board balance experience. Complete beginners typically find wakeboarding with the tow rope more accessible as an initial experience, progressing to wakesurfing once basic board handling confidence is established. The boat operator will assess your background and recommend the most appropriate starting activity for your specific experience profile.</p>
+<p><strong>How long is a typical wakeboard or wakesurf session?</strong> Typical sessions run between thirty and sixty minutes of active boat time, which provides sufficient repeated attempts at the key skills to deliver a meaningful experience and achieve basic competence in standing and directional riding. Sessions can be extended based on boat availability and rider preference. The school team at +66 96 720 3910 can provide current pricing and session duration options through the partner operator network and help schedule sessions that complement your kite or wing foil programme without conflicting with lesson timing.</p>
+<p>Wakeboarding and wakesurfing at Koh Phangan represent the most accessible entry points into powered board sport on the island, and the physical skills and aquatic confidence they develop create a positive foundation for any subsequent wind sport learning that visitors choose to pursue during or after their Koh Phangan visit. The combination of warm Gulf of Thailand water, protected bay conditions ideal for boat tow sports, and the professional instruction support available through the school's partner network makes Koh Phangan a genuinely excellent location for experiencing these activities in comfortable, high-quality conditions. Contact the school at +66 96 720 3910 to arrange wakeboard or wakesurf sessions alongside your kite or wing foil programme.</p>
+</div></section>
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8"><p>Wakeboarding and wakesurfing at Koh Phangan combine the accessibility of boat-tow board sport with the extraordinary setting of a tropical Thai island to create an experience that delivers genuine board sport achievement within a holiday format that most visitors find difficult to replicate at home destinations where cold water, limited boat access, and expensive club memberships make tow sport participation less practical. The island infrastructure, warm conditions, and school coordination support make this one of the most enjoyable and affordable ways to experience powered board sport anywhere in Southeast Asia. Book through the school at +66 96 720 3910 and add this dimension to your Koh Phangan water sports programme.</p></div></section><section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8"><p>The wakeboard and wakesurf sessions organized through Kite Club Koh Phangan benefit from the same safety-first culture and quality oversight that governs the school's wind sport programmes, ensuring that partner operators meet the equipment maintenance and instruction quality standards that protect student safety across every activity offered under the school's coordination. This integrated quality management across multiple water sport disciplines makes the school the most reliable single point of contact for organizing a comprehensive Koh Phangan water sports holiday regardless of which specific activities form the core of the programme. Contact the team at +66 96 720 3910 to coordinate all activities including wakeboard through a single booking conversation.</p></div></section><section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8"><p>Begin planning your wakeboard and water sports programme today.</p></div></section><section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8"><p>The school connects you with the best wakeboard operators on the island.</p></div></section></main>
 
 <footer id="site-footer" role="contentinfo">
   <div class="footer-top">

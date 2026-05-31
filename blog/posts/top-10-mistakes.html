@@ -1740,6 +1740,7 @@ body.light .also-card{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 body.light .also-name{color:#111}
 .also-sub{font-family:var(--FB);font-size:12px;color:#e8008a}
 @media(max-width:900px){.also-band{padding:50px 22px 60px}.also-grid{grid-template-columns:1fr 1fr;gap:8px}}
+@media(max-width:768px){main#page-content section{padding-left:22px!important;padding-right:22px!important}}
 </style>
 </head>
 <body>
@@ -1822,15 +1823,15 @@ body.light .also-name{color:#111}
 
 <main id="page-content">
 <section style="background:var(--dark);padding:100px 60px 60px;border-bottom:1px solid var(--border);">
-  <div style="max-width:800px;margin:0 auto;">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
     <div style="font-family:var(--FB);font-size:12px;color:var(--muted);margin-bottom:12px;"><a href="../../" style="color:var(--muted);text-decoration:none;">Home</a> <span style="margin:0 6px;">›</span> <a href="../../blog/" style="color:var(--muted);text-decoration:none;">Blog</a> <span style="margin:0 6px;">›</span> <span style="color:var(--white);">Kitesurfing Tips</span></div>
     <div style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px;">Kitesurfing Tips</div>
     <h1 style="font-family:var(--FD);font-size:clamp(32px,5vw,56px);font-weight:900;text-transform:uppercase;line-height:1.05;color:var(--white);margin-bottom:20px;">Top 10 Mistakes<br><em style='background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal;'>Beginner Kitesurfers Make</em></h1>
     <p style="font-family:var(--FB);font-size:clamp(15px,1.8vw,18px);color:var(--muted);line-height:1.7;">I have been teaching IKO-certified kitesurfing on Koh Phangan since 2021. The same mistakes appear in almost every beginner session. Here they are, with exactly how to fix each one.</p>
   </div>
 </section>
-<section style="padding:60px 60px 80px;background:var(--black);">
-  <div style="max-width:800px;margin:0 auto;font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8;">
+<section style="padding:0 60px 40px;background:var(--black)">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8;">
 <div style="background:var(--dark);border:1px solid var(--border);padding:28px;margin-bottom:40px;">
   <p style="font-family:var(--FD);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pink);margin-bottom:14px;">Contents</p>
   <ol style="padding-left:20px;color:var(--muted);font-size:14px;line-height:2;">
@@ -1904,7 +1905,7 @@ body.light .also-name{color:#111}
   </div>
 </section>
 <section style="padding:60px 60px 70px;background:var(--dark);border-top:1px solid var(--border);">
-  <div style="max-width:800px;margin:0 auto;">
+  <div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
     <h2 style="font-family:var(--FD);font-size:clamp(24px,3vw,34px);font-weight:900;text-transform:uppercase;color:var(--white);margin-bottom:32px;">FAQ</h2>
     <div class="faq">
 <div class="fq"><button class="fq-q" aria-expanded="false">How long does it take to fix bad habits in kitesurfing?<span class="arr">+</span></button><div class="fq-a"><p>Depends on the habit. Kite positioning errors usually correct within 1–2 additional sessions once identified. Body position errors can take 3–5 sessions because they involve retraining muscle memory. The key is having an instructor identify bad habits early.</p></div></div>
@@ -1914,12 +1915,59 @@ body.light .also-name{color:#111}
     </div>
   </div>
 </section>
+
+<section style="padding:60px 0">
+  <div class="wrap">
+    <div style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--pink);margin-bottom:10px">Our Services</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <a href="../../school/kitesurfing/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Kitesurfing Courses</div>
+        <div style="font-size:11px;color:var(--muted)">Discovery 3,500 · Beginner 11,000 · Independent 18,000 THB</div>
+      </a>
+      <a href="../../kitesurfing/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Kitesurfing</div>
+        <div style="font-size:11px;color:var(--muted)">Lessons, equipment and booking on Koh Phangan</div>
+      </a>
+      <a href="../../rental/" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Equipment Rental</div>
+        <div style="font-size:11px;color:var(--muted)">Kites, boards and gear for independent riders</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section style="padding:60px 0;border-top:1px solid var(--border)">
+  <div class="wrap">
+    <div style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--pink);margin-bottom:10px">Read Next</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <a href="../kitesurfing-safety-guide.html" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">Kitesurfing Safety Guide</div>
+        <div style="font-size:11px;color:var(--muted)">Pre-session checks and safety systems</div>
+      </a>
+      <a href="../iko-certification-guide.html" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">IKO Certification Guide</div>
+        <div style="font-size:11px;color:var(--muted)">All 4 IKO levels explained</div>
+      </a>
+      <a href="../how-long-to-learn.html" style="background:var(--card);border:1px solid var(--border);padding:18px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='var(--mag)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--FD);font-size:13px;font-weight:700;text-transform:uppercase;color:var(--white);margin-bottom:4px">How Long to Learn?</div>
+        <div style="font-size:11px;color:var(--muted)">Realistic timelines for every level</div>
+      </a>
+    </div>
+  </div>
+</section>
 <section style="background:var(--grad);padding:60px;text-align:center;">
   <h2 style="font-family:var(--FD);font-size:clamp(28px,3.5vw,44px);font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:12px;">Learn Correctly From Day One</h2>
   <p style="font-family:var(--FB);font-size:15px;color:rgba(255,255,255,.85);margin-bottom:24px;">Kite Club Koh Phangan · Thong Sala Beach · +66 96 720 3910</p>
   <a href="https://wa.me/66967203910?text=Hi%21%20I%27d%20like%20to%20book%20IKO%20kitesurfing%20lessons%20on%20Koh%20Phangan" class="btn-p" style="background:#fff;color:var(--mag);min-width:200px;">Book via WhatsApp</a>
 </section>
-</main>
+
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8">
+<h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Why These Ten Mistakes Are Universal</h2>
+<p>The ten beginner mistakes in kitesurfing are not random — they emerge from specific patterns in how the human brain manages novel physical challenges, how untrained proprioception misrepresents body position, and how the cognitive overload of learning a complex multi-component skill causes experienced habits from adjacent activities to override the new patterns being taught. Understanding the root cause of each mistake is more valuable than simply knowing the correction, because a student who understands why they are making a mistake can self-diagnose in the water rather than waiting for instructor intervention after every failed attempt. The kite position errors — maintaining the kite too high, letting it drift too far forward, or allowing it to hover in the power zone while the rider tries to mount the board — all stem from the same root cause: insufficient automaticity in kite control that forces the rider to divide attention between kite management and board management simultaneously, degrading both. Until kite control is sufficiently automatic that it occurs without conscious effort, any additional task demand will cause the kite to drift toward the default high-and-forward position that feels stable but generates inconsistent power that prevents reliable board riding. The solution is not to try harder to control the kite while mounting the board, but to develop kite automaticity to a sufficient level through dedicated beach and body drag practice before attempting water starts — a sequencing discipline that impatient students consistently shortcut with the predictable consequence of extended plateau periods at the water-start stage. Instructors at Kite Club Koh Phangan are specifically trained to recognize which of the ten mistakes each student is manifesting in the water and provide the targeted correction that addresses the specific root cause rather than a generic reminder to improve technique that the student cannot translate into a specific behavioral change.</p>
+<p>The physical mistakes — incorrect harness height, inappropriate stance width, head position turned toward the kite rather than the direction of travel, and upright rather than athletic stance — share the characteristic that they all feel correct to the student at the time. The harness placed too high feels stable because it seems to sit more comfortably on the torso, but reduces the hip drive that efficiently transmits kite power to board speed. The narrow stance feels natural to new riders who are instinctively managing fear of falling by keeping their feet closer together, but dramatically reduces the lateral stability needed for the edge control that creates upwind progress. The head turned toward the kite feels logical because the kite is the thing the student is most concerned about managing, but steers the body away from the direction of travel through the proprioceptive coupling between head orientation and body orientation that experienced riders have learned to override. The upright stance feels less precarious than the correct bent-knee athletic position because it puts the center of gravity higher and the body more firmly over the board, but actually makes dynamic balance harder by reducing the reactive range available to absorb wave and kite power variation. Each of these mistakes requires the same counterintuitive correction: doing something that feels wrong in order to do something that works. This counterintuitive quality is precisely why instructor guidance is so valuable for these specific errors — without the external feedback of an experienced observer, students' self-assessment consistently confirms the incorrect position as correct because it feels more stable, and only direct coaching intervention breaks the cycle of self-reinforcing incorrect technique.</p>
+<div style="background:var(--card);border-left:4px solid var(--pink);padding:18px 22px;margin:28px 0;border-radius:0 8px 8px 0"><p style="font-family:var(--FD);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--pink);margin-bottom:8px">Expert Tip</p><p style="margin:0">Record your session from the beach whenever possible and review the footage with your instructor immediately after the session. The ten mistakes described here are all visible in video and almost all invisible to the student's own in-the-moment perception. Seeing your body position, kite angle, and riding stance on video while your instructor provides the technical commentary creates a direct feedback loop that accelerates correction far faster than any amount of verbal instruction delivered while you are still on the water managing multiple tasks simultaneously.</p></div>
+</div></section>
+<section style="padding:0 60px 40px;background:var(--black)"><div style="font-family:var(--FB);font-size:16px;color:var(--muted);line-height:1.8"><h2 style="font-family:var(--FD);font-size:clamp(22px,2.5vw,32px);font-weight:900;text-transform:uppercase;color:var(--white);margin:40px 0 16px">Avoiding Mistakes with the Right Instruction</h2><p>The most effective way to avoid or quickly correct all ten beginner mistakes is consistent engagement with qualified instruction rather than extended periods of unsupervised practice that allow incorrect technique to become habitual. Students who alternate formal lesson sessions with informal practice time under occasional instructor observation develop better technique faster than those who practice independently for long periods between lessons, because the independent practice reinforces whatever technique the student is currently using — correct or incorrect — through repetition that makes the pattern more automatic over time. Booking a combined programme of formal lessons and supervised practice sessions at Kite Club Koh Phangan via WhatsApp at +66 96 720 3910 creates the optimal learning environment: structured instruction that establishes correct foundations, supervised practice that reinforces correct patterns before they become automatic, and the progressive achievement of IKO certification milestones that provide external validation of the quality standards your technique has reached. The school team's experience identifying and correcting all ten mistakes across hundreds of students provides the pattern recognition that makes feedback specific and effective rather than generic and confusing.</p></div></section><p style="font-family:var(--FB);font-size:16px;color:var(--muted);padding:8px 60px">The ten mistakes described in this guide are universal among kitesurfing beginners and are all correctable with proper instruction. IKO certified courses at Kite Club Koh Phangan are structured specifically to identify and address these exact error patterns before they become habitual, ensuring that students develop correct foundational technique from the beginning of their kite journey. Contact via WhatsApp +66 96 720 3910.</p></main>
 
 <footer id="site-footer" role="contentinfo">
   <div class="footer-top">
