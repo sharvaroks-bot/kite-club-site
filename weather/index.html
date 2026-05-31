@@ -259,6 +259,39 @@ html,body{
   .chart-box{height:90px}
   #radar-map{min-height:260px}
 }
+
+/* ── Rain ETA ─────────────────────────────────────────────── */
+.rain-eta{margin:0 12px 8px;background:var(--card);border:1px solid var(--border2);border-radius:14px;overflow:hidden;flex-shrink:0}
+.eta-hdr{display:flex;justify-content:space-between;align-items:center;padding:9px 14px 7px;border-bottom:1px solid var(--border)}
+.eta-hdr-lbl{font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.eta-hdr-time{font-size:9px;color:var(--muted)}
+.eta-inner{padding:12px 14px 10px}
+.eta-status-row{display:flex;align-items:center;gap:10px;margin-bottom:0}
+.eta-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.eta-status-txt{font-size:14px;font-weight:700;line-height:1.2}
+.eta-clear-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.eta-src-pill{margin-left:auto;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 7px;border-radius:5px;background:rgba(255,255,255,.06);color:var(--muted)}
+.eta-cd-wrap{background:var(--card2);border-radius:10px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;margin:10px 0}
+.eta-cd{font-size:38px;font-weight:800;line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.eta-cd-lbl{font-size:10px;color:var(--muted);margin-top:3px}
+.eta-ico-wrap{text-align:right}
+.eta-ico{font-size:24px;line-height:1}
+.eta-ico-lbl{font-size:10px;color:var(--muted);margin-top:4px}
+.eta-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px}
+.eta-stat{background:var(--card2);border-radius:8px;padding:7px 10px}
+.eta-stat-lbl{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.eta-stat-val{font-size:13px;font-weight:700;color:var(--text)}
+.eta-risk{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:700}
+.eta-offline{display:flex;align-items:center;gap:10px;padding:12px 14px}
+.eta-offline-icon{font-size:20px;opacity:.5}
+.eta-offline-txt{font-size:11px;color:var(--muted);line-height:1.5}
+.eta-offline-txt strong{color:var(--text);display:block;font-size:12px;margin-bottom:2px}
+.eta-loading{display:flex;align-items:center;gap:8px;padding:12px 14px}
+.eta-pulse{width:7px;height:7px;border-radius:50%;background:var(--cyan);opacity:.5;animation:etaPulse 1.2s ease-in-out infinite}
+.eta-pulse:nth-child(2){animation-delay:.2s}.eta-pulse:nth-child(3){animation-delay:.4s}
+@keyframes etaPulse{0%,80%,100%{transform:scale(.8);opacity:.3}40%{transform:scale(1.2);opacity:1}}
+.eta-loading-txt{font-size:11px;color:var(--muted)}
+.eta-disclaimer{font-size:9px;color:var(--muted);line-height:1.4;padding:7px 14px 8px;border-top:1px solid var(--border);opacity:.65}
 </style>
 </head>
 <body>
@@ -325,6 +358,21 @@ html,body{
       </div>
       <div class="wave-row" id="wave-row" style="display:none">🌊 <span id="w-wave">—</span> m</div>
     </div>
+  </div>
+
+  <!-- Rain ETA Module -->
+  <div class="rain-eta" id="rain-eta-card">
+    <div class="eta-hdr">
+      <div class="eta-hdr-lbl">🌧 Rain ETA · Radar Estimate</div>
+      <div class="eta-hdr-time" id="eta-updated">—</div>
+    </div>
+    <div id="eta-body">
+      <div class="eta-loading">
+        <div class="eta-pulse"></div><div class="eta-pulse"></div><div class="eta-pulse"></div>
+        <span class="eta-loading-txt">Connecting to radar…</span>
+      </div>
+    </div>
+    <div class="eta-disclaimer">⚠ Radar-based estimate only · Not an official forecast · For reference only</div>
   </div>
 
   <!-- Mid grid (desktop: 2-col, mobile: stacked) -->
@@ -678,8 +726,181 @@ async function init() {
   }
 }
 
+// ── Rain ETA Module ────────────────────────────────────────────────────────
+let etaCountdownInterval = null;
+let etaArrival = null;
+
+const ETA_COLORS = {
+  none:'#1fe8a0', green:'#4ade80', yellow:'#ffd166', red:'#ff5252', purple:'#e040fb'
+};
+const ETA_RISK = {
+  low:    { label:'Low',    bg:'rgba(31,232,160,.15)',  color:'#1fe8a0' },
+  medium: { label:'Medium', bg:'rgba(255,209,102,.15)', color:'#ffd166' },
+  high:   { label:'High',   bg:'rgba(255,82,82,.15)',   color:'#ff5252' }
+};
+const ETA_EMOJI  = { none:'🌤', green:'🌦', yellow:'🌧', red:'⛈', purple:'🌪' };
+const ETA_LABELS = { none:'Clear', green:'Light rain', yellow:'Moderate', red:'Heavy', purple:'Squall' };
+
+async function fetchRainEta() {
+  try {
+    const ctrl = new AbortController();
+    setTimeout(() => ctrl.abort(), 5000);
+    const r = await fetch('/api/rain-eta', { signal: ctrl.signal });
+    if (!r.ok) throw new Error('api_error');
+    renderEtaData(await r.json(), 'radar');
+  } catch(e) {
+    // Fallback: Open-Meteo hourly precipitation probability
+    try { await fetchEtaFallback(); }
+    catch(e2) { renderEtaOffline(); }
+  }
+}
+
+async function fetchEtaFallback() {
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}`
+    + `&hourly=precipitation_probability,precipitation,weather_code`
+    + `&wind_speed_unit=kn&timezone=Asia%2FBangkok&forecast_days=1`;
+  const r = await fetch(url);
+  if (!r.ok) throw new Error('meteo_error');
+  const d = await r.json();
+
+  const nowTH  = new Date(Date.now() + 7 * 3600_000);
+  const nowH   = nowTH.getUTCHours();
+  const nowMin = nowTH.getUTCMinutes();
+  const probs  = d.hourly.precipitation_probability;
+  const precip = d.hourly.precipitation;
+  const codes  = d.hourly.weather_code;
+
+  let rainOffset = null, maxProb = 0;
+  for (let i = 0; i <= 5; i++) {
+    const h = nowH + i;
+    if (h >= probs.length) break;
+    if (probs[h] > maxProb) maxProb = probs[h];
+    if (probs[h] >= 40 && rainOffset === null) rainOffset = i;
+  }
+
+  let etaMinutes = null;
+  if (rainOffset !== null) {
+    etaMinutes = Math.max(0, rainOffset * 60 - nowMin);
+  }
+
+  const hi = Math.min((rainOffset !== null ? nowH + rainOffset : nowH), precip.length - 1);
+  const mm = precip[hi] || 0, wc = codes[hi] || 0;
+
+  let intensity = 'none', windGust = '—';
+  if (maxProb >= 40) {
+    if      (mm < 2 || wc <= 61)  { intensity = 'green';  windGust = '+2–5 kn'; }
+    else if (mm < 6)               { intensity = 'yellow'; windGust = '+5–10 kn'; }
+    else if (mm < 15)              { intensity = 'red';    windGust = '+10–20 kn'; }
+    else                           { intensity = 'purple'; windGust = '+10–20 kn'; }
+  }
+
+  const confidence = maxProb >= 75 ? 'high' : maxProb >= 50 ? 'medium' : 'low';
+  const updStr = nowTH.toISOString().slice(11,16) + ' ICT';
+
+  renderEtaData({
+    rainApproaching: maxProb >= 40 && (etaMinutes === null || etaMinutes >= 0),
+    etaMinutes,
+    distanceKm: null,
+    stormSpeedKmH: null,
+    intensity,
+    windGustIncreaseKnots: windGust,
+    confidence,
+    updatedAtThailand: updStr,
+    _prob: maxProb
+  }, 'forecast');
+}
+
+function renderEtaData(d, source) {
+  document.getElementById('eta-updated').textContent = d.updatedAtThailand || '—';
+  const color = ETA_COLORS[d.intensity] || ETA_COLORS.none;
+  const body  = document.getElementById('eta-body');
+
+  if (!d.rainApproaching || d.etaMinutes === null) {
+    stopEtaCountdown();
+    body.innerHTML = `<div class="eta-inner">
+      <div class="eta-status-row">
+        <span class="eta-dot" style="background:${color};box-shadow:0 0 6px ${color}"></span>
+        <div>
+          <div class="eta-status-txt" style="color:${color}">No rain nearby</div>
+          <div class="eta-clear-sub">Clear conditions · Next 1–2 hours</div>
+        </div>
+      </div></div>`;
+    return;
+  }
+
+  const risk    = ETA_RISK[d.confidence] || ETA_RISK.low;
+  const distStr = d.distanceKm    ? `${d.distanceKm} km`      : '—';
+  const spdStr  = d.stormSpeedKmH ? `${d.stormSpeedKmH} km/h` : '—';
+  const probStr = d._prob != null ? `${d._prob}%` : '—';
+  const metaLbl = source === 'radar' ? 'Confidence' : 'Probability';
+  const metaVal = source === 'radar' ? (d.confidence || '—') : probStr;
+
+  body.innerHTML = `<div class="eta-inner">
+    <div class="eta-status-row" style="margin-bottom:10px">
+      <span class="eta-dot" style="background:${color};box-shadow:0 0 6px ${color}"></span>
+      <div class="eta-status-txt" style="color:${color}">Rain approaching</div>
+      <span class="eta-src-pill">${source === 'radar' ? 'RADAR' : 'FORECAST'}</span>
+    </div>
+    <div class="eta-cd-wrap" style="border:1px solid ${color}33">
+      <div>
+        <div class="eta-cd" id="eta-cd" style="color:${color}">--:--</div>
+        <div class="eta-cd-lbl">Estimated arrival</div>
+      </div>
+      <div class="eta-ico-wrap">
+        <div class="eta-ico">${ETA_EMOJI[d.intensity] || '🌧'}</div>
+        <div class="eta-ico-lbl">${ETA_LABELS[d.intensity] || ''}</div>
+      </div>
+    </div>
+    <div class="eta-grid">
+      <div class="eta-stat"><div class="eta-stat-lbl">Distance</div><div class="eta-stat-val">${distStr}</div></div>
+      <div class="eta-stat"><div class="eta-stat-lbl">Storm speed</div><div class="eta-stat-val">${spdStr}</div></div>
+      <div class="eta-stat"><div class="eta-stat-lbl">Gust increase</div><div class="eta-stat-val" style="color:#ff7a2f">${d.windGustIncreaseKnots}</div></div>
+      <div class="eta-stat"><div class="eta-stat-lbl">${metaLbl}</div><div class="eta-stat-val">${metaVal}</div></div>
+    </div>
+    <span class="eta-risk" style="background:${risk.bg};color:${risk.color}">Risk: ${risk.label}</span>
+  </div>`;
+
+  startEtaCountdown(d.etaMinutes);
+}
+
+function renderEtaOffline() {
+  stopEtaCountdown();
+  document.getElementById('eta-body').innerHTML = `
+    <div class="eta-offline">
+      <div class="eta-offline-icon">📡</div>
+      <div class="eta-offline-txt">
+        <strong>Radar service offline</strong>
+        Configure <code style="font-size:10px;color:var(--cyan)">/api/rain-eta</code> to enable radar estimates.
+      </div>
+    </div>`;
+}
+
+function startEtaCountdown(minutes) {
+  stopEtaCountdown();
+  etaArrival = new Date(Date.now() + minutes * 60_000);
+  tickEta();
+  etaCountdownInterval = setInterval(tickEta, 1000);
+}
+
+function stopEtaCountdown() {
+  if (etaCountdownInterval) { clearInterval(etaCountdownInterval); etaCountdownInterval = null; }
+  etaArrival = null;
+}
+
+function tickEta() {
+  const el = document.getElementById('eta-cd');
+  if (!el || !etaArrival) return;
+  const ms = etaArrival - Date.now();
+  if (ms <= 0) { el.textContent = 'NOW'; return; }
+  const m = Math.floor(ms / 60_000);
+  const s = Math.floor((ms % 60_000) / 1000);
+  el.textContent = `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+}
+
 // Auto-refresh every 10 minutes
 setInterval(init, 10 * 60_000);
+fetchRainEta();
+setInterval(fetchRainEta, 5 * 60_000);
 init();
 </script>
 </body>
