@@ -226,6 +226,37 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:55px 60
 .wa{position:fixed;bottom:28px;right:28px;z-index:400;width:56px;height:56px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 4px 20px rgba(232,0,138,.45);transition:transform .2s}
 .wa:hover{transform:scale(1.1)}
 
+/* ─── SECTION LABEL ─── */
+.wx-scope .s-label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:4px 0 2px}
+
+/* ─── RAIN ETA MODULE ─── */
+.wx-scope .rain-eta{background:var(--card);border:1px solid var(--border2);border-radius:12px;overflow:hidden}
+.wx-scope .eta-hdr{padding:14px 18px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+.wx-scope .eta-hdr-label{font-size:12px;font-weight:600;letter-spacing:.1em;color:var(--text);text-transform:uppercase;flex:1}
+.wx-scope .eta-updated{font-size:11px;color:var(--muted)}
+.wx-scope .eta-inner{padding:16px 18px 18px}
+.wx-scope .eta-dot{width:11px;height:11px;border-radius:50%;display:inline-block;flex-shrink:0;animation:etaPulse 2s ease-in-out infinite}
+.wx-scope .eta-dot.green{background:var(--green);box-shadow:0 0 8px rgba(31,232,160,.5)}
+.wx-scope .eta-dot.yellow{background:var(--yellow);box-shadow:0 0 8px rgba(255,209,102,.5)}
+.wx-scope .eta-dot.red{background:#ff4757;box-shadow:0 0 8px rgba(255,71,87,.5)}
+@keyframes etaPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(1.35)}}
+.wx-scope .eta-status{font-size:17px;font-weight:700;color:var(--text);display:flex;align-items:center;gap:10px;margin-bottom:14px;line-height:1.3}
+.wx-scope .eta-cd-wrap{background:var(--card2);border-radius:8px;padding:14px 18px;margin-bottom:14px;display:flex;align-items:center;gap:16px}
+.wx-scope .eta-cd-num{font-size:40px;font-weight:700;font-family:monospace;line-height:1;color:var(--cyan);min-width:5ch;letter-spacing:-.02em}
+.wx-scope .eta-cd-meta{font-size:12px;color:var(--muted);line-height:1.6}
+.wx-scope .eta-cd-meta strong{display:block;color:var(--text);font-size:14px;margin-bottom:2px}
+.wx-scope .eta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.wx-scope .eta-stat{background:var(--card2);border-radius:8px;padding:10px 12px}
+.wx-scope .eta-stat-val{font-size:19px;font-weight:700;color:var(--cyan);line-height:1}
+.wx-scope .eta-stat-lbl{font-size:11px;color:var(--muted);margin-top:3px}
+.wx-scope .eta-risk{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:12px}
+.wx-scope .eta-risk.low{background:rgba(31,232,160,.1);color:var(--green);border:1px solid rgba(31,232,160,.25)}
+.wx-scope .eta-risk.medium{background:rgba(255,209,102,.1);color:var(--yellow);border:1px solid rgba(255,209,102,.3)}
+.wx-scope .eta-risk.high{background:rgba(255,71,87,.1);color:#ff4757;border:1px solid rgba(255,71,87,.3)}
+.wx-scope .eta-no-rain{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;color:var(--green);padding:8px 0 12px}
+.wx-scope .eta-disclaimer{font-size:11px;color:var(--muted);line-height:1.65;border-top:1px solid var(--border);padding-top:10px}
+.wx-scope .eta-offline,.wx-scope .eta-loading{padding:22px;text-align:center;color:var(--muted);font-size:14px}
+
 /* ─── RESPONSIVE ─── */
 @media(max-width:900px){
   nav{padding:0 20px}
@@ -377,6 +408,18 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:55px 60
     </div>
   </div>
 
+  <!-- 3. RAIN ETA — Approaching storm timer -->
+  <div class="rain-eta" id="rain-eta">
+    <div class="eta-hdr">
+      <span class="eta-dot green" id="eta-dot"></span>
+      <span class="eta-hdr-label">🌧 Rain ETA · Approaching Storm</span>
+      <span class="eta-updated" id="eta-updated"></span>
+    </div>
+    <div class="eta-inner" id="eta-inner">
+      <div class="eta-loading">Загрузка данных о дожде…</div>
+    </div>
+  </div>
+
 </div><!-- wx-app-inner -->
 </div><!-- wx-scope -->
 
@@ -448,6 +491,139 @@ function openMobile(){document.getElementById('mobileMenu').classList.add('open'
 function closeMobile(){document.getElementById('mobileMenu').classList.remove('open');}
 function toggleSub(id){var el=document.getElementById(id);if(el)el.classList.toggle('open');}
 (function(){if(localStorage.getItem('theme')!=='dark')document.body.classList.add('light');})();
+
+// ── Rain ETA ───────────────────────────────────────────────────────────────
+var _etaCd = null;
+
+function fetchRainEta() {
+  fetch('/api/rain-eta')
+    .then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(d){ renderEtaData(d); })
+    .catch(function(){ fetchEtaFallback(); });
+}
+
+function fetchEtaFallback() {
+  var url = 'https://api.open-meteo.com/v1/forecast' +
+    '?latitude=9.70&longitude=99.98' +
+    '&hourly=precipitation_probability,precipitation,windgusts_10m' +
+    '&forecast_days=1&timezone=Asia%2FBangkok';
+  fetch(url)
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      var now  = new Date();
+      var hr   = now.getHours();
+      var times = d.hourly.time;
+      var pp    = d.hourly.precipitation_probability;
+      var prec  = d.hourly.precipitation;
+
+      var idx = 0;
+      for (var i = 0; i < times.length; i++) {
+        if (new Date(times[i]).getHours() === hr) { idx = i; break; }
+      }
+
+      var maxProb = 0, etaMinutes = null, intensity = 'none';
+      for (var j = 0; j <= 3; j++) {
+        var p = pp[idx + j] || 0;
+        if (p > maxProb) {
+          maxProb = p;
+          if (p >= 60) {
+            etaMinutes  = j * 60;
+            intensity   = (prec[idx+j] > 5) ? 'heavy' : (prec[idx+j] > 1) ? 'moderate' : 'light';
+          }
+        }
+      }
+
+      var ict = now.toLocaleTimeString('en-GB', {timeZone:'Asia/Bangkok',hour:'2-digit',minute:'2-digit'});
+      if (maxProb < 40) {
+        renderEtaData({ rainApproaching:false, confidence:'low', updatedAtThailand: ict });
+        return;
+      }
+      var gustIncrease = intensity==='heavy' ? 18 : intensity==='moderate' ? 7 : 3;
+      renderEtaData({
+        rainApproaching:       true,
+        etaMinutes:            etaMinutes !== null ? etaMinutes : 90,
+        distanceKm:            null,
+        stormSpeedKmH:         null,
+        intensity:             intensity,
+        windGustIncreaseKnots: gustIncrease,
+        confidence:            'medium',
+        updatedAtThailand:     ict
+      });
+    })
+    .catch(function(){ renderEtaOffline(); });
+}
+
+function renderEtaData(d) {
+  var inner = document.getElementById('eta-inner');
+  var dot   = document.getElementById('eta-dot');
+  var upd   = document.getElementById('eta-updated');
+  if (!inner) return;
+  stopEtaCountdown();
+  if (d.updatedAtThailand) upd.textContent = 'Updated ' + d.updatedAtThailand + ' ICT';
+
+  if (!d.rainApproaching) {
+    dot.className = 'eta-dot green';
+    inner.innerHTML =
+      '<div class="eta-no-rain"><span>✅</span><span>No rain approaching — skies clear</span></div>' +
+      '<div class="eta-disclaimer">Based on Open-Meteo hourly forecast for Koh Phangan. Tropical conditions change rapidly — always check the radar above before heading out.</div>';
+    return;
+  }
+
+  var dotCls = d.intensity==='heavy' ? 'red' : d.intensity==='moderate' ? 'yellow' : 'green';
+  dot.className = 'eta-dot ' + dotCls;
+  var riskCls   = d.intensity==='heavy' ? 'high' : d.intensity==='moderate' ? 'medium' : 'low';
+  var riskTxt   = d.intensity==='heavy' ? '⚠ HIGH RISK' : d.intensity==='moderate' ? '⚠ MEDIUM RISK' : '⚠ LOW RISK';
+  var intenTxt  = d.intensity==='heavy' ? '⛈ Heavy rain' : d.intensity==='moderate' ? '🌧 Moderate rain' : '🌦 Light rain';
+
+  var statsHtml = '';
+  if (d.distanceKm)            statsHtml += '<div class="eta-stat"><div class="eta-stat-val">'+d.distanceKm+' km</div><div class="eta-stat-lbl">Distance</div></div>';
+  if (d.stormSpeedKmH)         statsHtml += '<div class="eta-stat"><div class="eta-stat-val">'+d.stormSpeedKmH+' km/h</div><div class="eta-stat-lbl">Storm speed</div></div>';
+  if (d.windGustIncreaseKnots) statsHtml += '<div class="eta-stat"><div class="eta-stat-val">+'+d.windGustIncreaseKnots+' kn</div><div class="eta-stat-lbl">Expected gusts</div></div>';
+
+  inner.innerHTML =
+    '<div class="eta-status"><span class="eta-dot '+dotCls+'"></span><span>'+intenTxt+' approaching</span></div>' +
+    '<div class="eta-cd-wrap">' +
+      '<div class="eta-cd-num" id="eta-cd-num">--:--</div>' +
+      '<div class="eta-cd-meta"><strong>Estimated time until rain</strong>Minutes remaining before arrival at Thong Sala Beach</div>' +
+    '</div>' +
+    (statsHtml ? '<div class="eta-grid">'+statsHtml+'</div>' : '') +
+    '<span class="eta-risk '+riskCls+'">'+riskTxt+'</span>' +
+    '<div class="eta-disclaimer">Radar-based estimate. Confidence: '+(d.confidence||'medium')+'. Tropical storms can change rapidly — this is informational only, not a safety guarantee. Always check the radar above.</div>';
+
+  startEtaCountdown(d.etaMinutes);
+}
+
+function renderEtaOffline() {
+  var inner = document.getElementById('eta-inner');
+  if (!inner) return;
+  stopEtaCountdown();
+  inner.innerHTML = '<div class="eta-offline">⚡ Rain ETA unavailable — check the radar above</div>';
+}
+
+function startEtaCountdown(minutes) {
+  stopEtaCountdown();
+  if (!minutes || minutes <= 0) return;
+  var end = Date.now() + minutes * 60 * 1000;
+  tickEta(end);
+  _etaCd = setInterval(function(){ tickEta(end); }, 1000);
+}
+
+function stopEtaCountdown() {
+  if (_etaCd) { clearInterval(_etaCd); _etaCd = null; }
+}
+
+function tickEta(end) {
+  var el = document.getElementById('eta-cd-num');
+  if (!el) { stopEtaCountdown(); return; }
+  var rem = Math.max(0, end - Date.now());
+  var m = Math.floor(rem / 60000);
+  var s = Math.floor((rem % 60000) / 1000);
+  el.textContent = m + ':' + (s < 10 ? '0' : '') + s;
+  if (rem === 0) stopEtaCountdown();
+}
+
+fetchRainEta();
+setInterval(fetchRainEta, 5 * 60 * 1000);
 
 // ── TMD Radar scaling + Koh Phangan zoom ──────────────────────────────────
 (function(){
