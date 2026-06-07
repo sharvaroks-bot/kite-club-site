@@ -24,7 +24,8 @@
 <meta name="twitter:image" content="https://kiteclubkohphangan.com/assets/kitesurfing.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -1662,7 +1663,7 @@ li.has-dropdown > button{background:none;border:none;color:var(--fg);cursor:poin
 <a href="https://wa.me/66967203910?text=Hi!%20I%27d%20like%20to%20book%20the%20Independent%20Rider%20Kitesurf%20Course%20%2810h%2C%2018%2C000%20THB%29" target="_blank" class="wa">💬</a>
 <script>
 function toggleTheme(){const l=document.body.classList.toggle('light');localStorage.setItem('theme',l?'light':'dark');}
-(function(){if(localStorage.getItem('theme')!=='dark')document.body.classList.add('light');})();
+(function(){if(localStorage.getItem('theme')==='light')document.body.classList.add('light');})();
 function openMobile(){document.getElementById('mobileMenu').classList.add('open');}
 function closeMobile(){document.getElementById('mobileMenu').classList.remove('open');}
 function toggleSub(id){document.getElementById(id).classList.toggle('open');}
