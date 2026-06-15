@@ -114,8 +114,8 @@ body.light .theme-icon-sun{opacity:0}body.light .theme-icon-moon{opacity:1}
 .sl-filter:hover{color:var(--white)}
 .sl-filter.active{color:var(--pink);border-bottom-color:var(--pink)}
 .sl-grid-wrap{padding:40px 60px 80px;max-width:1400px;margin:0 auto}
-.sl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.sl-card{position:relative;background:var(--card);border:1px solid var(--border);display:block;transition:border-color .3s,box-shadow .3s;overflow:hidden;text-decoration:none;border-radius:4px}
+.sl-grid{display:flex;flex-wrap:wrap;gap:20px}
+.sl-card{position:relative;background:var(--card);border:1px solid var(--border);display:block;width:calc((100% - 40px) / 3);transition:border-color .3s,box-shadow .3s;overflow:hidden;text-decoration:none;border-radius:4px}
 .sl-card:hover{border-color:var(--mag);box-shadow:0 8px 32px rgba(232,0,138,.18)}
 .sl-card-img{position:relative;background:#fff;overflow:hidden}
 .sl-card-img img{width:100%;height:auto;display:block;object-fit:contain;aspect-ratio:4/3}
@@ -152,8 +152,8 @@ body.light .sl-card-size{background:#f0f0ec;border-color:rgba(17,17,24,.12);colo
   .sl-hero-stats{gap:22px}.sl-stat-num{font-size:28px}
   .sl-filters{padding:0 22px}.sl-filter{padding:14px 14px;font-size:12px}
   .sl-grid-wrap{padding:28px 0 55px}
-  .sl-grid{grid-template-columns:1fr}
-  .sl-card{border-radius:0;border-left:none;border-right:none}
+  .sl-grid{flex-direction:column}
+  .sl-card{width:100%;border-radius:0;border-left:none;border-right:none}
   .sl-card-body{padding:14px 16px 16px}
   .sl-dist-band{padding:36px 22px}
 }
