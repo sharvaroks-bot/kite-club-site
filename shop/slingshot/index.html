@@ -119,6 +119,8 @@ body.light .theme-icon-sun{opacity:0}body.light .theme-icon-moon{opacity:1}
 .sl-card:hover{border-color:var(--mag);box-shadow:0 8px 32px rgba(232,0,138,.18)}
 .sl-card-img{position:relative;background:#fff;overflow:hidden}
 .sl-card-img img{width:100%;height:auto;display:block;object-fit:contain;aspect-ratio:4/3}
+.sl-card-img::after{content:'';position:absolute;bottom:0;left:0;right:0;height:48px;background:linear-gradient(to bottom,transparent,var(--card));pointer-events:none}
+body.light .sl-card-img::after{background:linear-gradient(to bottom,transparent,#fff)}
 .sl-card-badge{position:absolute;top:12px;left:12px;background:var(--grad);color:#fff;font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:5px 11px;z-index:2}
 .sl-card-badge.sale{background:linear-gradient(135deg,#ff6b00,#ff3a00)}
 .sl-card-body{padding:18px 18px 20px;flex:1;display:flex;flex-direction:column;background:var(--card)}
@@ -250,7 +252,7 @@ body.light .sl-card-size{background:#f0f0ec;border-color:rgba(17,17,24,.12);colo
   <div class="sl-hero-inner">
     <div class="sl-distributor-badge"><span>✦ Official Slingshot Distributor · Koh Phangan</span></div>
     <h1>Slingshot<br><em>Kite Shop</em></h1>
-    <p>The world's most innovative kites — now available direct on Koh Phangan. We are an official Slingshot distributor. Order via WhatsApp, pick up at the school or arrange delivery.</p>
+    <p>The world's most innovative kites — now available direct on Koh Phangan. We are an official Slingshot distributor. Order via WhatsApp, pick up at our Kite Club or arrange delivery.</p>
     <div class="sl-hero-stats">
       <div class="sl-stat"><span class="sl-stat-num">7</span><span class="sl-stat-label">Kite Models</span></div>
       <div class="sl-stat"><span class="sl-stat-num">$899</span><span class="sl-stat-label">Starting From</span></div>
