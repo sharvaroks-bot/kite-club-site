@@ -1206,6 +1206,48 @@ body.light .pc.feat .pc-badge {
   .hero-btns{flex-wrap:nowrap !important;gap:8px !important}
   .hero-btns a,.hero-btns .btn-p,.hero-btns .btn-s{flex:1;text-align:center;padding:14px 8px !important;font-size:14px !important;min-width:0}
 }
+
+/* ─── DISC SECTION (Shop brands) ─── */
+.disc-section{display:grid;grid-template-columns:1fr 1fr;min-height:520px;overflow:hidden}
+.disc-video{position:relative;overflow:hidden;min-height:460px}
+.disc-video video,.disc-video img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.disc-text{display:flex;flex-direction:column;justify-content:center;padding:60px 64px}
+.disc-tag{font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#e8008a;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.disc-tag::before{content:'';display:inline-block;width:32px;height:2px;background:#e8008a}
+.disc-text h2{font-family:var(--FD);font-size:52px;font-weight:900;text-transform:uppercase;line-height:.95;margin:0 0 20px;color:var(--fg,#fff)}
+.disc-text h2 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.disc-facts{display:flex;gap:32px;margin-bottom:36px}
+.disc-fact{display:flex;flex-direction:column}
+.disc-fact strong{font-family:var(--FD);font-size:28px;font-weight:900;color:var(--fg,#fff)}
+.disc-fact span{font-family:var(--FB);font-size:12px;color:var(--sub,rgba(255,255,255,.5));text-transform:uppercase;letter-spacing:.08em}
+.disc-btns{display:flex;gap:12px}
+.disc-btn-primary{padding:14px 28px;background:var(--grad);color:#fff;font-family:var(--FD);font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;transition:opacity .2s;display:inline-block}
+.disc-btn-primary:hover{opacity:.85}
+.disc-btn-secondary{padding:14px 28px;background:transparent;border:2px solid rgba(255,255,255,.5);color:#fff;font-family:var(--FD);font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;transition:all .2s;display:inline-block}
+.disc-btn-secondary:hover{border-color:var(--pink);color:var(--pink)}
+body.light .disc-text{background:var(--mid)}
+body.light .disc-btn-secondary{border-color:rgba(17,17,24,.3);color:#111118}
+body.light .disc-btn-secondary:hover{border-color:var(--mag);color:var(--mag)}
+/* Mobile Slingshot card */
+.shop-brands-mobile{display:none}
+.mob-disc-list{padding:0 0 55px}
+.mob-disc-card{position:relative;overflow:hidden;display:block;width:100%;aspect-ratio:5/3;text-decoration:none;cursor:pointer}
+.mob-disc-card video,.mob-disc-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.mob-disc-ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:24px 22px;background:linear-gradient(to top,rgba(0,0,0,.8) 0%,rgba(0,0,0,.2) 55%,transparent 100%)}
+.mob-disc-tag{font-family:var(--FD);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#e8008a;margin-bottom:8px}
+.mob-disc-card h3{font-family:var(--FD);font-weight:900;font-size:38px;text-transform:uppercase;line-height:.95;margin:0 0 12px;color:#fff}
+.mob-disc-lnk{font-family:var(--FD);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+/* Mobile shop header (replaces hero on mobile) */
+.shop-mob-header{display:none;padding:44px 22px 32px;background:linear-gradient(135deg,rgba(123,47,255,.25) 0%,rgba(232,0,138,.22) 100%)}
+.shop-mob-eyebrow{font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.shop-mob-eyebrow::before{content:'';width:24px;height:2px;background:var(--grad)}
+.shop-mob-h1{font-family:var(--FD);font-weight:900;font-size:clamp(40px,12vw,58px);text-transform:uppercase;line-height:.9;color:#fff}
+@media(max-width:900px){
+  .page-hero{display:none!important}
+  .shop-mob-header{display:block!important}
+  .disc-section{display:none!important}
+  .shop-brands-mobile{display:block!important}
+}
 </style>
 </head>
 <body>
@@ -1294,26 +1336,54 @@ body.light .pc.feat .pc-badge {
 </div>
 <main id="page-content">
 
-
-  <div class="shop-header fu">
-    <h1>Equipment<br><em>Shop</em></h1>
+  <div class="shop-mob-header">
+    <div class="shop-mob-eyebrow">Official Distributor · Slingshot Sports</div>
+    <h1 class="shop-mob-h1">Kite Club<br>Equipment<br>Shop</h1>
   </div>
 
-  <!-- SLINGSHOT DISTRIBUTOR BANNER -->
-  <div style="margin:0 60px 3px;padding:28px 32px;background:linear-gradient(135deg,rgba(123,47,255,.15) 0%,rgba(232,0,138,.15) 100%);border:1px solid rgba(123,47,255,.3);display:flex;align-items:center;gap:24px;flex-wrap:wrap" class="fu">
-    <div style="font-size:40px">🏄</div>
-    <div style="flex:1;min-width:220px">
-      <div style="font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);margin-bottom:4px">Official Distributor</div>
-      <div style="font-family:var(--FD);font-weight:900;font-size:26px;text-transform:uppercase;margin-bottom:6px">Slingshot Sports <span style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">2026</span></div>
-      <div style="font-size:14px;color:var(--muted)">Ghost V4 from $1,209 · Code NXT V2 from $2,690 · 7 models in stock · Order via WhatsApp</div>
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('../assets/kitesurfing.jpg')"></div>
+    <div class="page-hero-content">
+      <div class="eyebrow">Kite Club Koh Phangan</div>
+      <h1>Equipment<br><em>Shop</em></h1>
     </div>
-    <a href="slingshot/" class="btn-p">Browse Slingshot →</a>
   </div>
 
-  <div class="shop-cats fu" id="shopMainTrack" style="padding:0 60px 70px;flex-wrap:wrap;display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:3px" data-shop="0">
+  <section class="disc-section fu">
+    <div class="disc-text">
+      <div class="disc-tag">Official Distributor</div>
+      <h2>SLING<em>SHOT</em></h2>
+      <p>Premium kites, bars and accessories from one of the world's leading kitesurfing brands. Official Slingshot distributor on Koh Phangan — 2026 season models in stock, ready to order.</p>
+      <div class="disc-facts">
+        <div class="disc-fact"><strong>7</strong><span>Models</span></div>
+        <div class="disc-fact"><strong>$899</strong><span>From</span></div>
+        <div class="disc-fact"><strong>2026</strong><span>Season</span></div>
+      </div>
+      <div class="disc-btns">
+        <a href="slingshot/" class="disc-btn-primary">Browse Slingshot →</a>
+        <a href="https://wa.me/66967203910" class="disc-btn-secondary">Ask a Question</a>
+      </div>
+    </div>
+    <div class="disc-video">
+      <video autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="../assets/kitesurf-drone-kite.mp4" type="video/mp4"></video>
+      <img src="../assets/kitesurfing.jpg" alt="Slingshot Kites 2026" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+    </div>
+  </section>
+
+  <div class="shop-brands-mobile fu">
+    <div class="mob-disc-list">
+      <a href="slingshot/" class="mob-disc-card">
+        <img src="../assets/kitesurfing.jpg" alt="Slingshot Kites 2026">
+        <div class="mob-disc-ov">
+          <div class="mob-disc-tag">Official Distributor</div>
+          <h3>SLINGSHOT</h3>
+          <div class="mob-disc-lnk">Browse Shop →</div>
+        </div>
+      </a>
+    </div>
   </div>
+
   <div class="cta-band fu"><div class="cta-inner"><h2>Need<br><em>Gear?</em></h2><p>We stock top-quality kitesurfing equipment. Contact us for custom orders and advice.</p><div class="cta-btns"><a href="https://wa.me/66967203910" target="_blank" class="btn-p">Contact Us</a></div></div></div>
-
 
 </main>
 <footer id="site-footer" role="contentinfo">
