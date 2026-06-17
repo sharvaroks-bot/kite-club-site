@@ -381,7 +381,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(13,13,26,.95);backdrop-fil
 .sh a:hover,.sh button:hover{color:var(--pink)}
 
 /* ─── HERO ─── */
-.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:flex-end;overflow:hidden}
+.hero{position:relative;height:55vh;min-height:480px;max-height:600px;display:flex;align-items:center;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,13,26,.05) 0%,rgba(13,13,26,.45) 60%,rgba(13,13,26,.92) 100%),url('../../assets/kitesurfing.jpg') center/cover no-repeat;transform:scale(1.04);animation:hzoom 16s ease-in-out infinite alternate}
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(123,47,255,.15) 0%,rgba(232,0,138,.2) 45%,transparent 70%)}
 @keyframes hzoom{from{transform:scale(1.04)}to{transform:scale(1)}}
@@ -1298,30 +1298,13 @@ body.light .snap-btn-learn{color:var(--pink);border-color:var(--pink);}
   }
 }
 
-/* ─── Page hero video ─── */
-.page-hero-bg-video{
-  background:none !important;
-  background-image:none !important;
-  overflow:hidden;
+/* ─── Hero video ─── */
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-video-desktop{display:block}.hero-video-mobile{display:none}
+.hero .hero-content{padding-bottom:20px}
+@media(max-width:900px){
+  .hero-video-desktop{display:none}.hero-video-mobile{display:block}
 }
-.page-hero-video{
-  position:absolute;
-  top:50%;left:50%;
-  transform:translate(-50%,-50%);
-  min-width:100%;min-height:100%;
-  width:auto;height:auto;
-  object-fit:cover;
-  z-index:0;
-}
-.page-hero-video-mobile{display:none;}
-.page-hero-video-desktop{display:block;}
-@media(max-width:768px){
-  .page-hero-video-desktop{display:none;}
-  .page-hero-video-mobile{display:block;}
-}
-/* Keep overlay on top */
-.page-hero-bg-video::after{z-index:1;}
-.page-hero-content{position:relative;z-index:2;}
 
 /* ─── Tasks 2&3: Full-width snap on mobile, no left gap ─── */
 @media(max-width:768px){
@@ -1845,25 +1828,21 @@ body.light .geo-lbl{color:#666677}
 
 <main id="page-content">
 
-  <div class="page-hero">
-    <div class="page-hero-bg page-hero-bg-video">
-      <video class="page-hero-video page-hero-video-desktop" autoplay muted loop playsinline preload="auto">
-        <source src="../../assets/kitesurf-desktop.mp4" type="video/mp4">
-      </video>
-      <video class="page-hero-video page-hero-video-mobile" autoplay muted loop playsinline preload="auto">
-        <source src="../../assets/kitesurf-mobile.mp4" type="video/mp4">
-      </video>
+  <section class="hero fu" role="banner" aria-label="Kitesurfing Lessons Koh Phangan — IKO Certified School">
+    <div class="hero-bg">
+      <video class="hero-video hero-video-desktop" src="../../assets/desktopKP.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+      <video class="hero-video hero-video-mobile" src="../../assets/mobileKP.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
     </div>
-    <div class="page-hero-content fu">
-      <div class="eyebrow">IKO Certified School</div>
-      <h1>Kitesurfing Lessons<br><em>in Koh Phangan</em></h1>
+    <div class="hero-content fu">
+      <div class="hero-eyebrow">IKO Certified School · Thong Sala Beach, Koh Phangan · Est. 2021</div>
+      <h1>Kitesurfing<br><em>Lessons</em></h1>
       <p>IKO certified school at Thong Sala Beach — flat water lagoon, radio helmet coaching, private &amp; group lessons from 3,500 THB.</p>
       <div class="hero-btns">
+        <a href="https://wa.me/66967203910?text=Hi!%20I%27d%20like%20to%20book%20a%20kitesurfing%20lesson" target="_blank" rel="noopener" class="btn-p">Book via WhatsApp</a>
         <a href="../../kitesurfing/" class="btn-s">About Kitesurfing</a>
-        <a href="https://wa.me/66967203910" target="_blank" class="btn-p">Book via WhatsApp</a>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- ПРЕИМУЩЕСТВА -->
 
