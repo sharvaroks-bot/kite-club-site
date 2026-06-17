@@ -537,7 +537,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(13,13,26,.95);backdrop-fil
 .gt{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
 /* ─── SECTION HEADER ─── */
-.sh{display:flex;align-items:flex-end;justify-content:space-between;padding:70px 60px 36px}
+.sh{display:flex;align-items:flex-end;justify-content:space-between;padding:40px 60px 36px}
 .sh h2{font-family:var(--FD);font-weight:900;font-size:clamp(32px,4.5vw,58px);text-transform:uppercase;letter-spacing:-.01em;line-height:.92}
 .sh a,.sh button{color:var(--muted);font-family:var(--FD);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border-bottom:1.5px solid var(--mag);padding-bottom:2px;transition:color .2s;background:none;cursor:pointer;white-space:nowrap}
 .sh a:hover,.sh button:hover{color:var(--pink)}
@@ -644,7 +644,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(13,13,26,.95);backdrop-fil
 .act-card:hover .act-arr{background:var(--grad);color:#fff;border-color:transparent}
 
 /* ─── STATS ─── */
-.stats{border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:grid;grid-template-columns:repeat(6,1fr);margin:0 60px 70px}
+.stats{border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:grid;grid-template-columns:repeat(6,1fr);margin:0 60px 0}
 .si{padding:40px 28px;border-right:1px solid var(--border);text-align:center}
 .si:last-child{border-right:none}
 .si-num{font-family:var(--FD);font-weight:900;font-size:50px;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;display:block}
@@ -1596,14 +1596,6 @@ body.light .disc-btn-secondary:hover{border-color:#e8008a;color:#e8008a}
 .seo-cols p{color:var(--off);font-size:15px;line-height:1.8}
 body.light .seo-cols p{color:#444}
 @media(max-width:768px){.seo-block{padding:40px 20px 0}.seo-cols{grid-template-columns:1fr;gap:24px}}
-.photo-grid-section{overflow:hidden}
-.photo-grid{display:grid;grid-template-columns:repeat(4,1fr);height:460px}
-.photo-item{position:relative;overflow:hidden;display:block;text-decoration:none}
-.photo-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .55s ease}
-.photo-item:hover img{transform:scale(1.05)}
-.photo-ov{position:absolute;inset:0;display:flex;align-items:flex-end;padding:22px 24px;background:linear-gradient(to top,rgba(0,0,0,.72) 0%,transparent 55%);opacity:0;transition:opacity .3s}
-.photo-item:hover .photo-ov{opacity:1}
-.photo-ov span{font-family:var(--FD);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#fff}
 .perks-section{padding:70px 60px;text-align:center}
 .perks-label{font-family:var(--FD);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#e8008a;margin-bottom:10px}
 .perks-title{font-family:var(--FD);font-size:clamp(32px,4vw,52px);font-weight:900;text-transform:uppercase;margin:0 0 48px;color:var(--fg,#fff)}
@@ -1651,10 +1643,7 @@ body.light .review-card{background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
   .mob-disc-tag{font-size:9px;margin-bottom:4px}
   .mob-disc-card h3{font-size:22px;margin:0 0 4px}
   .mob-disc-lnk{font-size:10px}
-  .photo-grid{grid-template-columns:1fr 1fr;height:auto}
-  .photo-item{aspect-ratio:4/5}
-  .photo-ov{opacity:1}
-  .perks-section{padding:50px 22px}
+.perks-section{padding:50px 22px}
   .perks-grid{grid-template-columns:1fr 1fr;gap:24px}
   .cond-section{grid-template-columns:1fr}
   .cond-media{min-height:280px;position:relative}
@@ -2086,19 +2075,19 @@ body.light .prog-num,body.light .prog-day{color:#888}
     <div class="sh-disc-mobile" aria-hidden="true"><h2>Choose Your<br><span class="gt">Discipline</span></h2><a href="courses/" tabindex="-1">All activities</a></div>
     <div class="mob-disc-list">
       <a href="kitesurfing/" class="mob-disc-card">
-        <video src="assets/kitesurf-mobile.mp4" autoplay muted loop playsinline preload="metadata" poster="assets/kitesurfing.jpg"></video>
+        <img src="assets/kitesurfing-new.jpg" alt="Kitesurfing at Koh Phangan — female rider on twin tip board in turquoise water" style="object-position:center 55%">
         <div class="mob-disc-ov"><div class="mob-disc-tag">Water Sport 01</div><h3>Kitesurfing</h3><span class="mob-disc-lnk">View courses →</span></div>
       </a>
       <a href="wing-foil/" class="mob-disc-card">
-        <video src="assets/wingfoil-desktop.mp4" autoplay muted loop playsinline preload="metadata" poster="assets/wingfoil.jpg"></video>
+        <img src="assets/wingfoil-new.jpg" alt="Wing foiling on Koh Phangan — rider on hydrofoil with inflatable wing, blue ocean">
         <div class="mob-disc-ov"><div class="mob-disc-tag">Water Sport 02</div><h3>Wing Foil</h3><span class="mob-disc-lnk">View courses →</span></div>
       </a>
       <a href="windsurfing/" class="mob-disc-card">
-        <video src="assets/windsurfing-desktop.mp4" autoplay muted loop playsinline preload="metadata" poster="assets/windsurfing.jpg"></video>
+        <img src="assets/windsurfing-new.jpg" alt="Windsurfing through waves at Koh Phangan — kites visible in the background">
         <div class="mob-disc-ov"><div class="mob-disc-tag">Water Sport 03</div><h3>Windsurfing</h3><span class="mob-disc-lnk">View courses →</span></div>
       </a>
       <a href="efoil/" class="mob-disc-card">
-        <video src="assets/efoil.mp4" autoplay muted loop playsinline preload="metadata" poster="assets/efoil-photo.jpg"></video>
+        <img src="assets/efoil-new.jpeg" alt="E-foil electric surfboard above turquoise water near tropical island, Koh Phangan" style="object-position:center 30%">
         <div class="mob-disc-ov"><div class="mob-disc-tag">Water Sport 04</div><h3>E-Foil</h3><span class="mob-disc-lnk">View courses →</span></div>
       </a>
     </div>
@@ -2136,13 +2125,13 @@ body.light .prog-num,body.light .prog-day{color:#888}
       </div>
     </div>
     <div class="disc-video">
-      <video autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="assets/kitesurf-desktop.mp4" type="video/mp4"></video>
+      <img src="assets/kitesurfing-new.jpg" alt="Kitesurfing at Koh Phangan — female rider on twin tip board in turquoise water" loading="eager">
     </div>
   </section>
 
   <section class="disc-section fu">
     <div class="disc-video">
-      <video autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="assets/wingfoil-desktop.mp4" type="video/mp4"></video>
+      <img src="assets/wingfoil-new.jpg" alt="Wing foiling on Koh Phangan — rider on hydrofoil with inflatable handheld wing, blue ocean" loading="lazy">
     </div>
     <div class="disc-text">
       <div class="disc-tag">Water Sport 02</div>
@@ -2178,13 +2167,13 @@ body.light .prog-num,body.light .prog-day{color:#888}
       </div>
     </div>
     <div class="disc-video">
-      <video autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="assets/windsurfing-desktop.mp4" type="video/mp4"></video>
+      <img src="assets/windsurfing-new.jpg" alt="Windsurfing through waves at Koh Phangan — kites visible in the background" loading="lazy">
     </div>
   </section>
 
   <section class="disc-section fu">
     <div class="disc-video">
-      <video autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="assets/efoil.mp4" type="video/mp4"></video>
+      <img src="assets/efoil-new.jpeg" alt="E-foil electric surfboard above turquoise water near tropical island, Koh Phangan Thailand" loading="lazy">
     </div>
     <div class="disc-text">
       <div class="disc-tag">Water Sport 04</div>
@@ -2200,28 +2189,6 @@ body.light .prog-num,body.light .prog-day{color:#888}
         <a href="rental/" class="disc-btn-rent">Rent</a>
         <a href="https://wa.me/66967203910" class="disc-btn-primary">Book a Lesson</a>
       </div>
-    </div>
-  </section>
-
-  <!-- PHOTO GALLERY — 4 disciplines -->
-  <section class="photo-grid-section" aria-label="Water sports on Koh Phangan">
-    <div class="photo-grid">
-      <a href="kitesurfing/" class="photo-item">
-        <img src="assets/kitesurfing-new.jpg" alt="Kitesurfing at Koh Phangan — female rider on twin tip board in turquoise water" loading="lazy">
-        <div class="photo-ov"><span>Kitesurfing</span></div>
-      </a>
-      <a href="wing-foil/" class="photo-item">
-        <img src="assets/wingfoil-new.jpg" alt="Wing foiling on Koh Phangan — rider on hydrofoil with inflatable handheld wing, blue ocean" loading="lazy">
-        <div class="photo-ov"><span>Wing Foil</span></div>
-      </a>
-      <a href="windsurfing/" class="photo-item">
-        <img src="assets/windsurfing-new.jpg" alt="Windsurfing through waves at Koh Phangan — kites visible in the background" loading="lazy">
-        <div class="photo-ov"><span>Windsurfing</span></div>
-      </a>
-      <a href="efoil/" class="photo-item">
-        <img src="assets/efoil-new.jpeg" alt="E-foil electric surfboard above turquoise water near tropical island, Koh Phangan Thailand" loading="lazy">
-        <div class="photo-ov"><span>E-Foil</span></div>
-      </a>
     </div>
   </section>
 
