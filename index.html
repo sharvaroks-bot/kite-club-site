@@ -709,7 +709,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(13,13,26,.95);backdrop-fil
 
 /* ─── CTA ─── */
 .cta-band{position:relative;overflow:hidden;padding:100px 60px;text-align:center}
-.cta-band::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1600&q=70') center/cover no-repeat;opacity:.12}
+.cta-band::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=70') center/cover no-repeat;opacity:.12}
 .cta-band::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(123,47,255,.25) 0%,rgba(232,0,138,.25) 100%)}
 .cta-inner{position:relative;z-index:2}
 .cta-band h2{font-family:var(--FD);font-weight:900;font-size:clamp(44px,7vw,92px);text-transform:uppercase;line-height:.9;margin-bottom:22px}
@@ -1952,7 +1952,7 @@ body.light .prog-cta .btn-s{color:#111118;border-color:rgba(17,17,24,.45)}
 body.light .prog-cta .btn-s:hover{color:var(--pink);border-color:var(--pink)}
 body.light .prog-num,body.light .prog-day{color:#888}
 </style>
-<link rel="icon" href="assets/favicon.ico" sizes="32x32"><link rel="icon" href="assets/favicon-512.png" sizes="512x512"><link rel="apple-touch-icon" href="assets/favicon-512.png"><link rel="preload" as="image" href="assets/poster-desktop.jpg" media="(min-width:769px)"><link rel="preload" as="image" href="assets/poster-mobile.jpg" media="(max-width:768px)"></head>
+<link rel="icon" href="assets/favicon.ico" sizes="32x32"><link rel="icon" href="assets/favicon-512.png" sizes="512x512"><link rel="apple-touch-icon" href="assets/favicon-512.png"><link rel="preload" as="image" href="assets/poster-desktop.jpg" media="(min-width:769px)" fetchpriority="high"><link rel="preload" as="image" href="assets/poster-mobile.jpg" media="(max-width:768px)" fetchpriority="high"></head>
 <body>
 
 
@@ -2126,13 +2126,13 @@ body.light .prog-num,body.light .prog-day{color:#888}
       </div>
     </div>
     <div class="disc-video">
-      <img src="assets/kitesurfing-new.jpg" alt="Kitesurfing at Koh Phangan — female rider on twin tip board in turquoise water" loading="eager">
+      <picture><source srcset="assets/kitesurfing-new.webp" type="image/webp"><img src="assets/kitesurfing-new.jpg" alt="Kitesurfing at Koh Phangan — female rider on twin tip board in turquoise water" loading="eager"></picture>
     </div>
   </section>
 
   <section class="disc-section fu">
     <div class="disc-video">
-      <img src="assets/wingfoil-new.jpg" alt="Wing foiling on Koh Phangan — rider on hydrofoil with inflatable handheld wing, blue ocean" loading="lazy">
+      <picture><source srcset="assets/wingfoil-new.webp" type="image/webp"><img src="assets/wingfoil-new.jpg" alt="Wing foiling on Koh Phangan — rider on hydrofoil with inflatable handheld wing, blue ocean" loading="lazy"></picture>
     </div>
     <div class="disc-text">
       <div class="disc-tag">Water Sport 02</div>
@@ -2168,13 +2168,13 @@ body.light .prog-num,body.light .prog-day{color:#888}
       </div>
     </div>
     <div class="disc-video">
-      <img src="assets/windsurfing-new.jpg" alt="Windsurfing through waves at Koh Phangan — kites visible in the background" loading="lazy">
+      <picture><source srcset="assets/windsurfing-new.webp" type="image/webp"><img src="assets/windsurfing-new.jpg" alt="Windsurfing through waves at Koh Phangan — kites visible in the background" loading="lazy"></picture>
     </div>
   </section>
 
   <section class="disc-section fu">
     <div class="disc-video">
-      <img src="assets/efoil-new.jpeg" alt="E-foil electric surfboard above turquoise water near tropical island, Koh Phangan Thailand" loading="lazy">
+      <picture><source srcset="assets/efoil-new.webp" type="image/webp"><img src="assets/efoil-new.jpeg" alt="E-foil electric surfboard above turquoise water near tropical island, Koh Phangan Thailand" loading="lazy"></picture>
     </div>
     <div class="disc-text">
       <div class="disc-tag">Water Sport 04</div>
