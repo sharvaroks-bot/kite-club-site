@@ -2043,8 +2043,9 @@ body.light .prog-num,body.light .prog-day{color:#888}
   <!-- HERO -->
   <section class="hero" role="banner" aria-label="Kite Club Koh Phangan — Kitesurfing School">
     <div class="hero-bg">
-      <video class="hero-video hero-video-desktop" src="assets/desktopKP.mp4" poster="assets/poster-desktop.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
-      <video class="hero-video hero-video-mobile" src="assets/mobileKP.mp4" poster="assets/poster-mobile.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+      <video class="hero-video hero-video-desktop" id="vid-desktop" data-src="assets/desktopKP.mp4" poster="assets/poster-desktop.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <video class="hero-video hero-video-mobile" id="vid-mobile" data-src="assets/mobileKP.mp4" poster="assets/poster-mobile.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <script>window.addEventListener('load',function(){var m=window.matchMedia('(max-width:768px)').matches,el=document.getElementById(m?'vid-mobile':'vid-desktop');if(el){el.src=el.dataset.src;el.play().catch(function(){});}});</script>
     </div>
     <div class="hero-content fu">
       <div class="hero-eyebrow">IKO Certified School · Thong Sala Beach, Koh Phangan · Est. 2021</div>
