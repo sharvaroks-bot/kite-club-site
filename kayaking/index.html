@@ -1233,7 +1233,6 @@ body.light #seoExpandable p,body.light #seoExpandable li{color:rgba(17,17,24,.55
 .dmr-btns{display:flex;gap:10px;flex-wrap:wrap}
 
 /* nav dropdown backdrop */
-body:has(.dropdown:hover)::after{content:'';position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.55);z-index:299;pointer-events:none}
 </style>
 <link rel="icon" href="../assets/favicon.ico" sizes="32x32"><link rel="icon" href="../assets/favicon-512.png" sizes="512x512"><link rel="apple-touch-icon" href="../assets/favicon-512.png"></head>
 <body>
@@ -1523,6 +1522,18 @@ function initDrag(id){const el=document.getElementById(id);if(!el)return;let d=f
     });
   },{threshold:0.05});
   document.querySelectorAll('.fu').forEach(function(el){ io.observe(el); });
+})();
+</script>
+<div id="nav-overlay" style="display:none;position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.6);z-index:250;pointer-events:none;transition:opacity .2s"></div>
+<script>
+(function(){
+  var o=document.getElementById('nav-overlay');
+  document.querySelectorAll('.nav-links li').forEach(function(li){
+    if(li.querySelector('.dropdown')){
+      li.addEventListener('mouseenter',function(){o.style.display='block'});
+      li.addEventListener('mouseleave',function(){o.style.display='none'});
+    }
+  });
 })();
 </script>
 </body>

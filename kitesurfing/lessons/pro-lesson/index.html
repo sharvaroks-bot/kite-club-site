@@ -1472,7 +1472,6 @@ li.has-dropdown > button{background:none;border:none;color:var(--fg);cursor:poin
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Private Kitesurfing Pro Lesson","description":"Private kitesurfing coaching session on Koh Phangan. Technique refinement with IKO-certified instructor.","provider":{"@type":"LocalBusiness","name":"Kite Club Koh Phangan","address":{"@type":"PostalAddress","addressLocality":"Thong Sala","addressRegion":"Surat Thani","addressCountry":"TH"},"telephone":"+66967203910","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"47"}},"offers":{"@type":"Offer","price":"3500","priceCurrency":"THB"}}</script>
 
 /* nav dropdown backdrop */
-body:has(.dropdown:hover)::after{content:'';position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.55);z-index:299;pointer-events:none}
 </style>
 <nav role="navigation" aria-label="Main navigation">
   <div class="nav-logo" style="cursor:pointer" onclick="location.href='../../../'" >
@@ -1707,6 +1706,18 @@ document.querySelectorAll('.course-item').forEach(function(item){
 });
 
 
+</script>
+<div id="nav-overlay" style="display:none;position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.6);z-index:250;pointer-events:none;transition:opacity .2s"></div>
+<script>
+(function(){
+  var o=document.getElementById('nav-overlay');
+  document.querySelectorAll('.nav-links li').forEach(function(li){
+    if(li.querySelector('.dropdown')){
+      li.addEventListener('mouseenter',function(){o.style.display='block'});
+      li.addEventListener('mouseleave',function(){o.style.display='none'});
+    }
+  });
+})();
 </script>
 </body>
 </html>

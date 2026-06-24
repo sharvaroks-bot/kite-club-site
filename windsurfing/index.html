@@ -1886,7 +1886,6 @@ a.course-price-row{text-decoration:none}
 a.course-price-row:hover strong{color:var(--pink) !important}
 
 /* nav dropdown backdrop */
-body:has(.dropdown:hover)::after{content:'';position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.55);z-index:299;pointer-events:none}
 </style>
 <link rel="icon" href="../assets/favicon.ico" sizes="32x32"><link rel="icon" href="../assets/favicon-512.png" sizes="512x512"><link rel="apple-touch-icon" href="../assets/favicon-512.png"></head>
 <body>
@@ -2280,6 +2279,18 @@ document.addEventListener('click',function(e){
   if(!isOpen){btn.classList.add('open');ans.classList.add('open');}
 });
   function toggleSEOBlock(el){const box=document.getElementById('seoExpandable');const btn=el.querySelector('span');const open=el.getAttribute('aria-expanded')==='true';if(open){box.style.display='none';btn.textContent='Show more ▾';el.setAttribute('aria-expanded','false');}else{box.style.display='block';btn.textContent='Hide ▴';el.setAttribute('aria-expanded','true');}}
+</script>
+<div id="nav-overlay" style="display:none;position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.6);z-index:250;pointer-events:none;transition:opacity .2s"></div>
+<script>
+(function(){
+  var o=document.getElementById('nav-overlay');
+  document.querySelectorAll('.nav-links li').forEach(function(li){
+    if(li.querySelector('.dropdown')){
+      li.addEventListener('mouseenter',function(){o.style.display='block'});
+      li.addEventListener('mouseleave',function(){o.style.display='none'});
+    }
+  });
+})();
 </script>
 </body>
 </html>

@@ -1731,7 +1731,6 @@ body.light .also-name{color:#111}
 @media(max-width:768px){main#page-content section{padding-left:22px!important;padding-right:22px!important}}
 
 /* nav dropdown backdrop */
-body:has(.dropdown:hover)::after{content:'';position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.55);z-index:299;pointer-events:none}
 </style>
 </head>
 <nav role="navigation" aria-label="Main navigation">
@@ -2079,6 +2078,18 @@ function closeMobile(){document.getElementById('mobileMenu').classList.remove('o
 function toggleSub(id){var el=document.getElementById(id);if(el)el.classList.toggle('open');}
 (function(){if(localStorage.getItem('theme')==='light')document.body.classList.add('light');})();
 document.addEventListener('click',function(e){const btn=e.target.classList.contains('fq-q')?e.target:e.target.closest('.fq-q');if(!btn)return;const ans=btn.nextElementSibling;const isOpen=btn.classList.contains('open');document.querySelectorAll('.fq-q.open').forEach(b=>{b.classList.remove('open');b.nextElementSibling.classList.remove('open');});if(!isOpen){btn.classList.add('open');ans.classList.add('open');}});
+</script>
+<div id="nav-overlay" style="display:none;position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.6);z-index:250;pointer-events:none;transition:opacity .2s"></div>
+<script>
+(function(){
+  var o=document.getElementById('nav-overlay');
+  document.querySelectorAll('.nav-links li').forEach(function(li){
+    if(li.querySelector('.dropdown')){
+      li.addEventListener('mouseenter',function(){o.style.display='block'});
+      li.addEventListener('mouseleave',function(){o.style.display='none'});
+    }
+  });
+})();
 </script>
 </body>
 </html>
