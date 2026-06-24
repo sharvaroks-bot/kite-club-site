@@ -101,6 +101,9 @@ body.light .fb-brand h3{color:#111}
   .footer-top{grid-template-columns:1fr 1fr;gap:24px;padding:40px 22px}
   .footer-bot{padding:16px 22px;flex-direction:column;gap:10px;text-align:center}
 }
+
+/* nav dropdown backdrop */
+.nav-links li:has(.dropdown):hover::after{content:'';position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.55);z-index:200;pointer-events:none}
 </style>
 <link rel="icon" href="../assets/favicon.ico" sizes="32x32"><link rel="icon" href="../assets/favicon-512.png" sizes="512x512"><link rel="apple-touch-icon" href="../assets/favicon-512.png"></head>
 <body>

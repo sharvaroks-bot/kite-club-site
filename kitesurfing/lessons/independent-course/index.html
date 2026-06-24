@@ -1470,6 +1470,9 @@ li.has-dropdown > button{background:none;border:none;color:var(--fg);cursor:poin
   .hero-btns a,.hero-btns .btn-p,.hero-btns .btn-s{flex:1;text-align:center;padding:14px 8px !important;font-size:14px !important;min-width:0}
 }
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Kitesurfing Independent Rider Course","description":"Advanced IKO kitesurfing course on Koh Phangan. Learn transitions, self-rescue and riding in both directions.","provider":{"@type":"LocalBusiness","name":"Kite Club Koh Phangan","address":{"@type":"PostalAddress","addressLocality":"Thong Sala","addressRegion":"Surat Thani","addressCountry":"TH"},"telephone":"+66967203910","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"47"}},"offers":{"@type":"Offer","price":"18000","priceCurrency":"THB"}}</script>
+
+/* nav dropdown backdrop */
+.nav-links li:has(.dropdown):hover::after{content:'';position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.55);z-index:200;pointer-events:none}
 </style>
 <nav role="navigation" aria-label="Main navigation">
   <div class="nav-logo" style="cursor:pointer" onclick="location.href='../../../'" >

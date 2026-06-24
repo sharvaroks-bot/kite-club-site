@@ -1684,6 +1684,9 @@ body.light .cc-btns .btn-s{border-color:#7b2fff;color:#7b2fff}
   .cc-price-box{width:110px;height:110px}
   .cc-price-box strong{font-size:28px}
 }
+
+/* nav dropdown backdrop */
+.nav-links li:has(.dropdown):hover::after{content:'';position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.55);z-index:200;pointer-events:none}
 </style>
 
 <nav role="navigation" aria-label="Main navigation">
