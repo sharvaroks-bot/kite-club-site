@@ -1472,7 +1472,7 @@ li.has-dropdown > button{background:none;border:none;color:var(--fg);cursor:poin
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Kitesurfing Refresh Lesson","description":"1-day kitesurfing refresh session on Koh Phangan. Get back on the board after a break with IKO-certified instruction.","provider":{"@type":"LocalBusiness","name":"Kite Club Koh Phangan","address":{"@type":"PostalAddress","addressLocality":"Thong Sala","addressRegion":"Surat Thani","addressCountry":"TH"},"telephone":"+66967203910","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"47"}},"offers":{"@type":"Offer","price":"3500","priceCurrency":"THB"}}</script>
 
 /* nav dropdown backdrop */
-.nav-links li:has(.dropdown):hover::after{content:'';position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.55);z-index:200;pointer-events:none}
+body:has(.dropdown:hover)::after{content:'';position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.55);z-index:299;pointer-events:none}
 </style>
 <nav role="navigation" aria-label="Main navigation">
   <div class="nav-logo" style="cursor:pointer" onclick="location.href='../../../'" >

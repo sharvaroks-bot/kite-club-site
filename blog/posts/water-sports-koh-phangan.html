@@ -1743,7 +1743,7 @@ body.light .also-name{color:#111}
 @media(max-width:768px){main#page-content section{padding-left:22px!important;padding-right:22px!important}}
 
 /* nav dropdown backdrop */
-.nav-links li:has(.dropdown):hover::after{content:'';position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.55);z-index:200;pointer-events:none}
+body:has(.dropdown:hover)::after{content:'';position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.55);z-index:299;pointer-events:none}
 </style>
 </head>
 <body>
