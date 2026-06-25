@@ -1881,17 +1881,5 @@ document.querySelectorAll('.course-item').forEach(function(item){
   });}
 });
 </script>
-<div id="nav-overlay" style="display:none;position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.6);z-index:250;pointer-events:none;transition:opacity .2s"></div>
-<script>
-(function(){
-  var o=document.getElementById('nav-overlay');
-  document.querySelectorAll('.nav-links li').forEach(function(li){
-    if(li.querySelector('.dropdown')){
-      li.addEventListener('mouseenter',function(){o.style.display='block'});
-      li.addEventListener('mouseleave',function(){o.style.display='none'});
-    }
-  });
-})();
-</script>
 </body>
 </html>

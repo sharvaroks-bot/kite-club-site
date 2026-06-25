@@ -1763,7 +1763,7 @@ body.light .also-name{color:#111}
     </div></li>
     <li><a href="../shop/">Shop</a></li>
     <li><a href="../storage/">Storage</a></li>
-      <li><a href="../shop/">Shop</a></li>
+      
     <li><a href="../locations/">Locations</a></li>
     <li><a href="../blog/">Blog</a></li>
     <li><a href="../about/" style="color:var(--off);font-family:var(--FD);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:color .2s;padding:0 14px;height:64px;display:flex;align-items:center">Info ▾</a><div class="dropdown"><a href="../about/">About Us</a><a href="../seasons/">Wind Season</a><a href="../best-kitesurf-spots-koh-phangan/">Kite Spots</a><a href="../no-wind/">No-Wind Days</a><a href="../koh-phangan-weather/">Live Weather</a></div></li>
@@ -2081,18 +2081,6 @@ document.querySelectorAll('.course-toggle').forEach(function(btn){
   };
 });
 document.addEventListener('click',function(e){const btn=e.target.classList.contains('fq-q')?e.target:e.target.closest('.fq-q');if(!btn)return;const ans=btn.nextElementSibling;const isOpen=btn.classList.contains('open');document.querySelectorAll('.fq-q.open').forEach(b=>{b.classList.remove('open');b.nextElementSibling.classList.remove('open');});if(!isOpen){btn.classList.add('open');ans.classList.add('open');}});
-</script>
-<div id="nav-overlay" style="display:none;position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.6);z-index:250;pointer-events:none;transition:opacity .2s"></div>
-<script>
-(function(){
-  var o=document.getElementById('nav-overlay');
-  document.querySelectorAll('.nav-links li').forEach(function(li){
-    if(li.querySelector('.dropdown')){
-      li.addEventListener('mouseenter',function(){o.style.display='block'});
-      li.addEventListener('mouseleave',function(){o.style.display='none'});
-    }
-  });
-})();
 </script>
 </body>
 

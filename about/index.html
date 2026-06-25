@@ -1189,17 +1189,5 @@ function renderShop(id,limit){const el=document.getElementById(id);if(!el)return
 function initDrag(id){const el=document.getElementById(id);if(!el)return;let d=false,sx,sl;el.addEventListener('mousedown',e=>{d=true;el.classList.add('drag');sx=e.pageX-el.offsetLeft;sl=el.scrollLeft;});['mouseleave','mouseup'].forEach(ev=>el.addEventListener(ev,()=>{d=false;el.classList.remove('drag');}));el.addEventListener('mousemove',e=>{if(!d)return;e.preventDefault();el.scrollLeft=sl-(e.pageX-el.offsetLeft-sx)*1.2;});}
 </script>
 <script>(function(){document.querySelectorAll('.fu').forEach(function(e){e.classList.add('vis');});})();</script>
-<div id="nav-overlay" style="display:none;position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.6);z-index:250;pointer-events:none;transition:opacity .2s"></div>
-<script>
-(function(){
-  var o=document.getElementById('nav-overlay');
-  document.querySelectorAll('.nav-links li').forEach(function(li){
-    if(li.querySelector('.dropdown')){
-      li.addEventListener('mouseenter',function(){o.style.display='block'});
-      li.addEventListener('mouseleave',function(){o.style.display='none'});
-    }
-  });
-})();
-</script>
 </body>
 </html>
