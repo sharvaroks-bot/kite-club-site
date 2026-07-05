@@ -243,6 +243,10 @@ body.light .fq-q{color:#111118}body.light .fq-a p{color:#444455}
   .footer-bot{padding:16px 22px;flex-direction:column;gap:10px;text-align:center}
 }
 
+.yt-bg{position:absolute;inset:0;overflow:hidden;z-index:0}
+.yt-bg iframe{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:177.78vh;height:56.25vw;min-width:100%;min-height:100%;pointer-events:none;border:none}
+.yt-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,13,26,.3) 0%,rgba(13,13,26,.75) 100%);z-index:1}
+@media(max-width:900px){.yt-bg{display:none}}
 /* nav dropdown backdrop */
 </style>
 <link rel="icon" href="../../assets/favicon.ico" sizes="32x32"><link rel="icon" href="../../assets/favicon-512.png" sizes="512x512"><link rel="apple-touch-icon" href="../../assets/favicon-512.png"></head>
@@ -337,6 +341,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <div class="sl-hero">
+  <div class="yt-bg"><iframe src="https://www.youtube.com/embed/icWkZLMOcwk?autoplay=1&mute=1&loop=1&playlist=icWkZLMOcwk&controls=0&rel=0&iv_load_policy=3&modestbranding=1&start=23&playsinline=1" frameborder="0" allow="autoplay; encrypted-media" title="Kite Club Koh Phangan"></iframe></div>
   <div class="sl-hero-inner">
     <div class="sl-distributor-badge"><span>✦ Slingshot Official Distributor · Koh Phangan</span></div>
     <h1>Buy Kites<br><em>Koh Phangan</em></h1>

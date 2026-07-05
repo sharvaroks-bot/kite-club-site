@@ -1257,6 +1257,10 @@ body.light .shop-mob-header{border-bottom-color:#fff}
   .shop-brands-mobile{display:block!important}
 }
 
+.yt-bg{position:absolute;inset:0;overflow:hidden;z-index:1}
+.yt-bg iframe{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:177.78vh;height:56.25vw;min-width:100%;min-height:100%;pointer-events:none;border:none}
+.yt-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,13,26,.2) 0%,rgba(13,13,26,.6) 100%);z-index:1}
+@media(max-width:900px){.yt-bg{display:none}}
 /* nav dropdown backdrop */
 </style>
 <link rel="icon" href="../assets/favicon.ico" sizes="32x32"><link rel="icon" href="../assets/favicon-512.png" sizes="512x512"><link rel="apple-touch-icon" href="../assets/favicon-512.png"></head>
@@ -1358,6 +1362,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="page-hero">
     <div class="page-hero-bg shop-hero-bg" style="background-image:url('../assets/slingshot-wp-home-kite.webp');background-position:center"></div>
+    <div class="yt-bg"><iframe src="https://www.youtube.com/embed/icWkZLMOcwk?autoplay=1&mute=1&loop=1&playlist=icWkZLMOcwk&controls=0&rel=0&iv_load_policy=3&modestbranding=1&start=23&playsinline=1" frameborder="0" allow="autoplay; encrypted-media" title="Kite Club Koh Phangan"></iframe></div>
     <div class="page-hero-content">
       <div class="eyebrow">Official Slingshot Distributor on Koh Phangan</div>
       <h1>Equipment<br><em>Shop</em></h1>
