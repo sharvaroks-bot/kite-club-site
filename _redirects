@@ -1,72 +1,141 @@
-# Kite Club Koh Phangan — Netlify Redirects
-# SEO Migration: WordPress (old) → Static HTML (new)
-# Updated: 2026-05-21 — all blog posts now mapped to specific pages
+# Kite Club Koh Phangan — redirects (Cloudflare Pages reads ONLY this file).
+# Old WordPress URLs → closest new page (1:1 article where possible). Updated 2026-09-25.
+# Old URLs that still exist as pages (9 posts + nav pages) are served directly and are NOT listed here.
+# Each rule is listed with and without the trailing slash.
 
-# ═══════════════════════════════════════
-# CRITICAL: nav URL changes
-# ═══════════════════════════════════════
-/windsurfing-2/       /windsurfing/     301
-/supboard-rental/     /sup-rental/      301
-/membership-storage/  /storage/         301
-/wind/                /seasons/         301
-/compare-sports/      /compare/         301
-
-# ═══════════════════════════════════════
-# BLOG → SPECIFIC NEW PAGES (high SEO value)
-# ═══════════════════════════════════════
-/best-time-to-kitesurf-on-koh-phangan-complete-monthly-wind-weather-guide/          /blog/posts/best-time-koh-phangan.html        301
-/best-kite-spots-in-koh-phangan-for-beginners-safety-first-beach-rankings/          /blog/posts/kitesurf-spots-koh-phangan.html   301
-/best-kiteboarding-spots-in-koh-phangan/                                             /blog/posts/kitesurf-spots-koh-phangan.html   301
-/best-kitesurfing-beaches-on-koh-phangan-for-beginners/                              /blog/posts/kitesurf-spots-koh-phangan.html   301
-/best-kitesurfing-beaches-on-koh-phangan/                                            /blog/posts/kitesurf-spots-koh-phangan.html   301
-/is-koh-phangan-good-for-learning-kitesurfing-honest-beginners-guide/               /blog/posts/beginner-guide-koh-phangan.html   301
-/what-to-expect-your-first-kitesurfing-lesson-on-koh-phangan/                       /blog/posts/first-lesson-guide.html           301
-/what-to-expect-your-first-kitesurfing-lesson-in-koh-phangan/                       /blog/posts/first-lesson-guide.html           301
-# /how-long-does-it-take-to-learn-kitesurfing-or-wing-foiling-in-koh-phangan-honest-timelines-for-beginners/  → real page exists at that path
-/how-many-days-does-it-actually-take-to-learn-kitesurfing-on-koh-phangan/           /blog/posts/how-long-to-learn.html            301
-/koh-phangan-vs-koh-samui-for-kitesurfing-which-island-should-you-choose/           /blog/posts/koh-phangan-vs-samui.html         301
-/kiteboarding-on-koh-phangan-vs-koh-samui-which-island-is-better/                   /blog/posts/koh-phangan-vs-samui.html         301
-# /kitesurfing-vs-wing-foiling-which-one-should-you-learn-first-on-koh-phangan/  → real page exists at that path
-# /first-time-on-the-water-should-you-start-with-kitesurfing-or-wing-foiling-on-koh-phangan/  → real page exists at that path
-# /wind-seasons-on-koh-phangan-the-complete-calendar-for-kitesurfing-and-wing-foil-riders/  → real page exists at that path
-/when-is-the-best-time-for-kitesurfing-in-koh-phangan/                              /seasons/                                     301
-/best-time-to-visit-kite-club-koh-phangan-wind-conditions-and-seasons-for-kite-surfing/     /seasons/                             301
-/wing-foil-vs-efoil-which-is-right-for-you/                                         /blog/posts/efoil-vs-wing.html                301
-# /from-kite-to-wing-why-experienced-kitesurfers-are-switching-to-wing-foil/  → real page exists at that path
-# /top-10-common-mistakes-when-transitioning-from-kitesurfing-to-wing-foil/  → real page exists at that path
-# /family-holidays-why-wing-foiling-and-kitesurfing-are-the-perfect-combo-for-active-groups/  → real page exists at that path
-/what-kitesurfing-equipment-you-need-on-koh-phangan-tropical-conditions-guide/      /blog/posts/what-equipment-is-included.html   301
-/the-complete-guide-to-kitesurf-in-koh-phangan-spots-seasons-kitesurfing-schools/   /blog/posts/complete-guide-koh-phangan.html   301
-/kitesurf-koh-phangan-kiteboarding-guide-the-best-spots-in-thailand/                /blog/posts/complete-guide-koh-phangan.html   301
-/your-first-day-kitesurf-on-the-water-a-step-by-step-guide-to-kitesurfing-on-koh-phangan/   /kitesurfing/lessons/discovery-course/  301
-/efoil-board-lessons-koh-phangan-learn-to-fly-above-the-water-in-thailand/          /efoil/                                       301
-/wing-foil-koh-phangan-how-to-start-with-wing-foil-rental-in-thailand/              /wing-foil/                                   301
-/ready-to-stand-up-paddleboarding-the-best-sup-rental-koh-phangan/                  /sup-rental/                                  301
-/top-activities-in-thailand-why-kayaking-koh-phangan-to-coral-reefs-is-a-must-do/   /kayaking/                                    301
-/why-wing-foiling-is-the-fastest-growing-water-sport-in-the-world/                  /blog/posts/kite-to-wing.html                 301
-
-# ═══════════════════════════════════════
-# BLOG → NEAREST SERVICE / CATEGORY PAGE
-# ═══════════════════════════════════════
-/top-5-reasons-why-koh-phangan-is-the-best-place-for-kitesurfing/      /kitesurfing/              301
-/top-reasons-to-choose-koh-phangan-for-your-next-kitesurf-trip/        /kitesurfing/              301
-/why-koh-phangan-is-the-best-place-in-thailand-to-learn-kiteboarding/  /kitesurfing/              301
-/top-kitesurf-school-in-koh-phangan-why-kite-club-rules/               /school/kitesurfing/       301
-/why-choose-kite-club-koh-phangan-for-your-first-kite-surfing-lesson/  /school/kitesurfing/       301
-/discover-kitesurfing-how-to-choose-the-best-kiteschool-koh-phangan/   /school/kitesurfing/       301
-/7-essential-tips-for-your-first-kite-surfing-trip-to-koh-phangan/     /blog/posts/first-kite-lesson.html  301
-/an-honest-guide-to-the-best-kitesurfing-on-koh-phangan/               /kitesurfing/koh-phangan/  301
-/a-day-in-the-life-the-real-vibe-of-kitesurfing-on-koh-phangan/        /kitesurfing/koh-phangan/  301
-/ride-the-tropical-wind-your-dream-kite-surfing-adventure-in-koh-phangan/  /kitesurfing/          301
-/where-to-find-the-best-kitesurfing-on-koh-phangan/                    /best-kitesurf-spots-koh-phangan/  301
-/where-are-the-best-kiteboarding-water-spots-on-koh-phangan/           /best-kitesurf-spots-koh-phangan/  301
-/the-guide-to-kitesurfing-on-koh-phangan/                              /kitesurfing/koh-phangan/  301
-/what-makes-kitesurfing-on-koh-phangan-different-from-bali-sri-lanka-or-vietnam/  /kitesurfing/koh-phangan/  301
-/what-makes-the-kitesurf-community-best-on-koh-phangan/                /about/                    301
-/10-best-beaches-koh-phangan-a-beach-guide-to-paradise/                /locations/                301
-/wing-foil-safety-essential-gear-and-tips-for-new-riders/              /wing-foil/                301
-/how-to-choose-your-first-wing-foil-board-on-koh-phangan-size-volume-and-stability/  /wing-foil/ 301
-/top-5-common-beginner-mistakes-in-wing-foiling-and-how-to-avoid-them/ /blog/posts/top-10-mistakes.html   301
-# /koh-phangan-for-the-active-wellness-traveller-combining-yoga-kitesurfing-and-wing-foiling-on-the-island/  → real page exists at that path
-# /the-ultimate-water-sports-guide-can-you-learn-kitesurfing-and-wing-foil-at-the-same-time/  → real page exists at that path
-/wakeboarding-wakesurfing-koh-phangan-best-spots-lessons-tips/          /                          301
+/10-best-beaches-koh-phangan-a-beach-guide-to-paradise/  /blog/posts/10-best-beaches-koh-phangan  301
+/10-best-beaches-koh-phangan-a-beach-guide-to-paradise  /blog/posts/10-best-beaches-koh-phangan  301
+/7-essential-tips-for-your-first-kite-surfing-trip-to-koh-phangan/  /blog/posts/7-tips-first-kitesurf-trip-koh-phangan  301
+/7-essential-tips-for-your-first-kite-surfing-trip-to-koh-phangan  /blog/posts/7-tips-first-kitesurf-trip-koh-phangan  301
+/a-day-in-the-life-the-real-vibe-of-kitesurfing-on-koh-phangan/  /blog/posts/a-day-kitesurfing-koh-phangan  301
+/a-day-in-the-life-the-real-vibe-of-kitesurfing-on-koh-phangan  /blog/posts/a-day-kitesurfing-koh-phangan  301
+/an-honest-guide-to-the-best-kitesurfing-on-koh-phangan/  /blog/posts/guide-kitesurfing-thailand  301
+/an-honest-guide-to-the-best-kitesurfing-on-koh-phangan  /blog/posts/guide-kitesurfing-thailand  301
+/articles/  /blog/  301
+/articles  /blog/  301
+/best-kite-spots-in-koh-phangan-for-beginners-safety-first-beach-rankings/  /best-kitesurf-spots-koh-phangan/  301
+/best-kite-spots-in-koh-phangan-for-beginners-safety-first-beach-rankings  /best-kitesurf-spots-koh-phangan/  301
+/best-kiteboarding-spots-in-koh-phangan/  /best-kitesurf-spots-koh-phangan/  301
+/best-kiteboarding-spots-in-koh-phangan  /best-kitesurf-spots-koh-phangan/  301
+/best-kitesurfing-beaches-on-koh-phangan-for-beginners/  /best-kitesurf-spots-koh-phangan/  301
+/best-kitesurfing-beaches-on-koh-phangan-for-beginners  /best-kitesurf-spots-koh-phangan/  301
+/best-kitesurfing-beaches-on-koh-phangan/  /best-kitesurf-spots-koh-phangan/  301
+/best-kitesurfing-beaches-on-koh-phangan  /best-kitesurf-spots-koh-phangan/  301
+/best-time-to-kitesurf-on-koh-phangan-complete-monthly-wind-weather-guide/  /blog/posts/best-time-koh-phangan  301
+/best-time-to-kitesurf-on-koh-phangan-complete-monthly-wind-weather-guide  /blog/posts/best-time-koh-phangan  301
+/best-time-to-visit-kite-club-koh-phangan-wind-conditions-and-seasons-for-kite-surfing/  /blog/posts/best-time-koh-phangan  301
+/best-time-to-visit-kite-club-koh-phangan-wind-conditions-and-seasons-for-kite-surfing  /blog/posts/best-time-koh-phangan  301
+/blog/feed/  /blog/  301
+/blog/feed  /blog/  301
+/blog/posts/family-holidays  /family-holidays-why-wing-foiling-and-kitesurfing-are-the-perfect-combo-for-active-groups/  301
+/blog/posts/family-holidays.html  /family-holidays-why-wing-foiling-and-kitesurfing-are-the-perfect-combo-for-active-groups/  301
+/blog/posts/how-long-to-learn  /how-long-does-it-take-to-learn-kitesurfing-or-wing-foiling-in-koh-phangan-honest-timelines-for-beginners/  301
+/blog/posts/how-long-to-learn.html  /how-long-does-it-take-to-learn-kitesurfing-or-wing-foiling-in-koh-phangan-honest-timelines-for-beginners/  301
+/blog/posts/kite-to-wing  /from-kite-to-wing-why-experienced-kitesurfers-are-switching-to-wing-foil/  301
+/blog/posts/kite-to-wing.html  /from-kite-to-wing-why-experienced-kitesurfers-are-switching-to-wing-foil/  301
+/blog/posts/kitesurfing-vs-wing-foil  /kitesurfing-vs-wing-foiling-which-one-should-you-learn-first-on-koh-phangan/  301
+/blog/posts/kitesurfing-vs-wing-foil.html  /kitesurfing-vs-wing-foiling-which-one-should-you-learn-first-on-koh-phangan/  301
+/blog/posts/koh-phangan-active-wellness-traveller  /koh-phangan-for-the-active-wellness-traveller-combining-yoga-kitesurfing-and-wing-foiling-on-the-island/  301
+/blog/posts/koh-phangan-active-wellness-traveller.html  /koh-phangan-for-the-active-wellness-traveller-combining-yoga-kitesurfing-and-wing-foiling-on-the-island/  301
+/blog/posts/learn-kitesurfing-and-wing-foil-together  /the-ultimate-water-sports-guide-can-you-learn-kitesurfing-and-wing-foil-at-the-same-time/  301
+/blog/posts/learn-kitesurfing-and-wing-foil-together.html  /the-ultimate-water-sports-guide-can-you-learn-kitesurfing-and-wing-foil-at-the-same-time/  301
+/blog/posts/wind-season-2026  /wind-seasons-on-koh-phangan-the-complete-calendar-for-kitesurfing-and-wing-foil-riders/  301
+/blog/posts/wind-season-2026.html  /wind-seasons-on-koh-phangan-the-complete-calendar-for-kitesurfing-and-wing-foil-riders/  301
+/category/articles/  /blog/  301
+/category/articles  /blog/  301
+/comments/feed/  /blog/  301
+/comments/feed  /blog/  301
+/compare-sports/  /compare/  301
+/compare-sports  /compare/  301
+/discover-kitesurfing-how-to-choose-the-best-kiteschool-koh-phangan/  /blog/posts/discover-kitesurfing-choose-kiteschool  301
+/discover-kitesurfing-how-to-choose-the-best-kiteschool-koh-phangan  /blog/posts/discover-kitesurfing-choose-kiteschool  301
+/efoil-board-lessons-koh-phangan-learn-to-fly-above-the-water-in-thailand/  /blog/posts/efoil-lessons-koh-phangan  301
+/efoil-board-lessons-koh-phangan-learn-to-fly-above-the-water-in-thailand  /blog/posts/efoil-lessons-koh-phangan  301
+/feed/  /blog/  301
+/feed  /blog/  301
+/how-many-days-does-it-actually-take-to-learn-kitesurfing-on-koh-phangan/  /how-long-does-it-take-to-learn-kitesurfing-or-wing-foiling-in-koh-phangan-honest-timelines-for-beginners/  301
+/how-many-days-does-it-actually-take-to-learn-kitesurfing-on-koh-phangan  /how-long-does-it-take-to-learn-kitesurfing-or-wing-foiling-in-koh-phangan-honest-timelines-for-beginners/  301
+/how-to-choose-your-first-wing-foil-board-on-koh-phangan-size-volume-and-stability/  /blog/posts/how-to-choose-wing-foil-board  301
+/how-to-choose-your-first-wing-foil-board-on-koh-phangan-size-volume-and-stability  /blog/posts/how-to-choose-wing-foil-board  301
+/is-koh-phangan-good-for-learning-kitesurfing-honest-beginners-guide/  /blog/posts/is-koh-phangan-good-for-learning-kitesurfing  301
+/is-koh-phangan-good-for-learning-kitesurfing-honest-beginners-guide  /blog/posts/is-koh-phangan-good-for-learning-kitesurfing  301
+/kiteboarding-on-koh-phangan-vs-koh-samui-which-island-is-better/  /blog/posts/koh-phangan-vs-samui  301
+/kiteboarding-on-koh-phangan-vs-koh-samui-which-island-is-better  /blog/posts/koh-phangan-vs-samui  301
+/kitesurf-koh-phangan-kiteboarding-guide-the-best-spots-in-thailand/  /blog/posts/guide-kitesurfing-thailand  301
+/kitesurf-koh-phangan-kiteboarding-guide-the-best-spots-in-thailand  /blog/posts/guide-kitesurfing-thailand  301
+/koh-phangan-vs-koh-samui-for-kitesurfing-which-island-should-you-choose/  /blog/posts/koh-phangan-vs-samui  301
+/koh-phangan-vs-koh-samui-for-kitesurfing-which-island-should-you-choose  /blog/posts/koh-phangan-vs-samui  301
+/koh-phangan-wind/  /seasons/  301
+/koh-phangan-wind  /seasons/  301
+/membership-storage/  /storage/  301
+/membership-storage  /storage/  301
+/ready-to-stand-up-paddleboarding-the-best-sup-rental-koh-phangan/  /sup-rental/  301
+/ready-to-stand-up-paddleboarding-the-best-sup-rental-koh-phangan  /sup-rental/  301
+/ride-the-tropical-wind-your-dream-kite-surfing-adventure-in-koh-phangan/  /kitesurfing/  301
+/ride-the-tropical-wind-your-dream-kite-surfing-adventure-in-koh-phangan  /kitesurfing/  301
+/supboard-rental/  /sup-rental/  301
+/supboard-rental  /sup-rental/  301
+/team_post/abdo/  /about/  301
+/team_post/abdo  /about/  301
+/team_post/abdulla/  /about/  301
+/team_post/abdulla  /about/  301
+/team_post/natali/  /about/  301
+/team_post/natali  /about/  301
+/team_post/ray/  /about/  301
+/team_post/ray  /about/  301
+/team_post/sergei-3/  /about/  301
+/team_post/sergei-3  /about/  301
+/team_post/sergei/  /about/  301
+/team_post/sergei  /about/  301
+/the-complete-guide-to-kitesurf-in-koh-phangan-spots-seasons-kitesurfing-schools/  /blog/posts/complete-guide-koh-phangan  301
+/the-complete-guide-to-kitesurf-in-koh-phangan-spots-seasons-kitesurfing-schools  /blog/posts/complete-guide-koh-phangan  301
+/the-guide-to-kitesurfing-on-koh-phangan/  /blog/posts/guide-kitesurfing-thailand  301
+/the-guide-to-kitesurfing-on-koh-phangan  /blog/posts/guide-kitesurfing-thailand  301
+/top-5-common-beginner-mistakes-in-wing-foiling-and-how-to-avoid-them/  /blog/posts/top-5-beginner-mistakes-wing-foiling  301
+/top-5-common-beginner-mistakes-in-wing-foiling-and-how-to-avoid-them  /blog/posts/top-5-beginner-mistakes-wing-foiling  301
+/top-5-reasons-why-koh-phangan-is-the-best-place-for-kitesurfing/  /blog/posts/top-5-reasons-koh-phangan-best-kitesurfing  301
+/top-5-reasons-why-koh-phangan-is-the-best-place-for-kitesurfing  /blog/posts/top-5-reasons-koh-phangan-best-kitesurfing  301
+/top-activities-in-thailand-why-kayaking-koh-phangan-to-coral-reefs-is-a-must-do/  /kayaking/  301
+/top-activities-in-thailand-why-kayaking-koh-phangan-to-coral-reefs-is-a-must-do  /kayaking/  301
+/top-kitesurf-school-in-koh-phangan-why-kite-club-rules/  /blog/posts/top-kitesurf-school-koh-phangan  301
+/top-kitesurf-school-in-koh-phangan-why-kite-club-rules  /blog/posts/top-kitesurf-school-koh-phangan  301
+/top-reasons-to-choose-koh-phangan-for-your-next-kitesurf-trip/  /blog/posts/top-5-reasons-koh-phangan-best-kitesurfing  301
+/top-reasons-to-choose-koh-phangan-for-your-next-kitesurf-trip  /blog/posts/top-5-reasons-koh-phangan-best-kitesurfing  301
+/wakeboarding-wakesurfing-koh-phangan-best-spots-lessons-tips/  /blog/posts/wakeboarding-wakesurfing-koh-phangan  301
+/wakeboarding-wakesurfing-koh-phangan-best-spots-lessons-tips  /blog/posts/wakeboarding-wakesurfing-koh-phangan  301
+/what-kitesurfing-equipment-you-need-on-koh-phangan-tropical-conditions-guide/  /blog/posts/kitesurfing-equipment-guide  301
+/what-kitesurfing-equipment-you-need-on-koh-phangan-tropical-conditions-guide  /blog/posts/kitesurfing-equipment-guide  301
+/what-makes-kitesurfing-on-koh-phangan-different-from-bali-sri-lanka-or-vietnam/  /blog/posts/koh-phangan-vs-bali-sri-lanka-vietnam  301
+/what-makes-kitesurfing-on-koh-phangan-different-from-bali-sri-lanka-or-vietnam  /blog/posts/koh-phangan-vs-bali-sri-lanka-vietnam  301
+/what-makes-the-kitesurf-community-best-on-koh-phangan/  /blog/posts/kitesurf-community-koh-phangan  301
+/what-makes-the-kitesurf-community-best-on-koh-phangan  /blog/posts/kitesurf-community-koh-phangan  301
+/what-to-expect-your-first-kitesurfing-lesson-in-koh-phangan/  /blog/posts/first-kite-lesson  301
+/what-to-expect-your-first-kitesurfing-lesson-in-koh-phangan  /blog/posts/first-kite-lesson  301
+/what-to-expect-your-first-kitesurfing-lesson-on-koh-phangan/  /blog/posts/first-kite-lesson  301
+/what-to-expect-your-first-kitesurfing-lesson-on-koh-phangan  /blog/posts/first-kite-lesson  301
+/when-is-the-best-time-for-kitesurfing-in-koh-phangan/  /blog/posts/best-time-koh-phangan  301
+/when-is-the-best-time-for-kitesurfing-in-koh-phangan  /blog/posts/best-time-koh-phangan  301
+/where-are-the-best-kiteboarding-water-spots-on-koh-phangan/  /best-kitesurf-spots-koh-phangan/  301
+/where-are-the-best-kiteboarding-water-spots-on-koh-phangan  /best-kitesurf-spots-koh-phangan/  301
+/where-to-find-the-best-kitesurfing-on-koh-phangan/  /best-kitesurf-spots-koh-phangan/  301
+/where-to-find-the-best-kitesurfing-on-koh-phangan  /best-kitesurf-spots-koh-phangan/  301
+/why-choose-kite-club-koh-phangan-for-your-first-kite-surfing-lesson/  /blog/posts/top-kitesurf-school-koh-phangan  301
+/why-choose-kite-club-koh-phangan-for-your-first-kite-surfing-lesson  /blog/posts/top-kitesurf-school-koh-phangan  301
+/why-koh-phangan-is-the-best-place-in-thailand-to-learn-kiteboarding/  /blog/posts/why-koh-phangan-best-thailand-kiteboarding  301
+/why-koh-phangan-is-the-best-place-in-thailand-to-learn-kiteboarding  /blog/posts/why-koh-phangan-best-thailand-kiteboarding  301
+/why-wing-foiling-is-the-fastest-growing-water-sport-in-the-world/  /blog/posts/why-wing-foiling-fastest-growing-sport  301
+/why-wing-foiling-is-the-fastest-growing-water-sport-in-the-world  /blog/posts/why-wing-foiling-fastest-growing-sport  301
+/wind-season-koh-phangan/  /seasons/  301
+/wind-season-koh-phangan  /seasons/  301
+/wind/  /seasons/  301
+/wind  /seasons/  301
+/windsurfing-2/  /windsurfing/  301
+/windsurfing-2  /windsurfing/  301
+/wing-foil-koh-phangan-how-to-start-with-wing-foil-rental-in-thailand/  /blog/posts/wing-foil-rental-lessons-koh-phangan  301
+/wing-foil-koh-phangan-how-to-start-with-wing-foil-rental-in-thailand  /blog/posts/wing-foil-rental-lessons-koh-phangan  301
+/wing-foil-safety-essential-gear-and-tips-for-new-riders/  /blog/posts/wing-foil-safety-gear-guide  301
+/wing-foil-safety-essential-gear-and-tips-for-new-riders  /blog/posts/wing-foil-safety-gear-guide  301
+/wing-foil-vs-efoil-which-is-right-for-you/  /blog/posts/efoil-vs-wing  301
+/wing-foil-vs-efoil-which-is-right-for-you  /blog/posts/efoil-vs-wing  301
+/your-first-day-kitesurf-on-the-water-a-step-by-step-guide-to-kitesurfing-on-koh-phangan/  /blog/posts/your-first-day-kitesurfing-koh-phangan  301
+/your-first-day-kitesurf-on-the-water-a-step-by-step-guide-to-kitesurfing-on-koh-phangan  /blog/posts/your-first-day-kitesurfing-koh-phangan  301
